@@ -1,0 +1,30 @@
+input[type=radio] {
+  display: none;
+}
+input[type=radio] + label.css-label {
+  height: 17px;
+  padding-left: 23px;
+  letter-spacing: 1px;
+  vertical-align: middle;
+  color: #7a828b;
+  cursor: pointer;
+  -webkit-transition: background 300ms ease-in-out, color 300ms ease-in-out;
+  -o-transition: background 300ms ease-in-out, color 300ms ease-in-out;
+  transition: background 300ms ease-in-out, color 300ms ease-in-out;
+}
+
+input[type=radio] + label.css-label {
+  background: url("../img/radio/radio.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+input[type=radio] + label.css-label:hover {
+  background: url("../img/radio/radio-hover.png");
+  background-repeat: no-repeat;
+}
+
+input[type=radio]:checked + label.css-label {
+  background: url("../img/radio/radio-check.png");
+  background-repeat: no-repeat;
+  color: #000;
+}
