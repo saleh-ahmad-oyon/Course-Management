@@ -14,7 +14,7 @@ $("#stuid").each(function(){$(this).keypress(function(e){
 		if ($id.val().length === 2 || $id.val().length === 8) {
 			$id.val($id.val() + '-');
 		}
-		
+
 		if((code>=48)&&(code<=57)){
 			return true;
 		}

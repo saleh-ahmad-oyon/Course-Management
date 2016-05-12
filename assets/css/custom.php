@@ -10,6 +10,7 @@ header h2{padding-top: 55px;}
 .padding20{padding-top: 20px;}
 .font20{font-size: 20px;}
 .font17{font-size: 17px;}
+.btn{padding: 5px 10px;}
 #wrap {
     min-height: 100%;
 }

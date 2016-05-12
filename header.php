@@ -10,14 +10,14 @@
 		<div class="btn-group">
 			<a class="btn btn-primary">
 				<?php if(isset($_SESSION['teacher'])){
-            echo '<img src="'.TEACHERPP.'/'.returnTeacherPic($_SESSION['tid']).'" alt="propic"style="height: 18px;width: 17px;border-radius: 2px;" />', '&nbsp;&nbsp;', $_SESSION['teacher'];
+            echo '<img src="'.TEACHERPP.'/'.returnTeacherPic($_SESSION['tid']).'" alt="propic"style="height: 18px;width: 17px;border-radius: 2px;" class="hidden-md hidden-sm" />', '<span class="hidden-xs">   '.$_SESSION['teacher'].'</span>';
 				}
 
 				elseif(isset($_SESSION['stud'])){
-					echo '<img src="'.studentpp.'/'.returnStdentPic($_SESSION['sid']).'" alt="propic"style="height: 18px;width: 17px;border-radius: 2px;" />', '&nbsp;&nbsp;', $_SESSION['stud'];
+					echo '<img src="'.studentpp.'/'.returnStdentPic($_SESSION['sid']).'" alt="propic"style="height: 18px;width: 17px;border-radius: 2px;" class="hidden-md hidden-sm" />', '<span class="hidden-xs">   '.$_SESSION['stud'].'</span>';
 				}
 				elseif(isset($_SESSION['authority'])){
-					echo '<i class="fa fa-user"></i>', '&nbsp;&nbsp;', $_SESSION['authority'];
+					echo '<i class="fa fa-user hidden-md hidden-sm"></i>', '<span class="hidden-xs">   '.$_SESSION['authority'].'</span>';
 				} ?>
 			</a>
 			<a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#">
