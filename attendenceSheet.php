@@ -28,6 +28,9 @@
                                 <div class="text-center">
                                     <h3><ins><?php echo getCourseName($_GET['id']) ?></ins></h3>
                                 </div><br />
+                                <?php if(!count($outputString)): ?>
+                                    <h3>No Data Found.</h3>
+                                <?php else: ?>
                                 <table class="table table-bordered">
                                     <thead>
                                         <tr>
@@ -58,6 +61,7 @@
                                         </form>
                                     </thead>
                                 </table>
+                                <?php endif; ?>
                             </div>
                         </div>
                     </section>

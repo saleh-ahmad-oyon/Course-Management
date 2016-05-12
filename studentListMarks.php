@@ -24,6 +24,9 @@
                     <section>
                         <div class="row">
                             <div class="col-md-12">
+                                <?php if(!count($outputString)): ?>
+                                    <h3>No Data Found.</h3>
+                                <?php else: ?>
                                 <table class="table table-bordered">
                                     <thead>
                                         <th>No.</th>
@@ -47,6 +50,7 @@
                                         <?php endforeach; ?>
                                     </tbody>
                                 </table>
+                                <?php endif; ?>
                             </div>
                         </div>
                     </section>
