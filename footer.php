@@ -3,7 +3,7 @@
 	<p><cite>Course Management</cite> &copy; <?php echo date("Y") ?></p>
 </div>
 <div class="col-md-4">
-	<p><span class="glyphicon glyphicon-envelope"></span>&nbsp;&nbsp;<a href="mailto:salehoyon@hotmail.com?cc=nissongo102@gmail.com&amp;subject=Feedback&amp;body=Dear%20Buddy%2C%0A" target="_top">salehoyon@hotmail.com</a></p>
+	<p><span class="glyphicon glyphicon-envelope"></span>&nbsp;&nbsp;<a href="mailto:oyon@nooblonely.com?cc=nissongo102@gmail.com&amp;subject=Feedback&amp;body=Dear%20Buddy%2C%0A" target="_top">oyon@nooblonely.com</a></p>
 	<p><span class="glyphicon glyphicon-earphone"></span>&nbsp;&nbsp;+880-1626785569</p>
 	<p><span class="glyphicon glyphicon-map-marker"></span>&nbsp;&nbsp;10/181, 12/B, Mirpur, Dhaka-1216</p>
 </div>

@@ -1,10 +1,10 @@
-<div class="col-md-2 padding20">
-	<img src="<?php echo SERVER; ?>/assets/img/aiub.png" alt="aiub logo" />
+<div class="col-lg-2 col-md-3 padding20">
+	<img src="<?php echo SERVER; ?>/assets/img/aiub.png" alt="aiub logo" class="center-block" />
 </div>
-<div class="col-md-7 text-center">
+<div class="col-lg-8 col-md-6 text-center">
 	<h2>American International University-Bangladesh</h2>
 </div>
-<div class="col-md-3 padding20">
+<div class="col-lg-2 col-md-3 padding20">
 	<?php if(isset($_SESSION['teacher']) || isset($_SESSION['stud']) || isset($_SESSION['authority'])): ?>
 	<div class="pull-right">
 		<div class="btn-group">
