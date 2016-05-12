@@ -20,7 +20,7 @@
 	
 	function check_authority_login($user, $pass){
 		$conn = db_conn();
-		$sql = "SELECT COUNT(*) as `num` FROM `Authority` WHERE `a_aiub_id` = '$user' and `a_pass` = '$pass'";
+		$sql = "SELECT COUNT(*) as `num` FROM `authority` WHERE `a_aiub_id` = '$user' and `a_pass` = '$pass'";
 		$result = mysqli_query($conn, $sql);
 		while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
 			return ($row['num'] == 1) ? true : false ;
@@ -39,7 +39,7 @@
 	
 	function authority_id($user){
 		$conn = db_conn();
-		$sql = "SELECT `a_id` FROM `Authority` WHERE `a_aiub_id` = '$user'";
+		$sql = "SELECT `a_id` FROM `authority` WHERE `a_aiub_id` = '$user'";
 		$result = mysqli_query($conn, $sql);
 		$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 		$tid = $row['a_id'];
@@ -837,7 +837,7 @@ WHERE course_student_marks.c_id = $cid ORDER BY student.s_full_name";
     }
     function getPrivilege($prv){
         $conn = db_conn();
-        $sql = "SELECT `info_list` FROM `Information` WHERE `info_privilege` = $prv";
+        $sql = "SELECT `info_list` FROM `information` WHERE `info_privilege` = $prv";
         $result = mysqli_query($conn, $sql);
         $row = array();
         for($i=0; $i<mysqli_num_rows($result); $i++){
