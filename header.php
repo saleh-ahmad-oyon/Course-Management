@@ -29,12 +29,12 @@
 				<?php endif; ?>
 				<?php if(isset($_SESSION['teacher'])): ?>
 					<li><a href="<?php echo SERVER; ?>"><i class="fa fa-home"></i>&nbsp;&nbsp;Home</a></li>
-					<li><a href="<?php echo SERVER; ?>/stuBasicInfo"><i class="fa fa-briefcase"></i>&nbsp;&nbsp;Profile</a></li>
+					<li><a href="<?php echo SERVER; ?>/profile"><i class="fa fa-briefcase"></i>&nbsp;&nbsp;Profile</a></li>
 					<li><a href="<?php echo SERVER; ?>/changePass?id=11"><i class="fa fa-lock"></i>&nbsp;&nbsp;Change Password</a></li>
 				<?php endif; ?>
 				<?php if(isset($_SESSION['stud'])): ?>
 					<li><a href="<?php echo SERVER; ?>"><i class="fa fa-home"></i>&nbsp;&nbsp;Home</a></li>
-					<li><a href="<?php echo SERVER; ?>/stuBasicInfo"><i class="fa fa-briefcase"></i>&nbsp;&nbsp;Profile</a></li>
+					<li><a href="<?php echo SERVER; ?>/profile"><i class="fa fa-briefcase"></i>&nbsp;&nbsp;Profile</a></li>
 					<li><a href="<?php echo SERVER; ?>/changePass?id=22"><i class="fa fa-lock"></i>&nbsp;&nbsp;Change Password</a></li>
 				<?php endif; ?>
 				<li class="divider"></li>

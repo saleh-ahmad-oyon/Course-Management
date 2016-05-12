@@ -97,7 +97,7 @@
                                     </table>
                                     <br />
                                     <div class="text-center">
-                                        <a class="btn btn-primary" href="<?php echo SERVER; ?>/editStuBasicInfo"><i class="fa fa-pencil"></i>&nbsp;&nbsp;Update</a>
+                                        <a class="btn btn-primary" href="<?php echo SERVER; ?>/editinfo"><i class="fa fa-pencil"></i>&nbsp;&nbsp;Update</a>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
@@ -145,7 +145,7 @@
                                         </table>
                                         <br />
                                         <div class="text-center">
-                                            <a class="btn btn-primary" href="<?php echo SERVER; ?>/editStuBasicInfo"><i class="fa fa-pencil"></i>&nbsp;&nbsp;Update</a>
+                                            <a class="btn btn-primary" href="<?php echo SERVER; ?>/editinfo"><i class="fa fa-pencil"></i>&nbsp;&nbsp;Update</a>
                                         </div>
                                     </div>
                                     <div class="col-md-4">

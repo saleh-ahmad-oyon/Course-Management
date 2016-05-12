@@ -108,13 +108,13 @@
                                         <div class="form-group">
                                             <div class="input-group">
                                                 <div class="input-group-addon" title="Gender"><i class="fa fa-venus-mars"></i></div>
-                                                <input type="radio" name="sex" id="male" value="male"<?php if(isset($row['s_gender']) && htmlentities(stripcslashes($row['s_gender'])) == 'male'): ?> checked="checked" <?php endif; ?> />
+                                                <input type="radio" name="sex" id="male" value="Male"<?php if(isset($row['s_gender']) && htmlentities(stripcslashes($row['s_gender'])) == 'Male'): ?> checked="checked" <?php endif; ?> />
                                                 <label for="male" class="css-label">Male</label>
 
-                                                <input type="radio" name="sex" id="female" value="female"<?php if(isset($row['s_gender']) && htmlentities(stripcslashes($row['s_gender'])) == 'female'): ?> checked="checked" <?php endif; ?> />
+                                                <input type="radio" name="sex" id="female" value="Female"<?php if(isset($row['s_gender']) && htmlentities(stripcslashes($row['s_gender'])) == 'Female'): ?> checked="checked" <?php endif; ?> />
                                                 <label for="female" class="css-label">Female</label>
 
-                                                <input type="radio" name="sex" id="other" value="other"<?php if(isset($row['s_gender']) && htmlentities(stripcslashes($row['s_gender'])) == 'other'): ?> checked="checked" <?php endif; ?> />
+                                                <input type="radio" name="sex" id="other" value="Other"<?php if(isset($row['s_gender']) && htmlentities(stripcslashes($row['s_gender'])) == 'Other'): ?> checked="checked" <?php endif; ?> />
                                                 <label for="other" class="css-label">Other</label>
                                             </div>
                                         </div>
@@ -159,13 +159,13 @@
                                             <div class="form-group">
                                                 <div class="input-group">
                                                     <div class="input-group-addon" title="Gender"><i class="fa fa-venus-mars"></i></div>
-                                                    <input type="radio" name="sex" id="male" value="male"<?php if(isset($row['t_gender']) && htmlentities(stripcslashes($row['t_gender'])) == 'male'): ?> checked="checked" <?php endif; ?> />
+                                                    <input type="radio" name="sex" id="male" value="Male"<?php if(isset($row['t_gender']) && htmlentities(stripcslashes($row['t_gender'])) == 'Male'): ?> checked="checked" <?php endif; ?> />
                                                     <label for="male" class="css-label">Male</label>
 
-                                                    <input type="radio" name="sex" id="female" value="female"<?php if(isset($row['t_gender']) && htmlentities(stripcslashes($row['t_gender'])) == 'female'): ?> checked="checked" <?php endif; ?> />
+                                                    <input type="radio" name="sex" id="female" value="Female"<?php if(isset($row['t_gender']) && htmlentities(stripcslashes($row['t_gender'])) == 'Female'): ?> checked="checked" <?php endif; ?> />
                                                     <label for="female" class="css-label">Female</label>
 
-                                                    <input type="radio" name="sex" id="other" value="other"<?php if(isset($row['t_gender']) && htmlentities(stripcslashes($row['t_gender'])) == 'other'): ?> checked="checked" <?php endif; ?> />
+                                                    <input type="radio" name="sex" id="other" value="Other"<?php if(isset($row['t_gender']) && htmlentities(stripcslashes($row['t_gender'])) == 'Other'): ?> checked="checked" <?php endif; ?> />
                                                     <label for="other" class="css-label">Other</label>
                                                 </div>
                                             </div>

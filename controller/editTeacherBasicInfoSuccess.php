@@ -29,13 +29,13 @@ if(isset($_POST['editBtn'])){
 
             echo '<script language="javascript">
 							alert("Update Successful !!");
-							window.location="'.SERVER.'/stuBasicInfo";
+							window.location="'.SERVER.'/profile";
 						  </script>';
 
         } else {
             echo '<script language="javascript">
 							alert("Uploaded File is not an image !!");
-							window.location="'.SERVER.'/stuBasicInfo";
+							window.location="'.SERVER.'/profile";
 						  </script>';
         }
     }
@@ -43,7 +43,7 @@ if(isset($_POST['editBtn'])){
         editTeacherBasicInfoWithoutPic($fullName, $phone, $email, $tid, $gender, $date);
         echo '<script language="javascript">
 							alert("Update Successful !!");
-							window.location="'.SERVER.'/stuBasicInfo";
+							window.location="'.SERVER.'/profile";
 						  </script>';
     }
 }
