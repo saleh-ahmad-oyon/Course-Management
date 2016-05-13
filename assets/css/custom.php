@@ -8,6 +8,7 @@ html, body{font-family: "Comic Sans MS", cursive, sans-serif; height: 100%;}
 h2{font-family:sans-serif;}
 header h2{padding-top: 55px;}
 .padding20{padding-top: 20px;}
+.margin-top-10{margin-top: 10px;}
 .font20{font-size: 20px;}
 .font17{font-size: 17px;}
 .btn{padding: 5px 10px;}
