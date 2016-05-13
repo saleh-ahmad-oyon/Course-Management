@@ -41,7 +41,7 @@
 											<th>CGPA</th>
 											<th>Department</th>
 											<th>Image</th>
-											<th></th>
+											<th class="text-center">Action</th>
 										</tr>
 									</thead>
 									<tbody>
@@ -57,7 +57,7 @@
 												</td>
 												<td class='text-center'>
 													<form action="<?php echo SERVER; ?>/controller/removeStudentSuccess?id1=<?php echo $_GET['id']; ?>&id2=<?php echo $value['s_id']; ?>" method="post" onsubmit="return confirmation();">
-														<button type="submit" name="dltBtn" class="btn btn-danger" ><span class='glyphicon glyphicon-trash'></span></button>
+														<button type="submit" name="dltBtn" class="btn btn-danger" ><span class='glyphicon glyphicon-trash hidden-md hidden-sm'></span><span class="hidden-xs">  Delete</span></button>
 													</form>
 												</td>
 											</tr>

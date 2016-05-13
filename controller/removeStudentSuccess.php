@@ -12,7 +12,7 @@
 		
 		echo '<script language="javascript">
 				alert("Successfully Removed !!");
-				window.location="'.SERVER.'/studentList?id='.$cid.'";
+				window.location="'.SERVER.'/studentlist?id='.$cid.'";
 			  </script>';
 	}
 	else{
