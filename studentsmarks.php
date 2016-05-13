@@ -33,7 +33,7 @@
                                         <th>ID</th>
                                         <th>Name</th>
                                         <th>Marks</th>
-                                        <th></th>
+                                        <th class="text-center">Action</th>
                                     </thead>
                                     <tbody>
                                         <?php $i=1; foreach($outputString as $value): ?>
@@ -43,7 +43,7 @@
                                                     <td><?php echo $value['s_full_name']; ?></td>
                                                     <td><?php echo $value['grand_final_total']; ?></td>
                                                     <td class='text-center'>
-                                                        <a class='btn btn-info' href='<?php echo SERVER;?>/detailsMark?id1=<?php echo $_GET['id']; ?>&id2=<?php echo $value['s_id']; ?>'><span class='glyphicon glyphicon-info-sign font17'></span></a>
+                                                        <a class='btn btn-info' href='<?php echo SERVER;?>/detailsMark?id1=<?php echo $_GET['id']; ?>&id2=<?php echo $value['s_id']; ?>' data-toggle="tooltip" data-placement="top" title="Mark Details"><span class='glyphicon glyphicon-info-sign font17 hidden-md hidden-sm'></span><span class="hidden-xs">  Details</span></a>
                                                     </td>
                                                 </tr>
                                         <?php $i++; ?>
@@ -69,3 +69,4 @@
         </footer>
 	</body>
 </html>
+<script src="<?php echo SERVER;?>/assets/js/custom.js"></script>

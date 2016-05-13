@@ -50,6 +50,10 @@ else{
 }
 });});
 
+$(function () {
+    $('[data-toggle="tooltip"]').tooltip();
+});
+
 jQuery(function($){
    $("#phone").mask("+880-99999?9999999", { "placeholder": "" });
 });

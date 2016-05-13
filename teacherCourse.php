@@ -29,7 +29,7 @@
                                         <h3><ins><?php echo getCourseName($_GET['id']) ?></ins></h3><br />
                                         <a class="btn btn-primary hover-focus" href="<?php echo SERVER; ?>/studentList?id=<?php echo $id; ?>">Student List</a>&nbsp;&nbsp;
                                         <a class="btn btn-info hover-focus" href="<?php echo SERVER; ?>/addStudent?id=<?php echo $id; ?>"><i class="fa fa-user-plus"></i> Student</a>&nbsp;&nbsp;
-                                        <a class="btn btn-primary hover-focus" href="<?php echo SERVER; ?>/studentListMarks?id=<?php echo $id; ?>">Students Marks</a>&nbsp;&nbsp;
+                                        <a class="btn btn-primary hover-focus" href="<?php echo SERVER; ?>/studentsmarks?id=<?php echo $id; ?>">Students Marks</a>&nbsp;&nbsp;
                                         <a class="btn btn-info hover-focus" href="<?php echo SERVER; ?>/attendenceSheet?id=<?php echo $id; ?>">Students Attendence</a>
                                     </div>
                                 </div>
