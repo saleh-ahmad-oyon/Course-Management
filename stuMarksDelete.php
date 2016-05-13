@@ -49,6 +49,9 @@
                                     <h5><ins><?php echo $name; ?></h5></ins>
                                 </div>
                                 <br/><br/>
+                                <?php if(!count($outputString)): ?>
+                                    <h3>No Data Found.</h3>
+                                <?php else: ?>
                                 <div class="col-md-4"></div>
                                 <div class="col-md-4">
                                     <form action="<?php echo SERVER; ?>/controller/stuMarksDeleteSubmit?id1=<?php echo $_GET['id1']; ?>&id2=<?php echo $_GET['id2']; ?>" method="post" onsubmit="return confirmation();">
@@ -83,6 +86,7 @@
                                     </form>
                                 </div>
                                 <div class="col-md-4"></div>
+                                <?php endif; ?>
                             </div>
                         </div>
                     </section>
