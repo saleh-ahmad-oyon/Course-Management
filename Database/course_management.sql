@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: May 15, 2016 at 07:01 PM
+-- Generation Time: May 15, 2016 at 09:43 PM
 -- Server version: 10.1.13-MariaDB
 -- PHP Version: 5.6.20
 
@@ -317,7 +317,7 @@ INSERT INTO `student` (`s_id`, `s_aiub_id`, `s_full_name`, `s_cgpa`, `s_phone`, 
 (20, '12-20261-1', 'Hassan, Mahir Faisal', 2.95, '01670281289', 'mahir@gmail.com', '1234', 'CSE', 'default-user.png', 'Male', '0000-00-00'),
 (21, '12-20332-1', 'Sajid Mohammad', 3.25, '01732761556', 'sajid@rocketmail.com', '1234', 'CSE', 'default-user.png', 'Male', '0000-00-00'),
 (22, '12-20335-1', 'Lasker, Md. Naim', 3.46, '01680641959', 'lasker@yahoo.com', '1234', 'CSE', 'naim.jpg', 'Male', '0000-00-00'),
-(23, '12-20337-1', 'Khan, A.K.M Shakuruzzaman', 3.71, '01676608440', 'ashik@rocketmail.com', '1234', 'CSE', 'default-user.png', 'Male', '0000-00-00'),
+(23, '12-20337-1', 'Khan, A.K.M Shakuruzzaman', 3.51, '01676608440', 'ashik@rocketmail.com', '1234', 'CSE', 'ashik.jpg', 'Male', '0000-00-00'),
 (24, '12-20339-1', 'Islam, Md, Rashedul', 2.87, '01676044694', 'rislam@gmail.com', '1234', 'CSSE', 'default-user.png', 'Male', '0000-00-00'),
 (25, '12-20342-1', 'Tazrin, Fahmida', 3.32, '01745269873', 'tazrin@ymail.com', '1234', 'CSE', 'tazrin.JPG', 'Female', '0000-00-00'),
 (26, '12-20114-1', 'Antu, Golam Rabbi', 3.62, '+880-1671953765', 'amit@ymail.com', '1234', 'CSE', 'amit.jpg', 'Male', '1990-01-25'),
