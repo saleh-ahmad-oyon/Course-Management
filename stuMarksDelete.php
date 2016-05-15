@@ -54,7 +54,7 @@
                                 <?php else: ?>
                                 <div class="col-md-4"></div>
                                 <div class="col-md-4">
-                                    <form action="<?php echo SERVER; ?>/controller/stuMarksDeleteSubmit?id1=<?php echo $_GET['id1']; ?>&id2=<?php echo $_GET['id2']; ?>" method="post" onsubmit="return confirmation();">
+                                    <form action="<?php echo SERVER; ?>/controller/stuMarksDelete?id1=<?php echo $_GET['id1']; ?>&id2=<?php echo $_GET['id2']; ?>" method="post" onsubmit="return confirmation();">
                                         <table class="table table-bordered">
                                             <thead>
                                                 <tr>
