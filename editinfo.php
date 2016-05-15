@@ -31,7 +31,6 @@
 					showOtherMonths: true,
 					changeMonth: true,
 					changeYear: true,
-					showButtonPanel: true,
 					dateFormat: "d M, yy",
 					maxDate: "+0D"
 				});
