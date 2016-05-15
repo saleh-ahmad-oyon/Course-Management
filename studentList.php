@@ -53,7 +53,7 @@
 												<td><?php echo $value['s_cgpa']; ?></td>
 												<td><?php echo $value['s_dept']; ?></td>
 												<td>
-													<img src="<?php echo studentpp, '/', $value['s_image']; ?>" alt="Profile Pic" class="img-circle zoom">
+													<img src="<?php echo STUDENTPP, '/', $value['s_image']; ?>" alt="Profile Pic" class="img-circle zoom">
 												</td>
 												<td class='text-center'>
 													<form action="<?php echo SERVER; ?>/controller/removeStudentSuccess?id1=<?php echo $_GET['id']; ?>&id2=<?php echo $value['s_id']; ?>" method="post" onsubmit="return confirmation();">
