@@ -74,6 +74,10 @@
                                 <div class="col-md-4">
                                     <?php if($student): ?>
                                     <form action="<?php echo SERVER; ?>/controller/editStuBasicInfoSuccess" method="post" enctype="multipart/form-data" >
+                                        <div class="form-group" style="vertical-align: middle">
+                                            <label>Profile Picture</label>
+                                            <input type="file" name="profilepic" accept='image/*' id="input-file-now" class="dropify" data-default-file="<?php echo studentpp, '/', htmlentities(stripslashes($row['s_image'])); ?>" />
+                                        </div>
                                         <div class="form-group">
                                             <div class="input-group">
                                                 <div class="input-group-addon" title="Full Name"><i class="fa fa-user font17"></i></div>
@@ -130,16 +134,16 @@
                                                 <input type="email" value="<?php echo htmlentities(stripslashes($row['s_email'])); ?>" name="editEmail" pattern="[([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)]i" title="Insert Email address Correctly" class="form-control"/>
                                             </div>
                                         </div>
-                                        <div class="form-group" style="vertical-align: middle">
-                                            <label>Profile Picture</label>
-                                            <input type="file" name="profilepic" accept='image/*' id="input-file-now" class="dropify" data-default-file="<?php echo studentpp, '/', htmlentities(stripslashes($row['s_image'])); ?>" />
-                                        </div>
                                         <div class="form-group">
                                             <button type="submit" name="editBtn" class="btn btn-block btn-primary"><i class="fa fa-wrench"></i>&nbsp;&nbsp;Update</button>
                                         </div>
                                     </form>
                                     <?php elseif($teacher): ?>
                                         <form action="<?php echo SERVER; ?>/controller/editTeacherBasicInfoSuccess" method="post" enctype="multipart/form-data" >
+                                            <div class="form-group" style="vertical-align: middle">
+                                                <label>Profile Picture</label>
+                                                <input type="file" name="profilepic" accept='image/*' id="input-file-now" class="dropify" data-default-file="<?php echo TEACHERPP, '/', htmlentities(stripslashes($row['t_image'])); ?>" />
+                                            </div>
                                             <div class="form-group">
                                                 <div class="input-group">
                                                     <div class="input-group-addon" title="Full Name"><i class="fa fa-user font17"></i></div>
@@ -180,10 +184,6 @@
                                                     <div class="input-group-addon" title="Email"><span class="glyphicon glyphicon-envelope"></span></div>
                                                     <input type="email" value="<?php echo htmlentities(stripslashes($row['t_email'])); ?>" name="editEmail" pattern="[([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)]i" title="Insert Email address Correctly" class="form-control"/>
                                                 </div>
-                                            </div>
-                                            <div class="form-group" style="vertical-align: middle">
-                                                <label>Profile Picture</label>
-                                                <input type="file" name="profilepic" accept='image/*' id="input-file-now" class="dropify" data-default-file="<?php echo TEACHERPP, '/', htmlentities(stripslashes($row['t_image'])); ?>" />
                                             </div>
                                             <div class="form-group">
                                                 <button type="submit" name="editBtn" class="btn btn-block btn-primary"><i class="fa fa-wrench"></i>&nbsp;&nbsp;Update</button>
