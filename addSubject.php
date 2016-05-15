@@ -108,7 +108,7 @@ if($_GET['id'] == 1){
                                             <td><?php echo $tc['c_name']; ?></td>
                                             <td>
                                                 <div class="text-center">
-                                                    <form action="<?php echo SERVER; ?>/controller/removeTeacherFromCourse" method="post" onsubmit="return confirmation();">
+                                                    <form action="<?php echo SERVER; ?>/controller/dltTeacherCourse" method="post" onsubmit="return confirmation();">
                                                         <input type="hidden" value="<?php echo $tc['c_id']; ?>" name="id">
                                                         <input type="hidden" value="<?php echo $_GET['id']; ?>" name="id2">
                                                         <button type="submit" name="dltTeacher" class="btn btn-danger"><span class='glyphicon glyphicon-trash hidden-md hidden-sm'></span><span class="hidden-xs">  Delete</span></button>
