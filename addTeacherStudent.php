@@ -20,7 +20,6 @@
                     showOtherMonths: true,
                     changeMonth: true,
                     changeYear: true,
-                    showButtonPanel: true,
                     dateFormat: "dd/mm/yy",
                     minDate: '01/01/1900',
                     maxDate: "+0D"
