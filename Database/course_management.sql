@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: May 13, 2016 at 09:52 PM
+-- Generation Time: May 15, 2016 at 07:01 PM
 -- Server version: 10.1.13-MariaDB
 -- PHP Version: 5.6.20
 
@@ -52,7 +52,7 @@ INSERT INTO `attendinfo` (`att_id`, `att_total`, `s_id`, `c_id`) VALUES
 (10, 0, 9, 2),
 (11, 0, 10, 2),
 (12, 0, 11, 2),
-(13, 0, 12, 2),
+(46, 0, 55, 2),
 (14, 0, 13, 2),
 (15, 0, 14, 2),
 (16, 0, 15, 2),
@@ -69,11 +69,11 @@ INSERT INTO `attendinfo` (`att_id`, `att_total`, `s_id`, `c_id`) VALUES
 (27, 0, 26, 2),
 (28, 0, 27, 2),
 (29, 0, 28, 2),
-(30, 0, 29, 2),
+(45, 0, 51, 2),
 (42, 0, 54, 2),
 (32, 0, 31, 2),
 (33, 0, 32, 2),
-(34, 0, 33, 2),
+(44, 0, 52, 2),
 (35, 0, 34, 2),
 (36, 0, 35, 2),
 (37, 0, 36, 2),
@@ -165,7 +165,7 @@ INSERT INTO `course_student_marks` (`c_s_m_id`, `c_id`, `s_id`, `mid_best_two`, 
 (10, 2, 9, 0, 0, 0, 'FAIL', 'FAIL', 'FAIL', 0, 0),
 (11, 2, 10, 0, 0, 0, 'FAIL', 'FAIL', 'FAIL', 0, 0),
 (12, 2, 11, 0, 0, 0, 'FAIL', 'FAIL', 'FAIL', 0, 0),
-(13, 2, 12, 0, 0, 0, 'FAIL', 'FAIL', 'FAIL', 0, 0),
+(46, 2, 55, 0, 0, 0, 'FAIL', 'FAIL', 'FAIL', 0, 0),
 (14, 2, 13, 0, 0, 0, 'FAIL', 'FAIL', 'FAIL', 0, 0),
 (15, 2, 14, 0, 0, 0, 'FAIL', 'FAIL', 'FAIL', 0, 0),
 (16, 2, 15, 0, 0, 0, 'FAIL', 'FAIL', 'FAIL', 0, 0),
@@ -182,11 +182,11 @@ INSERT INTO `course_student_marks` (`c_s_m_id`, `c_id`, `s_id`, `mid_best_two`, 
 (27, 2, 26, 0, 0, 0, 'FAIL', 'FAIL', 'FAIL', 0, 0),
 (28, 2, 27, 0, 0, 0, 'FAIL', 'FAIL', 'FAIL', 0, 0),
 (29, 2, 28, 0, 0, 0, 'FAIL', 'FAIL', 'FAIL', 0, 0),
-(30, 2, 29, 0, 0, 0, 'FAIL', 'FAIL', 'FAIL', 0, 0),
+(45, 2, 51, 0, 0, 0, 'FAIL', 'FAIL', 'FAIL', 0, 0),
 (42, 2, 54, 0, 0, 0, 'FAIL', 'FAIL', 'FAIL', 0, 0),
 (32, 2, 31, 0, 0, 0, 'FAIL', 'FAIL', 'FAIL', 0, 0),
 (33, 2, 32, 0, 0, 0, 'FAIL', 'FAIL', 'FAIL', 0, 0),
-(34, 2, 33, 0, 0, 0, 'FAIL', 'FAIL', 'FAIL', 0, 0),
+(44, 2, 52, 0, 0, 0, 'FAIL', 'FAIL', 'FAIL', 0, 0),
 (35, 2, 34, 0, 0, 0, 'FAIL', 'FAIL', 'FAIL', 0, 0),
 (36, 2, 35, 0, 0, 0, 'FAIL', 'FAIL', 'FAIL', 0, 0),
 (37, 2, 36, 0, 0, 0, 'FAIL', 'FAIL', 'FAIL', 0, 0),
@@ -297,7 +297,7 @@ CREATE TABLE `student` (
 INSERT INTO `student` (`s_id`, `s_aiub_id`, `s_full_name`, `s_cgpa`, `s_phone`, `s_email`, `s_pass`, `s_dept`, `s_image`, `s_gender`, `s_dob`) VALUES
 (1, '12-20167-1', 'Rahman Sadikur', 3.5, '01680091207', 'shawon@gmail.com', '1234', 'CSE', 'shawon.jpg', 'Male', '0000-00-00'),
 (2, '12-20107-1', 'Rafi, M.H', 3.62, '01677649964', 'rafi@yahoo.com', '1234', 'CSE', 'rafi.jpg', 'Male', '0000-00-00'),
-(3, '12-20235-1', 'Saleh Ahmad', 3.84, '+880-1626785569', 'salehoyon@hotmail.com', 'qQ1!', 'CSE', 'oyon.jpg', 'Male', '1991-08-13'),
+(3, '12-20235-1', 'Saleh Ahmad', 3.85, '+880-1626785569', 'salehoyon@hotmail.com', 'qQ1!', 'CSE', 'oyon.jpg', 'Male', '1991-08-13'),
 (4, '12-20115-1', 'Roy, Pallob Kanti', 3.25, '01912165908', 'pallab@ymail.com', '1234', 'CSSE', 'Pallob.jpg', 'Male', '0000-00-00'),
 (5, '12-20120-1', 'Ayon, Arif Ahmed', 3.56, '01677377003', 'ayon@rocketmail.com', '1234', 'CSSE', 'Ayon.jpg', 'Male', '0000-00-00'),
 (6, '12-20124-1', 'Alam, Nesar Ul', 3.41, '01676756794', 'nesarul@gmail.com', '1234', 'CSSE', 'Nesar.jpg', 'Male', '0000-00-00'),
@@ -313,7 +313,7 @@ INSERT INTO `student` (`s_id`, `s_aiub_id`, `s_full_name`, `s_cgpa`, `s_phone`, 
 (16, '12-20229-1', 'Parag, Kutubuddin Jalal', 3.12, '01676163313', 'parag@ymail.com', '1234', 'CSE', 'default-user.png', 'Male', '0000-00-00'),
 (17, '12-20232-1', 'Mosharaf, Khaled', 2.81, '01915699339', 'khaled@live.com', '1234', 'CSE', 'default-user.png', 'Male', '0000-00-00'),
 (18, '12-20245-1', 'Banna, Sazid Hossain', 3.21, '+880-1715342366', 'cryingbanna@live.com', '1234', 'CSE', 'banna.jpg', 'Male', '1992-08-30'),
-(19, '12-20497-1', 'Roy, Nirbachita', 3.79, '+880-1730078219', 'nirba@live.com', '1234', 'CSE', 'nirbachita.jpg', 'Female', '0000-00-00'),
+(19, '12-20497-1', 'Roy, Nirbachita', 3.8, '+880-1730078219', 'nirba@live.com', '1234', 'CSE', 'nirbachita.jpg', 'Female', '0000-00-00'),
 (20, '12-20261-1', 'Hassan, Mahir Faisal', 2.95, '01670281289', 'mahir@gmail.com', '1234', 'CSE', 'default-user.png', 'Male', '0000-00-00'),
 (21, '12-20332-1', 'Sajid Mohammad', 3.25, '01732761556', 'sajid@rocketmail.com', '1234', 'CSE', 'default-user.png', 'Male', '0000-00-00'),
 (22, '12-20335-1', 'Lasker, Md. Naim', 3.46, '01680641959', 'lasker@yahoo.com', '1234', 'CSE', 'naim.jpg', 'Male', '0000-00-00'),
@@ -322,33 +322,34 @@ INSERT INTO `student` (`s_id`, `s_aiub_id`, `s_full_name`, `s_cgpa`, `s_phone`, 
 (25, '12-20342-1', 'Tazrin, Fahmida', 3.32, '01745269873', 'tazrin@ymail.com', '1234', 'CSE', 'tazrin.JPG', 'Female', '0000-00-00'),
 (26, '12-20114-1', 'Antu, Golam Rabbi', 3.62, '+880-1671953765', 'amit@ymail.com', '1234', 'CSE', 'amit.jpg', 'Male', '1990-01-25'),
 (27, '12-20343-1', 'Sonchay, Khalid Hassan', 3.25, '01677873564', 'sonchay@gmail.com', '1234', 'SE', 'sonchoy.jpg', 'Male', '0000-00-00'),
-(28, '12-20368-1', 'Toma, Tahmida Hedayet', 3.82, '+880-1746715666', 'toma@rocketmail.com', '1234', 'CSE', 'toma.jpg', 'female', '0000-00-00'),
-(29, '12-20369-1', 'Nirjhor, Junayed Ahnaf', 2.42, '01710498712', 'nirjhor@gmail.com', '1234', 'CSSE', 'default-user.png', 'male', '0000-00-00'),
-(30, '12-20373-1', 'Chowdhury, Ali Ashraf', 2.93, '01680267283', 'ali@yahoo.com', '1234', 'CSE', 'default-user.png', 'male', '0000-00-00'),
-(31, '12-20381-1', 'Haque, Imran Atiqul', 3.13, '01682635939', 'imran@outlook.com', '1234', 'CSE', 'imran.jpg', 'male', '0000-00-00'),
-(32, '12-20478-1', 'Uddin Jumana Jashim', 3.23, '+880-1621534769', 'jumana@ymail.com', '1234', 'CSE', 'jumana.JPG', 'female', '0000-00-00'),
-(33, '12-21119-1', 'Alam, Maskurul', 3.26, '01743912055', 'alam@hotmail.com', '1234', 'CSSE', 'default-user.png', 'male', '0000-00-00'),
-(34, '12-21130-1', 'Hasan, Mehedi', 2.78, '+880-1710975078', 'mehedi@rocketmail.com', '1234', 'CSE', 'default-user.png', 'male', '0000-00-00'),
-(35, '12-20520-1', 'Israt,Fahmida', 3.56, '+880-1723217411', 'panda@yahoo.com', '1234', 'CSSE', 'pinkey.jpg', 'female', '0000-00-00'),
-(36, '12-20397-1', 'Abrita, Samiha Islam', 3.82, '+880-1515245238', 'abrita@outlook.com', '1234', 'CSE', 'abrita.jpg', 'female', '0000-00-00'),
-(37, '12-21094-1', 'Abrar,Faheem', 3.98, '+880-1515253396', 'faheem@gmail.com', '1234', 'CSE', 'faheem.jpg', 'male', '0000-00-00'),
-(38, '12-21023-1', 'Abedin Md. Tahmidul', 3.78, '+880-1552380913', 'anik@ymail.com', '1234', 'CSE', 'anik.jpg', 'male', '0000-00-00'),
-(39, '12-20142-1', 'Abedin, Md. Rashedul', 3.01, '+880-1673016974', 'rashedul@yahoo.com', '1234', 'CSE', 'rashed.jpg', 'male', '0000-00-00'),
-(40, '12-20636-1', 'Faize, Md. Sadik', 3.27, '+880-1741341060', 'sadik@gmail.com', '1234', 'CSE', 'sohan.jpg', 'male', '0000-00-00'),
-(41, '12-20781-1', 'Uddin, Md. Sadman Sakib', 3.68, '01785439727', 'sadmansakib@ymail.com', '1234', 'CSE', 'default-user.png', 'male', '0000-00-00'),
-(42, '12-20566-1', 'Mansur, Ryan', 3.59, '+880-1558354442', 'ryan@ymail.com', '1234', 'CSSE', 'default-user.png', 'male', '0000-00-00'),
-(43, '12-21122-1', 'Selim, Rayan', 3.42, '01925479615', 'rselim@live.com', '1234', 'CSSE', 'default-user.png', 'male', '0000-00-00'),
-(44, '12-20305-1', 'Khan, Sakib', 2.82, '+880-1736666712', 'sakibkhan@yahoo.com', '1234', 'CIS', 'tanzim.jpg', 'male', '0000-00-00'),
-(45, '12-20609-1', 'Silvia, Israt Jahan', 3.43, '01678942537', 'silvi@gmail.com', '1234', 'CSSE', 'default-user.png', 'female', '0000-00-00'),
-(46, '12-20310-1', 'Ahmad, Rafat', 3.59, '+880-1553264372', 'rafat@outlook.com', '1234', 'CSSE', 'rafat.jpg', 'male', '0000-00-00'),
-(47, '12-20140-1', 'Islam Md. Zahidul', 3.22, '01552479613', 'zahidul@rocketmail.com', '1234', 'SE', 'zahid.jpg', 'male', '0000-00-00'),
-(48, '12-21020-1', 'Shanto mahmud Hossain', 3.47, '+880-1849396922', 'shanto@gmail.com', '1234', 'CSE', 'shanto.jpg', 'male', '0000-00-00'),
-(49, '12-20731-1', 'Islam, Md Shadmanul', 3.9, '01645967435', 'shadmanul@live.com', '1234', 'CSE', 'shadmanul.jpg', 'male', '0000-00-00'),
-(50, '12-20721-1', 'Saha, Koushik', 3.77, '+880-1920859131', 'koushik@live.com', '1234', 'CSE', 'koushik.jpg', 'male', '0000-00-00'),
-(51, '12-21003-1', 'Tawhid Al Islam', 3.99, '+880-1622036696', 'tawhidvai@gmail.com', '1234', 'CSE', 'Tawhid.jpg', 'Male', '1992-01-04'),
-(52, '12-20981-1', 'Rahman, Sajidur', 3.96, '+8801674242999', 'sajid_reznov9185@live.com', '1234', 'CSE', '12313906_10206968968014271_5478273476895932071_n.jpg', 'Male', '1992-10-31'),
+(28, '12-20368-1', 'Toma, Tahmida Hedayet', 3.74, '+880-1746715666', 'toma@rocketmail.com', '1234', 'CSE', 'toma.jpg', 'Female', '0000-00-00'),
+(29, '12-20369-1', 'Nirjhor, Junayed Ahnaf', 2.42, '01710498712', 'nirjhor@gmail.com', '1234', 'CSSE', 'default-user.png', 'Male', '0000-00-00'),
+(30, '12-20373-1', 'Chowdhury, Ali Ashraf', 2.93, '01680267283', 'ali@yahoo.com', '1234', 'CSE', 'default-user.png', 'Male', '0000-00-00'),
+(31, '12-20381-1', 'Haque, Imran Atiqul', 3.13, '01682635939', 'imran@outlook.com', '1234', 'CSE', 'imran.jpg', 'Male', '0000-00-00'),
+(32, '12-20478-1', 'Uddin Jumana Jashim', 3.23, '+880-1621534769', 'jumana@ymail.com', '1234', 'CSE', 'jumana.JPG', 'Female', '0000-00-00'),
+(33, '12-21119-1', 'Alam, Maskurul', 3.26, '01743912055', 'alam@hotmail.com', '1234', 'CSSE', 'default-user.png', 'Male', '0000-00-00'),
+(34, '12-21130-1', 'Hasan, Mehedi', 2.78, '+880-1710975078', 'mehedi@rocketmail.com', '1234', 'CSE', 'default-user.png', 'Male', '0000-00-00'),
+(35, '12-20520-1', 'Israt,Fahmida', 3.56, '+880-1723217411', 'panda@yahoo.com', '1234', 'CSSE', 'pinkey.jpg', 'Female', '0000-00-00'),
+(36, '12-20397-1', 'Abrita, Samiha Islam', 3.82, '+880-1515245238', 'abrita@outlook.com', '1234', 'CSE', 'abrita.jpg', 'Female', '0000-00-00'),
+(37, '12-21094-1', 'Abrar,Faheem', 3.98, '+880-1515253396', 'faheem@gmail.com', '1234', 'CSE', 'faheem.jpg', 'Male', '0000-00-00'),
+(38, '12-21023-1', 'Abedin Md. Tahmidul', 3.78, '+880-1552380913', 'anik@ymail.com', '1234', 'CSE', 'anik.jpg', 'Male', '0000-00-00'),
+(39, '12-20142-1', 'Abedin, Md. Rashedul', 3.01, '+880-1673016974', 'rashedul@yahoo.com', '1234', 'CSE', 'rashed.jpg', 'Male', '0000-00-00'),
+(40, '12-20636-1', 'Faize, Md. Sadik', 3.27, '+880-1741341060', 'sadik@gmail.com', '1234', 'CSE', 'sohan.jpg', 'Male', '0000-00-00'),
+(41, '12-20781-1', 'Uddin, Md. Sadman Sakib', 3.68, '01785439727', 'sadmansakib@ymail.com', '1234', 'CSE', 'default-user.png', 'Male', '0000-00-00'),
+(42, '12-20566-1', 'Mansur, Ryan', 3.59, '+880-1558354442', 'ryan@ymail.com', '1234', 'CSSE', 'default-user.png', 'Male', '0000-00-00'),
+(43, '12-21122-1', 'Selim, Rayan', 3.42, '01925479615', 'rselim@live.com', '1234', 'CSSE', 'default-user.png', 'Male', '0000-00-00'),
+(44, '12-20305-1', 'Khan, Sakib', 2.82, '+880-1736666712', 'sakibkhan@yahoo.com', '1234', 'CIS', 'tanzim.jpg', 'Male', '0000-00-00'),
+(45, '12-20609-1', 'Silvia, Israt Jahan', 3.43, '01678942537', 'silvi@gmail.com', '1234', 'CSSE', 'default-user.png', 'Female', '0000-00-00'),
+(46, '12-20310-1', 'Ahmad, Rafat', 3.59, '+880-1553264372', 'rafat@outlook.com', '1234', 'CSSE', 'rafat.jpg', 'Male', '0000-00-00'),
+(47, '12-20140-1', 'Islam Md. Zahidul', 3.22, '01552479613', 'zahidul@rocketmail.com', '1234', 'SE', 'zahid.jpg', 'Male', '0000-00-00'),
+(48, '12-21020-1', 'Shanto mahmud Hossain', 3.47, '+880-1849396922', 'shanto@gmail.com', '1234', 'CSE', 'shanto.jpg', 'Male', '0000-00-00'),
+(49, '12-20731-1', 'Islam, Md Shadmanul', 3.9, '01645967435', 'shadmanul@live.com', '1234', 'CSE', 'shadmanul.jpg', 'Male', '0000-00-00'),
+(50, '12-20721-1', 'Saha, Koushik', 3.77, '+880-1920859131', 'koushik@live.com', '1234', 'CSE', 'koushik.jpg', 'Male', '0000-00-00'),
+(51, '12-21003-1', 'Islam, Tawhid Al ', 3.99, '+880-1622036696', 'tawhidvai@gmail.com', '1234', 'CSE', 'Tawhid.jpg', 'Male', '1992-01-04'),
+(52, '12-20981-1', 'Rahman, Sajidur', 3.96, '+8801674242999', 'sajid_reznov9185@live.com', '1234', 'CSE', 'sajid.jpg', 'Male', '1992-10-31'),
 (53, '11-52486-1', 'Maher Mahmud Nishan', 2.75, '+880-1771588210', 'maheer@yahoo.com', '1234', 'CSSE', 'maheer.jpg', 'Male', '1992-02-24'),
-(54, '12-20502-1', 'Bonna, Jannatul Ferdous', 3.72, '+880-1765342899', 'bonna@yahoo.com', '1234', 'CSE', 'bonna.jpg', 'Female', '1992-07-26');
+(54, '12-20502-1', 'Bonna, Jannatul Ferdous', 3.72, '+880-1765342899', 'bonna@yahoo.com', '1234', 'CSE', 'bonna.jpg', 'Female', '1992-07-26'),
+(55, '12-20664-1', 'Keya, rashika Tasnim', 3.62, '+880-1676119628', 'rashika_tasnim@yahoo.com', '1234', 'CSE', 'keya.jpg', 'Female', '1992-05-18');
 
 -- --------------------------------------------------------
 
@@ -410,7 +411,7 @@ INSERT INTO `teacher_student_course` (`t_s_c_id`, `s_id`, `t_id`, `c_id`) VALUES
 (10, 9, 1, 2),
 (11, 10, 1, 2),
 (12, 11, 1, 2),
-(13, 12, 1, 2),
+(46, 55, 1, 2),
 (14, 13, 1, 2),
 (15, 14, 1, 2),
 (16, 15, 1, 2),
@@ -427,11 +428,11 @@ INSERT INTO `teacher_student_course` (`t_s_c_id`, `s_id`, `t_id`, `c_id`) VALUES
 (27, 26, 1, 2),
 (28, 27, 1, 2),
 (29, 28, 1, 2),
-(30, 29, 1, 2),
+(45, 51, 1, 2),
 (42, 54, 1, 2),
 (32, 31, 1, 2),
 (33, 32, 1, 2),
-(34, 33, 1, 2),
+(44, 52, 1, 2),
 (35, 34, 1, 2),
 (36, 35, 1, 2),
 (37, 36, 1, 2),
@@ -512,7 +513,7 @@ ALTER TABLE `teacher_student_course`
 -- AUTO_INCREMENT for table `attendinfo`
 --
 ALTER TABLE `attendinfo`
-  MODIFY `att_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'attendence id', AUTO_INCREMENT=44;
+  MODIFY `att_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'attendence id', AUTO_INCREMENT=47;
 --
 -- AUTO_INCREMENT for table `authority`
 --
@@ -527,7 +528,7 @@ ALTER TABLE `course`
 -- AUTO_INCREMENT for table `course_student_marks`
 --
 ALTER TABLE `course_student_marks`
-  MODIFY `c_s_m_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'course student marks id', AUTO_INCREMENT=44;
+  MODIFY `c_s_m_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'course student marks id', AUTO_INCREMENT=47;
 --
 -- AUTO_INCREMENT for table `department`
 --
@@ -547,7 +548,7 @@ ALTER TABLE `information`
 -- AUTO_INCREMENT for table `student`
 --
 ALTER TABLE `student`
-  MODIFY `s_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'student id', AUTO_INCREMENT=55;
+  MODIFY `s_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'student id', AUTO_INCREMENT=56;
 --
 -- AUTO_INCREMENT for table `teacher`
 --
@@ -557,7 +558,7 @@ ALTER TABLE `teacher`
 -- AUTO_INCREMENT for table `teacher_student_course`
 --
 ALTER TABLE `teacher_student_course`
-  MODIFY `t_s_c_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'id', AUTO_INCREMENT=44;
+  MODIFY `t_s_c_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'id', AUTO_INCREMENT=47;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
