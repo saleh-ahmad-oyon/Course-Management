@@ -75,7 +75,7 @@
                                     <form action="<?php echo SERVER; ?>/controller/editStuBasicInfoSuccess" method="post" enctype="multipart/form-data" >
                                         <div class="form-group" style="vertical-align: middle">
                                             <label>Profile Picture</label>
-                                            <input type="file" name="profilepic" accept='image/*' id="input-file-now" class="dropify" data-default-file="<?php echo studentpp, '/', htmlentities(stripslashes($row['s_image'])); ?>" />
+                                            <input type="file" name="profilepic" accept='image/*' id="input-file-now" class="dropify" data-default-file="<?php echo STUDENTPP, '/', htmlentities(stripslashes($row['s_image'])); ?>" />
                                         </div>
                                         <div class="form-group">
                                             <div class="input-group">

@@ -14,7 +14,7 @@
 				}
 
 				elseif(isset($_SESSION['stud'])){
-					echo '<img src="'.studentpp.'/'.returnStdentPic($_SESSION['sid']).'" alt="propic"style="height: 18px;width: 17px;border-radius: 2px;" />', '<span>   '.$_SESSION['stud'].'</span>';
+					echo '<img src="'.STUDENTPP.'/'.returnStdentPic($_SESSION['sid']).'" alt="propic"style="height: 18px;width: 17px;border-radius: 2px;" />', '<span>   '.$_SESSION['stud'].'</span>';
 				}
 				elseif(isset($_SESSION['authority'])){
 					echo '<i class="fa fa-user"></i>', '<span>   '.$_SESSION['authority'].'</span>';

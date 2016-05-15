@@ -94,7 +94,7 @@
                                         </div>
                                         <div class="form-group">
                                             <label>Upload an Image</label>
-                                            <input type="file" name="teacherpic" accept='image/*' id="input-file-now" class="dropify" data-default-file="<?php echo studentpp, '/default-user.png'; ?>" />
+                                            <input type="file" name="teacherpic" accept='image/*' id="input-file-now" class="dropify" data-default-file="<?php echo STUDENTPP, '/default-user.png'; ?>" />
                                         </div>
                                         <div class="form-group">
                                                 <button type="submit" name="addTeacher" class="btn btn-block btn-primary"><i class="fa fa-plus-circle"></i>&nbsp;&nbsp;ADD</button>
@@ -150,7 +150,7 @@
                                         </div>
                                         <div class="form-group">
                                             <label>Upload an Image</label>
-                                            <input type="file" name="stupic" accept='image/*' id="input-file-now" class="dropify" data-default-file="<?php echo studentpp, '/default-user.png'; ?>" />
+                                            <input type="file" name="stupic" accept='image/*' id="input-file-now" class="dropify" data-default-file="<?php echo STUDENTPP, '/default-user.png'; ?>" />
                                         </div>
                                         <div class="form-group">
                                             <button type="submit" name="addStudent" class="btn btn-block btn-primary"><i class="fa fa-plus-circle"></i>&nbsp;&nbsp;ADD</button>

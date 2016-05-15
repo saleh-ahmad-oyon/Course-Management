@@ -28,7 +28,7 @@
 			    height: 380px;
 			    background-position: center;
                 <?php if($student): ?>
-				background-image: url(<?php echo studentpp, '/', htmlentities(stripslashes($row['s_image'])); ?>);
+				background-image: url(<?php echo STUDENTPP, '/', htmlentities(stripslashes($row['s_image'])); ?>);
                 <?php elseif($teacher): ?>
 				background-image: url(<?php echo TEACHERPP, '/', htmlentities(stripslashes($row['t_image'])); ?>);
                 <?php endif; ?>
