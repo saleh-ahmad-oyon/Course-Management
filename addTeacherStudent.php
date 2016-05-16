@@ -55,7 +55,7 @@
                             <div class="col-md-4">
                                 <?php if($_GET['id'] == 1): ?>
                                     <h3 class="text-center"><i><b><ins>Teacher Registration</ins></b></i></h3><br/><br/>
-                                    <form action="<?php echo SERVER; ?>/controller/addStudentTeacherSuccess" method="post" onsubmit="return confirmation();" enctype="multipart/form-data">
+                                    <form action="<?php echo SERVER; ?>/controller/addStudentTeacher" method="post" onsubmit="return confirmation();" enctype="multipart/form-data">
                                         <div class="form-group">
                                             <label>Name</label>
                                             <input type="text" class="form-control onlyChars" placeholder="Full Name" name="tname" title="name">
@@ -102,7 +102,7 @@
                                     </form>
                                 <?php elseif($_GET['id'] == 2): ?>
                                     <h3 class="text-center"><i><b><ins>Student Registration</ins></b></i></h3><br/><br/>
-                                    <form action="<?php echo SERVER; ?>/controller/addStudentTeacherSuccess" method="post" onsubmit="return confirmation();" enctype="multipart/form-data">
+                                    <form action="<?php echo SERVER; ?>/controller/addStudentTeacher" method="post" onsubmit="return confirmation();" enctype="multipart/form-data">
                                         <div class="form-group">
                                             <label>Name</label>
                                             <input type="text" class="onlyChars form-control" placeholder="Full Name" name="fullname" title="Name">
