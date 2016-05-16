@@ -1,4 +1,9 @@
 <?php
+/**
+ * @author Saleh Ahmad
+ * @author My Name <oyon@nooblonely.com>
+ * @copyright 2015-2016 Noob Lonely
+ */
 
 /*===== Session Starts =====*/
 session_start();

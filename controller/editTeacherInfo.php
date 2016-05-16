@@ -1,9 +1,14 @@
 <?php
+/**
+ * @author Saleh Ahmad
+ * @author My Name <oyon@nooblonely.com>
+ * @copyright 2015-2016 Noob Lonely
+ */
 
-//===== Session Starts ======
+/*===== Session Starts ======*/
 session_start();
 
-//===== Required Files =====
+/*===== Required Files =====*/
 require '../model/db.php';
 require 'define.php';
 
