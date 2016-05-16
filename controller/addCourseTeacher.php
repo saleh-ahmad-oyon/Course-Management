@@ -15,7 +15,7 @@ require 'define.php';
 if (isset($_POST['addCot'])) {
     $id          = $_POST['id2'];
     $teacherInfo = explode(" ", $_POST['teacher']);
-    $tAiubId     =  $teacherInfo[0];
+    $tAiubId     = $teacherInfo[0];
 
     if (isset($_POST['teacher'])) {
         $tid = getTId($tAiubId);
