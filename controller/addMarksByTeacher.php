@@ -9,7 +9,7 @@
 require '../model/db.php';
 require 'define.php';
 
-if (isset($_POST['addMidBestTwo'])) {  /** Add Best Two Quiz Marks in Mid */
+if (isset($_POST['addMidBestTwo'])) {
 
     /**
      * @var int     $cid    Course ID
@@ -20,9 +20,12 @@ if (isset($_POST['addMidBestTwo'])) {  /** Add Best Two Quiz Marks in Mid */
 	$sid  = $_POST['sid'];
 	$mark = $_POST['mark'];
 
+    /** Add Best Two Quiz Marks in Mid */
 	addMidBestTwo($cid, $sid, $mark);
+
+    /** @link Mark Details */
 	header('Location: '.SERVER.'/detailsMark?id1='.$cid.'&id2='.$sid.'');
-} elseif (isset($_POST['addFinalBestTwo'])) {  /** Add Best Two Quiz Marks in Final */
+} elseif (isset($_POST['addFinalBestTwo'])) {
 
     /**
      * @var int     $cid    Course ID
@@ -33,9 +36,12 @@ if (isset($_POST['addMidBestTwo'])) {  /** Add Best Two Quiz Marks in Mid */
 	$sid  = $_POST['sid'];
 	$mark = $_POST['mark'];
 
+    /** Add Best Two Quiz Marks in Final */
 	addFinalBestTwo($cid, $sid, $mark);
+
+    /** @link Mark Details */
 	header('Location: '.SERVER.'/detailsMark?id1='.$cid.'&id2='.$sid.'');
-} elseif (isset($_POST['addMidTotal'])) {  /** Add Total Marks in Mid */
+} elseif (isset($_POST['addMidTotal'])) {
 
     /**
      * @var int     $cid    Course ID
@@ -46,9 +52,12 @@ if (isset($_POST['addMidBestTwo'])) {  /** Add Best Two Quiz Marks in Mid */
 	$sid  = $_POST['sid'];
 	$mark = $_POST['mark'];
 
+    /** Add Total Marks in Mid */
 	addMidTotal($cid, $sid, $mark);
+
+    /** @link Mark Details */
 	header('Location: '.SERVER.'/detailsMark?id1='.$cid.'&id2='.$sid.'');
-} elseif (isset($_POST['addFinalTotal'])) {  /** Add Total Marks in Final */
+} elseif (isset($_POST['addFinalTotal'])) {
 
     /**
      * @var int     $cid    Course ID
@@ -59,9 +68,12 @@ if (isset($_POST['addMidBestTwo'])) {  /** Add Best Two Quiz Marks in Mid */
 	$sid  = $_POST['sid'];
 	$mark = $_POST['mark'];
 
+    /** Add Total Marks in Final */
 	addFinalTotal($cid, $sid, $mark);
+
+    /** @link Mark Details */
 	header('Location: '.SERVER.'/detailsMark?id1='.$cid.'&id2='.$sid.'');
-} elseif (isset($_POST['addGrandTotal'])) {  /** Add Grand Total Marks */
+} elseif (isset($_POST['addGrandTotal'])) {
 
     /**
      * @var int     $cid    Course ID
@@ -72,7 +84,10 @@ if (isset($_POST['addMidBestTwo'])) {  /** Add Best Two Quiz Marks in Mid */
 	$sid  = $_POST['sid'];
 	$mark = $_POST['mark'];
 
+    /** Add Grand Total Marks */
 	addGrandTotal($cid, $sid, $mark);
+
+    /** @link Mark Details */
 	header('Location: '.SERVER.'/detailsMark?id1='.$cid.'&id2='.$sid.'');
 } else {
 
