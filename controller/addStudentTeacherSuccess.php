@@ -21,6 +21,9 @@ if (isset($_POST['addTeacher'])) {
     $date          = str_replace('/', '-', $dob);
     $date          = date('Y-m-d', strtotime($date));
 
+    /**
+     * @filesource
+     */
     $target_dir    = '../assets/img/teacher/';
     $fn            = $_FILES["teacherpic"]["name"];
     $target_file   = $target_dir . basename($fn);

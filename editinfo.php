@@ -72,7 +72,7 @@
                                 <div class="col-md-4"></div>
                                 <div class="col-md-4">
                                     <?php if($student): ?>
-                                    <form action="<?php echo SERVER; ?>/controller/editStuBasicInfoSuccess" method="post" enctype="multipart/form-data" >
+                                    <form action="<?php echo SERVER; ?>/controller/editStuInfo" method="post" enctype="multipart/form-data" >
                                         <div class="form-group" style="vertical-align: middle">
                                             <label>Profile Picture</label>
                                             <input type="file" name="profilepic" accept='image/*' id="input-file-now" class="dropify" data-default-file="<?php echo STUDENTPP, '/', htmlentities(stripslashes($row['s_image'])); ?>" />
@@ -138,7 +138,7 @@
                                         </div>
                                     </form>
                                     <?php elseif($teacher): ?>
-                                        <form action="<?php echo SERVER; ?>/controller/editTeacherBasicInfoSuccess" method="post" enctype="multipart/form-data" >
+                                        <form action="<?php echo SERVER; ?>/controller/editTeacherInfo" method="post" enctype="multipart/form-data" >
                                             <div class="form-group" style="vertical-align: middle">
                                                 <label>Profile Picture</label>
                                                 <input type="file" name="profilepic" accept='image/*' id="input-file-now" class="dropify" data-default-file="<?php echo TEACHERPP, '/', htmlentities(stripslashes($row['t_image'])); ?>" />
