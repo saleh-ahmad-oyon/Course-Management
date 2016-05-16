@@ -9,7 +9,7 @@
 require '../model/db.php';
 require 'define.php';
 
-if (isset($_POST['addMidBestTwo'])) {  //===== Add Best Two Quiz Marks in Mid =====
+if (isset($_POST['addMidBestTwo'])) {  /** Add Best Two Quiz Marks in Mid */
 
     /**
      * @var int     $cid    Course ID
@@ -22,7 +22,7 @@ if (isset($_POST['addMidBestTwo'])) {  //===== Add Best Two Quiz Marks in Mid ==
 
 	addMidBestTwo($cid, $sid, $mark);
 	header('Location: '.SERVER.'/detailsMark?id1='.$cid.'&id2='.$sid.'');
-} elseif (isset($_POST['addFinalBestTwo'])) {  //===== Add Best Two Quiz Marks in Final =====
+} elseif (isset($_POST['addFinalBestTwo'])) {  /** Add Best Two Quiz Marks in Final */
 
     /**
      * @var int     $cid    Course ID
@@ -35,7 +35,7 @@ if (isset($_POST['addMidBestTwo'])) {  //===== Add Best Two Quiz Marks in Mid ==
 
 	addFinalBestTwo($cid, $sid, $mark);
 	header('Location: '.SERVER.'/detailsMark?id1='.$cid.'&id2='.$sid.'');
-} elseif (isset($_POST['addMidTotal'])) {  //===== Add Total Marks in Mid =====
+} elseif (isset($_POST['addMidTotal'])) {  /** Add Total Marks in Mid */
 
     /**
      * @var int     $cid    Course ID
@@ -48,7 +48,7 @@ if (isset($_POST['addMidBestTwo'])) {  //===== Add Best Two Quiz Marks in Mid ==
 
 	addMidTotal($cid, $sid, $mark);
 	header('Location: '.SERVER.'/detailsMark?id1='.$cid.'&id2='.$sid.'');
-} elseif (isset($_POST['addFinalTotal'])) {  //===== Add Total Marks in Final =====
+} elseif (isset($_POST['addFinalTotal'])) {  /** Add Total Marks in Final */
 
     /**
      * @var int     $cid    Course ID
@@ -61,13 +61,13 @@ if (isset($_POST['addMidBestTwo'])) {  //===== Add Best Two Quiz Marks in Mid ==
 
 	addFinalTotal($cid, $sid, $mark);
 	header('Location: '.SERVER.'/detailsMark?id1='.$cid.'&id2='.$sid.'');
-} elseif (isset($_POST['addGrandTotal'])) {  //===== Add Grand Total Marks =====
+} elseif (isset($_POST['addGrandTotal'])) {  /** Add Grand Total Marks */
+
     /**
      * @var int     $cid    Course ID
      * @var int     $sid    Student ID
      * @var double  $mark   Grand Total Marks of Final Term
      */
-
 	$cid  = $_POST['cid'];
 	$sid  = $_POST['sid'];
 	$mark = $_POST['mark'];
@@ -75,5 +75,7 @@ if (isset($_POST['addMidBestTwo'])) {  //===== Add Best Two Quiz Marks in Mid ==
 	addGrandTotal($cid, $sid, $mark);
 	header('Location: '.SERVER.'/detailsMark?id1='.$cid.'&id2='.$sid.'');
 } else {
-	header('Location: '.SERVER.'');  /** @link Home Page */
+
+    /** @link Home Page */
+	header('Location: '.SERVER.'');
 }
