@@ -24,9 +24,16 @@ if (isset($_POST['addCot'])) {
     $course = $_POST['subject'];
 
     if ($_POST['teacher'] != '' && $_POST['subject'] != '') {
-        if (!checkDuplicateCourse($tid, $course)) {  //===== Checking if the Course is Assigned before to this Teacher =====
-            if (!checkCourse($course)) {  //===== Checking if the Course is assigned before =====
-                insertCourseTeacher($course, $tid);  //===== Assigning Course to the Teacher =====
+
+        /** Checking if the Course is Assigned before to this Teacher */
+        if (!checkDuplicateCourse($tid, $course)) {
+
+            /** Checking if the Course is assigned before */
+            if (!checkCourse($course)) {
+
+                /** Assigning Course to the Teacher */
+                insertCourseTeacher($course, $tid);
+                
                 echo '<script language="javascript">
                           alert("Successfully Assigned !!");
                           window.location="'.SERVER.'/addSubject?id='.$id.'";
