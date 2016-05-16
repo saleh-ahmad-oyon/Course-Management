@@ -25,7 +25,7 @@
                             <div class="col-md-12">
                                 <div class="text-center">
                                     <h3><ins><?php echo getCourseName($_GET['id']) ?></ins></h3><br />
-                                    <form action="<?php echo SERVER; ?>/controller/addStudentSuccess" method="post">
+                                    <form action="<?php echo SERVER; ?>/controller/addStudent" method="post">
                                         <div class="form-inline">
                                             <div class="form-group">
                                                 <label>AIUB ID</label>
