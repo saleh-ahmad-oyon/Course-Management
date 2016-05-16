@@ -5,7 +5,7 @@
  * @copyright 2015-2016 Noob Lonely
  */
 
-/*=====  =====*/
+/** Required Files */
 require '../model/db.php';
 require 'define.php';
 

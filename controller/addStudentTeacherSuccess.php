@@ -5,10 +5,10 @@
  * @copyright 2015-2016 Noob Lonely
  */
 
-/*===== Session Starts =====*/
+/** Session Starts */
 session_start();
 
-/*=====  Required Fies =====*/
+/**  Required Fies */
 require '../model/db.php';
 require 'define.php';
 
