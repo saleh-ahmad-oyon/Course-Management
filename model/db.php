@@ -1,14 +1,7 @@
 <?php
-	function db_conn(){
-		$SERVER = 'localhost';
-		$user = 'root';
-		$pass = '';
-		$db = 'course_management';
-		$conn = mysqli_connect($SERVER, $user, $pass, $db) or die(mysqli_connect_error());
-		
-		return $conn;
-	}
-	
+
+require_once 'db_conn.php';
+
 	function check_teacher_login($user, $pass){
 		$conn = db_conn();
 		$sql = "SELECT COUNT(*) as `num` FROM `teacher` WHERE `t_aiub_id` = '$user' and `t_pass` = '$pass'";
