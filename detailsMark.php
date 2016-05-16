@@ -150,7 +150,7 @@
 												<span title="">You've Given: <b><?php $givenMidQuizesMark = showMidBestTwo($_GET['id1'], $_GET['id2']); echo $givenMidQuizesMark; ?></b></span>
 											</div>
 											<div class="col-sm-5 col-xs-6 inline-form">
-												<form action="<?php echo SERVER; ?>/controller/addMarksByTeacher" method="post">
+												<form action="<?php echo SERVER; ?>/controller/addMarks" method="post">
 													<div class="form-inline">
 														<input type="number" step="0.01" min="0" max="40" name="mark" id='bestTwoMid' class="onlyFloat form-control" placeholder="Best Two" required="required"/>
 														<button type="submit" name="addMidBestTwo" data-toggle="tooltip" data-placement="top" title="Edit" class="btn btn-warning"><span class="glyphicon glyphicon-edit"></span></button>
@@ -208,7 +208,7 @@
 												<span title="">You've Given: <b><?php $midTotalMarks = showMidTotal($_GET['id1'], $_GET['id2']); echo $midTotalMarks; ?></b></span>
 											</div>
 											<div class="col-sm-5 col-xs-6 inline-form">
-												<form action="<?php echo SERVER; ?>/controller/addMarksByTeacher" method="post">
+												<form action="<?php echo SERVER; ?>/controller/addMarks" method="post">
 													<div class="form-inline">
 														<input type="number" step="0.01" min="0" max="100" name="mark" class="onlyFloat form-control" placeholder="Total" required="required" />
 														<button type="submit" name="addMidTotal" data-toggle="tooltip" data-placement="top" title="Edit" class="btn btn-warning"><span class="glyphicon glyphicon-edit"></span></button>
@@ -352,7 +352,7 @@
 												<span title="">You've Given: <b><?php $givenFinalBestTwo = showFinalBestTwo($_GET['id1'], $_GET['id2']); echo $givenFinalBestTwo; ?></b></span>
 											</div>
 											<div class="col-sm-5 col-xs-5 inline-form">
-												<form action="<?php echo SERVER; ?>/controller/addMarksByTeacher" method="post">
+												<form action="<?php echo SERVER; ?>/controller/addMarks" method="post">
 													<div class="form-inline">
 														<input type="number" step="0.01" min="0" max="40" name="mark" class="onlyFloat form-control" placeholder="Best Two" required="required" />
 														<button type="submit" name="addFinalBestTwo" data-toggle="tooltip" data-placement="top" title="Edit" class="btn btn-warning"><span class="glyphicon glyphicon-edit"></button>
@@ -413,7 +413,7 @@
 												<span title="">You've Given: <b><?php $finalTotalMarks = showFinalTotal($_GET['id1'], $_GET['id2']); echo $finalTotalMarks; ?></b></span>
 											</div>
 											<div class="col-sm-5 col-xs-6 inline-form">
-												<form action="<?php echo SERVER; ?>/controller/addMarksByTeacher" method="post">
+												<form action="<?php echo SERVER; ?>/controller/addMarks" method="post">
 													<div class="form-inline">
 														<input type="number" step="0.01" min="0" max="100" name="mark" class="onlyFloat form-control" placeholder="Total" required="required" />
 														<button type="submit" name="addFinalTotal" data-toggle="tooltip" data-placement="top" title="Edit" class="btn btn-warning"><span class="glyphicon glyphicon-edit"></span></button>
@@ -459,7 +459,7 @@
 												<span title="">You've Given: <b><?php $grandTotalMarksByTeacher = showGrandTotal($_GET['id1'], $_GET['id2']); echo $grandTotalMarksByTeacher; ?></b></span>
 											</div>
 											<div class="col-sm-5 col-xs-6 inline-form">
-												<form action="<?php echo SERVER; ?>/controller/addMarksByTeacher" method="post">
+												<form action="<?php echo SERVER; ?>/controller/addMarks" method="post">
 													<div class="form-inline">
 														<input type="number" step="0.01" min="0" max="100" name="mark" class="onlyFloat form-control" placeholder="Grand Total" required="required" style="width: 120px;" />
 														<button type="submit" name="addGrandTotal" class="btn btn-warning"><span class="glyphicon glyphicon-edit"></span></button>
