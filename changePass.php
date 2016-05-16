@@ -25,7 +25,7 @@
 							<div class="col-md-12">
 								<div class="col-md-4"></div>
 								<div class="col-md-4">
-									<form action="<?php echo SERVER; ?>/controller/changePassSuccess" method="post">
+									<form action="<?php echo SERVER; ?>/controller/changePass" method="post">
 										<table class="table table-bordered">
 											<tr>
 												<td><input type="password" name="oldPass" placeholder="Old Password" class="form-control" required="required" /></td>
