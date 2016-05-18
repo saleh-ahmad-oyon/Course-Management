@@ -24,6 +24,9 @@
                     <section>
                         <div class="row">
                             <div class="col-md-12">
+                                <div class="text-center">
+                                    <h3><ins><?php echo getCourseName($_GET['id']) ?></ins></h3>
+                                </div><br />
                                 <?php if(!count($outputString)): ?>
                                     <h3>No Data Found.</h3>
                                 <?php else: ?>

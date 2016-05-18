@@ -25,14 +25,14 @@
                     <section>
                         <div class="row">
                             <div class="col-md-12">
+                                <div class="text-center">
+                                    <h3><ins><?php echo getCourseName($_GET['id']) ?></ins></h3>
+                                </div><br />
+                                <?php if(!count($outputString)): ?>
+                                    <h3>No Data Found.</h3>
+                                <?php else: ?>
                                 <div class="col-md-1"></div>
                                 <div class="col-md-10">
-                                    <div class="text-center">
-                                        <h3><ins><?php echo getCourseName($_GET['id']) ?></ins></h3>
-                                    </div><br />
-                                    <?php if(!count($outputString)): ?>
-                                        <h3>No Data Found.</h3>
-                                    <?php else: ?>
                                         <table class="table table-bordered">
                                             <thead>
                                             <tr>
