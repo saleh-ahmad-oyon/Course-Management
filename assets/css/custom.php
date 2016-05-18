@@ -29,6 +29,20 @@ footer{
 .inline-form form{
 	display:inline-block;
 }
+.form-group.required label:after {
+    content:" *";
+    color:red;
+}
+
+.form-block{
+    border: 1px solid rgba(0,0,0,.075);
+    padding-top: 15px;
+    background-color: #f5f5f5;
+}
+
+.form-group label {
+    padding-top: 5px;
+}
 
 .hover-focus:hover{
   -webkit-transform: scale(1.05);
