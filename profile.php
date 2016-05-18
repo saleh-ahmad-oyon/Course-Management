@@ -108,7 +108,7 @@
                             <?php elseif($teacher): ?>
                                 <div class="col-md-12">
                                     <div class="col-md-4">
-                                        <div id="img-circle"></div>
+                                        <div id="img-circle" class="center-block"></div>
                                     </div>
                                     <div class="col-md-4"></div>
                                     <div class="col-md-4 padding20">
