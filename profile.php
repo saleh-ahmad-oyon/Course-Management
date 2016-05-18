@@ -54,7 +54,7 @@
                             <?php if($student): ?>
                             <div class="col-md-12">
                                 <div class="col-md-4">
-                                    <div id="img-circle"></div>
+                                    <div id="img-circle" class="center-block"></div>
                                 </div>
                                 <div class="col-md-4"></div>
                                 <div class="col-md-4 padding20">
@@ -103,6 +103,7 @@
                                         <a class="btn btn-primary" href="<?php echo SERVER; ?>/editinfo"><i class="fa fa-pencil"></i>&nbsp;&nbsp;Update</a>
                                     </div>
                                 </div>
+
                             </div>
                             <?php elseif($teacher): ?>
                                 <div class="col-md-12">
