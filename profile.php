@@ -53,8 +53,11 @@
                         <div class="row">
                             <?php if($student): ?>
                             <div class="col-md-12">
-                                <div class="col-md-4"></div>
                                 <div class="col-md-4">
+                                    <div id="img-circle"></div>
+                                </div>
+                                <div class="col-md-4"></div>
+                                <div class="col-md-4 padding20">
                                     <table class="table table-bordered">
                                         <tr>
                                             <td>ID</td>
@@ -100,14 +103,14 @@
                                         <a class="btn btn-primary" href="<?php echo SERVER; ?>/editinfo"><i class="fa fa-pencil"></i>&nbsp;&nbsp;Update</a>
                                     </div>
                                 </div>
-                                <div class="col-md-4">
-                                    <div id="img-circle"></div>
-                                </div>
                             </div>
                             <?php elseif($teacher): ?>
                                 <div class="col-md-12">
-                                    <div class="col-md-4"></div>
                                     <div class="col-md-4">
+                                        <div id="img-circle"></div>
+                                    </div>
+                                    <div class="col-md-4"></div>
+                                    <div class="col-md-4 padding20">
                                         <table class="table table-bordered">
                                             <tr>
                                                 <td>ID</td>
@@ -147,9 +150,6 @@
                                         <div class="text-center">
                                             <a class="btn btn-primary" href="<?php echo SERVER; ?>/editinfo"><i class="fa fa-pencil"></i>&nbsp;&nbsp;Update</a>
                                         </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div id="img-circle"></div>
                                     </div>
                                 </div>
                             <?php endif; ?>

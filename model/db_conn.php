@@ -6,7 +6,7 @@
  */
 
 /**
- * This method establishes a connection with the Database.
+ * Establish a connection with the Database.
  *
  * mysqli is used for the Database Connection
  *

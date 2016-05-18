@@ -1,2 +1,4 @@
 RewriteEngine on
+
+# Remove .php extension
 RewriteRule ^([^\.]+)$ $1.php [L]

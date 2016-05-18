@@ -43,7 +43,7 @@
                                         <?php foreach($outputString as $value):?>
                                             <tr>
                                                 <td>
-                                                    <a class="btn btn-default" href="<?php echo SERVER; ?>/studentCourse?id=<?php echo $value['c_id']; ?>"><?php echo $value['c_name']; ?></a>
+                                                    <a href="<?php echo SERVER; ?>/studentCourse?id=<?php echo $value['c_id']; ?>"><?php echo $value['c_name']; ?></a>
                                                 </td>
                                                 <td>
                                                     <?php echo $value['t_name']; ?>
