@@ -18,8 +18,8 @@ if (isset($_POST['attend'])) {
 		}
 	}
 	echo '<script language="javascript">
-			  alert("Attendence Confirmed !!");
-			  window.location="'.SERVER.'/teacherCourse?id='.$cid.'";
+			  alert("Attendance Confirmed !!");
+			  window.location="'.SERVER.'/teacher/course/'.$cid.'";
 		  </script>';
 } else {
 	header('Location: '.SERVER.'');

@@ -2,3 +2,9 @@ RewriteEngine on
 
 # Remove .php extension
 RewriteRule ^([^\.]+)$ $1.php [L]
+
+# Rewrite URL
+RewriteRule    teacher/course/([0-9])                    teacherCourse?id=$1
+RewriteRule    course/([0-9])/students                   studentlist?id=$1
+RewriteRule    course/([0-9])/addstudent                 addstudent?id=$1
+RewriteRule    course/([0-9])/attendance                 attendance?id=$1

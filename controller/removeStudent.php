@@ -23,7 +23,7 @@ if (isset($_POST['dltBtn'])) {
 
 	echo '<script language="javascript">
 		      alert("Successfully Removed !!");
-			  window.location="'.SERVER.'/studentlist?id='.$cid.'";
+			  window.location="'.SERVER.'/course/'.$cid.'/students";
 		  </script>';
 } else {
 	header('Location: '.SERVER.'');

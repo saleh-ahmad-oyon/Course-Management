@@ -27,7 +27,7 @@
                                     $tid = $_SESSION['tid'];
                                     $outputString = teacherCourse($tid);
                                     foreach($outputString as $value):?>
-                                    <a class="btn btn-default hover-focus" href="<?php echo SERVER; ?>/teacherCourse?id=<?php echo $value['c_id']; ?>"><?php echo $value['c_name']; ?></a><br /><br />
+                                    <a class="btn btn-default hover-focus" href="<?php echo SERVER; ?>/teacher/course/<?php echo $value['c_id']; ?>"><?php echo $value['c_name']; ?></a><br /><br />
                                     <?php endforeach; ?>
                                 <?php elseif(isset($_SESSION['stud'])):
                                     $sid = $_SESSION['sid'];

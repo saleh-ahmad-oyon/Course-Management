@@ -30,24 +30,24 @@ if (isset($_POST['addStud'])) {
 				
 				echo '<script language="javascript">
 					      alert("Successfully Added");
-						  window.location="'.SERVER.'/teacherCourse?id='.$cid.'";
+						  window.location="'.SERVER.'/teacher/course/'.$cid.'";
 					  </script>';
 			} else {
                 echo '<script language="javascript">
                           alert("ID has already inserted !!");
-						  window.location="'.SERVER.'/addStudent?id='.$cid.'";
+						  window.location="'.SERVER.'/course/'.$cid.'/addstudent";
 					  </script>';
 			}
 		} else {
             echo '<script language="javascript">
 				      alert("You cannot enter more than 40 students !!");
-					  window.location="'.SERVER.'/teacherCourse?id='.$cid.'";
+					  window.location="'.SERVER.'/teacher/course/'.$cid.'";
 				  </script>';
 		}
 	} else {
 		echo '<script language="javascript">
 			      alert("Student ID is Invalid !!");
-				  window.location="'.SERVER.'/addStudent?id='.$cid.'";
+				  window.location="'.SERVER.'/course/'.$cid.'/addstudent";
 			  </script>';
 	}
 } else {
