@@ -35,7 +35,9 @@
                                         <th>No.</th>
                                         <th>ID</th>
                                         <th>Name</th>
-                                        <th>Marks</th>
+                                        <th class="text-center">Mid</th>
+                                        <th class="text-center">Final</th>
+                                        <th class="text-center">Total</th>
                                         <th class="text-center">Action</th>
                                     </thead>
                                     <tbody>
@@ -44,9 +46,11 @@
                                                     <td><?php echo $i; ?></td>
                                                     <td><?php echo $value['s_aiub_id']; ?></td>
                                                     <td><?php echo $value['s_full_name']; ?></td>
-                                                    <td><?php echo $value['grand_final_total']; ?></td>
+                                                    <td class="text-center"><?php echo $value['mid_grade']; ?></td>
+                                                    <td class="text-center"><?php echo $value['final_grade']; ?></td>
+                                                    <td class="text-center"><?php echo $value['grand_final_grade']; ?></td>
                                                     <td class='text-center'>
-                                                        <a class='btn btn-info' href='<?php echo SERVER;?>/detailsMark?id1=<?php echo $_GET['id']; ?>&id2=<?php echo $value['s_id']; ?>' data-toggle="tooltip" data-placement="top" title="Mark Details"><span class='glyphicon glyphicon-info-sign font17 hidden-md hidden-sm'></span><span class="hidden-xs">  Details</span></a>
+                                                        <a class='btn btn-info' href='<?php echo SERVER;?>/course/<?php echo $_GET['id']; ?>/marks/<?php echo $value['s_id']; ?>' data-toggle="tooltip" data-placement="top" title="Mark Details"><span class='glyphicon glyphicon-info-sign font17 hidden-md hidden-sm'></span><span class="hidden-xs">  Details</span></a>
                                                     </td>
                                                 </tr>
                                         <?php $i++; ?>

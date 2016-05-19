@@ -24,7 +24,7 @@ if (isset($_POST['addMidBestTwo'])) {
 	addMidBestTwo($cid, $sid, $mark);
 
     /** @link Mark Details */
-	header('Location: '.SERVER.'/detailsMark?id1='.$cid.'&id2='.$sid.'');
+	header('Location: '.SERVER.'/course/'.$cid.'/marks/'.$sid.'');
 } elseif (isset($_POST['addFinalBestTwo'])) {
 
     /**
@@ -40,7 +40,7 @@ if (isset($_POST['addMidBestTwo'])) {
 	addFinalBestTwo($cid, $sid, $mark);
 
     /** @link Mark Details */
-	header('Location: '.SERVER.'/detailsMark?id1='.$cid.'&id2='.$sid.'');
+	header('Location: '.SERVER.'/course/'.$cid.'/marks/'.$sid.'');
 } elseif (isset($_POST['addMidTotal'])) {
 
     /**
@@ -56,7 +56,7 @@ if (isset($_POST['addMidBestTwo'])) {
 	addMidTotal($cid, $sid, $mark);
 
     /** @link Mark Details */
-	header('Location: '.SERVER.'/detailsMark?id1='.$cid.'&id2='.$sid.'');
+	header('Location: '.SERVER.'/course/'.$cid.'/marks/'.$sid.'');
 } elseif (isset($_POST['addFinalTotal'])) {
 
     /**
@@ -72,7 +72,7 @@ if (isset($_POST['addMidBestTwo'])) {
 	addFinalTotal($cid, $sid, $mark);
 
     /** @link Mark Details */
-	header('Location: '.SERVER.'/detailsMark?id1='.$cid.'&id2='.$sid.'');
+	header('Location: '.SERVER.'/course/'.$cid.'/marks/'.$sid.'');
 } elseif (isset($_POST['addGrandTotal'])) {
 
     /**
@@ -88,7 +88,7 @@ if (isset($_POST['addMidBestTwo'])) {
 	addGrandTotal($cid, $sid, $mark);
 
     /** @link Mark Details */
-	header('Location: '.SERVER.'/detailsMark?id1='.$cid.'&id2='.$sid.'');
+	header('Location: '.SERVER.'/course/'.$cid.'/marks/'.$sid.'');
 } else {
 
     /** @link Home Page */

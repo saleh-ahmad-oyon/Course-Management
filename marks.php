@@ -462,7 +462,7 @@
 												<form action="<?php echo SERVER; ?>/controller/addMarks" method="post">
 													<div class="form-inline">
 														<input type="number" step="0.01" min="0" max="100" name="mark" class="onlyFloat form-control" placeholder="Grand Total" required="required" style="width: 120px;" />
-														<button type="submit" name="addGrandTotal" class="btn btn-warning"><span class="glyphicon glyphicon-edit"></span></button>
+														<button type="submit" name="addGrandTotal" data-toggle="tooltip" data-placement="top" title="Edit" class="btn btn-warning"><span class="glyphicon glyphicon-edit"></span></button>
 														<input type="hidden" name="cid" value="<?php echo $_GET['id1']; ?>"/>
 														<input type="hidden" name="sid" value="<?php echo $_GET['id2']; ?>"/>
 														<?php

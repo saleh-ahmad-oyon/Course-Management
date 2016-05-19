@@ -367,7 +367,7 @@ require_once 'db_conn.php';
 	function getStudentListExam($cid)
     {
 		$conn = db_conn();
-		$sql = "SELECT student.s_id, `s_aiub_id`, `s_full_name`, course_student_marks.grand_final_total FROM `student`
+		$sql = "SELECT student.s_id, `s_aiub_id`, `s_full_name`, course_student_marks.mid_grade, course_student_marks.final_grade, course_student_marks.grand_final_grade FROM `student`
 INNER JOIN `course_student_marks` ON student.s_id = course_student_marks.s_id
 WHERE course_student_marks.c_id = $cid ORDER BY student.s_full_name";
 		$result = mysqli_query($conn, $sql);

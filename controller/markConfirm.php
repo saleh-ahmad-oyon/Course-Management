@@ -18,14 +18,14 @@ if (isset($_POST['addMarks'])) {
 
 	if ($name == 'mid' || $name == 'final') {
 		if (checkMid($name, $sid, $cid)) {
-			header('Location: '.SERVER.'/detailsMark?id1='.$cid.'&id2='.$sid.'&err=1');
+			header('Location: '.SERVER.'/course/'.$cid.'/marks/'.$sid.'&err=1');
 		} else {
 			addQuiz1Marks($sid, $cid, $marks, $dateTime, $name);
-			header('Location: '.SERVER.'/detailsMark?id1='.$cid.'&id2='.$sid.'');
+			header('Location: '.SERVER.'/course/'.$cid.'/marks/'.$sid.'');
 		}
 	} else {
 		addQuiz1Marks($sid, $cid, $marks, $dateTime, $name);
-		header('Location: '.SERVER.'/detailsMark?id1='.$cid.'&id2='.$sid.'');
+		header('Location: '.SERVER.'/course/'.$cid.'/marks/'.$sid.'');
 	}
 } else {
 	header('Location: '.SERVER.'');

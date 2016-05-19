@@ -21,7 +21,7 @@ if (isset($_POST['dltMarks'])) {
 
     echo '<script language="javascript">
               alert("Successfully Deleted !!");
-              window.location="'.SERVER.'/detailsMark?id1='.$cid.'&id2='.$studid.'";
+              window.location="'.SERVER.'/course/'.$cid.'/marks/'.$studid.'";
           </script>';
 } else {
     header('Location: '.SERVER.'');

@@ -24,7 +24,7 @@ if (isset($_POST['editMarks'])) {
 
 	echo '<script language="javascript">
 			  alert("Successfully Edited !!");
-			  window.location="'.SERVER.'/detailsMark?id1='.$cid.'&id2='.$studid.'";
+			  window.location="'.SERVER.'/course/'.$cid.'/marks/'.$studid.'";
 		  </script>';
 } else {
 	header('Location: '.SERVER.'');
