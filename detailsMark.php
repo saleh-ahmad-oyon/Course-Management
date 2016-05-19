@@ -64,10 +64,10 @@
 														</div>
 												</form>&nbsp;&nbsp;
 												<form>
-													<a class="btn btn-info" data-toggle="tooltip" data-placement="top" title="Edit" href="<?php echo SERVER; ?>/studMarksEdit?id1=<?php echo $_GET['id1'] ?>&id2=<?php echo $_GET['id2'] ?>&id3=<?php echo $q1 ?>"><span class="glyphicon glyphicon-edit"></span></a>
+													<a class="btn btn-info" data-toggle="tooltip" data-placement="top" title="Edit" href="<?php echo SERVER; ?>/editmarks?id1=<?php echo $_GET['id1'] ?>&id2=<?php echo $_GET['id2'] ?>&id3=<?php echo $q1 ?>"><span class="glyphicon glyphicon-edit"></span></a>
 												</form>&nbsp;&nbsp;
 												<form>
-													<a class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Delete" href="<?php echo SERVER; ?>/stuMarksDelete?id1=<?php echo $_GET['id1'] ?>&id2=<?php echo $_GET['id2'] ?>&id3=<?php echo $q1 ?>"><span class="glyphicon glyphicon-trash"></span></a>
+													<a class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Delete" href="<?php echo SERVER; ?>/deletemarks?id1=<?php echo $_GET['id1'] ?>&id2=<?php echo $_GET['id2'] ?>&id3=<?php echo $q1 ?>"><span class="glyphicon glyphicon-trash"></span></a>
 												</form>
 											</div>
 										</div>
@@ -97,10 +97,10 @@
 													</div>
 												</form>&nbsp;&nbsp;
 												<form>
-													<a class="btn btn-info" data-toggle="tooltip" data-placement="top" title="Edit" href="<?php echo SERVER; ?>/studMarksEdit?id1=<?php echo $_GET['id1'] ?>&id2=<?php echo $_GET['id2'] ?>&id3=<?php echo $q2 ?>"><span class="glyphicon glyphicon-edit"></span></a>
+													<a class="btn btn-info" data-toggle="tooltip" data-placement="top" title="Edit" href="<?php echo SERVER; ?>/editmarks?id1=<?php echo $_GET['id1'] ?>&id2=<?php echo $_GET['id2'] ?>&id3=<?php echo $q2 ?>"><span class="glyphicon glyphicon-edit"></span></a>
 												</form>&nbsp;&nbsp;
 												<form>
-													<a class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Delete" href="<?php echo SERVER; ?>/stuMarksDelete?id1=<?php echo $_GET['id1'] ?>&id2=<?php echo $_GET['id2'] ?>&id3=<?php echo $q2 ?>"><span class="glyphicon glyphicon-trash"></span></a>
+													<a class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Delete" href="<?php echo SERVER; ?>/deletemarks?id1=<?php echo $_GET['id1'] ?>&id2=<?php echo $_GET['id2'] ?>&id3=<?php echo $q2 ?>"><span class="glyphicon glyphicon-trash"></span></a>
 												</form>
 											</div>
 										</div>
@@ -130,10 +130,10 @@
 													</div>
 												</form>&nbsp;&nbsp;
 												<form>
-													<a class="btn btn-info" data-toggle="tooltip" data-placement="top" title="Edit" href="<?php echo SERVER; ?>/studMarksEdit?id1=<?php echo $_GET['id1'] ?>&id2=<?php echo $_GET['id2'] ?>&id3=<?php echo $q3 ?>"><span class="glyphicon glyphicon-edit"></span></a>
+													<a class="btn btn-info" data-toggle="tooltip" data-placement="top" title="Edit" href="<?php echo SERVER; ?>/editmarks?id1=<?php echo $_GET['id1'] ?>&id2=<?php echo $_GET['id2'] ?>&id3=<?php echo $q3 ?>"><span class="glyphicon glyphicon-edit"></span></a>
 												</form>&nbsp;&nbsp;
 												<form>
-													<a class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Delete" href="<?php echo SERVER; ?>/stuMarksDelete?id1=<?php echo $_GET['id1'] ?>&id2=<?php echo $_GET['id2'] ?>&id3=<?php echo $q3 ?>"><span class="glyphicon glyphicon-trash"></span></a>
+													<a class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Delete" href="<?php echo SERVER; ?>/deletemarks?id1=<?php echo $_GET['id1'] ?>&id2=<?php echo $_GET['id2'] ?>&id3=<?php echo $q3 ?>"><span class="glyphicon glyphicon-trash"></span></a>
 												</form>
 											</div>
 										</div>
@@ -190,7 +190,7 @@
 													</div>
 												</form>&nbsp;&nbsp;
 												<form>
-													<a class="btn btn-info" data-toggle="tooltip" data-placement="top" title="Edit" href="<?php echo SERVER; ?>/studMarksEdit?id1=<?php echo $_GET['id1'] ?>&id2=<?php echo $_GET['id2'] ?>&id3=<?php echo $mid ?>"><span class="glyphicon glyphicon-edit"></span></a>
+													<a class="btn btn-info" data-toggle="tooltip" data-placement="top" title="Edit" href="<?php echo SERVER; ?>/editmarks?id1=<?php echo $_GET['id1'] ?>&id2=<?php echo $_GET['id2'] ?>&id3=<?php echo $mid ?>"><span class="glyphicon glyphicon-edit"></span></a>
 												</form>
 											</div>
 										</div>
@@ -266,10 +266,10 @@
 													</div>
 												</form>&nbsp;&nbsp;
 												<form>
-													<a class="btn btn-info" data-toggle="tooltip" data-placement="top" title="Edit" href="<?php echo SERVER; ?>/studMarksEdit?id1=<?php echo $_GET['id1'] ?>&id2=<?php echo $_GET['id2'] ?>&id3=<?php echo $q4 ?>"><span class="glyphicon glyphicon-edit"></span></a>
+													<a class="btn btn-info" data-toggle="tooltip" data-placement="top" title="Edit" href="<?php echo SERVER; ?>/editmarks?id1=<?php echo $_GET['id1'] ?>&id2=<?php echo $_GET['id2'] ?>&id3=<?php echo $q4 ?>"><span class="glyphicon glyphicon-edit"></span></a>
 												</form>&nbsp;&nbsp;
 												<form>
-													<a class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Delete" href="<?php echo SERVER; ?>/stuMarksDelete?id1=<?php echo $_GET['id1'] ?>&id2=<?php echo $_GET['id2'] ?>&id3=<?php echo $q4 ?>"><span class="glyphicon glyphicon-trash"></span></a>
+													<a class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Delete" href="<?php echo SERVER; ?>/deletemarks?id1=<?php echo $_GET['id1'] ?>&id2=<?php echo $_GET['id2'] ?>&id3=<?php echo $q4 ?>"><span class="glyphicon glyphicon-trash"></span></a>
 												</form>
 											</div>
 										</div>
@@ -299,10 +299,10 @@
 													</div>
 												</form>&nbsp;&nbsp;
 												<form>
-													<a class="btn btn-info" data-toggle="tooltip" data-placement="top" title="Edit" href="<?php echo SERVER; ?>/studMarksEdit?id1=<?php echo $_GET['id1'] ?>&id2=<?php echo $_GET['id2'] ?>&id3=<?php echo $q5 ?>"><span class="glyphicon glyphicon-edit"></span></a>
+													<a class="btn btn-info" data-toggle="tooltip" data-placement="top" title="Edit" href="<?php echo SERVER; ?>/editmarks?id1=<?php echo $_GET['id1'] ?>&id2=<?php echo $_GET['id2'] ?>&id3=<?php echo $q5 ?>"><span class="glyphicon glyphicon-edit"></span></a>
 												</form>&nbsp;&nbsp;
 												<form>
-													<a class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Delete" href="<?php echo SERVER; ?>/stuMarksDelete?id1=<?php echo $_GET['id1'] ?>&id2=<?php echo $_GET['id2'] ?>&id3=<?php echo $q5 ?>"><span class="glyphicon glyphicon-trash"></span></a>
+													<a class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Delete" href="<?php echo SERVER; ?>/deletemarks?id1=<?php echo $_GET['id1'] ?>&id2=<?php echo $_GET['id2'] ?>&id3=<?php echo $q5 ?>"><span class="glyphicon glyphicon-trash"></span></a>
 												</form>
 											</div>
 										</div>
@@ -332,10 +332,10 @@
 													</div>
 												</form>&nbsp;&nbsp;
 												<form>
-													<a class="btn btn-info" data-toggle="tooltip" data-placement="top" title="Edit" href="<?php echo SERVER; ?>/studMarksEdit?id1=<?php echo $_GET['id1'] ?>&id2=<?php echo $_GET['id2'] ?>&id3=<?php echo $q6 ?>"><span class="glyphicon glyphicon-edit"></span></a>
+													<a class="btn btn-info" data-toggle="tooltip" data-placement="top" title="Edit" href="<?php echo SERVER; ?>/editmarks?id1=<?php echo $_GET['id1'] ?>&id2=<?php echo $_GET['id2'] ?>&id3=<?php echo $q6 ?>"><span class="glyphicon glyphicon-edit"></span></a>
 												</form>&nbsp;&nbsp;
 												<form>
-													<a class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Delete" href="<?php echo SERVER; ?>/stuMarksDelete?id1=<?php echo $_GET['id1'] ?>&id2=<?php echo $_GET['id2'] ?>&id3=<?php echo $q6 ?>"><span class="glyphicon glyphicon-trash"></span></a>
+													<a class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Delete" href="<?php echo SERVER; ?>/deletemarks?id1=<?php echo $_GET['id1'] ?>&id2=<?php echo $_GET['id2'] ?>&id3=<?php echo $q6 ?>"><span class="glyphicon glyphicon-trash"></span></a>
 												</form>
 											</div>
 										</div>
@@ -393,7 +393,7 @@
 													</div>
 												</form>&nbsp;&nbsp;
 												<form>
-													<a class="btn btn-info" data-toggle="tooltip" data-placement="top" title="Edit" href="<?php echo SERVER; ?>/studMarksEdit?id1=<?php echo $_GET['id1'] ?>&id2=<?php echo $_GET['id2'] ?>&id3=<?php echo $final ?>"><span class="glyphicon glyphicon-edit"></span></a>
+													<a class="btn btn-info" data-toggle="tooltip" data-placement="top" title="Edit" href="<?php echo SERVER; ?>/editmarks?id1=<?php echo $_GET['id1'] ?>&id2=<?php echo $_GET['id2'] ?>&id3=<?php echo $final ?>"><span class="glyphicon glyphicon-edit"></span></a>
 												</form>
 											</div>
 										</div>
