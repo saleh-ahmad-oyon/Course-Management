@@ -1,5 +1,5 @@
-<?php require 'session.php'; 
-	if(!isset($_SESSION['teacher']) && !isset($_SESSION['stud']) && !isset($_SESSION['authority'])){
+<?php require 'session.php';
+	if (!isset($_SESSION['teacher']) && !isset($_SESSION['stud']) && !isset($_SESSION['authority'])) {
 		header('Location: '.SERVER.'');
 	}
 ?>
