@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: May 15, 2016 at 09:43 PM
+-- Generation Time: May 20, 2016 at 08:39 AM
 -- Server version: 10.1.13-MariaDB
 -- PHP Version: 5.6.20
 
@@ -29,7 +29,7 @@ USE `course_management`;
 --
 
 CREATE TABLE `attendinfo` (
-  `att_id` int(11) NOT NULL COMMENT 'attendence id',
+  `att_id` int(11) NOT NULL COMMENT 'attendance id',
   `att_total` int(11) NOT NULL DEFAULT '0' COMMENT 'total attendance',
   `s_id` int(11) NOT NULL COMMENT 'student id',
   `c_id` int(11) NOT NULL COMMENT 'course id'
@@ -41,46 +41,46 @@ CREATE TABLE `attendinfo` (
 
 INSERT INTO `attendinfo` (`att_id`, `att_total`, `s_id`, `c_id`) VALUES
 (1, 0, 3, 1),
-(2, 0, 1, 2),
-(3, 0, 2, 2),
-(4, 0, 3, 2),
-(5, 0, 4, 2),
-(43, 0, 5, 2),
-(7, 0, 6, 2),
-(8, 0, 7, 2),
-(9, 0, 8, 2),
-(10, 0, 9, 2),
-(11, 0, 10, 2),
-(12, 0, 11, 2),
-(46, 0, 55, 2),
-(14, 0, 13, 2),
-(15, 0, 14, 2),
-(16, 0, 15, 2),
-(17, 0, 16, 2),
-(18, 0, 17, 2),
-(19, 0, 18, 2),
-(20, 0, 19, 2),
-(21, 0, 20, 2),
-(22, 0, 21, 2),
-(23, 0, 22, 2),
-(24, 0, 23, 2),
-(25, 0, 24, 2),
-(26, 0, 25, 2),
-(27, 0, 26, 2),
-(28, 0, 27, 2),
-(29, 0, 28, 2),
-(45, 0, 51, 2),
-(42, 0, 54, 2),
-(32, 0, 31, 2),
-(33, 0, 32, 2),
-(44, 0, 52, 2),
-(35, 0, 34, 2),
-(36, 0, 35, 2),
-(37, 0, 36, 2),
-(38, 0, 37, 2),
-(39, 0, 38, 2),
-(40, 0, 39, 2),
-(41, 0, 40, 2);
+(2, 2, 1, 2),
+(3, 1, 2, 2),
+(4, 2, 3, 2),
+(5, 1, 4, 2),
+(43, 2, 5, 2),
+(7, 2, 6, 2),
+(8, 2, 7, 2),
+(9, 2, 8, 2),
+(10, 2, 9, 2),
+(11, 2, 10, 2),
+(12, 2, 11, 2),
+(46, 2, 55, 2),
+(14, 2, 13, 2),
+(15, 2, 14, 2),
+(16, 2, 15, 2),
+(17, 1, 16, 2),
+(18, 2, 17, 2),
+(19, 2, 18, 2),
+(20, 2, 19, 2),
+(21, 2, 20, 2),
+(22, 2, 21, 2),
+(23, 2, 22, 2),
+(24, 2, 23, 2),
+(25, 2, 24, 2),
+(26, 1, 25, 2),
+(27, 2, 26, 2),
+(28, 1, 27, 2),
+(29, 2, 28, 2),
+(45, 2, 51, 2),
+(42, 2, 54, 2),
+(32, 2, 31, 2),
+(33, 2, 32, 2),
+(44, 2, 52, 2),
+(35, 2, 34, 2),
+(36, 2, 35, 2),
+(37, 2, 36, 2),
+(38, 2, 37, 2),
+(39, 2, 38, 2),
+(40, 2, 39, 2),
+(41, 2, 40, 2);
 
 -- --------------------------------------------------------
 
@@ -153,7 +153,7 @@ CREATE TABLE `course_student_marks` (
 --
 
 INSERT INTO `course_student_marks` (`c_s_m_id`, `c_id`, `s_id`, `mid_best_two`, `final_best_two`, `mid_total`, `mid_grade`, `final_grade`, `grand_final_grade`, `final_total`, `grand_final_total`) VALUES
-(1, 1, 3, 0, 0, 0, 'FAIL', 'FAIL', 'FAIL', 0, 0),
+(1, 1, 3, 40, 0, 100, 'A+', 'FAIL', 'FAIL', 0, 0),
 (2, 2, 1, 0, 0, 0, 'FAIL', 'FAIL', 'FAIL', 0, 0),
 (3, 2, 2, 0, 0, 0, 'FAIL', 'FAIL', 'FAIL', 0, 0),
 (4, 2, 3, 0, 0, 0, 'FAIL', 'FAIL', 'FAIL', 0, 0),
@@ -232,6 +232,17 @@ CREATE TABLE `exam` (
   `c_id` int(11) NOT NULL COMMENT 'course id'
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `exam`
+--
+
+INSERT INTO `exam` (`e_id`, `e_name`, `e_date`, `e_marks`, `s_id`, `c_id`) VALUES
+(1, 'quiz1', '2016-05-19 10:16:57', 18, 3, 1),
+(2, 'quiz2', '2016-05-19 10:17:05', 20, 3, 1),
+(3, 'quiz3', '2016-05-19 10:17:10', 17, 3, 1),
+(4, 'mid', '2016-05-19 10:17:21', 38, 3, 1),
+(5, 'quiz1', '2016-05-20 09:45:46', 20, 3, 1);
+
 -- --------------------------------------------------------
 
 --
@@ -297,7 +308,7 @@ CREATE TABLE `student` (
 INSERT INTO `student` (`s_id`, `s_aiub_id`, `s_full_name`, `s_cgpa`, `s_phone`, `s_email`, `s_pass`, `s_dept`, `s_image`, `s_gender`, `s_dob`) VALUES
 (1, '12-20167-1', 'Rahman Sadikur', 3.5, '01680091207', 'shawon@gmail.com', '1234', 'CSE', 'shawon.jpg', 'Male', '0000-00-00'),
 (2, '12-20107-1', 'Rafi, M.H', 3.62, '01677649964', 'rafi@yahoo.com', '1234', 'CSE', 'rafi.jpg', 'Male', '0000-00-00'),
-(3, '12-20235-1', 'Saleh Ahmad', 3.85, '+880-1626785569', 'salehoyon@hotmail.com', 'qQ1!', 'CSE', 'oyon.jpg', 'Male', '1991-08-13'),
+(3, '12-20235-1', 'Ahmad, Saleh', 3.85, '+880-1626785569', 'salehoyon@hotmail.com', 'qQ1!', 'CSE', 'oyon.jpg', 'Male', '1991-08-13'),
 (4, '12-20115-1', 'Roy, Pallob Kanti', 3.25, '01912165908', 'pallab@ymail.com', '1234', 'CSSE', 'Pallob.jpg', 'Male', '0000-00-00'),
 (5, '12-20120-1', 'Ayon, Arif Ahmed', 3.56, '01677377003', 'ayon@rocketmail.com', '1234', 'CSSE', 'Ayon.jpg', 'Male', '0000-00-00'),
 (6, '12-20124-1', 'Alam, Nesar Ul', 3.41, '01676756794', 'nesarul@gmail.com', '1234', 'CSSE', 'Nesar.jpg', 'Male', '0000-00-00'),
@@ -513,7 +524,7 @@ ALTER TABLE `teacher_student_course`
 -- AUTO_INCREMENT for table `attendinfo`
 --
 ALTER TABLE `attendinfo`
-  MODIFY `att_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'attendence id', AUTO_INCREMENT=47;
+  MODIFY `att_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'attendance id', AUTO_INCREMENT=47;
 --
 -- AUTO_INCREMENT for table `authority`
 --
@@ -538,7 +549,7 @@ ALTER TABLE `department`
 -- AUTO_INCREMENT for table `exam`
 --
 ALTER TABLE `exam`
-  MODIFY `e_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'exam id';
+  MODIFY `e_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'exam id', AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT for table `information`
 --
