@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: May 20, 2016 at 08:39 AM
+-- Generation Time: May 20, 2016 at 08:29 PM
 -- Server version: 10.1.13-MariaDB
 -- PHP Version: 5.6.20
 
@@ -57,14 +57,14 @@ INSERT INTO `attendinfo` (`att_id`, `att_total`, `s_id`, `c_id`) VALUES
 (15, 2, 14, 2),
 (16, 2, 15, 2),
 (17, 1, 16, 2),
-(18, 2, 17, 2),
+(48, 0, 49, 2),
 (19, 2, 18, 2),
 (20, 2, 19, 2),
 (21, 2, 20, 2),
-(22, 2, 21, 2),
+(50, 0, 46, 2),
 (23, 2, 22, 2),
 (24, 2, 23, 2),
-(25, 2, 24, 2),
+(47, 0, 56, 2),
 (26, 1, 25, 2),
 (27, 2, 26, 2),
 (28, 1, 27, 2),
@@ -74,7 +74,7 @@ INSERT INTO `attendinfo` (`att_id`, `att_total`, `s_id`, `c_id`) VALUES
 (32, 2, 31, 2),
 (33, 2, 32, 2),
 (44, 2, 52, 2),
-(35, 2, 34, 2),
+(49, 0, 50, 2),
 (36, 2, 35, 2),
 (37, 2, 36, 2),
 (38, 2, 37, 2),
@@ -170,14 +170,14 @@ INSERT INTO `course_student_marks` (`c_s_m_id`, `c_id`, `s_id`, `mid_best_two`, 
 (15, 2, 14, 0, 0, 0, 'FAIL', 'FAIL', 'FAIL', 0, 0),
 (16, 2, 15, 0, 0, 0, 'FAIL', 'FAIL', 'FAIL', 0, 0),
 (17, 2, 16, 0, 0, 0, 'FAIL', 'FAIL', 'FAIL', 0, 0),
-(18, 2, 17, 0, 0, 0, 'FAIL', 'FAIL', 'FAIL', 0, 0),
+(48, 2, 49, 0, 0, 0, 'FAIL', 'FAIL', 'FAIL', 0, 0),
 (19, 2, 18, 0, 0, 0, 'FAIL', 'FAIL', 'FAIL', 0, 0),
 (20, 2, 19, 0, 0, 0, 'FAIL', 'FAIL', 'FAIL', 0, 0),
 (21, 2, 20, 0, 0, 0, 'FAIL', 'FAIL', 'FAIL', 0, 0),
-(22, 2, 21, 0, 0, 0, 'FAIL', 'FAIL', 'FAIL', 0, 0),
+(50, 2, 46, 0, 0, 0, 'FAIL', 'FAIL', 'FAIL', 0, 0),
 (23, 2, 22, 0, 0, 0, 'FAIL', 'FAIL', 'FAIL', 0, 0),
 (24, 2, 23, 0, 0, 0, 'FAIL', 'FAIL', 'FAIL', 0, 0),
-(25, 2, 24, 0, 0, 0, 'FAIL', 'FAIL', 'FAIL', 0, 0),
+(47, 2, 56, 0, 0, 0, 'FAIL', 'FAIL', 'FAIL', 0, 0),
 (26, 2, 25, 0, 0, 0, 'FAIL', 'FAIL', 'FAIL', 0, 0),
 (27, 2, 26, 0, 0, 0, 'FAIL', 'FAIL', 'FAIL', 0, 0),
 (28, 2, 27, 0, 0, 0, 'FAIL', 'FAIL', 'FAIL', 0, 0),
@@ -187,7 +187,7 @@ INSERT INTO `course_student_marks` (`c_s_m_id`, `c_id`, `s_id`, `mid_best_two`, 
 (32, 2, 31, 0, 0, 0, 'FAIL', 'FAIL', 'FAIL', 0, 0),
 (33, 2, 32, 0, 0, 0, 'FAIL', 'FAIL', 'FAIL', 0, 0),
 (44, 2, 52, 0, 0, 0, 'FAIL', 'FAIL', 'FAIL', 0, 0),
-(35, 2, 34, 0, 0, 0, 'FAIL', 'FAIL', 'FAIL', 0, 0),
+(49, 2, 50, 0, 0, 0, 'FAIL', 'FAIL', 'FAIL', 0, 0),
 (36, 2, 35, 0, 0, 0, 'FAIL', 'FAIL', 'FAIL', 0, 0),
 (37, 2, 36, 0, 0, 0, 'FAIL', 'FAIL', 'FAIL', 0, 0),
 (38, 2, 37, 0, 0, 0, 'FAIL', 'FAIL', 'FAIL', 0, 0),
@@ -321,7 +321,7 @@ INSERT INTO `student` (`s_id`, `s_aiub_id`, `s_full_name`, `s_cgpa`, `s_phone`, 
 (13, '12-20158-1', 'Ahmed, Md. Isteak', 3.49, '01675179712', 'isti@hotmail.com', '1234', 'CSE', 'isteak.jpg', 'Male', '0000-00-00'),
 (14, '12-20111-1', 'Ahmed Rejwan', 3.6, '01831174312', 'rejwan@hotmail.com', '1234', 'CSSE', 'Rejwan.jpg', 'Male', '0000-00-00'),
 (15, '12-20172-1', 'Islam, Ayon Dipto', 3.32, '01675641830', 'auyon@yahoo.com', '1234', 'CSE', 'auyon.jpg', 'Male', '0000-00-00'),
-(16, '12-20229-1', 'Parag, Kutubuddin Jalal', 3.12, '01676163313', 'parag@ymail.com', '1234', 'CSE', 'default-user.png', 'Male', '0000-00-00'),
+(16, '12-20229-1', 'Parag, Kutubuddin Jalal', 3.12, '01676163313', 'parag@ymail.com', '1234', 'CSE', 'parag.jpg', 'Male', '0000-00-00'),
 (17, '12-20232-1', 'Mosharaf, Khaled', 2.81, '01915699339', 'khaled@live.com', '1234', 'CSE', 'default-user.png', 'Male', '0000-00-00'),
 (18, '12-20245-1', 'Banna, Sazid Hossain', 3.21, '+880-1715342366', 'cryingbanna@live.com', '1234', 'CSE', 'banna.jpg', 'Male', '1992-08-30'),
 (19, '12-20497-1', 'Roy, Nirbachita', 3.8, '+880-1730078219', 'nirba@live.com', '1234', 'CSE', 'nirbachita.jpg', 'Female', '0000-00-00'),
@@ -360,7 +360,8 @@ INSERT INTO `student` (`s_id`, `s_aiub_id`, `s_full_name`, `s_cgpa`, `s_phone`, 
 (52, '12-20981-1', 'Rahman, Sajidur', 3.96, '+8801674242999', 'sajid_reznov9185@live.com', '1234', 'CSE', 'sajid.jpg', 'Male', '1992-10-31'),
 (53, '11-52486-1', 'Maher Mahmud Nishan', 2.75, '+880-1771588210', 'maheer@yahoo.com', '1234', 'CSSE', 'maheer.jpg', 'Male', '1992-02-24'),
 (54, '12-20502-1', 'Bonna, Jannatul Ferdous', 3.72, '+880-1765342899', 'bonna@yahoo.com', '1234', 'CSE', 'bonna.jpg', 'Female', '1992-07-26'),
-(55, '12-20664-1', 'Keya, rashika Tasnim', 3.62, '+880-1676119628', 'rashika_tasnim@yahoo.com', '1234', 'CSE', 'keya.jpg', 'Female', '1992-05-18');
+(55, '12-20664-1', 'Keya, rashika Tasnim', 3.62, '+880-1676119628', 'rashika_tasnim@yahoo.com', '1234', 'CSE', 'keya.jpg', 'Female', '1992-05-18'),
+(56, '12-21014-1', 'Haque, Sadiah', 3.66, '+880-1767696626', 'sadiah.norway93@gmail.com', '1234', 'CSE', 'sadiah.jpg', 'Female', '1993-02-03');
 
 -- --------------------------------------------------------
 
@@ -427,14 +428,14 @@ INSERT INTO `teacher_student_course` (`t_s_c_id`, `s_id`, `t_id`, `c_id`) VALUES
 (15, 14, 1, 2),
 (16, 15, 1, 2),
 (17, 16, 1, 2),
-(18, 17, 1, 2),
+(48, 49, 1, 2),
 (19, 18, 1, 2),
 (20, 19, 1, 2),
 (21, 20, 1, 2),
-(22, 21, 1, 2),
+(50, 46, 1, 2),
 (23, 22, 1, 2),
 (24, 23, 1, 2),
-(25, 24, 1, 2),
+(47, 56, 1, 2),
 (26, 25, 1, 2),
 (27, 26, 1, 2),
 (28, 27, 1, 2),
@@ -444,7 +445,7 @@ INSERT INTO `teacher_student_course` (`t_s_c_id`, `s_id`, `t_id`, `c_id`) VALUES
 (32, 31, 1, 2),
 (33, 32, 1, 2),
 (44, 52, 1, 2),
-(35, 34, 1, 2),
+(49, 50, 1, 2),
 (36, 35, 1, 2),
 (37, 36, 1, 2),
 (38, 37, 1, 2),
@@ -524,7 +525,7 @@ ALTER TABLE `teacher_student_course`
 -- AUTO_INCREMENT for table `attendinfo`
 --
 ALTER TABLE `attendinfo`
-  MODIFY `att_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'attendance id', AUTO_INCREMENT=47;
+  MODIFY `att_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'attendance id', AUTO_INCREMENT=51;
 --
 -- AUTO_INCREMENT for table `authority`
 --
@@ -539,7 +540,7 @@ ALTER TABLE `course`
 -- AUTO_INCREMENT for table `course_student_marks`
 --
 ALTER TABLE `course_student_marks`
-  MODIFY `c_s_m_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'course student marks id', AUTO_INCREMENT=47;
+  MODIFY `c_s_m_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'course student marks id', AUTO_INCREMENT=51;
 --
 -- AUTO_INCREMENT for table `department`
 --
@@ -559,7 +560,7 @@ ALTER TABLE `information`
 -- AUTO_INCREMENT for table `student`
 --
 ALTER TABLE `student`
-  MODIFY `s_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'student id', AUTO_INCREMENT=56;
+  MODIFY `s_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'student id', AUTO_INCREMENT=57;
 --
 -- AUTO_INCREMENT for table `teacher`
 --
@@ -569,7 +570,7 @@ ALTER TABLE `teacher`
 -- AUTO_INCREMENT for table `teacher_student_course`
 --
 ALTER TABLE `teacher_student_course`
-  MODIFY `t_s_c_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'id', AUTO_INCREMENT=47;
+  MODIFY `t_s_c_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'id', AUTO_INCREMENT=51;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
