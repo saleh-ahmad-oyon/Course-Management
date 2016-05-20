@@ -34,7 +34,7 @@
 											}
 										?>
 									</label>
-									<h2><ins><?php echo getCourseName($_GET['id1']) ?></ins></h2><br />
+									<h3><ins><?php echo getCourseName($_GET['id1']) ?></ins></h3><br />
 									<h4>
 										<?php $value = explode('|', $stuInfo); ?>
 										ID: <span class="text-primary"><?php echo $value[0]; ?></span>&nbsp;&nbsp;&nbsp;&nbsp;Name: <span class="text-primary"><?php echo $value[1]; ?></span>&nbsp;&nbsp;&nbsp;&nbsp;Attendence: <span class="text-primary"><?php echo $value[2]; ?></span>
@@ -462,7 +462,7 @@
 												<form action="<?php echo SERVER; ?>/controller/addMarks" method="post">
 													<div class="form-inline">
 														<input type="number" step="0.01" min="0" max="100" name="mark" class="onlyFloat form-control" placeholder="Grand Total" required="required" style="width: 120px;" />
-														<button type="submit" name="addGrandTotal" data-toggle="tooltip" data-placement="top" title="Edit" class="btn btn-warning"><span class="glyphicon glyphicon-edit"></span></button>
+														<button type="submit" name="addGrandTotal"  class="btn btn-warning"><span class="glyphicon glyphicon-edit"></span></button>
 														<input type="hidden" name="cid" value="<?php echo $_GET['id1']; ?>"/>
 														<input type="hidden" name="sid" value="<?php echo $_GET['id2']; ?>"/>
 														<?php
