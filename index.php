@@ -21,8 +21,8 @@
                         <div class="col-md-12">
                             <div class="text-center">
                                 <?php if(isset($_SESSION['authority'])): ?>
-                                    <a class="btn btn-primary hover-focus" href="<?php echo SERVER; ?>/stuTeachHandle?id=1">Manage Teacher</a><br/><br/>
-                                    <a class="btn btn-success hover-focus" href="<?php echo SERVER; ?>/stuTeachHandle?id=2">Manage Student</a><br/><br/>
+                                    <a class="btn btn-primary hover-focus" href="<?php echo SERVER; ?>/manage/teacher">Manage Teacher</a><br/><br/>
+                                    <a class="btn btn-success hover-focus" href="<?php echo SERVER; ?>/manage/student">Manage Student</a><br/><br/>
                                 <?php elseif(isset($_SESSION['teacher'])):
                                     $tid = $_SESSION['tid'];
                                     $outputString = teacherCourse($tid);

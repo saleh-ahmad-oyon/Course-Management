@@ -13,7 +13,6 @@ require 'define.php';
  * Authority Assigns Course to the Teacher
  */
 if (isset($_POST['addCot'])) {
-    $id          = $_POST['id2'];
     $teacherInfo = explode(" ", $_POST['teacher']);
     $tAiubId     = $teacherInfo[0];
 
@@ -36,24 +35,24 @@ if (isset($_POST['addCot'])) {
                 
                 echo '<script language="javascript">
                           alert("Successfully Assigned !!");
-                          window.location="'.SERVER.'/addSubject?id='.$id.'";
+                          window.location="'.SERVER.'/teacher/subject";
                       </script>';
             } else {
                 echo '<script language="javascript">
                           alert("A teacher already assigned in this course !!");
-                          window.location="'.SERVER.'/addSubject?id='.$id.'";
+                          window.location="'.SERVER.'/teacher/subject";
                       </script>';
             }
         } else {
             echo '<script language="javascript">
                       alert("Duplicate Data !! Can\'t insert !!");
-                      window.location="'.SERVER.'/addSubject?id='.$id.'";
+                      window.location="'.SERVER.'/teacher/subject";
                   </script>';
         }
     } else {
         echo '<script language="javascript">
                   alert("You\'ve to fill both teacher and course");
-                  window.location="'.SERVER.'/addSubject?id='.$id.'";
+                  window.location="'.SERVER.'/teacher/subject";
               </script>';
     }
 }

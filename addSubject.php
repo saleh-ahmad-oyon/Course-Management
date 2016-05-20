@@ -80,7 +80,6 @@ if($_GET['id'] == 1){
                                     </div>
                                 </div>
                                 <div class="col-md-3">
-                                    <input type="hidden" value="<?php echo $_GET['id']; ?>" name="id2">
                                     <button type="submit" name="addCot" class="btn btn-success" style="margin-top: 25px;">Add</button>
                                 </div>
                             </form>
@@ -98,7 +97,7 @@ if($_GET['id'] == 1){
                                         <th>Teacher ID</th>
                                         <th>Teacher Name</th>
                                         <th>Course Name</th>
-                                        <th>Action</th>
+                                        <th class="text-center">Action</th>
                                     </tr>
                                     <?php $teacherCourse = getTeacherSubject();
                                     foreach($teacherCourse as $tc): ?>
@@ -110,7 +109,6 @@ if($_GET['id'] == 1){
                                                 <div class="text-center">
                                                     <form action="<?php echo SERVER; ?>/controller/dltTeacherCourse" method="post" onsubmit="return confirmation();">
                                                         <input type="hidden" value="<?php echo $tc['c_id']; ?>" name="id">
-                                                        <input type="hidden" value="<?php echo $_GET['id']; ?>" name="id2">
                                                         <button type="submit" name="dltTeacher" class="btn btn-danger"><span class='glyphicon glyphicon-trash hidden-md hidden-sm'></span><span class="hidden-xs">  Delete</span></button>
                                                     </form>
                                                 </div>

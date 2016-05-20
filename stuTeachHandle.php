@@ -35,10 +35,10 @@
                             <div class="col-md-4">
                                 <div class="text-center">
                                     <?php if($teacher): ?>
-                                    <a class="btn btn-primary btn-block hover-focus" href="<?php echo SERVER; ?>/addTeacherStudent?id=1"><i class="fa fa-user-plus"></i>&nbsp;&nbsp;Add Teacher</a><br/>
-                                    <a class="btn btn-primary btn-block hover-focus" href="<?php echo SERVER; ?>/addSubject?id=1"><i class="fa fa-book"></i>&nbsp;&nbsp;Manage Subject</a>
+                                    <a class="btn btn-primary btn-block hover-focus" href="<?php echo SERVER; ?>/add/teacher"><i class="fa fa-user-plus"></i>&nbsp;&nbsp;Add Teacher</a><br/>
+                                    <a class="btn btn-primary btn-block hover-focus" href="<?php echo SERVER; ?>/teacher/subject"><i class="fa fa-book"></i>&nbsp;&nbsp;Manage Subject</a>
                                         <?php elseif($student): ?>
-                                        <a class="btn btn-success btn-block hover-focus" href="<?php echo SERVER; ?>/addTeacherStudent?id=2"><i class="fa fa-user-plus"></i>&nbsp;&nbsp;Add Student</a>
+                                        <a class="btn btn-success btn-block hover-focus" href="<?php echo SERVER; ?>/add/student"><i class="fa fa-user-plus"></i>&nbsp;&nbsp;Add Student</a>
                                     <?php endif; ?>
                                 </div>
                             </div>
