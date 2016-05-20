@@ -25,17 +25,17 @@
 			<ul class="dropdown-menu">
 				<?php if(isset($_SESSION['authority'])): ?>
 					<li><a href="<?php echo SERVER; ?>"><i class="fa fa-home"></i>&nbsp;&nbsp;Home</a></li>
-					<li><a href="<?php echo SERVER; ?>/changePass?id=00"><i class="fa fa-lock"></i>&nbsp;&nbsp;Change Password</a></li>
+					<li><a href="<?php echo SERVER; ?>/changepassword?id=00"><i class="fa fa-lock"></i>&nbsp;&nbsp;Change Password</a></li>
 				<?php endif; ?>
 				<?php if(isset($_SESSION['teacher'])): ?>
 					<li><a href="<?php echo SERVER; ?>"><i class="fa fa-home"></i>&nbsp;&nbsp;Home</a></li>
 					<li><a href="<?php echo SERVER; ?>/profile"><i class="fa fa-briefcase"></i>&nbsp;&nbsp;Profile</a></li>
-					<li><a href="<?php echo SERVER; ?>/changePass?id=11"><i class="fa fa-lock"></i>&nbsp;&nbsp;Change Password</a></li>
+					<li><a href="<?php echo SERVER; ?>/changepassword?id=11"><i class="fa fa-lock"></i>&nbsp;&nbsp;Change Password</a></li>
 				<?php endif; ?>
 				<?php if(isset($_SESSION['stud'])): ?>
 					<li><a href="<?php echo SERVER; ?>"><i class="fa fa-home"></i>&nbsp;&nbsp;Home</a></li>
 					<li><a href="<?php echo SERVER; ?>/profile"><i class="fa fa-briefcase"></i>&nbsp;&nbsp;Profile</a></li>
-					<li><a href="<?php echo SERVER; ?>/changePass?id=22"><i class="fa fa-lock"></i>&nbsp;&nbsp;Change Password</a></li>
+					<li><a href="<?php echo SERVER; ?>/changepassword?id=22"><i class="fa fa-lock"></i>&nbsp;&nbsp;Change Password</a></li>
 				<?php endif; ?>
 				<li class="divider"></li>
 				<li><a href="<?php echo SERVER; ?>/controller/logout"><i class="fa fa-power-off"></i>&nbsp;&nbsp;Logout</a></li>

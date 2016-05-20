@@ -40,7 +40,7 @@ if (isset($_POST['changePassSubmit'])) {
 		} else {
 			echo '<script language="javascript">
 					  alert("Old Password did not match !!");
-					  window.location="'.SERVER.'/changePass?id='.$authority.'";
+					  window.location="'.SERVER.'/changepassword?id='.$authority.'";
 				  </script>';
 		}
 	} elseif ($_POST['user'] == '11') {
@@ -67,7 +67,7 @@ if (isset($_POST['changePassSubmit'])) {
 		} else {
 			echo '<script language="javascript">
 					  alert("Old Password did not match !!");
-					  window.location="'.SERVER.'/changePass?id='.$teacher.'";
+					  window.location="'.SERVER.'/changepassword?id='.$teacher.'";
 				  </script>';
 		}
 	} elseif ($_POST['user'] == '22') {
@@ -94,7 +94,7 @@ if (isset($_POST['changePassSubmit'])) {
 		} else {
 			echo '<script language="javascript">
 					  alert("Old Password did not match !!");
-					  window.location="'.SERVER.'/changePass?id='.$student.'";
+					  window.location="'.SERVER.'/changepassword?id='.$student.'";
 				  </script>';
 		}
 	}

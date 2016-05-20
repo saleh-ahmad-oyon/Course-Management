@@ -12,3 +12,5 @@ RewriteRule    course/([0-9]+)/result                                   result?i
 RewriteRule    course/([0-9]+)/marks/([0-9]+)                           marks?id1=$1&id2=$2
 #RewriteRule    course/([0-9]+)/marks/([0-9]+)/edit/([a-z0-9]+)          editmarks?id1=$1&id2=$2&id3=$3
 #RewriteRule    course/([0-9]+)/marks/([0-9]+)/delete/([a-z0-9]+)        deletemarks?id1=$1&id2=$2&id3=$3
+RewriteRule    course/student/([0-9]+)                                  studentCourse?id=$1
+#RewriteRule    changepassword/(00|11|22)                                  changepassword?id=$1
