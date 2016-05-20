@@ -50,12 +50,12 @@ if($_GET['id'] == 1){
                 <hr />
                 <section>
                     <div class="row">
-                        <div class="col-md-12">
+                        <div class="col-lg-12">
                             <h3>Assign Teacher in a Course</h3>
                             <br/><br/>
-                            <div class="col-md-1"></div>
+                            <div class="col-lg-1"></div>
                             <form action="<?php echo SERVER; ?>/controller/addCourseTeacher" method="post" onsubmit="return confirmation();">
-                                <div class="col-md-4">
+                                <div class="col-lg-4">
                                     <div class="form-group">
                                         <label>Choose Teacher</label>
                                         <select name="teacher" class="form-control" id="speed">
@@ -67,7 +67,7 @@ if($_GET['id'] == 1){
                                         </select>
                                     </div>
                                 </div>
-                                <div class="col-md-4">
+                                <div class="col-lg-4">
                                     <div class="form-group">
                                         <label>Choose Course</label>
                                         <select name="subject" class="form-control" id="speed1">
@@ -79,8 +79,8 @@ if($_GET['id'] == 1){
                                         </select>
                                     </div>
                                 </div>
-                                <div class="col-md-3">
-                                    <button type="submit" name="addCot" class="btn btn-success" style="margin-top: 25px;">Add</button>
+                                <div class="col-lg-3" style="padding-top: 32px;">
+                                    <button type="submit" name="addCot" class="btn btn-success">Add</button>
                                 </div>
                             </form>
                         </div>
