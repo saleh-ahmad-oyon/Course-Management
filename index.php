@@ -18,9 +18,8 @@
                 <hr/>
                 <section>
                     <div class="row">
-                        <div class="col-sm-12">
-                            <div class="text-center">
-                                <?php if(isset($_SESSION['authority'])): ?>
+                        <div class="col-sm-12 text-center">
+                            <?php if(isset($_SESSION['authority'])): ?>
                                     <a class="btn btn-primary hover-focus" href="<?php echo SERVER; ?>/manage/teacher">Manage Teacher</a><br/><br/>
                                     <a class="btn btn-success hover-focus" href="<?php echo SERVER; ?>/manage/student">Manage Student</a><br/><br/>
                                 <?php elseif(isset($_SESSION['teacher'])):
@@ -54,13 +53,12 @@
                                     </table>
                                 </div>
                                 <div class="col-sm-2"></div>
-                            </div>
                                 <?php else: ?>
                                 <div class="col-sm-4"></div>
                                 <div class="col-sm-4 form-block">
                                         <form action="<?php echo SERVER; ?>/session" method="post">
-                                            <p class="text-primary">Please login to view your profile</p>
-                                            <div class="input-group">
+                                            <p class="text-primary">Sign in with your organizational id number.</p>
+                                            <div class="input-group" style="padding-top: 25px;">
                                                 <div class="input-group-addon" title="AIUB ID"><i class="fa fa-user font17"></i></div>
                                                 <input type="text" placeholder="AIUB ID" class="onlyId form-control" name="user" required="required" pattern="^\d{2}\-\d{5}\-\d{1}$|^\d{4}\-\d{4}\-\d{1}$" title="Format should be XX-XXXXX-X or XXXX-XXXX-X"/>
                                             </div>
