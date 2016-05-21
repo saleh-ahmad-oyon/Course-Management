@@ -12,8 +12,8 @@
 
 <title>Course Management</title>
 <link href="<?php echo SERVER; ?>/assets/img/aiub.png" rel="shortcut icon" />
-<link href="<?php echo SERVER; ?>/assets/css/bootstrap-3.3.5-dist/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="<?php echo SERVER; ?>/assets/css/bootstrap-3.3.6-dist/css/bootstrap.min.css" rel="stylesheet"/>
 <link href="<?php echo SERVER; ?>/assets/css/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet"/>
 <link href="<?php echo SERVER; ?>/assets/css/custom.php" rel="stylesheet"/>
 <script src="<?php echo SERVER; ?>/assets/js/jquery-2.1.4.min.js"></script>
-<script src="<?php echo SERVER; ?>/assets/css/bootstrap-3.3.5-dist/js/bootstrap.js"></script>
+<script src="<?php echo SERVER; ?>/assets/css/bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
