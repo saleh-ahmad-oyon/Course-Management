@@ -34,6 +34,9 @@
             .overflow {
                 height: 85px;
             }
+            .form-group label {
+                padding-top: 0;
+            }
         </style>
 	</head>
 	<body>
@@ -72,16 +75,16 @@
                                             <label>Phone</label>
                                             <input type="text" class="form-control phnNum" placeholder="Phone" name="tphone" id="phone" title="Phone Number">
                                         </div>
-                                        <div class="form-group" style="padding-top: 10px;padding-bottom: 10px;">
+                                        <div class="form-group">
                                             <label style="padding-right: 30px;">Gender</label>
 
-                                            <input type="radio" name="sex" id="male" value="male" />
+                                            <input type="radio" name="sex" id="male" value="Male" />
                                             <label for="male" class="css-label">Male</label>
 
-                                            <input type="radio" name="sex" id="female" value="female" />
+                                            <input type="radio" name="sex" id="female" value="Female" />
                                             <label for="female" class="css-label">Female</label>
 
-                                            <input type="radio" name="sex" id="other" value="other" />
+                                            <input type="radio" name="sex" id="other" value="Other" />
                                             <label for="other" class="css-label">Other</label>
                                         </div>
                                         <div class="form-group">
@@ -127,13 +130,13 @@
                                         <div class="form-group" style="padding-top: 10px;padding-bottom: 10px;">
                                             <label style="padding-right: 30px;">Gender</label>
 
-                                            <input type="radio" name="sex" id="male" value="male" />
+                                            <input type="radio" name="sex" id="male" value="Male" />
                                             <label for="male" class="css-label">Male</label>
 
-                                            <input type="radio" name="sex" id="female" value="female" />
+                                            <input type="radio" name="sex" id="female" value="Female" />
                                             <label for="female" class="css-label">Female</label>
 
-                                            <input type="radio" name="sex" id="other" value="other" />
+                                            <input type="radio" name="sex" id="other" value="Other" />
                                             <label for="other" class="css-label">Other</label>
                                         </div>
                                         <div class="form-group">
