@@ -79,6 +79,10 @@
                                             <label>Phone</label>
                                             <input type="text" class="form-control phnNum" required="required" placeholder="Phone" name="tphone" id="phone" title="Phone Number">
                                         </div>
+                                        <div class="form-group required">
+                                            <label>Assign an AIUB ID</label>
+                                            <input type="text" class="form-control" required="required" placeholder="AIUB ID" name="aiubID" id="aiubID">
+                                        </div>
                                         <div class="form-group">
                                             <label style="padding-right: 30px;">Gender</label>
 
@@ -90,10 +94,6 @@
 
                                             <input type="radio" name="sex" id="other" value="Other" />
                                             <label for="other" class="css-label">Other</label>
-                                        </div>
-                                        <div class="form-group required">
-                                            <label>Assign an AIUB ID</label>
-                                            <input type="text" class="form-control" required="required" placeholder="AIUB ID" name="aiubID" id="aiubID">
                                         </div>
                                         <div class="form-group">
                                             <label>Upload an Image</label>
@@ -131,6 +131,14 @@
                                             <label>Phone</label>
                                             <input type="text" class="form-control phnNum" required="required" placeholder="Phone" name="phone" id="phone" title="Phone Number">
                                         </div>
+                                        <div class="form-group required">
+                                            <label>Assign an AIUB ID</label>
+                                            <input type="text" class="form-control" required="required" placeholder="AIUB ID" name="aiubID" id="stuID">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>CGPA</label>
+                                            <input type="number" step="0.01" min="0" max="4" class="form-control" placeholder="CGPA" name="cgpa">
+                                        </div>
                                         <div class="form-group" style="padding-top: 10px;padding-bottom: 10px;">
                                             <label style="padding-right: 30px;">Gender</label>
 
@@ -142,14 +150,6 @@
 
                                             <input type="radio" name="sex" id="other" value="Other" />
                                             <label for="other" class="css-label">Other</label>
-                                        </div>
-                                        <div class="form-group required">
-                                            <label>Assign an AIUB ID</label>
-                                            <input type="text" class="form-control" required="required" placeholder="AIUB ID" name="aiubID" id="stuID">
-                                        </div>
-                                        <div class="form-group">
-                                            <label>CGPA</label>
-                                            <input type="number" step="0.01" min="0" max="4" class="form-control" placeholder="CGPA" name="cgpa">
                                         </div>
                                         <div class="form-group">
                                             <label>Upload an Image</label>
