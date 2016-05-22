@@ -104,7 +104,7 @@
                                         </div>
                                     </form>
                                 <?php elseif($_GET['id'] == 2): ?>
-                                    <h3 class="text-center"><i><b><ins>Student Registration</ins></b></i></h3><br/><br/>
+                                    <h4 class="text-center"><i><b><ins>Student Registration</ins></b></i></h4><br/><br/>
                                     <form action="<?php echo SERVER; ?>/controller/addStudentTeacher" method="post" onsubmit="return confirmation();" enctype="multipart/form-data">
                                         <div class="form-group required">
                                             <label>Name</label>
