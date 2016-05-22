@@ -55,25 +55,29 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="col-md-4"></div>
-                            <div class="col-md-4">
+                            <div class="col-md-4 form-block">
                                 <?php if($_GET['id'] == 1): ?>
-                                    <h3 class="text-center"><i><b><ins>Teacher Registration</ins></b></i></h3><br/><br/>
+                                    <h4 class="text-center"><i><b><ins>Teacher Registration</ins></b></i></h4><br/><br/>
                                     <form action="<?php echo SERVER; ?>/controller/addStudentTeacher" method="post" onsubmit="return confirmation();" enctype="multipart/form-data">
-                                        <div class="form-group">
+                                        <div class="form-group required">
                                             <label>Name</label>
-                                            <input type="text" class="form-control onlyChars" placeholder="Full Name" name="tname" title="name">
+                                            <input type="text" class="form-control onlyChars" required="required" placeholder="Full Name" name="tname" title="name">
                                         </div>
-                                        <div class="form-group">
+                                        <div class="form-group required">
                                             <label>Designation</label>
-                                            <input type="text" class="form-control onlyChars" placeholder="Designation" name="desg" title="Designation">
+                                            <input type="text" class="form-control onlyChars" required="required" placeholder="Designation" name="desg" title="Designation">
                                         </div>
                                         <div class="form-group">
+                                            <label>Date of Birth</label>
+                                            <input type="text" id="datepicker" placeholder="dd/mm/yyyy" name="dob" class="form-control">
+                                        </div>
+                                        <div class="form-group required">
                                             <label>Email</label>
-                                            <input type="email" class="form-control" placeholder="Email" name="temail" pattern="[([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)]i" title="Insert Email address Correctly">
+                                            <input type="email" class="form-control" placeholder="Email" required="required" name="temail" pattern="[([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)]i" title="Insert Email address Correctly">
                                         </div>
-                                        <div class="form-group">
+                                        <div class="form-group required">
                                             <label>Phone</label>
-                                            <input type="text" class="form-control phnNum" placeholder="Phone" name="tphone" id="phone" title="Phone Number">
+                                            <input type="text" class="form-control phnNum" required="required" placeholder="Phone" name="tphone" id="phone" title="Phone Number">
                                         </div>
                                         <div class="form-group">
                                             <label style="padding-right: 30px;">Gender</label>
@@ -87,13 +91,9 @@
                                             <input type="radio" name="sex" id="other" value="Other" />
                                             <label for="other" class="css-label">Other</label>
                                         </div>
-                                        <div class="form-group">
-                                            <label>Date of Birth</label>
-                                            <input type="text" id="datepicker" placeholder="dd/mm/yyyy" name="dob" class="form-control">
-                                        </div>
-                                        <div class="form-group">
+                                        <div class="form-group required">
                                             <label>Assign an AIUB ID</label>
-                                            <input type="text" class="form-control" placeholder="AIUB ID" name="aiubID" id="aiubID">
+                                            <input type="text" class="form-control" required="required" placeholder="AIUB ID" name="aiubID" id="aiubID">
                                         </div>
                                         <div class="form-group">
                                             <label>Upload an Image</label>
@@ -106,13 +106,13 @@
                                 <?php elseif($_GET['id'] == 2): ?>
                                     <h3 class="text-center"><i><b><ins>Student Registration</ins></b></i></h3><br/><br/>
                                     <form action="<?php echo SERVER; ?>/controller/addStudentTeacher" method="post" onsubmit="return confirmation();" enctype="multipart/form-data">
-                                        <div class="form-group">
+                                        <div class="form-group required">
                                             <label>Name</label>
-                                            <input type="text" class="onlyChars form-control" placeholder="Full Name" name="fullname" title="Name">
+                                            <input type="text" class="onlyChars form-control" required="required" placeholder="Full Name" name="fullname" title="Name">
                                         </div>
-                                        <div class="form-group">
+                                        <div class="form-group required">
                                             <label>Departement</label>
-                                            <select name="editDept" class="form-control" id="speed">
+                                            <select name="editDept" class="form-control" id="speed" required="required">
                                                 <option></option>
                                                 <?php foreach($department as $value): ?>
                                                     <option><?php echo $value['d_name']; ?></option>
@@ -120,12 +120,16 @@
                                             </select>
                                         </div>
                                         <div class="form-group">
+                                            <label>Date of Birth</label>
+                                            <input type="text" id="datepicker" placeholder="dd/mm/yyyy" name="dob" class="form-control">
+                                        </div>
+                                        <div class="form-group">
                                             <label>Email</label>
                                             <input type="email" class="form-control" placeholder="Email" name="email" pattern="[([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)]i" title="Insert Email address Correctly">
                                         </div>
-                                        <div class="form-group">
+                                        <div class="form-group required">
                                             <label>Phone</label>
-                                            <input type="text" class="form-control phnNum" placeholder="Phone" name="phone" id="phone" title="Phone Number">
+                                            <input type="text" class="form-control phnNum" required="required" placeholder="Phone" name="phone" id="phone" title="Phone Number">
                                         </div>
                                         <div class="form-group" style="padding-top: 10px;padding-bottom: 10px;">
                                             <label style="padding-right: 30px;">Gender</label>
@@ -139,13 +143,9 @@
                                             <input type="radio" name="sex" id="other" value="Other" />
                                             <label for="other" class="css-label">Other</label>
                                         </div>
-                                        <div class="form-group">
-                                            <label>Date of Birth</label>
-                                            <input type="text" id="datepicker" placeholder="dd/mm/yyyy" name="dob" class="form-control">
-                                        </div>
-                                        <div class="form-group">
+                                        <div class="form-group required">
                                             <label>Assign an AIUB ID</label>
-                                            <input type="text" class="form-control" placeholder="AIUB ID" name="aiubID" id="stuID">
+                                            <input type="text" class="form-control" required="required" placeholder="AIUB ID" name="aiubID" id="stuID">
                                         </div>
                                         <div class="form-group">
                                             <label>CGPA</label>

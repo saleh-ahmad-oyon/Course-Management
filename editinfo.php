@@ -70,7 +70,7 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="col-md-4"></div>
-                                <div class="col-md-4">
+                                <div class="col-md-4 form-block">
                                     <?php if($student): ?>
                                     <form action="<?php echo SERVER; ?>/controller/editStuInfo" method="post" enctype="multipart/form-data" >
                                         <div class="form-group" style="vertical-align: middle">
