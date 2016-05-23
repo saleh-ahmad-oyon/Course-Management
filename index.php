@@ -20,29 +20,52 @@
             <div class="container">
                 <section>
                     <div class="row">
-                        <div class="col-sm-12 text-center">
+                        <div class="col-sm-12">
                             <?php if(isset($_SESSION['authority'])): ?>
+                                <div class="text-center">
                                     <a class="btn btn-primary hover-focus" href="<?php echo SERVER; ?>/manage/teacher">Manage Teacher</a><br/><br/>
-                                    <a class="btn btn-success hover-focus" href="<?php echo SERVER; ?>/manage/student">Manage Student</a><br/><br/>
+                                    <a class="btn btn-success hover-focus" href="<?php echo SERVER; ?>/manage/student">Manage Student</a>
+                                </div>
                                 <?php elseif(isset($_SESSION['teacher'])):
                                     $tid = $_SESSION['tid'];
-                                    $outputString = teacherCourse($tid);
-                                    foreach($outputString as $value):?>
-                                    <a class="btn btn-default hover-focus" href="<?php echo SERVER; ?>/teacher/course/<?php echo $value['c_id']; ?>"><?php echo $value['c_name']; ?></a><br /><br />
-                                    <?php endforeach; ?>
+                                    $outputString = teacherCourse($tid); ?>
+                                <div class="col-md-3"></div>
+                                <div class="col-md-6">
+                                    <table class="table table-bordered">
+                                        <thead>
+                                            <tr>
+                                                <th>No.</th>
+                                                <th class="text-center">Course Title</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <?php $i = 1;foreach($outputString as $value):?>
+                                            <tr>
+                                                <td><?php echo $i; ?></td>
+                                                <td><a href="<?php echo SERVER; ?>/teacher/course/<?php echo $value['c_id']; ?>"><?php echo $value['c_name']; ?></a></td>
+                                            </tr>
+                                            <?php $i++; endforeach; ?>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="col-md-3"></div>
                                 <?php elseif(isset($_SESSION['stud'])):
                                     $sid = $_SESSION['sid'];
                                     $outputString = studentCourse($sid);?>
-                                <div class="col-sm-2"></div>
-                                <div class="col-sm-8">
+                                <div class="col-md-2"></div>
+                                <div class="col-md-8">
                                     <table class="table table-bordered">
                                         <thead>
-                                        <th class="text-center">Subject</th>
-                                        <th class="text-center">Course Instructor</th>
+                                        <tr>
+                                            <th>No.</th>
+                                            <th class="text-center">Course Title</th>
+                                            <th class="text-center">Course Instructor</th>
+                                        </tr>
                                         </thead>
                                         <tbody>
-                                        <?php foreach($outputString as $value):?>
+                                        <?php $i=1; foreach($outputString as $value):?>
                                             <tr>
+                                                <td><?php echo $i; ?></td>
                                                 <td>
                                                     <a href="<?php echo SERVER; ?>/course/student/<?php echo $value['c_id']; ?>"><?php echo $value['c_name']; ?></a>
                                                 </td>
@@ -50,11 +73,11 @@
                                                     <?php echo $value['t_name']; ?>
                                                 </td>
                                             </tr>
-                                        <?php endforeach; ?>
+                                        <?php $i++; endforeach; ?>
                                         </tbody>
                                     </table>
                                 </div>
-                                <div class="col-sm-2"></div>
+                                <div class="col-md-2"></div>
                                 <?php else: ?>
                                 <div class="col-sm-4"></div>
                                 <div class="col-sm-4 form-block">
