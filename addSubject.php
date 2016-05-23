@@ -38,7 +38,7 @@ if($_GET['id'] == 1){
 </head>
 <body>
     <div id="wrap">
-        <div id="main">
+        <main>
             <div class="container">
                 <header>
                     <div class="row">
@@ -47,7 +47,9 @@ if($_GET['id'] == 1){
                         </div>
                     </div>
                 </header>
-                <hr />
+            </div>
+            <hr />
+            <div class="container">
                 <section>
                     <div class="row">
                         <div class="col-lg-12">
@@ -122,7 +124,7 @@ if($_GET['id'] == 1){
                     </div>
                 </section>
             </div>
-        </div>
+        </main>
     </div>
     <footer>
         <hr />

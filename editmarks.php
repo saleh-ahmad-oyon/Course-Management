@@ -24,7 +24,7 @@
 	</head>
 	<body>
         <div id="wrap">
-            <div id="main">
+            <main>
                 <div class="container">
                     <header>
                         <div class="row">
@@ -33,7 +33,9 @@
                             </div>
                         </div>
                     </header>
+                    </div>
                     <hr />
+                <div class="container">
                     <section>
                         <div class="row">
                             <div class="col-md-12">
@@ -87,7 +89,7 @@
                         </div>
                     </section>
                 </div>
-            </div>
+            </main>
         </div>
         <footer>
             <hr />

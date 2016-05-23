@@ -15,7 +15,7 @@ header h2{padding-top: 55px;}
 #wrap {
     min-height: 100%;
 }
-#main {
+main {
     overflow:auto;
     padding-bottom: 150px;
 }
