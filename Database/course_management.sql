@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: May 20, 2016 at 08:29 PM
+-- Generation Time: May 23, 2016 at 09:23 PM
 -- Server version: 10.1.13-MariaDB
 -- PHP Version: 5.6.20
 
@@ -118,15 +118,32 @@ CREATE TABLE `course` (
 --
 
 INSERT INTO `course` (`c_id`, `c_name`, `t_id`) VALUES
-(1, 'ADVANCED TOPICS IN PROGRAMMING II', 1),
-(2, 'WEB TECHNOLOGIES', 1),
-(3, 'DATA STRUCTURE', 1),
-(4, 'DATA WAREHOUSING AND DATA MINING', 2),
-(5, 'ALGORITHMS', 2),
-(6, 'ARTIFICIAL INTELLIGENCE AND EXPERT SYSTEM', 2),
-(7, 'OBJECT ORIENTED PROGRAMMING 2', 3),
-(8, 'PROGRAMMING LANGUAGE 2', 3),
-(9, 'ADVANCED TOPICS IN PROGRAMMING I', 3);
+(1, 'Advanced Topics In Programming II', 1),
+(2, 'Web Technologies', 1),
+(3, 'Data Structure', 1),
+(4, 'Data Warehousing and Data Mining', 2),
+(5, 'Algorithms', 2),
+(6, 'Artificial Intelligence and Expert System', 2),
+(7, 'Object Oriented Programming 2', 3),
+(8, 'Programming Language 2', 3),
+(9, 'Advanced Topics In Programming I', 3),
+(10, 'Human Computer Interaction', 0),
+(11, 'Programming Language 1 ', 0),
+(12, 'Advanced Database Management System', 0),
+(13, 'Computer Networks', 0),
+(14, 'Advanced Computer Networks', 0),
+(15, 'Object Oriented Programming 1', 0),
+(16, 'Computer Fundamentals', 0),
+(17, 'Discrete Mahematics', 0),
+(18, 'Introduction to Database', 0),
+(19, 'Object Oriented Analysis and Design', 0),
+(20, 'Computer Organization and Architecture', 0),
+(21, 'Software Engineering', 0),
+(22, 'Computer Graphics', 0),
+(23, 'Operating System', 0),
+(24, 'Theory of Computation', 0),
+(25, 'Compiler Design', 0),
+(26, 'Research Methodology', 0);
 
 -- --------------------------------------------------------
 
@@ -391,7 +408,8 @@ INSERT INTO `teacher` (`t_id`, `t_aiub_id`, `t_name`, `t_pass`, `t_email`, `t_ph
 (2, '5678-5678-2', 'ABDUS SALAM', '1234', '', '', 'Male', '0000-00-00', 'default-user.png', ''),
 (3, '1501-2358-2', 'SAIF AHMED RUMI', '1234', '', '', 'Male', '0000-00-00', 'default-user.png', ''),
 (4, '4785-4785-2', 'Mashiour Rahman', '1234', 'mashiour@yahoo.com', '+880-1658742367', 'Male', '1980-05-25', 'default-user.png', ''),
-(5, '7412-7412-2', 'Juena Ahmed Noshin', '1234', 'juena@aiub.edu', '+880-1685742648', 'Female', '1989-03-07', 'juena.jpg', 'Instructor');
+(5, '7412-7412-2', 'Juena Ahmed Noshin', '1234', 'juena@aiub.edu', '+880-1685742648', 'Female', '1989-03-07', 'juena.jpg', 'Instructor'),
+(6, '7412-9632-2', 'Shovra Das', '1234', 'shovra.das@gmail.com', '+880-01715224583', 'Male', '1998-03-15', 'shovra.jpg', 'Lecturer');
 
 -- --------------------------------------------------------
 
@@ -535,7 +553,7 @@ ALTER TABLE `authority`
 -- AUTO_INCREMENT for table `course`
 --
 ALTER TABLE `course`
-  MODIFY `c_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'course id', AUTO_INCREMENT=10;
+  MODIFY `c_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'course id', AUTO_INCREMENT=27;
 --
 -- AUTO_INCREMENT for table `course_student_marks`
 --
@@ -565,7 +583,7 @@ ALTER TABLE `student`
 -- AUTO_INCREMENT for table `teacher`
 --
 ALTER TABLE `teacher`
-  MODIFY `t_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'teacher id', AUTO_INCREMENT=6;
+  MODIFY `t_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'teacher id', AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT for table `teacher_student_course`
 --

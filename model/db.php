@@ -945,7 +945,7 @@ WHERE course_student_marks.c_id = $cid ORDER BY student.s_full_name";
     function getTeacher()
     {
         $conn = db_conn();
-        $sql = "SELECT `t_aiub_id`, `t_name` FROM `teacher`";
+        $sql = "SELECT `t_aiub_id`, `t_name` FROM `teacher` ORDER BY `t_name` ASC";
         $result = mysqli_query($conn, $sql);
         $row = array();
         for($i=0; $i<mysqli_num_rows($result); $i++){
@@ -957,7 +957,7 @@ WHERE course_student_marks.c_id = $cid ORDER BY student.s_full_name";
     function getSubject()
     {
         $conn = db_conn();
-        $sql = "SELECT `c_name` FROM `course`";
+        $sql = "SELECT `c_name` FROM `course` ORDER BY `c_name` ASC";
         $result = mysqli_query($conn, $sql);
         $row = array();
         for($i=0; $i<mysqli_num_rows($result); $i++){
