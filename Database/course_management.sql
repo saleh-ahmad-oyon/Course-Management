@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: May 23, 2016 at 09:23 PM
+-- Generation Time: May 25, 2016 at 10:18 PM
 -- Server version: 10.1.13-MariaDB
 -- PHP Version: 5.6.20
 
@@ -404,12 +404,14 @@ CREATE TABLE `teacher` (
 --
 
 INSERT INTO `teacher` (`t_id`, `t_aiub_id`, `t_name`, `t_pass`, `t_email`, `t_phone`, `t_gender`, `t_dob`, `t_image`, `t_designation`) VALUES
-(1, '1234-1234-2', 'MD. AL IMRAN', 'qQ1!', 'alimran@aiub.edu', '+880-9887935', 'Male', '1985-09-19', 'imran.jpg', 'Assistant Professor'),
-(2, '5678-5678-2', 'ABDUS SALAM', '1234', '', '', 'Male', '0000-00-00', 'default-user.png', ''),
+(1, '1205-1318-2', 'MD. AL IMRAN', '1234', 'alimran@aiub.edu', '+880-9887935', 'Male', '1985-09-19', 'imran.jpg', 'Assistant Professor'),
+(2, '1201-1280-2', 'ABDUS SALAM', '1234', '', '', 'Male', '0000-00-00', 'default-user.png', ''),
 (3, '1501-2358-2', 'SAIF AHMED RUMI', '1234', '', '', 'Male', '0000-00-00', 'default-user.png', ''),
-(4, '4785-4785-2', 'Mashiour Rahman', '1234', 'mashiour@yahoo.com', '+880-1658742367', 'Male', '1980-05-25', 'default-user.png', ''),
+(4, '0008-073-2', 'Mashiour Rahman', '1234', 'mashiour@yahoo.com', '+880-1658742367', 'Male', '1980-05-25', 'default-user.png', ''),
 (5, '7412-7412-2', 'Juena Ahmed Noshin', '1234', 'juena@aiub.edu', '+880-1685742648', 'Female', '1989-03-07', 'juena.jpg', 'Instructor'),
-(6, '7412-9632-2', 'Shovra Das', '1234', 'shovra.das@gmail.com', '+880-01715224583', 'Male', '1998-03-15', 'shovra.jpg', 'Lecturer');
+(6, '1501-1572-2', 'Shovra Das', '1234', 'shovra.das@gmail.com', '+880-01715224583', 'Male', '1998-03-15', 'shovra.jpg', 'Lecturer'),
+(7, '0905-884-2', 'S.M. Abdur Rouf Bhuiyan', '1234', 'abdur_rouf@aiub.edu', '+880-1824753916', 'Male', '1976-07-08', 'abdur_rouf.jpg', 'Lecturer'),
+(8, '1301-1412-2', 'Bayzid Ashik Hossain', '1234', 'bayzid_ashik@aiub.edu', '+880-1798251436', 'Male', '1984-05-10', 'Ashik.jpg', 'Assistant Professor');
 
 -- --------------------------------------------------------
 
@@ -583,7 +585,7 @@ ALTER TABLE `student`
 -- AUTO_INCREMENT for table `teacher`
 --
 ALTER TABLE `teacher`
-  MODIFY `t_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'teacher id', AUTO_INCREMENT=7;
+  MODIFY `t_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'teacher id', AUTO_INCREMENT=9;
 --
 -- AUTO_INCREMENT for table `teacher_student_course`
 --
