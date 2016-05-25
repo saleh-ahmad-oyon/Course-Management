@@ -83,7 +83,7 @@
                                         </div>
                                         <div class="form-group required">
                                             <label>Assign an AIUB ID</label>
-                                            <input type="text" class="form-control" required="required" placeholder="AIUB ID" name="aiubID" id="aiubID">
+                                            <input type="text" class="form-control" required="required" placeholder="AIUB ID" name="aiubID">
                                         </div>
                                         <div class="form-group">
                                             <label style="padding-right: 30px;">Gender</label>

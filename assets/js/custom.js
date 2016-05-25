@@ -57,9 +57,7 @@ $(function () {
 jQuery(function($){
    $("#phone").mask("+880-99999?9999999", { "placeholder": "" });
 });
-jQuery(function($){
-   $("#aiubID").mask("9999-9999-2", { "placeholder": "" });
-});
+
 jQuery(function($){
    $("#stuID").mask("99-99999-9", { "placeholder": "" });
 });

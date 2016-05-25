@@ -24,7 +24,7 @@ if (isset($_POST['loginbtn'])) {
     /**
      * Check if the AIUB ID pattern is matching with XX-XXXXX-X or XXXX-XXXX-X
      */
-	if (preg_match('/^\d{2}\-\d{5}\-\d{1}$|^\d{4}\-\d{4}\-\d{1}$/',$user)) {
+	if (preg_match('/^\d{2}\-\d{5}\-\d{1}$|^\d{4}\-\d{3,4}\-\d{1}$/',$user)) {
 
         /** Check if the AIUB ID pattern is matching with XXXX-XXXX-1 for Authority */
 		if (preg_match('/^\d{4}\-\d{4}\-1$/',$user)) {
@@ -41,7 +41,7 @@ if (isset($_POST['loginbtn'])) {
 			} else {
 				header('Location: '.SERVER.'?err=1');
 			}		
-		} elseif (preg_match('/^\d{4}\-\d{4}\-2$/',$user)) { /** Check if the AIUB ID pattern is matching with XXXX-XXXX-2 for Teacher */
+		} elseif (preg_match('/^\d{4}\-\d{3,4}\-2$/',$user)) { /** Check if the AIUB ID pattern is matching with XXXX-XXXX-2 or XXXX-XXX-2 for Teacher */
 			$teacher = check_teacher_login($user, $pass);
 			if ($teacher) {
 

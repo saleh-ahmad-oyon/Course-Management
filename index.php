@@ -28,7 +28,10 @@
                                 </div>
                                 <?php elseif(isset($_SESSION['teacher'])):
                                     $tid = $_SESSION['tid'];
-                                    $outputString = teacherCourse($tid); ?>
+                                    $outputString = teacherCourse($tid);
+                                    if(!count($outputString)): ?>
+                                        <h3>No Course has been assigned.</h3>
+                                        <?php else: ?>
                                 <div class="col-md-3"></div>
                                 <div class="col-md-6">
                                     <table class="table table-bordered">
@@ -49,9 +52,13 @@
                                     </table>
                                 </div>
                                 <div class="col-md-3"></div>
-                                <?php elseif(isset($_SESSION['stud'])):
+                                        <?php endif;
+                                elseif(isset($_SESSION['stud'])):
                                     $sid = $_SESSION['sid'];
-                                    $outputString = studentCourse($sid);?>
+                                    $outputString = studentCourse($sid);
+                                    if(!count($outputString)): ?>
+                                        <h3>No Course.</h3>
+                                        <?php else: ?>
                                 <div class="col-md-2"></div>
                                 <div class="col-md-8">
                                     <table class="table table-bordered">
@@ -78,6 +85,7 @@
                                     </table>
                                 </div>
                                 <div class="col-md-2"></div>
+                                    <?php endif; ?>
                                 <?php else: ?>
                                 <div class="col-sm-4"></div>
                                 <div class="col-sm-4 form-block">
@@ -85,7 +93,7 @@
                                             <p class="text-primary">Sign in with your organizational id number.</p>
                                             <div class="input-group" style="padding-top: 25px;">
                                                 <div class="input-group-addon" title="AIUB ID"><i class="fa fa-user font17"></i></div>
-                                                <input type="text" placeholder="AIUB ID" class="onlyId form-control" name="user" required="required" pattern="^\d{2}\-\d{5}\-\d{1}$|^\d{4}\-\d{4}\-\d{1}$" title="Format should be XX-XXXXX-X or XXXX-XXXX-X"/>
+                                                <input type="text" placeholder="AIUB ID" class="onlyId form-control" name="user" required="required" pattern="^\d{2}\-\d{5}\-\d{1}$|^\d{4}\-\d{3,4}\-\d{1}$" title="Please put a valid ID"/>
                                             </div>
                                             <div class="input-group padding20">
                                                 <div class="input-group-addon" title="Password"><i class="fa fa-key"></i></div>
