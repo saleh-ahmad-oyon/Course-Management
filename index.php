@@ -23,8 +23,8 @@
                         <div class="col-sm-12">
                             <?php if(isset($_SESSION['authority'])): ?>
                                 <div class="text-center">
-                                    <a class="btn btn-primary hover-focus" href="<?php echo SERVER; ?>/manage/teacher">Manage Teacher</a><br/><br/>
-                                    <a class="btn btn-success hover-focus" href="<?php echo SERVER; ?>/manage/student">Manage Student</a>
+                                    <a class="btn btn-primary hover-focus" href="<?= SERVER; ?>/manage/teacher">Manage Teacher</a><br/><br/>
+                                    <a class="btn btn-success hover-focus" href="<?= SERVER; ?>/manage/student">Manage Student</a>
                                 </div>
                                 <?php elseif(isset($_SESSION['teacher'])):
                                     $tid = $_SESSION['tid'];
@@ -45,15 +45,15 @@
                                             <?php $i = 1;foreach($outputString as $value):?>
                                             <tr>
                                                 <td><?php echo $i; ?></td>
-                                                <td><a href="<?php echo SERVER; ?>/teacher/course/<?php echo $value['c_id']; ?>"><?php echo $value['c_name']; ?></a></td>
+                                                <td><a href="<?= SERVER; ?>/teacher/course/<?= $value['c_id']; ?>"><?= $value['c_name']; ?></a></td>
                                             </tr>
                                             <?php $i++; endforeach; ?>
                                         </tbody>
                                     </table>
                                 </div>
                                 <div class="col-md-3"></div>
-                                        <?php endif;
-                                elseif(isset($_SESSION['stud'])):
+                                    <?php endif;
+                                    elseif(isset($_SESSION['stud'])):
                                     $sid = $_SESSION['sid'];
                                     $outputString = studentCourse($sid);
                                     if(!count($outputString)): ?>
@@ -74,10 +74,10 @@
                                             <tr>
                                                 <td><?php echo $i; ?></td>
                                                 <td>
-                                                    <a href="<?php echo SERVER; ?>/course/student/<?php echo $value['c_id']; ?>"><?php echo $value['c_name']; ?></a>
+                                                    <a href="<?= SERVER; ?>/course/student/<?= $value['c_id']; ?>"><?= $value['c_name']; ?></a>
                                                 </td>
                                                 <td>
-                                                    <?php echo $value['t_name']; ?>
+                                                    <?= $value['t_name']; ?>
                                                 </td>
                                             </tr>
                                         <?php $i++; endforeach; ?>
@@ -89,7 +89,7 @@
                                 <?php else: ?>
                                 <div class="col-sm-4"></div>
                                 <div class="col-sm-4 form-block">
-                                        <form action="<?php echo SERVER; ?>/session" method="post">
+                                        <form action="<?= SERVER; ?>/session" method="post">
                                             <p class="text-primary">Sign in with your organizational id number.</p>
                                             <div class="input-group" style="padding-top: 25px;">
                                                 <div class="input-group-addon" title="AIUB ID"><i class="fa fa-user font17"></i></div>
@@ -136,4 +136,4 @@
     </footer>
 	</body>
 </html>
-<script src="<?php echo SERVER; ?>/assets/js/custom.js"></script>
+<script src="<?= SERVER; ?>/assets/js/custom.js"></script>
