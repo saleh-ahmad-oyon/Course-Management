@@ -107,10 +107,10 @@
                                         <?php
                                             if(isset($_GET['err'])){
                                                 if($_GET['err'] == 1){
-                                                    echo '*Username and Password do not match !!';
+                                                    echo '<br/>* Username and Password do not match !!';
                                                 }
                                                 elseif($_GET['err'] == 2){
-                                                    echo '*Username pattern do not correct !!';
+                                                    echo '<br/>* Username pattern do not correct !!';
                                                 }
                                             }
                                         ?>
