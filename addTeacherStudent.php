@@ -8,11 +8,11 @@
 <html lang="en">
 	<head>
 		<?php require_once 'head.php'; ?>
-		<link href="<?php echo SERVER; ?>/assets/css/dropify.css" rel="stylesheet"/>
-		<link href="<?php echo SERVER; ?>/assets/css/radio.css" rel="stylesheet"/>
-		<link rel="stylesheet" href="<?php echo SERVER; ?>/assets/css/jquery-ui.css">
-		<link rel="stylesheet" href="<?php echo SERVER; ?>/assets/css/jquery-ui.theme.css">
-		<script src="<?php echo SERVER; ?>/assets/js/jquery-ui.js"></script>
+		<link href="<?= SERVER; ?>/assets/css/dropify.css" rel="stylesheet"/>
+		<link href="<?= SERVER; ?>/assets/css/radio.css" rel="stylesheet"/>
+		<link rel="stylesheet" href="<?= SERVER; ?>/assets/css/jquery-ui.css">
+		<link rel="stylesheet" href="<?= SERVER; ?>/assets/css/jquery-ui.theme.css">
+		<script src="<?= SERVER; ?>/assets/js/jquery-ui.js"></script>
         <script>
             $(function() {
                 $( "#datepicker" ).datepicker({
@@ -60,7 +60,7 @@
                             <div class="col-md-4 form-block">
                                 <?php if($_GET['id'] == 1): ?>
                                     <h4 class="text-center"><i><b><ins>Teacher Registration</ins></b></i></h4><br/><br/>
-                                    <form action="<?php echo SERVER; ?>/controller/addStudentTeacher" method="post" onsubmit="return confirmation();" enctype="multipart/form-data">
+                                    <form action="<?= SERVER; ?>/controller/addStudentTeacher" method="post" onsubmit="return confirmation();" enctype="multipart/form-data">
                                         <div class="form-group required">
                                             <label>Name</label>
                                             <input type="text" class="form-control onlyChars" required="required" placeholder="Full Name" name="tname" title="name">
@@ -107,7 +107,7 @@
                                     </form>
                                 <?php elseif($_GET['id'] == 2): ?>
                                     <h4 class="text-center"><i><b><ins>Student Registration</ins></b></i></h4><br/><br/>
-                                    <form action="<?php echo SERVER; ?>/controller/addStudentTeacher" method="post" onsubmit="return confirmation();" enctype="multipart/form-data">
+                                    <form action="<?= SERVER; ?>/controller/addStudentTeacher" method="post" onsubmit="return confirmation();" enctype="multipart/form-data">
                                         <div class="form-group required">
                                             <label>Name</label>
                                             <input type="text" class="onlyChars form-control" required="required" placeholder="Full Name" name="fullname" title="Name">
@@ -182,7 +182,7 @@
     </footer>
 	</body>
 </html>
-<script src="<?php echo SERVER; ?>/assets/js/dropify.js"></script>
+<script src="<?= SERVER; ?>/assets/js/dropify.js"></script>
 <script>
     //Dropify
     $(document).ready(function(){
@@ -206,5 +206,5 @@
         });
     });
 </script>
-<script src="<?php echo SERVER; ?>/assets/js/jquery.maskedinput.min.js"></script>
-<script src="<?php echo SERVER; ?>/assets/js/custom.js"></script>
+<script src="<?= SERVER; ?>/assets/js/jquery.maskedinput.min.js"></script>
+<script src="<?= SERVER; ?>/assets/js/custom.js"></script>

@@ -27,7 +27,7 @@
                             <div class="col-md-12">
                                 <div class="text-center">
                                     <h3><ins><?php echo getCourseName($_GET['id']) ?></ins></h3><br />
-                                    <form action="<?php echo SERVER; ?>/controller/addStudent" method="post">
+                                    <form action="<?= SERVER; ?>/controller/addStudent" method="post">
                                         <div class="form-inline">
                                             <div class="form-group">
                                                 <label>AIUB ID</label>
@@ -37,7 +37,7 @@
                                                 <button type="submit" class="btn btn-primary" name="addStud"><i class="fa fa-user-plus"></i></button>
                                             </div>
                                         </div>
-                                        <input type="hidden" value="<?php echo $_GET['id']; ?>" name="courseId"/>
+                                        <input type="hidden" value="<?= $_GET['id']; ?>" name="courseId"/>
                                     </form>
                                 </div>
                             </div>
@@ -58,4 +58,4 @@
         </footer>
 	</body>
 </html>
-<script src="<?php echo SERVER; ?>/assets/js/custom.js"></script>
+<script src="<?= SERVER; ?>/assets/js/custom.js"></script>

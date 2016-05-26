@@ -15,9 +15,9 @@ if($_GET['id'] == 1){
 <html lang="en">
 <head>
     <?php require_once 'head.php'; ?>
-    <link rel="stylesheet" href="<?php echo SERVER; ?>/assets/css/jquery-ui.css">
-    <link rel="stylesheet" href="<?php echo SERVER; ?>/assets/css/jquery-ui.theme.css">
-    <script src="<?php echo SERVER; ?>/assets/js/jquery-ui.js"></script>
+    <link rel="stylesheet" href="<?= SERVER; ?>/assets/css/jquery-ui.css">
+    <link rel="stylesheet" href="<?= SERVER; ?>/assets/css/jquery-ui.theme.css">
+    <script src="<?= SERVER; ?>/assets/js/jquery-ui.js"></script>
     <script>
         $(function() {
             $( "#speed" )
@@ -56,7 +56,7 @@ if($_GET['id'] == 1){
                             <h3>Assign Teacher in a Course</h3>
                             <br/><br/>
                             <div class="col-lg-1"></div>
-                            <form action="<?php echo SERVER; ?>/controller/addCourseTeacher" method="post" onsubmit="return confirmation();">
+                            <form action="<?= SERVER; ?>/controller/addCourseTeacher" method="post" onsubmit="return confirmation();">
                                 <div class="col-lg-4">
                                     <div class="form-group">
                                         <label>Choose Teacher</label>
@@ -64,7 +64,7 @@ if($_GET['id'] == 1){
                                             <option></option>
                                             <?php $teacher = getTeacher();
                                             foreach($teacher as $t):?>
-                                                <option><?php echo $t['t_aiub_id'], " ","|"," ", $t['t_name']; ?></option>
+                                                <option><?= $t['t_aiub_id'], " ","|"," ", $t['t_name']; ?></option>
                                             <?php endforeach; ?>
                                         </select>
                                     </div>
@@ -109,7 +109,7 @@ if($_GET['id'] == 1){
                                             <td><?php echo $tc['c_name']; ?></td>
                                             <td>
                                                 <div class="text-center">
-                                                    <form action="<?php echo SERVER; ?>/controller/dltTeacherCourse" method="post" onsubmit="return confirmation();">
+                                                    <form action="<?= SERVER; ?>/controller/dltTeacherCourse" method="post" onsubmit="return confirmation();">
                                                         <input type="hidden" value="<?php echo $tc['c_id']; ?>" name="id">
                                                         <button type="submit" name="dltTeacher" class="btn btn-danger"><span class='glyphicon glyphicon-trash hidden-md hidden-sm'></span><span class="hidden-xs">  Delete</span></button>
                                                     </form>
@@ -138,4 +138,4 @@ if($_GET['id'] == 1){
     </footer>
 </body>
 </html>
-<script src="<?php echo SERVER; ?>/assets/js/custom.js"></script>
+<script src="<?= SERVER; ?>/assets/js/custom.js"></script>
