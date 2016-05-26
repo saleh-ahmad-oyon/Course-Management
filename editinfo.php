@@ -5,25 +5,25 @@
 	if(!isset($_SESSION['stud']) && !isset($_SESSION['teacher'])){
 		header('Location: '.SERVER.'');
 	}elseif(isset($_SESSION['stud'])){
-        $student = true;
-        $sid = $_SESSION['sid'];
-        $row = stuEditableBasicInfo($sid);
+        $student    = true;
+        $sid        = $_SESSION['sid'];
+        $row        = stuEditableBasicInfo($sid);
         $department = deptName();
 	}elseif(isset($_SESSION['teacher'])){
         $teacher = true;
-        $tid = $_SESSION['tid'];
-        $row = teacherEditableBasicInfo($tid);
+        $tid     = $_SESSION['tid'];
+        $row     = teacherEditableBasicInfo($tid);
     }
 ?>
 <!DOCTYPE html>
 <html lang="en">
 	<head>
 		<?php require_once 'head.php'; ?>
-		<link href="<?php echo SERVER; ?>/assets/css/dropify.css" rel="stylesheet"/>
-		<link href="<?php echo SERVER; ?>/assets/css/radio.css" rel="stylesheet"/>
-        <link rel="stylesheet" href="<?php echo SERVER; ?>/assets/css/jquery-ui.css">
-        <link rel="stylesheet" href="<?php echo SERVER; ?>/assets/css/jquery-ui.theme.css">
-        <script src="<?php echo SERVER; ?>/assets/js/jquery-ui.js"></script>
+		<link href="<?= SERVER; ?>/assets/css/dropify.css" rel="stylesheet"/>
+		<link href="<?= SERVER; ?>/assets/css/radio.css" rel="stylesheet"/>
+        <link rel="stylesheet" href="<?= SERVER; ?>/assets/css/jquery-ui.css">
+        <link rel="stylesheet" href="<?= SERVER; ?>/assets/css/jquery-ui.theme.css">
+        <script src="<?= SERVER; ?>/assets/js/jquery-ui.js"></script>
 		<script>
             $(function() {
 				$( "#datepicker" ).datepicker({
@@ -74,15 +74,15 @@
                                 <div class="col-md-4"></div>
                                 <div class="col-md-4 form-block">
                                     <?php if($student): ?>
-                                    <form action="<?php echo SERVER; ?>/controller/editStuInfo" method="post" enctype="multipart/form-data" >
+                                    <form action="<?= SERVER; ?>/controller/editStuInfo" method="post" enctype="multipart/form-data" >
                                         <div class="form-group" style="vertical-align: middle">
                                             <label>Profile Picture</label>
-                                            <input type="file" name="profilepic" accept='image/*' id="input-file-now" class="dropify" data-default-file="<?php echo STUDENTPP, '/', htmlentities(stripslashes($row['s_image'])); ?>" />
+                                            <input type="file" name="profilepic" accept='image/*' id="input-file-now" class="dropify" data-default-file="<?= STUDENTPP, '/', htmlentities(stripslashes($row['s_image'])); ?>" />
                                         </div>
                                         <div class="form-group">
                                             <div class="input-group">
                                                 <div class="input-group-addon" title="Full Name"><i class="fa fa-user font17"></i></div>
-                                                <input type="text" value="<?php echo htmlentities(stripslashes($row['s_full_name'])); ?>" class="onlyChars form-control" name="editFullName" required="required" title="Only letters, space, dot and comma allowed" />
+                                                <input type="text" value="<?= htmlentities(stripslashes($row['s_full_name'])); ?>" class="onlyChars form-control" name="editFullName" required="required" title="Only letters, space, dot and comma allowed" />
                                             </div>
                                         </div>
                                         <div class="form-group">
@@ -107,7 +107,7 @@
                                                 $DOB = strtotime(htmlentities(stripcslashes($row['s_dob'])));
                                                 $DOB = date("d M, Y", $DOB);
                                                 ?>
-                                                <input type="text" id="datepicker" placeholder="dd Mmm, YYYY" name="dob" class="form-control" value="<?php echo $DOB; ?>">
+                                                <input type="text" id="datepicker" placeholder="dd Mmm, YYYY" name="dob" class="form-control" value="<?= $DOB; ?>">
                                             </div>
                                         </div>
                                         <div class="form-group">
@@ -140,15 +140,15 @@
                                         </div>
                                     </form>
                                     <?php elseif($teacher): ?>
-                                        <form action="<?php echo SERVER; ?>/controller/editTeacherInfo" method="post" enctype="multipart/form-data" >
+                                        <form action="<?= SERVER; ?>/controller/editTeacherInfo" method="post" enctype="multipart/form-data" >
                                             <div class="form-group" style="vertical-align: middle">
                                                 <label>Profile Picture</label>
-                                                <input type="file" name="profilepic" accept='image/*' id="input-file-now" class="dropify" data-default-file="<?php echo TEACHERPP, '/', htmlentities(stripslashes($row['t_image'])); ?>" />
+                                                <input type="file" name="profilepic" accept='image/*' id="input-file-now" class="dropify" data-default-file="<?= TEACHERPP, '/', htmlentities(stripslashes($row['t_image'])); ?>" />
                                             </div>
                                             <div class="form-group">
                                                 <div class="input-group">
                                                     <div class="input-group-addon" title="Full Name"><i class="fa fa-user font17"></i></div>
-                                                    <input type="text" value="<?php echo htmlentities(stripslashes($row['t_name'])); ?>" class="onlyChars form-control" name="editFullName" required="required" title="Only letters, space, dot and comma allowed" />
+                                                    <input type="text" value="<?= htmlentities(stripslashes($row['t_name'])); ?>" class="onlyChars form-control" name="editFullName" required="required" title="Only letters, space, dot and comma allowed" />
                                                 </div>
                                             </div>
                                             <div class="form-group">
@@ -158,7 +158,7 @@
                                                     $DOB = strtotime(htmlentities(stripcslashes($row['t_dob'])));
                                                     $DOB = date("d M, Y", $DOB);
                                                     ?>
-                                                    <input type="text" id="datepicker" placeholder="dd Mmm, YYYY" name="dob" class="form-control" value="<?php echo $DOB; ?>">
+                                                    <input type="text" id="datepicker" placeholder="dd Mmm, YYYY" name="dob" class="form-control" value="<?= $DOB; ?>">
                                                 </div>
                                             </div>
                                             <div class="form-group">
@@ -177,13 +177,13 @@
                                             <div class="form-group">
                                                 <div class="input-group">
                                                     <div class="input-group-addon" title="Contact No."><span class="glyphicon glyphicon-phone"></span></div>
-                                                    <input type="tel" value="<?php echo htmlentities(stripslashes($row['t_phone'])); ?>" class="phnNum form-control" name="editPhone" id="phone" />
+                                                    <input type="tel" value="<?= htmlentities(stripslashes($row['t_phone'])); ?>" class="phnNum form-control" name="editPhone" id="phone" />
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                 <div class="input-group">
                                                     <div class="input-group-addon" title="Email"><span class="glyphicon glyphicon-envelope"></span></div>
-                                                    <input type="email" value="<?php echo htmlentities(stripslashes($row['t_email'])); ?>" name="editEmail" pattern="[([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)]i" title="Insert Email address Correctly" class="form-control"/>
+                                                    <input type="email" value="<?= htmlentities(stripslashes($row['t_email'])); ?>" name="editEmail" pattern="[([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)]i" title="Insert Email address Correctly" class="form-control"/>
                                                 </div>
                                             </div>
                                             <div class="form-group">
@@ -211,8 +211,8 @@
         </footer>
 	</body>
 </html>
-<script src="<?php echo SERVER; ?>/assets/js/jquery.maskedinput.min.js"></script>
-<script src="<?php echo SERVER; ?>/assets/js/dropify.js"></script>
+<script src="<?= SERVER; ?>/assets/js/jquery.maskedinput.min.js"></script>
+<script src="<?= SERVER; ?>/assets/js/dropify.js"></script>
 <script>
     //Dropify
     $(document).ready(function(){
@@ -235,4 +235,4 @@
         });
     });
 </script>
-<script src="<?php echo SERVER; ?>/assets/js/custom.js"></script>
+<script src="<?= SERVER; ?>/assets/js/custom.js"></script>

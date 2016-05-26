@@ -3,16 +3,16 @@
     $student = false;
     $teacher = false;
 
-	if(!isset($_SESSION['teacher']) && !isset($_SESSION['stud'])){
+	if (!isset($_SESSION['teacher']) && !isset($_SESSION['stud'])) {
 		header('Location: '.SERVER.'');
-	}elseif(isset($_SESSION['stud'])){
+	} elseif(isset($_SESSION['stud'])) {
         $student = true;
-        $sid = $_SESSION['sid'];
-        $row = stubasicInfo($sid);
-    }elseif(isset($_SESSION['teacher'])){
+        $sid     = $_SESSION['sid'];
+        $row     = stubasicInfo($sid);
+    } elseif(isset($_SESSION['teacher'])) {
         $teacher = true;
-        $tid = $_SESSION['tid'];
-        $row = teacherBasicInfo($tid);
+        $tid     = $_SESSION['tid'];
+        $row     = teacherBasicInfo($tid);
     }
 ?>
 <!DOCTYPE html>
@@ -63,24 +63,24 @@
                                     <table class="table table-bordered">
                                         <tr>
                                             <td>ID</td>
-                                            <td><?php echo htmlentities(stripslashes($row['s_aiub_id'])); ?></td>
+                                            <td><?= htmlentities(stripslashes($row['s_aiub_id'])); ?></td>
                                         </tr>
                                         <tr>
                                             <td>Full Name</td>
-                                            <td><?php echo htmlentities(stripslashes($row['s_full_name'])); ?></td>
+                                            <td><?= htmlentities(stripslashes($row['s_full_name'])); ?></td>
                                         </tr>
                                         <tr>
                                             <td>Department</td>
-                                            <td><?php echo htmlentities(stripslashes($row['s_dept'])); ?></td>
+                                            <td><?= htmlentities(stripslashes($row['s_dept'])); ?></td>
                                         </tr>
                                         <tr>
                                             <td>CGPA</td>
-                                            <td><?php echo htmlentities(stripslashes($row['s_cgpa'])); ?></td>
+                                            <td><?= htmlentities(stripslashes($row['s_cgpa'])); ?></td>
                                         </tr>
 
                                         <tr>
                                             <td>Gender</td>
-                                            <td><?php echo htmlentities(stripcslashes($row['s_gender'])); ?></td>
+                                            <td><?= htmlentities(stripcslashes($row['s_gender'])); ?></td>
                                         </tr>
 
                                         <tr>
@@ -89,20 +89,20 @@
                                             $DOB = strtotime(htmlentities(stripcslashes($row['s_dob'])));
                                             $DOB = date("d M, Y", $DOB);
                                             ?>
-                                            <td><?php echo $DOB; ?></td>
+                                            <td><?= $DOB; ?></td>
                                         </tr>
                                         <tr>
                                             <td>Phone</td>
-                                            <td><?php echo htmlentities(stripslashes($row['s_phone'])); ?></td>
+                                            <td><?= htmlentities(stripslashes($row['s_phone'])); ?></td>
                                         </tr>
                                         <tr>
                                             <td>Email</td>
-                                            <td><?php echo htmlentities(stripslashes($row['s_email'])); ?></td>
+                                            <td><?= htmlentities(stripslashes($row['s_email'])); ?></td>
                                         </tr>
                                     </table>
                                     <br />
                                     <div class="text-center">
-                                        <a class="btn btn-primary" href="<?php echo SERVER; ?>/editinfo"><i class="fa fa-pencil"></i>&nbsp;&nbsp;Update</a>
+                                        <a class="btn btn-primary" href="<?= SERVER; ?>/editinfo"><i class="fa fa-pencil"></i>&nbsp;&nbsp;Update</a>
                                     </div>
                                 </div>
 
@@ -117,19 +117,19 @@
                                         <table class="table table-bordered">
                                             <tr>
                                                 <td>ID</td>
-                                                <td><?php echo htmlentities(stripslashes($row['t_aiub_id'])); ?></td>
+                                                <td><?= htmlentities(stripslashes($row['t_aiub_id'])); ?></td>
                                             </tr>
                                             <tr>
                                                 <td>Full Name</td>
-                                                <td><?php echo htmlentities(stripslashes($row['t_name'])); ?></td>
+                                                <td><?= htmlentities(stripslashes($row['t_name'])); ?></td>
                                             </tr>
                                             <tr>
                                                 <td>Designation</td>
-                                                <td><?php echo htmlentities(stripslashes($row['t_designation'])); ?></td>
+                                                <td><?= htmlentities(stripslashes($row['t_designation'])); ?></td>
                                             </tr>
                                             <tr>
                                                 <td>Gender</td>
-                                                <td><?php echo htmlentities(stripcslashes($row['t_gender'])); ?></td>
+                                                <td><?= htmlentities(stripcslashes($row['t_gender'])); ?></td>
                                             </tr>
 
                                             <tr>
@@ -138,20 +138,20 @@
                                                 $DOB = strtotime(htmlentities(stripcslashes($row['t_dob'])));
                                                 $DOB = date("d M, Y", $DOB);
                                                 ?>
-                                                <td><?php echo $DOB; ?></td>
+                                                <td><?= $DOB; ?></td>
                                             </tr>
                                             <tr>
                                                 <td>Phone</td>
-                                                <td><?php echo htmlentities(stripslashes($row['t_phone'])); ?></td>
+                                                <td><?= htmlentities(stripslashes($row['t_phone'])); ?></td>
                                             </tr>
                                             <tr>
                                                 <td>Email</td>
-                                                <td><?php echo htmlentities(stripslashes($row['t_email'])); ?></td>
+                                                <td><?= htmlentities(stripslashes($row['t_email'])); ?></td>
                                             </tr>
                                         </table>
                                         <br />
                                         <div class="text-center">
-                                            <a class="btn btn-primary" href="<?php echo SERVER; ?>/editinfo"><i class="fa fa-pencil"></i>&nbsp;&nbsp;Update</a>
+                                            <a class="btn btn-primary" href="<?= SERVER; ?>/editinfo"><i class="fa fa-pencil"></i>&nbsp;&nbsp;Update</a>
                                         </div>
                                     </div>
                                 </div>

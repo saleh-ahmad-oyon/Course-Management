@@ -11,9 +11,9 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
 <title>Course Management</title>
-<link href="<?php echo SERVER; ?>/assets/img/aiub.png" rel="shortcut icon" />
-<link href="<?php echo SERVER; ?>/assets/css/bootstrap-3.3.6-dist/css/bootstrap.min.css" rel="stylesheet"/>
-<link href="<?php echo SERVER; ?>/assets/css/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet"/>
-<link href="<?php echo SERVER; ?>/assets/css/custom.php" rel="stylesheet"/>
-<script src="<?php echo SERVER; ?>/assets/js/jquery-2.1.4.min.js"></script>
-<script src="<?php echo SERVER; ?>/assets/css/bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
+<link href="<?= SERVER; ?>/assets/img/aiub.png" rel="shortcut icon" />
+<link href="<?= SERVER; ?>/assets/css/bootstrap-3.3.6-dist/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="<?= SERVER; ?>/assets/css/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="<?= SERVER; ?>/assets/css/custom.php" rel="stylesheet"/>
+<script src="<?= SERVER; ?>/assets/js/jquery-2.1.4.min.js"></script>
+<script src="<?= SERVER; ?>/assets/css/bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>

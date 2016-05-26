@@ -36,7 +36,8 @@ if (isset($_POST['loginbtn'])) {
                  * @var int        $_SESSION['aid']          Saving Authority's ID
                  */
 				$_SESSION['authority'] = $user;
-				$_SESSION['aid'] = authority_id($user);
+				$_SESSION['aid']       = authority_id($user);
+                
 				header('Location: '.SERVER.'');
 			} else {
 				header('Location: '.SERVER.'?err=1');
@@ -50,7 +51,8 @@ if (isset($_POST['loginbtn'])) {
                  * @var int        $_SESSION['tid']        Saving Teacher's ID
                  */
                 $_SESSION['teacher'] = $user;
-				$_SESSION['tid'] = teacher_id($user);
+				$_SESSION['tid']     = teacher_id($user);
+				
 				header('Location: '.SERVER.'');
 			} else {
 				header('Location: '.SERVER.'?err=1');
@@ -64,7 +66,8 @@ if (isset($_POST['loginbtn'])) {
                  * @var int        $_SESSION['sid']     Saving Student's ID
                  */
                 $_SESSION['stud'] = $user;
-				$_SESSION['sid'] = student_id($user);
+				$_SESSION['sid']  = student_id($user);
+                
 				header('Location: '.SERVER.'');
 			} else {
 				header('Location: '.SERVER.'?err=1');

@@ -2,18 +2,18 @@
 	if(!isset($_SESSION['teacher']) && !isset($_SESSION['stud'])){
 		header('Location: '.SERVER.'');
 	}
-	$cid = $_GET['id1'];
-	$sid = $_GET['id2'];
+	$cid     = $_GET['id1'];
+	$sid     = $_GET['id2'];
 	$stuInfo = getStuIdNameAttendence($cid, $sid);
 	
 	$outputString = getXmMarks($_GET['id1'],$_GET['id2'],$_GET['id3']);
-	if(strpos($_GET['id3'],'quiz')!== false){
+	if (strpos($_GET['id3'],'quiz') !== false) {
 		$name = str_replace('quiz', 'Quiz ', $_GET['id3']);
 	}
-	elseif(strpos($_GET['id3'],'mid')!== false){
+	elseif (strpos($_GET['id3'],'mid') !== false) {
 		$name = str_replace('mid', 'Mid Term', $_GET['id3']);
 	}
-	elseif(strpos($_GET['id3'],'final')!== false){
+	elseif (strpos($_GET['id3'],'final') !== false) {
 		$name = str_replace('final', 'Final Term', $_GET['id3']);
 	}	
 ?>
@@ -40,13 +40,13 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="text-center">
-                                    <h2><ins><?php echo getCourseName($_GET['id1']) ?></ins></h2><br />
+                                    <h2><ins><?= getCourseName($_GET['id1']) ?></ins></h2><br />
                                     <h4>
                                         <?php $value = explode('|', $stuInfo); ?>
-                                        ID: <span class="text-primary"><?php echo $value[0]; ?></span>&nbsp;&nbsp;&nbsp;&nbsp;Name: <span class="text-primary"><?php echo $value[1]; ?></span>&nbsp;&nbsp;&nbsp;&nbsp;Attendence: <span class="text-primary"><?php echo $value[2]; ?></span>
+                                        ID: <span class="text-primary"><?= $value[0]; ?></span>&nbsp;&nbsp;&nbsp;&nbsp;Name: <span class="text-primary"><?= $value[1]; ?></span>&nbsp;&nbsp;&nbsp;&nbsp;Attendence: <span class="text-primary"><?= $value[2]; ?></span>
                                     </h4>
                                     <br/>
-                                    <h5><ins><?php echo $name; ?></h5></ins>
+                                    <h5><ins><?= $name; ?></h5></ins>
                                 </div>
                                 <br/><br/>
                                 <?php if(!count($outputString)): ?>
@@ -54,7 +54,7 @@
                                 <?php else: ?>
                                 <div class="col-md-4"></div>
                                 <div class="col-md-4">
-                                    <form action="<?php echo SERVER; ?>/controller/stuMarksEdit?id1=<?php echo $_GET['id1']; ?>&id2=<?php echo $_GET['id2']; ?>" method="post" onsubmit="return confirmation();">
+                                    <form action="<?= SERVER; ?>/controller/stuMarksEdit?id1=<?= $_GET['id1']; ?>&id2=<?= $_GET['id2']; ?>" method="post" onsubmit="return confirmation();">
                                         <table class="table table-bordered">
                                             <thead>
                                                 <tr>
@@ -65,19 +65,23 @@
                                             <tbody>
                                                 <?php foreach($outputString as $value): ?>
                                                     <tr>
-                                                        <td><label><?php echo $value['e_date']; ?></label></td>
+                                                        <td><label><?= $value['e_date']; ?></label></td>
                                                         <?php if($_GET['id3'] == 'mid' || $_GET['id3'] == 'final'): ?>
-                                                                <td><input type="number" step="0.50" min="0" max="40" value="<?php echo $value['e_marks']; ?>" name="marks[]" class="onlyFloat form-control" /></td>
+                                                                <td><input type="number" step="0.50" min="0" max="40" value="<?= $value['e_marks']; ?>" name="marks[]" class="onlyFloat form-control" /></td>
                                                         <?php else: ?>
-                                                                <td><input type="number" step="0.50" min="0" max="20" value="<?php echo $value['e_marks']; ?>" name="marks[]" class="onlyFloat form-control" /></td>
+                                                                <td><input type="number" step="0.50" min="0" max="20" value="<?= $value['e_marks']; ?>" name="marks[]" class="onlyFloat form-control" /></td>
                                                         <?php endif; ?>
-                                                        <input type="hidden" value="<?php echo $value['e_id']; ?>" name="id[]" />
+                                                        <input type="hidden" value="<?= $value['e_id']; ?>" name="id[]" />
                                                     </tr>
                                                 <?php endforeach; ?>
                                             </tbody>
                                             <tfoot>
                                                 <tr>
-                                                    <td colspan="2"><div class="text-center"><input type="submit" value="submit" name="editMarks" class="btn btn-success" /></div></td>
+                                                    <td colspan="2">
+                                                        <div class="text-center">
+                                                            <button type="submit" name="editMarks" class="btn btn-success"><span class='glyphicon glyphicon-refresh hidden-md hidden-sm'></span><span class="hidden-xs">  Update</span></button>
+                                                        </div>
+                                                    </td>
                                                 </tr>
                                             </tfoot>
                                         </table>
@@ -103,4 +107,4 @@
         </footer>
 	</body>
 </html>
-<script src="<?php echo SERVER; ?>/assets/js/custom.js"></script>
+<script src="<?= SERVER; ?>/assets/js/custom.js"></script>

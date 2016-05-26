@@ -1,8 +1,9 @@
-<?php require 'session.php'; 
-	if(!isset($_SESSION['teacher']) && !isset($_SESSION['stud'])){
+<?php
+    require 'session.php'; 
+	if (!isset($_SESSION['teacher']) && !isset($_SESSION['stud'])) {
 		header('Location: '.SERVER.'');
 	}
-	$cid = $_GET['id'];
+	$cid          = $_GET['id'];
 	$outputString = studentList($cid);
 ?>
 <!DOCTYPE html>
@@ -28,7 +29,7 @@
 						<div class="row">
 							<div class="col-md-12">
 								<div class="text-center">
-									<h3><ins><?php echo getCourseName($_GET['id']) ?></ins></h3>
+									<h3><ins><?= getCourseName($_GET['id']) ?></ins></h3>
 								</div>
 								<br />
 								<?php if(!count($outputString)): ?>
@@ -49,16 +50,16 @@
 									<tbody>
 										<?php $i=1; foreach($outputString as $value):?>
 											<tr>
-												<td><?php echo $i; ?></td>
-												<td><?php echo $value['s_aiub_id']; ?></td>
-												<td><?php echo $value['s_full_name']; ?></td>
-												<td><?php echo $value['s_cgpa']; ?></td>
-												<td><?php echo $value['s_dept']; ?></td>
+												<td><?= $i; ?></td>
+												<td><?= $value['s_aiub_id']; ?></td>
+												<td><?= $value['s_full_name']; ?></td>
+												<td><?= $value['s_cgpa']; ?></td>
+												<td><?= $value['s_dept']; ?></td>
 												<td>
-													<img src="<?php echo STUDENTPP, '/', $value['s_image']; ?>" alt="Profile Pic" class="img-circle zoom">
+													<img src="<?= STUDENTPP, '/', $value['s_image']; ?>" alt="Profile Pic" class="img-circle zoom">
 												</td>
 												<td class='text-center'>
-													<form action="<?php echo SERVER; ?>/controller/removeStudent?id1=<?php echo $_GET['id']; ?>&id2=<?php echo $value['s_id']; ?>" method="post" onsubmit="return confirmation();">
+													<form action="<?= SERVER; ?>/controller/removeStudent?id1=<?= $_GET['id']; ?>&id2=<?= $value['s_id']; ?>" method="post" onsubmit="return confirmation();">
 														<button type="submit" name="dltBtn" class="btn btn-danger" ><span class='glyphicon glyphicon-trash hidden-md hidden-sm'></span><span class="hidden-xs">  Delete</span></button>
 													</form>
 												</td>

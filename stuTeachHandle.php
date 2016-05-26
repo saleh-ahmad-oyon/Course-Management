@@ -1,13 +1,13 @@
 <?php
     require 'session.php';
-    if(!isset($_SESSION['authority'])){
+    if (!isset($_SESSION['authority'])) {
         header('Location: '.SERVER.'');
     }
     $teacher = false;
     $student = false;
-    if($_GET['id'] == 1){
+    if ($_GET['id'] == 1) {
         $teacher = true;
-    }elseif($_GET['id'] == 2){
+    } elseif($_GET['id'] == 2) {
         $student = true;
     }
 ?>
@@ -37,10 +37,10 @@
                             <div class="col-md-4">
                                 <div class="text-center">
                                     <?php if($teacher): ?>
-                                    <a class="btn btn-primary btn-block hover-focus" href="<?php echo SERVER; ?>/add/teacher"><i class="fa fa-user-plus"></i>&nbsp;&nbsp;Add Teacher</a><br/>
-                                    <a class="btn btn-primary btn-block hover-focus" href="<?php echo SERVER; ?>/teacher/subject"><i class="fa fa-book"></i>&nbsp;&nbsp;Manage Subject</a>
+                                    <a class="btn btn-primary btn-block hover-focus" href="<?= SERVER; ?>/add/teacher"><i class="fa fa-user-plus"></i>&nbsp;&nbsp;Add Teacher</a><br/>
+                                    <a class="btn btn-primary btn-block hover-focus" href="<?= SERVER; ?>/teacher/subject"><i class="fa fa-book"></i>&nbsp;&nbsp;Manage Subject</a>
                                         <?php elseif($student): ?>
-                                        <a class="btn btn-success btn-block hover-focus" href="<?php echo SERVER; ?>/add/student"><i class="fa fa-user-plus"></i>&nbsp;&nbsp;Add Student</a>
+                                        <a class="btn btn-success btn-block hover-focus" href="<?= SERVER; ?>/add/student"><i class="fa fa-user-plus"></i>&nbsp;&nbsp;Add Student</a>
                                     <?php endif; ?>
                                 </div>
                             </div>
@@ -63,4 +63,4 @@
     </footer>
 </body>
 </html>
-<script src="<?php echo SERVER; ?>/assets/js/custom.js"></script>
+<script src="<?= SERVER; ?>/assets/js/custom.js"></script>

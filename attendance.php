@@ -8,7 +8,7 @@
 <html lang="en">
 	<head>
 		<?php require_once 'head.php'; ?>
-		<link href="<?php echo SERVER; ?>/assets/css/checkbox.css" rel="stylesheet"/>
+		<link href="<?= SERVER; ?>/assets/css/checkbox.css" rel="stylesheet"/>
 	</head>
 	<body>
         <div id="wrap">
@@ -44,14 +44,14 @@
                                                 <th>Name</th>
                                                 <th>Total Attendence</th>
                                             </tr>
-                                            <form action="<?php echo SERVER; ?>/controller/confirmAttendence?id=<?php echo $_GET['id']; ?>" method="post" onsubmit="return confirmation();">
+                                            <form action="<?= SERVER; ?>/controller/confirmAttendence?id=<?= $_GET['id']; ?>" method="post" onsubmit="return confirmation();">
                                                 <?php $i=1; foreach($outputString as $value):?>
                                                     <tr>
-                                                        <td><input type='checkbox' id='del<?php echo $i ?>' name='check_att[]' checked='checked' value='<?php echo $value['s_id']; ?>' /><label for='del<?php echo $i; ?>'></label></td>
-                                                        <td><?php echo $i; ?></td>
-                                                        <td><?php echo $value['s_aiub_id']; ?></td>
-                                                        <td><?php echo $value['s_full_name'] ?></td>
-                                                        <td class='text-success'><?php echo $value['att_total']; ?></td>
+                                                        <td><input type='checkbox' id='del<?= $i ?>' name='check_att[]' checked='checked' value='<?= $value['s_id']; ?>' /><label for='del<?= $i; ?>'></label></td>
+                                                        <td><?= $i; ?></td>
+                                                        <td><?= $value['s_aiub_id']; ?></td>
+                                                        <td><?= $value['s_full_name'] ?></td>
+                                                        <td class='text-success'><?= $value['att_total']; ?></td>
                                                     </tr>
                                                     <?php $i++; ?>
                                                 <?php endforeach; ?>
@@ -86,4 +86,4 @@
         </footer>
 	</body>
 </html>
-<script src="<?php echo SERVER; ?>/assets/js/custom.js"></script>
+<script src="<?= SERVER; ?>/assets/js/custom.js"></script>

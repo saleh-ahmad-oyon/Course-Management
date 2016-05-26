@@ -1,5 +1,6 @@
-<?php require 'session.php'; 
-	if(!isset($_SESSION['teacher']) && !isset($_SESSION['stud'])){
+<?php
+    require 'session.php';
+	if (!isset($_SESSION['teacher']) && !isset($_SESSION['stud'])) {
 		header('Location: '.SERVER.'');
 	}
 	$id = $_GET['id'];
@@ -28,11 +29,11 @@
                             <div class="col-md-12">
                                 <div class="col-md-12">
                                     <div class="text-center">
-                                        <h3><ins><?php echo getCourseName($_GET['id']) ?></ins></h3><br />
-                                        <a class="btn btn-primary hover-focus margin-top-10" href="<?php echo SERVER; ?>/course/<?php echo $id; ?>/students">Student List</a>&nbsp;&nbsp;
-                                        <a class="btn btn-info hover-focus margin-top-10" href="<?php echo SERVER; ?>/course/<?php echo $id; ?>/addstudent"><i class="fa fa-user-plus"></i> Student</a>&nbsp;&nbsp;
-                                        <a class="btn btn-primary hover-focus margin-top-10" href="<?php echo SERVER; ?>/course/<?php echo $id; ?>/result">Students Marks</a>&nbsp;&nbsp;
-                                        <a class="btn btn-info hover-focus margin-top-10" href="<?php echo SERVER; ?>/course/<?php echo $id; ?>/attendance">Students Attendance</a>
+                                        <h3><ins><?= getCourseName($_GET['id']) ?></ins></h3><br />
+                                        <a class="btn btn-primary hover-focus margin-top-10" href="<?= SERVER; ?>/course/<?= $id; ?>/students">Student List</a>&nbsp;&nbsp;
+                                        <a class="btn btn-info hover-focus margin-top-10" href="<?= SERVER; ?>/course/<?= $id; ?>/addstudent"><i class="fa fa-user-plus"></i> Student</a>&nbsp;&nbsp;
+                                        <a class="btn btn-primary hover-focus margin-top-10" href="<?= SERVER; ?>/course/<?= $id; ?>/result">Students Marks</a>&nbsp;&nbsp;
+                                        <a class="btn btn-info hover-focus margin-top-10" href="<?= SERVER; ?>/course/<?= $id; ?>/attendance">Students Attendance</a>
                                     </div>
                                 </div>
                             </div>

@@ -86,8 +86,8 @@
                                     <?php $stuIDPass = getStuIDPass();
                                     foreach($stuIDPass as $sip): ?>
                                     <tr>
-                                        <td><?php echo $sip['s_aiub_id']; ?></td>
-                                        <td><?php echo $sip['s_pass']; ?></td>
+                                        <td><?= $sip['s_aiub_id']; ?></td>
+                                        <td><?= $sip['s_pass']; ?></td>
                                     </tr>
                                     <?php endforeach; ?>
                                 </table>
@@ -102,8 +102,8 @@
                                     <?php $authorityIDPass = getAuthorityIDPass();
                                     foreach($authorityIDPass as $aip): ?>
                                     <tr>
-                                        <td><?php echo $aip['a_aiub_id']; ?></td>
-                                        <td><?php echo $aip['a_pass']; ?></td>
+                                        <td><?= $aip['a_aiub_id']; ?></td>
+                                        <td><?= $aip['a_pass']; ?></td>
                                     </tr>
                                     <?php endforeach; ?>
                                 </table>
@@ -116,8 +116,8 @@
                                     <?php $teacherIDPass = getteacherIDPass();
                                     foreach($teacherIDPass as $tip): ?>
                                     <tr>
-                                        <td><?php echo $tip['t_aiub_id']; ?></td>
-                                        <td><?php echo $tip['t_pass']; ?></td>
+                                        <td><?= $tip['t_aiub_id']; ?></td>
+                                        <td><?= $tip['t_pass']; ?></td>
                                     </tr>
                                     <?php endforeach; ?>
                                 </table>

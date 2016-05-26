@@ -1,5 +1,5 @@
 <div class="col-lg-2 col-md-3 padding20">
-	<img src="<?php echo SERVER; ?>/assets/img/aiub.png" alt="aiub logo" class="center-block" />
+	<img src="<?= SERVER; ?>/assets/img/aiub.png" alt="aiub logo" class="center-block" />
 </div>
 <div class="col-lg-8 col-md-6 text-center">
 	<h2>American International University-Bangladesh</h2>
@@ -24,21 +24,21 @@
 				<span class="fa fa-caret-down"></span></a>
 			<ul class="dropdown-menu">
 				<?php if(isset($_SESSION['authority'])): ?>
-					<li><a href="<?php echo SERVER; ?>"><i class="fa fa-home"></i>&nbsp;&nbsp;Home</a></li>
-					<li><a href="<?php echo SERVER; ?>/changepassword?id=00"><i class="fa fa-lock"></i>&nbsp;&nbsp;Change Password</a></li>
+					<li><a href="<?= SERVER; ?>"><i class="fa fa-home"></i>&nbsp;&nbsp;Home</a></li>
+					<li><a href="<?= SERVER; ?>/changepassword?id=00"><i class="fa fa-lock"></i>&nbsp;&nbsp;Change Password</a></li>
 				<?php endif; ?>
 				<?php if(isset($_SESSION['teacher'])): ?>
-					<li><a href="<?php echo SERVER; ?>"><i class="fa fa-home"></i>&nbsp;&nbsp;Home</a></li>
-					<li><a href="<?php echo SERVER; ?>/profile"><i class="fa fa-briefcase"></i>&nbsp;&nbsp;Profile</a></li>
-					<li><a href="<?php echo SERVER; ?>/changepassword?id=11"><i class="fa fa-lock"></i>&nbsp;&nbsp;Change Password</a></li>
+					<li><a href="<?= SERVER; ?>"><i class="fa fa-home"></i>&nbsp;&nbsp;Home</a></li>
+					<li><a href="<?= SERVER; ?>/profile"><i class="fa fa-briefcase"></i>&nbsp;&nbsp;Profile</a></li>
+					<li><a href="<?= SERVER; ?>/changepassword?id=11"><i class="fa fa-lock"></i>&nbsp;&nbsp;Change Password</a></li>
 				<?php endif; ?>
 				<?php if(isset($_SESSION['stud'])): ?>
-					<li><a href="<?php echo SERVER; ?>"><i class="fa fa-home"></i>&nbsp;&nbsp;Home</a></li>
-					<li><a href="<?php echo SERVER; ?>/profile"><i class="fa fa-briefcase"></i>&nbsp;&nbsp;Profile</a></li>
-					<li><a href="<?php echo SERVER; ?>/changepassword?id=22"><i class="fa fa-lock"></i>&nbsp;&nbsp;Change Password</a></li>
+					<li><a href="<?= SERVER; ?>"><i class="fa fa-home"></i>&nbsp;&nbsp;Home</a></li>
+					<li><a href="<?= SERVER; ?>/profile"><i class="fa fa-briefcase"></i>&nbsp;&nbsp;Profile</a></li>
+					<li><a href="<?= SERVER; ?>/changepassword?id=22"><i class="fa fa-lock"></i>&nbsp;&nbsp;Change Password</a></li>
 				<?php endif; ?>
 				<li class="divider"></li>
-				<li><a href="<?php echo SERVER; ?>/controller/logout"><i class="fa fa-power-off"></i>&nbsp;&nbsp;Logout</a></li>
+				<li><a href="<?= SERVER; ?>/controller/logout"><i class="fa fa-power-off"></i>&nbsp;&nbsp;Logout</a></li>
 			</ul>
 		</div>
 	</div>

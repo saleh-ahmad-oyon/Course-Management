@@ -27,7 +27,7 @@
 							<div class="col-sm-12">
 								<div class="col-sm-2"></div>
 								<div class="col-sm-8 form-block">
-									<form action="<?php echo SERVER; ?>/controller/changePass" method="post">
+									<form action="<?= SERVER; ?>/controller/changePass" method="post">
 										<div class="form-group col-sm-12 required">
                                             <div class="col-sm-4">
                                                 <label>Old Password</label>
