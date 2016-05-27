@@ -89,15 +89,16 @@ if (isset($_POST['addTeacher'])) {
     $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
 
     if (!empty($fn)) {
-        $file  = $_FILES['stupic'];
         $check = getimagesize($_FILES["stupic"]["tmp_name"]);
 
         if ($check !== false) {
-            $file_path = $target_dir . $file['name'];
-            move_uploaded_file($file['tmp_name'], $file_path);
-            $pic = $file['name'];
+            $image     = md5($ID) . '_' . $_FILES['stupic']['name'];
+            $file_path = $target_dir . $image;
+
+            move_uploaded_file($_FILES['stupic']['tmp_name'], $file_path);
+
             if (returnStuAiubID($ID)) {
-                insertStudent($ID, $name, $cgpa, $phone, $email, $dept, $pic, $gender, $date);
+                insertStudent($ID, $name, $cgpa, $phone, $email, $dept, $image, $gender, $date);
 
                 echo '<script language="javascript">
                           alert("Successfully Added !!");
