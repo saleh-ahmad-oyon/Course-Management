@@ -1032,4 +1032,3 @@ function checkCourse($course)
 	$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 	return ($row['num'] == 0) ? true : false ;
 }
-

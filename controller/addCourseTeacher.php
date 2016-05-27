@@ -57,4 +57,3 @@ echo '<script language="javascript">
           alert("Successfully Assigned !!");
           window.location="'.SERVER.'/teacher/subject";
       </script>';
-
