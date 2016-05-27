@@ -218,14 +218,8 @@ require_once 'db_conn.php';
 		$conn = db_conn();
 		$sql ="SELECT COUNT(*) as `num` FROM `student` WHERE `s_aiub_id` = '$stuId'";
 		$result = mysqli_query($conn, $sql);
-		while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
-			if($row['num'] == 1){
-				return true;
-			}
-			else{
-				return false;
-			}
-		}
+		$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
+		return $row['num'] == 1 ? true : false;
 	}
 	
 	function checkUniqueId($tid, $stuId, $cid)
@@ -234,12 +228,7 @@ require_once 'db_conn.php';
 		$sql = "SELECT COUNT(*) as `num` FROM `teacher_student_course` WHERE `s_id` = (SELECT `s_id` FROM `student` WHERE `s_aiub_id` = '$stuId') and `t_id` = $tid and `c_id` = $cid";
 		$result = mysqli_query($conn, $sql);
 		$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
-			if($row['num'] >0){
-				return false;
-			}
-			else{
-				return true;
-			}
+		return $row['num'] == 0 ? true : false;
 	}
 	
 	function checkFourtyStud($cid)
@@ -248,12 +237,7 @@ require_once 'db_conn.php';
 		$sql="SELECT COUNT(*) as `num` FROM `teacher_student_course` WHERE `c_id` = $cid";
 		$result = mysqli_query($conn, $sql);
 		$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
-		if($row['num'] >= 40){
-			return false;
-		}
-		else{
-			return true;
-		}
+		return $row['num'] < 40 ? true : false;
 	}
 	
 	function addStudent($tid, $stuId, $cid)

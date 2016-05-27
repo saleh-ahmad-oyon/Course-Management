@@ -12,44 +12,58 @@ session_start();
 require '../model/db.php';
 require 'define.php';
 
-if (isset($_POST['addStud'])) {
-	$stuId = $_POST['studId'];
-	$cid   = $_POST['courseId'];
-	
-	if (checkStudentId($stuId)) {  //===== Check the Student ID is valid or not
-		$tid = $_SESSION['tid'];
-
-        if(checkFourtyStud($cid)) {  //===== Check if the no. of students is forty or not =====
-            if (checkUniqueId($tid, $stuId, $cid)) {  //===== Check the student has already added or not =====
-                /**
-                 * Adding Student in the Course
-                 */
-				addStudent($tid, $stuId, $cid);
-				attendence($stuId, $cid);
-				addMarks($stuId, $cid);
-				
-				echo '<script language="javascript">
-					      alert("Successfully Added");
-						  window.location="'.SERVER.'/teacher/course/'.$cid.'";
-					  </script>';
-			} else {
-                echo '<script language="javascript">
-                          alert("ID has already inserted !!");
-						  window.location="'.SERVER.'/course/'.$cid.'/addstudent";
-					  </script>';
-			}
-		} else {
-            echo '<script language="javascript">
-				      alert("You cannot enter more than 40 students !!");
-					  window.location="'.SERVER.'/teacher/course/'.$cid.'";
-				  </script>';
-		}
-	} else {
-		echo '<script language="javascript">
-			      alert("Student ID is Invalid !!");
-				  window.location="'.SERVER.'/course/'.$cid.'/addstudent";
-			  </script>';
-	}
-} else {
-	header('Location: '.SERVER.'');
+if (!isset($_POST['addStud'])) {
+    header('Location: '.SERVER.'');
 }
+
+/**
+ * @var int $stuId     Student ID
+ * @var int $cid     Course ID
+ */
+$stuId = $_POST['studId'];
+$cid   = $_POST['courseId'];
+
+/**
+ * Check the Student ID is valid or not
+ */
+if (!checkStudentId($stuId)) {
+    echo '<script language="javascript">
+              alert("Student ID is Invalid !!");
+              window.location="'.SERVER.'/course/'.$cid.'/addstudent";
+          </script>';
+}
+
+/**
+ * Check if the no. of students is forty or not
+ */
+if(!checkFourtyStud($cid)) {
+    echo '<script language="javascript">
+              alert("You cannot enter more than 40 students !!");
+              window.location="'.SERVER.'/teacher/course/'.$cid.'";
+          </script>';
+}
+
+/** @var int $tid     Teacher ID */
+$tid = $_SESSION['tid'];
+
+/**
+ * Check the student has already added or not
+ */
+if (!checkUniqueId($tid, $stuId, $cid)) {
+    echo '<script language="javascript">
+              alert("ID has already inserted !!");
+              window.location="'.SERVER.'/course/'.$cid.'/addstudent";
+          </script>';
+}
+
+/**
+ * Adding Student in the Course
+ */
+addStudent($tid, $stuId, $cid);
+attendence($stuId, $cid);
+addMarks($stuId, $cid);
+
+echo '<script language="javascript">
+          alert("Successfully Added");
+          window.location="'.SERVER.'/teacher/course/'.$cid.'";
+      </script>';
