@@ -19,7 +19,7 @@ if (isset($_POST['addStud'])) {
 	if (checkStudentId($stuId)) {  //===== Check the Student ID is valid or not
 		$tid = $_SESSION['tid'];
 
-        if(checkFourtyStud($cid)) {  //===== Check if the no. of students is fourty or not =====
+        if(checkFourtyStud($cid)) {  //===== Check if the no. of students is forty or not =====
             if (checkUniqueId($tid, $stuId, $cid)) {  //===== Check the student has already added or not =====
                 /**
                  * Adding Student in the Course
