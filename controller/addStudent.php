@@ -31,6 +31,7 @@ if (!checkStudentId($stuId)) {
               alert("Student ID is Invalid !!");
               window.location="'.SERVER.'/course/'.$cid.'/addstudent";
           </script>';
+    return;
 }
 
 /**
@@ -41,6 +42,7 @@ if(!checkFourtyStud($cid)) {
               alert("You cannot enter more than 40 students !!");
               window.location="'.SERVER.'/teacher/course/'.$cid.'";
           </script>';
+    return;
 }
 
 /** @var int $tid     Teacher ID */
@@ -54,6 +56,7 @@ if (!checkUniqueId($tid, $stuId, $cid)) {
               alert("ID has already inserted !!");
               window.location="'.SERVER.'/course/'.$cid.'/addstudent";
           </script>';
+    return;
 }
 
 /**
