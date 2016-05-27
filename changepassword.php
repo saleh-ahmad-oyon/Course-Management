@@ -28,7 +28,7 @@
 							<div class="col-sm-12">
 								<div class="col-sm-2"></div>
 								<div class="col-sm-8 form-block">
-									<form action="<?= SERVER; ?>/controller/changePass" method="post">
+									<form action="<?= SERVER; ?>/controller/changePassword" method="post">
 										<div class="form-group col-sm-12 required">
                                             <div class="col-sm-4">
                                                 <label>Old Password</label>
@@ -57,7 +57,7 @@
                                         <div class="col-sm-12 form-group">
                                             <div class="col-sm-12">
                                                 <div class="text-center">
-                                                    <button type="submit" value="Confirm" name="changePassSubmit"class="btn btn-primary"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span><span>  Confirm</span></button>
+                                                    <button type="submit" value="Confirm" name="changePassword" class="btn btn-primary"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span><span>  Confirm</span></button>
                                                 </div>
                                             </div>
                                         </div>

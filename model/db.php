@@ -71,12 +71,7 @@ function checkTeacherOldPass($tid, $oldPass)
 	$sql = "SELECT `t_pass` FROM `teacher` WHERE `t_id` = $tid";
 	$result = mysqli_query($conn, $sql);
 	$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
-	if(strcmp($oldPass, $row['t_pass']) == 0){
-		return true;
-	}
-	else{
-		return false;
-	}
+	return strcmp($oldPass, $row['t_pass']) == 0 ? true : false;
 }
 
 function checkAuthorOldPass($aid, $oldPass)
@@ -85,12 +80,7 @@ function checkAuthorOldPass($aid, $oldPass)
 	$sql = "SELECT `a_pass` FROM `authority` WHERE `a_id` = $aid";
 	$result = mysqli_query($conn, $sql);
 	$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
-	if(strcmp($oldPass, $row['a_pass']) == 0){
-		return true;
-	}
-	else{
-		return false;
-	}
+    return strcmp($oldPass, $row['a_pass']) == 0 ? true : false;
 }
 
 function checkStudentOldPass($sid, $oldPass)
@@ -99,12 +89,7 @@ function checkStudentOldPass($sid, $oldPass)
 	$sql = "SELECT `s_pass` FROM `student` WHERE `s_id` = $sid";
 	$result = mysqli_query($conn, $sql);
 	$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
-	if(strcmp($oldPass, $row['s_pass']) == 0){
-		return true;
-	}
-	else{
-		return false;
-	}
+	return strcmp($oldPass, $row['s_pass']) == 0 ? true : false;
 }
 	
 function updateStudentPass($sid, $newpass)
