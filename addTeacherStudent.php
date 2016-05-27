@@ -1,5 +1,6 @@
-<?php require 'session.php';
-	if(!isset($_SESSION['authority'])){
+<?php
+    require 'session.php';
+	if (!isset($_SESSION['authority'])) {
 		header('Location: '.SERVER.'');
 	}
 	$department = deptName();

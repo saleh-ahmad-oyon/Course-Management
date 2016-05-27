@@ -1,15 +1,15 @@
 <?php
-require 'session.php';
-if(!isset($_SESSION['authority'])){
-    header('Location: '.SERVER.'');
-}
-$teacher = false;
-$student = false;
-if($_GET['id'] == 1){
-    $teacher = true;
-}elseif($_GET['id'] == 2){
-    $student = true;
-}
+    require 'session.php';
+    if (!isset($_SESSION['authority'])) {
+        header('Location: '.SERVER.'');
+    }
+    $teacher = false;
+    $student = false;
+    if ($_GET['id'] == 1) {
+        $teacher = true;
+    } elseif($_GET['id'] == 2) {
+        $student = true;
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">

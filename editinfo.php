@@ -2,14 +2,14 @@
     require 'session.php';
     $student = false;
     $teacher = false;
-	if(!isset($_SESSION['stud']) && !isset($_SESSION['teacher'])){
+	if (!isset($_SESSION['stud']) && !isset($_SESSION['teacher'])) {
 		header('Location: '.SERVER.'');
-	}elseif(isset($_SESSION['stud'])){
+	} elseif (isset($_SESSION['stud'])) {
         $student    = true;
         $sid        = $_SESSION['sid'];
         $row        = stuEditableBasicInfo($sid);
         $department = deptName();
-	}elseif(isset($_SESSION['teacher'])){
+	} elseif (isset($_SESSION['teacher'])) {
         $teacher = true;
         $tid     = $_SESSION['tid'];
         $row     = teacherEditableBasicInfo($tid);
