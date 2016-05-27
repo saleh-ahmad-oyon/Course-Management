@@ -13,7 +13,9 @@ require '../model/db.php';
 require 'define.php';
 
 if (!isset($_POST['addStud'])) {
-    header('Location: '.SERVER.'');
+    /** @Link 404 Page */
+    header('Location: '.SERVER.'/404');
+    return;
 }
 
 /**

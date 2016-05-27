@@ -400,12 +400,7 @@ WHERE course_student_marks.c_id = $cid ORDER BY student.s_full_name";
 		$sql = "SELECT COUNT(`e_name`) as `num` FROM `exam` WHERE `s_id` = $sid and `e_name` = '$name' and `c_id` = $cid";
 		$result = mysqli_query($conn, $sql);
 		$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
-		if($row['num'] == 1){
-			return true;
-		}
-		else{
-			return false;
-		}
+		return $row['num'] == 1 ? true : false;
 	}
 	
 	function getBestTwoQuizesMarks($q1, $q2, $q3, $cid, $sid)
