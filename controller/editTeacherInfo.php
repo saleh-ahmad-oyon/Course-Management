@@ -30,15 +30,15 @@ if (isset($_POST['editBtn'])) {
     $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
 
     if (!empty($fn)) {
-        $file  = $_FILES['profilepic'];
         $check = getimagesize($_FILES["profilepic"]["tmp_name"]);
         
         if ($check !== false) {
-            $file_path = $target_dir.$file['name'];
-            move_uploaded_file($file['tmp_name'], $file_path);
-
-            $pic = $file['name'];
-            editTeacherBasicInfo($fullName, $phone, $email, $tid, $pic, $gender, $date);
+            $image     = md5($tid) . '_' . $_FILES["profilepic"]['name'];
+            $file_path = $target_dir.$image;
+            
+            move_uploaded_file($_FILES['profilepic']['tmp_name'], $file_path);
+            
+            editTeacherBasicInfo($fullName, $phone, $email, $tid, $image, $gender, $date);
 
             echo '<script language="javascript">
 					  alert("Update Successful !!");

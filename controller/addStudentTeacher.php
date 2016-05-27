@@ -30,21 +30,21 @@ if (isset($_POST['addTeacher'])) {
      * @filesource
      */
     $target_dir    = '../assets/img/teacher/';
-    $fn            = $_FILES["teacherpic"]["name"];
+    $fn            = $_FILES['teacherpic']['name'];
     $target_file   = $target_dir . basename($fn);
     $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
 
     if (!empty($fn)) {
-        $file  = $_FILES['teacherpic'];
-        $check = getimagesize($_FILES["teacherpic"]["tmp_name"]);
+        $check = getimagesize($_FILES['teacherpic']['tmp_name']);
 
         if ($check !== false) {
-            $file_path = $target_dir . $file['name'];
-            move_uploaded_file($file['tmp_name'], $file_path);
-            $pic = $file['name'];
+            $image     = md5($ID) . '_' .$_FILES['teacherpic']['name'];
+            $file_path = $target_dir . $image;
+            
+            move_uploaded_file($_FILES['teacherpic']['tmp_name'], $file_path);
 
             if (returnTeacherAiubID($ID)) {
-                insertTeacher($ID, $name, $phone, $email, $pic, $gender, $date, $designation);
+                insertTeacher($ID, $name, $phone, $email, $image, $gender, $date, $designation);
 
                 echo '<script language="javascript">
                           alert("Successfully Added !!");
