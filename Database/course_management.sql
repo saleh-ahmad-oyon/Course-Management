@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: May 25, 2016 at 10:18 PM
+-- Generation Time: May 27, 2016 at 09:12 AM
 -- Server version: 10.1.13-MariaDB
 -- PHP Version: 5.6.20
 
@@ -404,14 +404,18 @@ CREATE TABLE `teacher` (
 --
 
 INSERT INTO `teacher` (`t_id`, `t_aiub_id`, `t_name`, `t_pass`, `t_email`, `t_phone`, `t_gender`, `t_dob`, `t_image`, `t_designation`) VALUES
-(1, '1205-1318-2', 'MD. AL IMRAN', '1234', 'alimran@aiub.edu', '+880-9887935', 'Male', '1985-09-19', 'imran.jpg', 'Assistant Professor'),
-(2, '1201-1280-2', 'ABDUS SALAM', '1234', '', '', 'Male', '0000-00-00', 'default-user.png', ''),
-(3, '1501-2358-2', 'SAIF AHMED RUMI', '1234', '', '', 'Male', '0000-00-00', 'default-user.png', ''),
-(4, '0008-073-2', 'Mashiour Rahman', '1234', 'mashiour@yahoo.com', '+880-1658742367', 'Male', '1980-05-25', 'default-user.png', ''),
-(5, '7412-7412-2', 'Juena Ahmed Noshin', '1234', 'juena@aiub.edu', '+880-1685742648', 'Female', '1989-03-07', 'juena.jpg', 'Instructor'),
-(6, '1501-1572-2', 'Shovra Das', '1234', 'shovra.das@gmail.com', '+880-01715224583', 'Male', '1998-03-15', 'shovra.jpg', 'Lecturer'),
-(7, '0905-884-2', 'S.M. Abdur Rouf Bhuiyan', '1234', 'abdur_rouf@aiub.edu', '+880-1824753916', 'Male', '1976-07-08', 'abdur_rouf.jpg', 'Lecturer'),
-(8, '1301-1412-2', 'Bayzid Ashik Hossain', '1234', 'bayzid_ashik@aiub.edu', '+880-1798251436', 'Male', '1984-05-10', 'Ashik.jpg', 'Assistant Professor');
+(1, '1205-1318-2', 'Md. Al Imran', '1234', 'alimran@aiub.edu', '+880-9887935', 'Male', '1985-09-19', 'd24d2232c2bbe736063a48ef321f86cf_imran.jpg', 'Assistant Professor'),
+(2, '1201-1280-2', 'Abdus Salam', '1234', 'salam.t2@aiub.edu', '+880-1764110526', 'Male', '1983-03-10', '05908ef1a6a58448946f23a3de3e9758_titu.jpg', 'Assistant Professor'),
+(3, '0703-562-3', 'Saif Ahmed Rumi', '1234', 'rumi@aiub.edu', '+880-1725789456', 'Male', '1985-01-16', 'eccbc87e4b5ce2fe28308fd9f2a7baf3_rumi.jpeg', 'Facilty'),
+(4, '0008-073-2', 'Mashiour Rahman', '1234', 'mashiour@yahoo.com', '+880-1658742367', 'Male', '1977-05-25', 'a87ff679a2f3e71d9181a67b7542122c_mashiour.jpg', ''),
+(5, '1509-1664-3', 'Juena Ahmed Noshin', '1234', 'juena@aiub.edu', '+880-1685742648', 'Female', '1989-03-07', 'e4da3b7fbbce2345d7772b0674a318d5_juena.jpg', 'Instructor'),
+(6, '1501-1572-2', 'Shovra Das', '1234', 'shovra.das@gmail.com', '+880-01715224583', 'Male', '1998-03-15', '1679091c5a880faf6fb5e6087eb1b2dc_shovra.jpg', 'Lecturer'),
+(7, '0905-884-2', 'S.M. Abdur Rouf Bhuiyan', '1234', 'abdur_rouf@aiub.edu', '+880-1824753916', 'Male', '1976-07-08', '8f14e45fceea167a5a36dedd4bea2543_abdur_rouf.jpg', 'Lecturer'),
+(8, '1301-1412-2', 'Bayzid Ashik Hossain', '1234', 'bayzid_ashik@aiub.edu', '+880-1798251436', 'Male', '1984-05-10', 'c9f0f895fb98ab9159f51fd0297e236d_Ashik.jpg', 'Assistant Professor'),
+(9, '0507-416-2', 'Dr. Dip Nandi', '1234', 'dip@aiub.edu', '+880-1759729138', 'Male', '1980-09-08', '45c48cce2e2d7fbdea1afc51c7c6ad26_dip.jpg', 'Head, Undergraduate Program'),
+(10, '0905-883-2', 'Nahar Sultana', '1234', 'nahar_sultana@aiub.edu', '+880-1853789641', 'Female', '1985-08-14', 'd3d9446802a44259755d38e6d163e820_nahar.jpg', 'Assistant Professor'),
+(11, '1105-1220-2', 'Dr. Tabin Hasan', '1234', 'tabin@aiub.edu', '+880-1721727528', 'Male', '1977-10-13', '6512bd43d9caa6e02c990b0a82652dca_tabin.jpg', 'Head, Graduate Program'),
+(15, '0509-431-2', 'Md. Manirul Islam', '1234', 'manir@aiub.edu', '+880-1852639874', 'Male', '1981-11-18', 'a83b3b84b4285cc0db3f96c110840d1a_monir.jpg', 'Assistant Professor');
 
 -- --------------------------------------------------------
 
@@ -585,7 +589,7 @@ ALTER TABLE `student`
 -- AUTO_INCREMENT for table `teacher`
 --
 ALTER TABLE `teacher`
-  MODIFY `t_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'teacher id', AUTO_INCREMENT=9;
+  MODIFY `t_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'teacher id', AUTO_INCREMENT=16;
 --
 -- AUTO_INCREMENT for table `teacher_student_course`
 --
