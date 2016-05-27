@@ -10,11 +10,11 @@
 
 	if (!isset($_SESSION['teacher']) && !isset($_SESSION['stud'])) {
 		header('Location: '.SERVER.'');
-	} elseif(isset($_SESSION['stud'])) {
+	} elseif (isset($_SESSION['stud'])) {
         $student = true;
         $sid     = $_SESSION['sid'];
         $row     = stubasicInfo($sid);
-    } elseif(isset($_SESSION['teacher'])) {
+    } elseif (isset($_SESSION['teacher'])) {
         $teacher = true;
         $tid     = $_SESSION['tid'];
         $row     = teacherBasicInfo($tid);
