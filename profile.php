@@ -1,5 +1,10 @@
 <?php
     require 'session.php';
+
+    /**
+     * @var bool $student     Student
+     * @var bool $teacher     Teacher
+     */
     $student = false;
     $teacher = false;
 

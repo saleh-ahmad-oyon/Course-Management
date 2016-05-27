@@ -1,5 +1,6 @@
-<?php require 'session.php';
-	if(!isset($_SESSION['teacher']) && !isset($_SESSION['stud'])){
+<?php
+    require 'session.php';
+	if (!isset($_SESSION['teacher']) && !isset($_SESSION['stud'])) {
 		header('Location: '.SERVER.'');
 	}
 	$outputString = getStudentListExam($_GET['id']);

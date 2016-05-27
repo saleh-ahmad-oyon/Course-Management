@@ -1,9 +1,11 @@
-<?php require 'session.php';
-	if(!isset($_SESSION['teacher']) && !isset($_SESSION['stud'])){
+<?php
+    require 'session.php';
+	if (!isset($_SESSION['teacher']) && !isset($_SESSION['stud'])) {
 		header('Location: '.SERVER.'');
 	}
-	$cid = $_GET['id1'];
-	$sid = $_GET['id2'];
+
+	$cid     = $_GET['id1'];
+	$sid     = $_GET['id2'];
 	$stuInfo = getStuIdNameAttendence($cid, $sid);
 ?>
 <!DOCTYPE html>

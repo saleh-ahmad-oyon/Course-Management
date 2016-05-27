@@ -2,18 +2,16 @@
 	if(!isset($_SESSION['teacher']) && !isset($_SESSION['stud'])){
 		header('Location: '.SERVER.'');
 	}
-	$cid     = $_GET['id1'];
-	$sid     = $_GET['id2'];
-	$stuInfo = getStuIdNameAttendence($cid, $sid);
-	
+	$cid          = $_GET['id1'];
+	$sid          = $_GET['id2'];
+	$stuInfo      = getStuIdNameAttendence($cid, $sid);
 	$outputString = getXmMarks($_GET['id1'],$_GET['id2'],$_GET['id3']);
+
 	if (strpos($_GET['id3'],'quiz') !== false) {
 		$name = str_replace('quiz', 'Quiz ', $_GET['id3']);
-	}
-	elseif (strpos($_GET['id3'],'mid') !== false) {
+	} elseif (strpos($_GET['id3'],'mid') !== false) {
 		$name = str_replace('mid', 'Mid Term', $_GET['id3']);
-	}
-	elseif (strpos($_GET['id3'],'final') !== false) {
+	} elseif (strpos($_GET['id3'],'final') !== false) {
 		$name = str_replace('final', 'Final Term', $_GET['id3']);
 	}	
 ?>
