@@ -53,7 +53,7 @@ if (empty($fn)) {
 
     if (($check[2] !== IMAGETYPE_GIF) && ($check[2] !== IMAGETYPE_JPEG) && ($check[2] !== IMAGETYPE_PNG)) {
         echo '<script language="javascript">
-                  alert("Not a gif/jpeg/png !!");
+                  alert("Image Type is not a gif/jpeg/png !!");
                   window.location="'.SERVER.'/profile";
               </script>';
         return;

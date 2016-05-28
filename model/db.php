@@ -794,7 +794,7 @@ function returnStuAiubID($ID)
 	$sql ="SELECT COUNT(*) as `num` FROM `student` WHERE `s_aiub_id` = '$ID'";
 	$result = mysqli_query($conn, $sql);
 	$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
-	return ($row['num'] == 0) ? true : false;
+	return $row['num'] == 0 ? true : false;
 }
 
 function returnTeacherAiubID($ID)
