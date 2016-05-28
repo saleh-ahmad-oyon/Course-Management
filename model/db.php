@@ -397,21 +397,21 @@ function getBestTwoQuizesMarks($q1, $q2, $q3, $cid, $sid)
 	$a = $b = $c =0;
 
 	$result1 = mysqli_query($conn, $sql1);
-	$row1 = mysqli_fetch_array($result1, MYSQLI_ASSOC);
-	$a = $row1['e_marks'];
+	$row1    = mysqli_fetch_array($result1, MYSQLI_ASSOC);
+	$a       = $row1['e_marks'];
 
 	$result2 = mysqli_query($conn, $sql2);
-	$row2 = mysqli_fetch_array($result2, MYSQLI_ASSOC);
-	$b = $row2['e_marks'];
+	$row2    = mysqli_fetch_array($result2, MYSQLI_ASSOC);
+	$b       = $row2['e_marks'];
 
 	$result3 = mysqli_query($conn, $sql3);
-	$row3 = mysqli_fetch_array($result3, MYSQLI_ASSOC);
-	$c = $row3['e_marks'];
+	$row3    = mysqli_fetch_array($result3, MYSQLI_ASSOC);
+	$c       = $row3['e_marks'];
 
-	$bestTwo = array($a, $b, $c);
+	$bestTwo = [$a, $b, $c];
 	rsort($bestTwo);
 
-	$sum =0;
+	$sum = 0.0;
 	$sum = $bestTwo[0] + $bestTwo[1];
 
 	return $sum;
