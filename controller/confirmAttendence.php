@@ -9,7 +9,7 @@
 require '../model/db.php';
 require 'define.php';
 
-if (isset($_POST['attend'])) {
+if (!isset($_POST['attend'])) {
     /** @Link 404 Page */
     header('Location: '.SERVER.'/404');
     return;
