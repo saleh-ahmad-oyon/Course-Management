@@ -58,7 +58,7 @@ if (isset($_POST['addTeacher'])) {
         insertTeacher($ID, $name, $phone, $email, $pic, $gender, $date, $designation);
     } else {
         if (!empty($_FILES['teacherpic']['tmp_name'])) {
-            $check = getimagesize($_FILES["profilepic"]["tmp_name"]);
+            $check = getimagesize($_FILES["teacherpic"]["tmp_name"]);
         }
 
         if (!$check) {
@@ -123,7 +123,7 @@ if (isset($_POST['addTeacher'])) {
         $pic = "default-user.png";
         insertStudent($ID, $name, $cgpa, $phone, $email, $dept, $pic, $gender, $date);
     } else {
-        if (!empty($_FILES['teacherpic']['tmp_name'])) {
+        if (!empty($_FILES['stupic']['tmp_name'])) {
             $check = getimagesize($_FILES["stupic"]["tmp_name"]);
         }
 
