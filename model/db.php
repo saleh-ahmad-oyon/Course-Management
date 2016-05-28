@@ -7,9 +7,8 @@ function check_teacher_login($user, $pass)
 	$conn = db_conn();
 	$sql = "SELECT COUNT(*) as `num` FROM `teacher` WHERE `t_aiub_id` = '$user' and `t_pass` = '$pass'";
 	$result = mysqli_query($conn, $sql);
-	while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
-		return ($row['num'] == 1) ? true : false ;
-	}
+	$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
+	return ($row['num'] == 1) ? true : false ;
 }
 
 function check_authority_login($user, $pass)
@@ -17,9 +16,8 @@ function check_authority_login($user, $pass)
 	$conn = db_conn();
 	$sql = "SELECT COUNT(*) as `num` FROM `authority` WHERE `a_aiub_id` = '$user' and `a_pass` = '$pass'";
 	$result = mysqli_query($conn, $sql);
-	while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
-		return ($row['num'] == 1) ? true : false ;
-	}
+	$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
+	return ($row['num'] == 1) ? true : false ;
 }
 
 function teacher_id($user)
@@ -49,9 +47,8 @@ function check_stud_login($user, $pass)
 	$conn = db_conn();
 	$sql = "SELECT COUNT(*) as `num` FROM `student` WHERE `s_aiub_id` = '$user' and `s_pass` = '$pass';";
 	$result = mysqli_query($conn, $sql);
-	while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
-		return ($row['num'] == 1) ? true : false ;
-	}
+	$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
+	return ($row['num'] == 1) ? true : false ;
 }
 
 function student_id($user)
@@ -411,7 +408,6 @@ function getBestTwoQuizesMarks($q1, $q2, $q3, $cid, $sid)
 	$bestTwo = [$a, $b, $c];
 	rsort($bestTwo);
 
-	$sum = 0.0;
 	$sum = $bestTwo[0] + $bestTwo[1];
 
 	return $sum;
@@ -681,7 +677,6 @@ function addGradeGrandTotal($grandTotalGrand, $cid, $sid)
 	
 function newSuggestedMid($givenMidQuizesMark, $mid){
 	$total = ($givenMidQuizesMark + $mid) * 1.25;
-
 	return $total;
 }
 
