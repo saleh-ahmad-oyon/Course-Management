@@ -10,17 +10,21 @@ require '../model/db.php';
 require 'define.php';
 
 if (isset($_POST['attend'])) {
-	$cid = $_GET['id'];
-    
-	if (!empty($_POST['check_att'])) {
-		foreach ($_POST['check_att'] as $sid) {
-			insertAttendence($sid, $cid);
-		}
-	}
-	echo '<script language="javascript">
-			  alert("Attendance Confirmed !!");
-			  window.location="'.SERVER.'/teacher/course/'.$cid.'";
-		  </script>';
-} else {
-	header('Location: '.SERVER.'');
+    /** @Link 404 Page */
+    header('Location: '.SERVER.'/404');
+    return;
 }
+
+/** @var int $cid     Course ID */
+$cid = $_GET['id'];
+
+if (!empty($_POST['check_att'])) {
+    foreach ($_POST['check_att'] as $sid) {
+        insertAttendence($sid, $cid);
+    }
+}
+
+echo '<script language="javascript">
+          alert("Attendance Confirmed !!");
+          window.location="'.SERVER.'/teacher/course/'.$cid.'";
+      </script>';
