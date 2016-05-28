@@ -124,7 +124,7 @@ if (isset($_POST['addTeacher'])) {
         insertStudent($ID, $name, $cgpa, $phone, $email, $dept, $pic, $gender, $date);
     } else {
         if (!empty($_FILES['stupic']['tmp_name'])) {
-            $check = getimagesize($_FILES["stupic"]["tmp_name"]);
+            $check = getimagesize($_FILES['stupic']['tmp_name']);
         }
 
         if (!$check) {
