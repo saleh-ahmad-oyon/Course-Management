@@ -15,7 +15,7 @@
 				<p><span><label>O</label>hh.....</span>You Requested the page that is no longer There.</p>
 				<a href="<?= SERVER; ?>">Back To Home</a>
    			</div>
-			<!--End-Cotent------>
+			<!--End-Content------>
 		</div>
 		<!--End-wrap--->
 	</body>

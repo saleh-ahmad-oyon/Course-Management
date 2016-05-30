@@ -88,8 +88,9 @@
 	</body>
 </html>
 <script>
-	function confirmation(){
-	var r = confirm("Are you sure ?\nNo data will be available of this student");
-	return r == true ? true : false;
-}
+	function confirmation()
+	{
+	    var r = confirm("Are you sure ?\nNo data will be available of this student");
+	    return r == true ? true : false;
+    }
 </script>

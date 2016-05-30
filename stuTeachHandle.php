@@ -61,6 +61,6 @@
             </div>
         </div>
     </footer>
+    <script src="<?= SERVER; ?>/assets/js/custom.js"></script>
 </body>
 </html>
-<script src="<?= SERVER; ?>/assets/js/custom.js"></script>

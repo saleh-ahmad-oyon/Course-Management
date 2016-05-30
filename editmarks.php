@@ -1,5 +1,6 @@
-<?php require 'session.php';
-	if(!isset($_SESSION['teacher']) && !isset($_SESSION['stud'])){
+<?php
+    require 'session.php';
+	if (!isset($_SESSION['teacher']) && !isset($_SESSION['stud'])) {
 		header('Location: '.SERVER.'');
 	}
 	$cid          = $_GET['id1'];
@@ -103,6 +104,6 @@
                 </div>
             </div>
         </footer>
+        <script src="<?= SERVER; ?>/assets/js/custom.js"></script>
 	</body>
 </html>
-<script src="<?= SERVER; ?>/assets/js/custom.js"></script>
