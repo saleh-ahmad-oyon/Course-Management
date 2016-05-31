@@ -6,6 +6,6 @@
  */
 
 /** Define Constants */
-define('SERVER', 'http://localhost/course');
+define('SERVER', 'http://'.$_SERVER['SERVER_NAME'].'/course');
 define('STUDENTPP', SERVER.'/assets/img/student');
 define('TEACHERPP', SERVER.'/assets/img/teacher');
