@@ -1,7 +1,6 @@
 <?php
 /**
- * @author Saleh Ahmad
- * @author My Name <oyon@nooblonely.com>
+ * @author Saleh Ahmad <oyon@nooblonely.com>
  * @copyright 2015-2016 Noob Lonely
  */
 
