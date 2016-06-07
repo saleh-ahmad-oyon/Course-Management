@@ -2,10 +2,21 @@
 
 require_once 'db_conn.php';
 
+function check_stud_login($user, $pass)
+{
+	$conn = db_conn();
+	$sql = "SELECT COUNT(*) as `num` FROM `student` 
+WHERE `s_aiub_id` = '".mysqli_real_escape_string($conn, $user)."' and `s_pass` = '".mysqli_real_escape_string($conn, $pass)."';";
+	$result = mysqli_query($conn, $sql);
+	$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
+	return ($row['num'] == 1) ? true : false ;
+}
+
 function check_teacher_login($user, $pass)
 {
 	$conn = db_conn();
-	$sql = "SELECT COUNT(*) as `num` FROM `teacher` WHERE `t_aiub_id` = '$user' and `t_pass` = '$pass'";
+	$sql = "SELECT COUNT(*) as `num` FROM `teacher` 
+WHERE `t_aiub_id` = '".mysqli_real_escape_string($conn, $user)."' and `t_pass` = '".mysqli_real_escape_string($conn, $pass)."'";
 	$result = mysqli_query($conn, $sql);
 	$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 	return ($row['num'] == 1) ? true : false ;
@@ -14,7 +25,8 @@ function check_teacher_login($user, $pass)
 function check_authority_login($user, $pass)
 {
 	$conn = db_conn();
-	$sql = "SELECT COUNT(*) as `num` FROM `authority` WHERE `a_aiub_id` = '$user' and `a_pass` = '$pass'";
+	$sql = "SELECT COUNT(*) as `num` FROM `authority` 
+WHERE `a_aiub_id` = '".mysqli_real_escape_string($conn, $user)."' and `a_pass` = '".mysqli_real_escape_string($conn, $pass)."'";
 	$result = mysqli_query($conn, $sql);
 	$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 	return ($row['num'] == 1) ? true : false ;
@@ -40,15 +52,6 @@ function authority_id($user)
 	$tid = $row['a_id'];
 
 	return $tid;
-}
-
-function check_stud_login($user, $pass)
-{
-	$conn = db_conn();
-	$sql = "SELECT COUNT(*) as `num` FROM `student` WHERE `s_aiub_id` = '$user' and `s_pass` = '$pass';";
-	$result = mysqli_query($conn, $sql);
-	$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
-	return ($row['num'] == 1) ? true : false ;
 }
 
 function student_id($user)
