@@ -23,23 +23,6 @@
 		<link href="<?= SERVER; ?>/assets/css/radio.css" rel="stylesheet"/>
         <link rel="stylesheet" href="<?= SERVER; ?>/assets/css/jquery-ui.css">
         <link rel="stylesheet" href="<?= SERVER; ?>/assets/css/jquery-ui.theme.css">
-        <script src="<?= SERVER; ?>/assets/js/jquery-ui.js"></script>
-		<script>
-            $(function() {
-				$( "#datepicker" ).datepicker({
-					showOnFocus: true,
-					showOtherMonths: true,
-					changeMonth: true,
-					changeYear: true,
-					dateFormat: "d M, yy",
-					maxDate: "+0D"
-				});
-                $( "#speed" )
-                    .selectmenu()
-                    .selectmenu( "menuWidget" )
-                    .addClass( "overflow" );
-            });
-		</script>
 		<style>
 			input[type=radio] + label.css-label,
 			input[type=radio]:checked + label.css-label,

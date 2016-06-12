@@ -151,18 +151,7 @@
 
 <?php if(isset($jui)): ?>
     <script src="<?= SERVER; ?>/assets/js/jquery-ui.js"></script>
-    <script>
-        $(function() {
-            $( "#speed" )
-                .selectmenu()
-                .selectmenu( "menuWidget" )
-                .addClass( "overflow" );
-            $( "#speed1" )
-                .selectmenu()
-                .selectmenu( "menuWidget" )
-                .addClass( "overflow" );
-        });
-    </script>
+    <script src="<?= SERVER; ?>/assets/js/myjui.js"></script>
 <?php endif; ?>
 <?php if(isset($dropify)): ?>
     <script src="<?= SERVER; ?>/assets/js/dropify.js"></script>
