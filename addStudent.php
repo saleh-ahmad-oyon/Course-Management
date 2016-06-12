@@ -47,6 +47,6 @@
                 </div>
             </main>
         </div>
-        <?php require_once 'footer.php'; $mask = true; ?>        
+        <?php $mask = true; require_once 'footer.php'; ?>        
 	</body>
 </html>

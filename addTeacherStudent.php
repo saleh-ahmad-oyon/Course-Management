@@ -153,6 +153,6 @@
                 </div>
             </main>
         </div>
-        <?php require_once 'footer.php'; $jui = true; $dropify = true; $mask = true; ?>
+        <?php $jui = true; $dropify = true; $mask = true; require_once 'footer.php'; ?>
 	</body>
 </html>
