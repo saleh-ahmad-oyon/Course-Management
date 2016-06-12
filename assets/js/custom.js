@@ -54,9 +54,8 @@ $(document).ready(function(){
     $(function () {
         $('[data-toggle="tooltip"]').tooltip();
     });
-
-    function confirmation(){
-        var r = confirm("Are you sure ?");
-        return r ? true : false;
-    }
 });
+function confirmation(){
+    var r = confirm("Are you sure ?");
+    return r ? true : false;
+}
