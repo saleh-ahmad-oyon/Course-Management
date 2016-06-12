@@ -21,5 +21,3 @@ aiub mini portal,project done by aiubian,php with bootstrap" />
 <link href="<?= SERVER; ?>/assets/css/bootstrap-3.3.6-dist/css/bootstrap.min.css" rel="stylesheet"/>
 <link href="<?= SERVER; ?>/assets/css/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet"/>
 <link href="<?= SERVER; ?>/assets/css/custom.php" rel="stylesheet"/>
-<script src="<?= SERVER; ?>/assets/js/jquery-2.1.4.min.js"></script>
-<script src="<?= SERVER; ?>/assets/css/bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>

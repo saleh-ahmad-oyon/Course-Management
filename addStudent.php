@@ -47,18 +47,6 @@
                 </div>
             </main>
         </div>
-        <footer>
-            <hr />
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <?php require_once 'footer.php' ?>
-                    </div>
-                </div>
-            </div>
-        </footer>
-        <script src="<?= SERVER; ?>/assets/js/jquery.maskedinput.min.js"></script>
-        <script src="<?= SERVER; ?>/assets/js/mymask.js"></script>
-        <script src="<?= SERVER; ?>/assets/js/custom.js"></script>
+        <?php require_once 'footer.php'; $mask = true; ?>        
 	</body>
 </html>

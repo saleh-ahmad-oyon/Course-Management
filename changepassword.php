@@ -70,15 +70,6 @@
 				</div>
 			</main>
 		</div>
-		<footer>
-			<hr />
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12">
-						<?php require_once 'footer.php' ?>
-					</div>
-				</div>
-			</div>
-		</footer>
+		<?php require_once 'footer.php' ?>
 	</body>
 </html>

@@ -17,19 +17,6 @@
         <?php require_once 'head.php'; ?>
         <link rel="stylesheet" href="<?= SERVER; ?>/assets/css/jquery-ui.css">
         <link rel="stylesheet" href="<?= SERVER; ?>/assets/css/jquery-ui.theme.css">
-        <script src="<?= SERVER; ?>/assets/js/jquery-ui.js"></script>
-        <script>
-            $(function() {
-                $( "#speed" )
-                    .selectmenu()
-                    .selectmenu( "menuWidget" )
-                    .addClass( "overflow" );
-                $( "#speed1" )
-                    .selectmenu()
-                    .selectmenu( "menuWidget" )
-                    .addClass( "overflow" );
-            });
-        </script>
         <style>
             .overflow {
                 height: 142px;
@@ -126,16 +113,6 @@
                 </div>
             </main>
         </div>
-        <footer>
-            <hr />
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <?php require_once 'footer.php' ?>
-                    </div>
-                </div>
-            </div>
-        </footer>
-        <script src="<?= SERVER; ?>/assets/js/custom.js"></script>
+        <?php require_once 'footer.php'; $jui = true; ?>
     </body>
 </html>

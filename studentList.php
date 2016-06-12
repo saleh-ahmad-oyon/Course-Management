@@ -74,23 +74,13 @@
 				</div>
 			</main>
 		</div>
-		<footer>
-			<hr />
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12">
-						<?php require_once 'footer.php' ?>
-					</div>
-				</div>
-			</div>
-		</footer>
-
+		<?php require_once 'footer.php' ?>
+		<script>
+			function confirmation()
+			{
+				var r = confirm("Are you sure ?\nNo data will be available of this student");
+				return r ? true : false;
+			}
+		</script>
 	</body>
 </html>
-<script>
-	function confirmation()
-	{
-	    var r = confirm("Are you sure ?\nNo data will be available of this student");
-	    return r == true ? true : false;
-    }
-</script>
