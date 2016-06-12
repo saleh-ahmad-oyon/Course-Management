@@ -16,6 +16,7 @@ $(function() {
         changeMonth: true,
         changeYear: true,
         dateFormat: "d M, yy",
+        minDate: '01/01/1900',
         maxDate: "+0D"
     });
     $( "#speed" )

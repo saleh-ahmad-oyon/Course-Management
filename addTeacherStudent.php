@@ -13,24 +13,6 @@
 		<link href="<?= SERVER; ?>/assets/css/radio.css" rel="stylesheet"/>
 		<link rel="stylesheet" href="<?= SERVER; ?>/assets/css/jquery-ui.css">
 		<link rel="stylesheet" href="<?= SERVER; ?>/assets/css/jquery-ui.theme.css">
-		<script src="<?= SERVER; ?>/assets/js/jquery-ui.js"></script>
-        <script>
-            $(function() {
-                $( "#datepicker" ).datepicker({
-                    showOnFocus: true,
-                    showOtherMonths: true,
-                    changeMonth: true,
-                    changeYear: true,
-                    dateFormat: "dd/mm/yy",
-                    minDate: '01/01/1900',
-                    maxDate: "+0D"
-                });
-				$( "#speed" )
-                    .selectmenu()
-                    .selectmenu( "menuWidget" )
-                    .addClass( "overflow" );
-            });
-        </script>
         <style>
             .overflow {
                 height: 85px;
@@ -171,6 +153,6 @@
                 </div>
             </main>
         </div>
-        <?php require_once 'footer.php'; $dropify = true; $mask = true; ?>
+        <?php require_once 'footer.php'; $jui = true; $dropify = true; $mask = true; ?>
 	</body>
 </html>

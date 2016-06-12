@@ -3,7 +3,7 @@
 <html>
 	<head>
 		<title>Page Not Found</title>
-		<link href="<?= SERVER; ?>/assets/img/aiub.png" rel="shortcut icon" />
+		<link href="<?= SERVER; ?>/assets/img/aiub.png" rel="icon" />
 		<link href="<?= SERVER; ?>/assets/css/404.css" rel="stylesheet" type="text/css"  media="all" />
 	</head>
 	<body>
