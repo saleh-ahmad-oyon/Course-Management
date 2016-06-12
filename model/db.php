@@ -35,7 +35,7 @@ WHERE `a_aiub_id` = '".mysqli_real_escape_string($conn, $user)."' and `a_pass` =
 function teacher_id($user)
 {
 	$conn = db_conn();
-	$sql = "SELECT `t_id` FROM `teacher` WHERE `t_aiub_id` = '$user'";
+	$sql = "SELECT `t_id` FROM `teacher` WHERE `t_aiub_id` = '".mysqli_real_escape_string($conn, $user)."'";
 	$result = mysqli_query($conn, $sql);
 	$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 	$tid = $row['t_id'];
@@ -46,7 +46,7 @@ function teacher_id($user)
 function authority_id($user)
 {
 	$conn = db_conn();
-	$sql = "SELECT `a_id` FROM `authority` WHERE `a_aiub_id` = '$user'";
+	$sql = "SELECT `a_id` FROM `authority` WHERE `a_aiub_id` = '".mysqli_real_escape_string($conn, $user)."'";
 	$result = mysqli_query($conn, $sql);
 	$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 	$tid = $row['a_id'];
@@ -57,7 +57,7 @@ function authority_id($user)
 function student_id($user)
 {
 	$conn = db_conn();
-	$sql = "SELECT `s_id` FROM `student` WHERE `s_aiub_id` = '$user';";
+	$sql = "SELECT `s_id` FROM `student` WHERE `s_aiub_id` = '".mysqli_real_escape_string($conn, $user)."';";
 	$result = mysqli_query($conn, $sql);
 	$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 	$sid = $row['s_id'];
@@ -68,7 +68,7 @@ function student_id($user)
 function checkTeacherOldPass($tid, $oldPass)
 {
 	$conn = db_conn();
-	$sql = "SELECT `t_pass` FROM `teacher` WHERE `t_id` = $tid";
+	$sql = "SELECT `t_pass` FROM `teacher` WHERE `t_id` = ".mysqli_real_escape_string($conn, $tid);
 	$result = mysqli_query($conn, $sql);
 	$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 	return strcmp($oldPass, $row['t_pass']) == 0 ? true : false;
@@ -77,7 +77,7 @@ function checkTeacherOldPass($tid, $oldPass)
 function checkAuthorOldPass($aid, $oldPass)
 {
 	$conn = db_conn();
-	$sql = "SELECT `a_pass` FROM `authority` WHERE `a_id` = $aid";
+	$sql = "SELECT `a_pass` FROM `authority` WHERE `a_id` = ".mysqli_real_escape_string($conn, $aid);
 	$result = mysqli_query($conn, $sql);
 	$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
     return strcmp($oldPass, $row['a_pass']) == 0 ? true : false;
@@ -86,16 +86,17 @@ function checkAuthorOldPass($aid, $oldPass)
 function checkStudentOldPass($sid, $oldPass)
 {
 	$conn = db_conn();
-	$sql = "SELECT `s_pass` FROM `student` WHERE `s_id` = $sid";
+	$sql = "SELECT `s_pass` FROM `student` WHERE `s_id` = ".mysqli_real_escape_string($conn, $sid);
 	$result = mysqli_query($conn, $sql);
 	$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
-	return strcmp($oldPass, $row['s_pass']) == 0 ? true : false;
+	return strcmp(mysqli_real_escape_string($conn, $oldPass), $row['s_pass']) == 0 ? true : false;
 }
 	
 function updateStudentPass($sid, $newpass)
 {
 	$conn = db_conn();
-	$sql = "UPDATE `student` SET `s_pass`= '$newpass' WHERE `s_id` = $sid";
+	$sql = "UPDATE `student` SET `s_pass`= '".mysqli_real_escape_string($conn, $newpass)."' 
+	WHERE `s_id` = ".mysqli_real_escape_string($conn, $sid);
 	mysqli_query($conn, $sql);
 	mysqli_close($conn);
 }
@@ -103,7 +104,8 @@ function updateStudentPass($sid, $newpass)
 function updateTeacherPass($tid, $newpass)
 {
 	$conn = db_conn();
-	$sql = "UPDATE `teacher` SET `t_pass`= '$newpass' WHERE `t_id` = $tid";
+	$sql = "UPDATE `teacher` SET `t_pass`= '".mysqli_real_escape_string($conn, $newpass)."' 
+	WHERE `t_id` = ".mysqli_real_escape_string($conn, $tid);
 	mysqli_query($conn, $sql);
 	mysqli_close($conn);
 }
@@ -111,7 +113,8 @@ function updateTeacherPass($tid, $newpass)
 function updateAuthorityPass($aid, $newpass)
 {
 	$conn = db_conn();
-	$sql = "UPDATE `authority` SET `a_pass`= '$newpass' WHERE `a_id` = $aid";
+	$sql = "UPDATE `authority` SET `a_pass`= '".mysqli_real_escape_string($conn, $newpass)."' 
+	WHERE `a_id` = ".mysqli_real_escape_string($conn, $aid);
 	mysqli_query($conn, $sql);
 	mysqli_close($conn);
 }
@@ -119,7 +122,7 @@ function updateAuthorityPass($aid, $newpass)
 function teacherCourse($tid)
 {
 	$conn = db_conn();
-	$sql = "SELECT `c_id`, `c_name` FROM `course` WHERE `t_id` = $tid";
+	$sql = "SELECT `c_id`, `c_name` FROM `course` WHERE `t_id` = ".mysqli_real_escape_string($conn, $tid);
 	$result = mysqli_query($conn, $sql);
 	$row = array();
 	for($i = 0; $i<mysqli_num_rows($result); $i++){
@@ -131,7 +134,7 @@ function teacherCourse($tid)
 function getCourseName($cid)
 {
 	$conn = db_conn();
-	$sql = "SELECT `c_name` FROM `course` WHERE `c_id` = $cid";
+	$sql = "SELECT `c_name` FROM `course` WHERE `c_id` = ".mysqli_real_escape_string($conn, $cid);
 	$result = mysqli_query($conn, $sql);
 	$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 	return $row['c_name'];
@@ -140,7 +143,10 @@ function getCourseName($cid)
 function studentCourse($sid)
 {
 	$conn = db_conn();
-	$sql = "SELECT course.c_id, `c_name`, teacher.t_name FROM `course` INNER JOIN `teacher_student_course` ON course.c_id = teacher_student_course.c_id INNER JOIN teacher ON course.t_id = teacher.t_id where teacher_student_course.s_id = $sid";
+	$sql = "SELECT course.c_id, `c_name`, teacher.t_name FROM `course` 
+INNER JOIN `teacher_student_course` ON course.c_id = teacher_student_course.c_id 
+INNER JOIN teacher ON course.t_id = teacher.t_id 
+where teacher_student_course.s_id = $sid";
 	$result = mysqli_query($conn, $sql);
 	$row = array();
 	for($i=0;$i < mysqli_num_rows($result) ;$i++){
