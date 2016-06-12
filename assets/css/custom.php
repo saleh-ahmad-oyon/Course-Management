@@ -83,3 +83,8 @@ footer{
 .KR-Baby-Love-baby:before{
     content: "g";
 }
+
+.modal-body {
+    max-height: 460px;
+    overflow-y: auto;
+}
