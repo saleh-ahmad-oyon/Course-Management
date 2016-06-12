@@ -122,7 +122,8 @@ function updateAuthorityPass($aid, $newpass)
 function teacherCourse($tid)
 {
 	$conn = db_conn();
-	$sql = "SELECT `c_id`, `c_name` FROM `course` WHERE `t_id` = ".mysqli_real_escape_string($conn, $tid);
+	$sql = "SELECT `c_id`, `c_name` FROM `course` 
+WHERE `t_id` = ".mysqli_real_escape_string($conn, $tid);
 	$result = mysqli_query($conn, $sql);
 	$row = array();
 	for($i = 0; $i<mysqli_num_rows($result); $i++){
@@ -134,7 +135,8 @@ function teacherCourse($tid)
 function getCourseName($cid)
 {
 	$conn = db_conn();
-	$sql = "SELECT `c_name` FROM `course` WHERE `c_id` = ".mysqli_real_escape_string($conn, $cid);
+	$sql = "SELECT `c_name` FROM `course` 
+WHERE `c_id` = ".mysqli_real_escape_string($conn, $cid);
 	$result = mysqli_query($conn, $sql);
 	$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 	return $row['c_name'];
@@ -146,7 +148,7 @@ function studentCourse($sid)
 	$sql = "SELECT course.c_id, `c_name`, teacher.t_name FROM `course` 
 INNER JOIN `teacher_student_course` ON course.c_id = teacher_student_course.c_id 
 INNER JOIN teacher ON course.t_id = teacher.t_id 
-where teacher_student_course.s_id = $sid";
+where teacher_student_course.s_id = ".mysqli_real_escape_string($conn, $sid);
 	$result = mysqli_query($conn, $sql);
 	$row = array();
 	for($i=0;$i < mysqli_num_rows($result) ;$i++){
@@ -159,7 +161,8 @@ where teacher_student_course.s_id = $sid";
 function stubasicInfo($sid)
 {
 	$conn = db_conn();
-	$sql = "SELECT `s_aiub_id`, `s_full_name`, `s_cgpa`, `s_gender`, `s_phone`, `s_email`, `s_dept`, `s_image`, `s_dob` FROM `student` WHERE `s_id` = $sid";
+	$sql = "SELECT `s_aiub_id`, `s_full_name`, `s_cgpa`, `s_gender`, `s_phone`, `s_email`, `s_dept`, `s_image`, `s_dob` 
+FROM `student` WHERE `s_id` = ".mysqli_real_escape_string($conn, $sid);
 	$result = mysqli_query($conn, $sql);
 	$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 
@@ -169,7 +172,8 @@ function stubasicInfo($sid)
 function stuEditableBasicInfo($sid)
 {
 	$conn = db_conn();
-	$sql = "SELECT `s_full_name`, `s_phone`, `s_email`, `s_dept`, `s_image`, `s_gender`, `s_dob` FROM `student` WHERE `s_id` = $sid";
+	$sql = "SELECT `s_full_name`, `s_phone`, `s_email`, `s_dept`, `s_image`, `s_gender`, `s_dob` 
+FROM `student` WHERE `s_id` = ".mysqli_real_escape_string($conn, $sid);
 	$result = mysqli_query($conn, $sql);
 	$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 
@@ -191,7 +195,9 @@ function deptName()
 function editBasicInfo($fullName, $dept, $phone, $email, $sid, $pic, $gender, $date)
 {
 	$conn = db_conn();
-	$sql = "UPDATE `student` SET `s_full_name`= '$fullName', `s_phone`= '$phone',`s_email`='$email', `s_dept`= '$dept', `s_image`= '$pic', `s_gender`='$gender', `s_dob`='$date' WHERE `s_id` = $sid";
+	$sql = "UPDATE `student` 
+SET `s_full_name`= '$fullName', `s_phone`= '$phone',`s_email`='$email', `s_dept`= '$dept', `s_image`= '$pic', `s_gender`='$gender', `s_dob`='$date' 
+WHERE `s_id` = $sid";
 	mysqli_query($conn, $sql);
 	mysqli_close($conn);
 }
