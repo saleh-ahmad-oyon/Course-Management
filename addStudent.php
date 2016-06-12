@@ -57,6 +57,8 @@
                 </div>
             </div>
         </footer>
+        <script src="<?= SERVER; ?>/assets/js/jquery.maskedinput.min.js"></script>
+        <script src="<?= SERVER; ?>/assets/js/mymask.js"></script>
         <script src="<?= SERVER; ?>/assets/js/custom.js"></script>
 	</body>
 </html>
