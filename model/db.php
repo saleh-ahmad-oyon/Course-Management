@@ -205,7 +205,8 @@ WHERE `s_id` = $sid";
 function editBasicInfoWithoutPic($fullName, $dept, $phone, $email, $sid, $gender, $date)
 {
 	$conn = db_conn();
-	$sql = "UPDATE `student` SET `s_full_name`= '$fullName', `s_phone`= '$phone',`s_email`='$email', `s_dept`= '$dept', `s_gender`='$gender', `s_dob`='$date' WHERE `s_id` = $sid";
+	$sql = "UPDATE `student` SET `s_full_name`= '$fullName', `s_phone`= '$phone',`s_email`='$email', `s_dept`= '$dept', `s_gender`='$gender', `s_dob`='$date' 
+WHERE `s_id` = $sid";
 	mysqli_query($conn, $sql);
 	mysqli_close($conn);
 }
@@ -213,7 +214,7 @@ function editBasicInfoWithoutPic($fullName, $dept, $phone, $email, $sid, $gender
 function checkStudentId($stuId)
 {
 	$conn = db_conn();
-	$sql ="SELECT COUNT(*) as `num` FROM `student` WHERE `s_aiub_id` = '$stuId'";
+	$sql ="SELECT COUNT(*) as `num` FROM `student` WHERE `s_aiub_id` = '".mysqli_real_escape_string($conn, $stuId)."'";
 	$result = mysqli_query($conn, $sql);
 	$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 	return $row['num'] == 1 ? true : false;
@@ -222,7 +223,9 @@ function checkStudentId($stuId)
 function checkUniqueId($tid, $stuId, $cid)
 {
 	$conn = db_conn();
-	$sql = "SELECT COUNT(*) as `num` FROM `teacher_student_course` WHERE `s_id` = (SELECT `s_id` FROM `student` WHERE `s_aiub_id` = '$stuId') and `t_id` = $tid and `c_id` = $cid";
+	$sql = "SELECT COUNT(*) as `num` FROM `teacher_student_course` 
+WHERE `s_id` = (SELECT `s_id` FROM `student` 
+WHERE `s_aiub_id` = '$stuId') and `t_id` = $tid and `c_id` = $cid";
 	$result = mysqli_query($conn, $sql);
 	$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 	return $row['num'] == 0 ? true : false;
@@ -248,7 +251,10 @@ function addStudent($tid, $stuId, $cid)
 function studentList($cid)
 {
 	$conn = db_conn();
-	$sql = "SELECT student.s_id, `s_aiub_id`, `s_full_name`, `s_cgpa`, `s_dept`, `s_image` FROM `student` INNER JOIN `teacher_student_course` ON student.s_id = teacher_student_course.s_id where teacher_student_course.c_id = $cid ORDER BY student.s_full_name";
+	$sql = "SELECT student.s_id, `s_aiub_id`, `s_full_name`, `s_cgpa`, `s_dept`, `s_image` FROM `student` 
+INNER JOIN `teacher_student_course` ON student.s_id = teacher_student_course.s_id 
+where teacher_student_course.c_id = $cid 
+ORDER BY student.s_full_name";
 	$result = mysqli_query($conn, $sql);
 	$row = array();
 	for($i=0; $i< mysqli_num_rows($result); $i++){
@@ -260,7 +266,8 @@ function studentList($cid)
 function stuDeleteInfo($sid)
 {
 	$conn = db_conn();
-	$sql ="SELECT `s_aiub_id`, `s_full_name`, `s_cgpa`, `s_dept` FROM `student` where `s_id` = $sid";
+	$sql ="SELECT `s_aiub_id`, `s_full_name`, `s_cgpa`, `s_dept` 
+FROM `student` where `s_id` = ".mysqli_real_escape_string($conn, $sid);
 	$result = mysqli_query($conn, $sql);
 	$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 
