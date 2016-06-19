@@ -762,7 +762,8 @@ function returnFinalBestTwoQuizMarks($cid, $studid)
 function returnFinalTotal($cid, $studid)
 {
 	$conn = db_conn();
-	$sql = "SELECT `final_total` FROM `course_student_marks` WHERE `s_id` = $studid and `c_id` = $cid";
+	$sql = "SELECT `final_total` FROM `course_student_marks` 
+WHERE `s_id` = ".mysqli_real_escape_string($conn, $studid)." and `c_id` = ".mysqli_real_escape_string($conn, $cid);
 	$result = mysqli_query($conn, $sql);
 	$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 	$mark = $row['final_total'];
