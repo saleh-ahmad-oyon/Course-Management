@@ -196,7 +196,8 @@ function editBasicInfo($fullName, $dept, $phone, $email, $sid, $pic, $gender, $d
 {
 	$conn = db_conn();
 	$sql = "UPDATE `student` 
-SET `s_full_name`= '$fullName', `s_phone`= '$phone',`s_email`='$email', `s_dept`= '$dept', `s_image`= '$pic', `s_gender`='$gender', `s_dob`='$date' 
+SET `s_full_name`= '".mysqli_real_escape_string($conn, $fullName)."', `s_phone`= '".mysqli_real_escape_string($conn, $phone)."', 
+`s_email`='".mysqli_real_escape_string($conn, $email)."', `s_dept`= '$dept', `s_image`= '$pic', `s_gender`='$gender', `s_dob`='$date' 
 WHERE `s_id` = $sid";
 	mysqli_query($conn, $sql);
 	mysqli_close($conn);
@@ -214,7 +215,8 @@ WHERE `s_id` = $sid";
 function checkStudentId($stuId)
 {
 	$conn = db_conn();
-	$sql ="SELECT COUNT(*) as `num` FROM `student` WHERE `s_aiub_id` = '".mysqli_real_escape_string($conn, $stuId)."'";
+	$sql ="SELECT COUNT(*) as `num` FROM `student` 
+WHERE `s_aiub_id` = '".mysqli_real_escape_string($conn, $stuId)."'";
 	$result = mysqli_query($conn, $sql);
 	$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 	return $row['num'] == 1 ? true : false;
@@ -234,7 +236,8 @@ WHERE `s_aiub_id` = '$stuId') and `t_id` = $tid and `c_id` = $cid";
 function checkFourtyStud($cid)
 {
 	$conn = db_conn();
-	$sql="SELECT COUNT(*) as `num` FROM `teacher_student_course` WHERE `c_id` = $cid";
+	$sql="SELECT COUNT(*) as `num` FROM `teacher_student_course` 
+WHERE `c_id` = mysqli_real_escape_string($conn, $cid)";
 	$result = mysqli_query($conn, $sql);
 	$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 	return $row['num'] < 40 ? true : false;
@@ -277,7 +280,8 @@ FROM `student` where `s_id` = ".mysqli_real_escape_string($conn, $sid);
 function deleteStudent($cid, $sid)
 {
 	$conn = db_conn();
-	$sql ="DELETE FROM `teacher_student_course` WHERE `s_id` = $sid and `c_id` = $cid";
+	$sql ="DELETE FROM `teacher_student_course` 
+WHERE `s_id` = ".mysqli_real_escape_string($conn, $sid)." and `c_id` =" .mysqli_real_escape_string($conn, $cid);
 	mysqli_query($conn, $sql);
 	mysqli_close($conn);
 }
