@@ -305,7 +305,8 @@ function removeStudentExam($cid, $sid)
 function removeStudentQuizTerm($cid, $sid)
 {
 	$conn = db_conn();
-	$sql ="DELETE FROM `exam` WHERE `s_id` = $sid and `c_id` = $cid";
+	$sql ="DELETE FROM `exam` WHERE 
+`s_id` = ".mysqli_real_escape_string($conn, $sid)." and `c_id` = ".mysqli_real_escape_string($conn, $cid);
 	mysqli_query($conn, $sql);
 	mysqli_close($conn);
 }
