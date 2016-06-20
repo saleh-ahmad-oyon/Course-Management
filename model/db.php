@@ -1026,7 +1026,8 @@ function getTId($tAiubId)
 function checkDuplicateCourse($tid, $course)
 {
 	$conn = db_conn();
-	$sql = "SELECT COUNT(*) as `num` FROM `course` WHERE `t_id` = $tid and `c_name` = '$course'";
+	$sql = "SELECT COUNT(*) as `num` FROM `course`
+ WHERE `t_id` = ".mysqli_real_escape_string($conn, $tid)." and `c_name` = '".mysqli_real_escape_string($conn, $course)."'";
 	$result = mysqli_query($conn, $sql);
 	$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 	return ($row['num'] == 0) ? true : false ;
@@ -1035,7 +1036,8 @@ function checkDuplicateCourse($tid, $course)
 function checkCourse($course)
 {
 	$conn = db_conn();
-	$sql = "SELECT COUNT(*) as `num` FROM `course` WHERE `t_id` <> 0 AND `c_name` = '$course'";
+	$sql = "SELECT COUNT(*) as `num` FROM `course` 
+WHERE `t_id` <> 0 AND `c_name` = '".mysqli_real_escape_string($conn, $course)."'";
 	$result = mysqli_query($conn, $sql);
 	$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 	return ($row['num'] == 0) ? true : false ;
