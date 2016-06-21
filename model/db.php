@@ -751,7 +751,8 @@ function returnMidGrade($cid, $studid)
 function returnFinalBestTwoQuizMarks($cid, $studid)
 {
 	$conn = db_conn();
-	$sql = "SELECT `final_best_two` FROM `course_student_marks` WHERE `s_id` = $studid and `c_id` = $cid";
+	$sql = "SELECT `final_best_two` FROM `course_student_marks` 
+WHERE `s_id` = $studid AND `c_id` = $cid";
 	$result = mysqli_query($conn, $sql);
 	$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 	$mark = $row['final_best_two'];
@@ -763,7 +764,8 @@ function returnFinalTotal($cid, $studid)
 {
 	$conn = db_conn();
 	$sql = "SELECT `final_total` FROM `course_student_marks` 
-WHERE `s_id` = ".mysqli_real_escape_string($conn, $studid)." and `c_id` = ".mysqli_real_escape_string($conn, $cid);
+WHERE `s_id` = ".mysqli_real_escape_string($conn, $studid)." 
+AND `c_id` = ".mysqli_real_escape_string($conn, $cid);
 	$result = mysqli_query($conn, $sql);
 	$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 	$mark = $row['final_total'];
@@ -774,7 +776,7 @@ WHERE `s_id` = ".mysqli_real_escape_string($conn, $studid)." and `c_id` = ".mysq
 function returnFinalGrade($cid, $studid)
 {
 	$conn = db_conn();
-	$sql = "SELECT `final_grade` FROM `course_student_marks` WHERE `s_id` = $studid and `c_id` = $cid";
+	$sql = "SELECT `final_grade` FROM `course_student_marks` WHERE `s_id` = $studid AND `c_id` = $cid";
 	$result = mysqli_query($conn, $sql);
 	$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 	$mark = $row['final_grade'];
@@ -785,7 +787,9 @@ function returnFinalGrade($cid, $studid)
 function returnGrandFinalGrade($cid, $studid)
 {
 	$conn = db_conn();
-	$sql = "SELECT `grand_final_grade` FROM `course_student_marks` WHERE `s_id` = $studid and `c_id` = $cid";
+	$sql = "SELECT `grand_final_grade` FROM `course_student_marks` 
+WHERE `s_id` = $studid 
+AND `c_id` = ".mysqli_real_escape_string($conn, $cid);
 	$result = mysqli_query($conn, $sql);
 	$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 	$mark = $row['grand_final_grade'];
@@ -796,7 +800,7 @@ function returnGrandFinalGrade($cid, $studid)
 function returnStdentPic($sid)
 {
 	$conn = db_conn();
-	$sql = "SELECT `s_image` FROM `student` WHERE `s_id` = $sid";
+	$sql = "SELECT `s_image` FROM `student` WHERE `s_id` = ".mysqli_real_escape_string($conn, $sid);
 	$result = mysqli_query($conn, $sql);
 	$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 	$stuImage = $row['s_image'];
@@ -858,7 +862,14 @@ function teacherEditableBasicInfo($tid)
 function editTeacherBasicInfo($fullName, $phone, $email, $tid, $pic, $gender, $date)
 {
 	$conn = db_conn();
-	$sql = "UPDATE `teacher` SET `t_name`='$fullName',`t_email`='$email',`t_phone`='$phone',`t_gender`='$gender',`t_dob`='$date',`t_image`='$pic' WHERE `t_id` = $tid";
+	$sql = "UPDATE `teacher` SET 
+`t_name`='$fullName',
+`t_email`='$email',
+`t_phone`='$phone',
+`t_gender`='$gender',
+`t_dob`='$date',
+`t_image`='$pic' 
+WHERE `t_id` = $tid";
 	mysqli_query($conn, $sql);
 	mysqli_close($conn);
 }
@@ -866,7 +877,13 @@ function editTeacherBasicInfo($fullName, $phone, $email, $tid, $pic, $gender, $d
 function editTeacherBasicInfoWithoutPic($fullName, $phone, $email, $tid, $gender, $date)
 {
 	$conn = db_conn();
-	$sql = "UPDATE `teacher` SET `t_name`='$fullName',`t_email`='$email',`t_phone`='$phone',`t_gender`='$gender',`t_dob`='$date' WHERE `t_id` = $tid";
+	$sql = "UPDATE `teacher` SET 
+`t_name`='".mysqli_real_escape_string($conn, $fullName)."',
+`t_email`='".mysqli_real_escape_string($conn, $email)."',
+`t_phone`='".mysqli_real_escape_string($conn, $phone)."',
+`t_gender`='".mysqli_real_escape_string($conn, $gender)."',
+`t_dob`='".mysqli_real_escape_string($conn, $date)."' 
+WHERE `t_id` = $tid";
 	mysqli_query($conn, $sql);
 	mysqli_close($conn);
 }
@@ -956,7 +973,9 @@ function getSubject()
 function getTeacherSubject()
 {
 	$conn = db_conn();
-	$sql = "SELECT teacher.t_aiub_id, teacher.t_name, course.c_id, `c_name` FROM `course` INNER JOIN teacher ON course.t_id = teacher.t_id where course.t_id <> 0 order by course.c_id DESC";
+	$sql = "SELECT teacher.t_aiub_id, teacher.t_name, course.c_id, `c_name` FROM `course` 
+INNER JOIN teacher ON course.t_id = teacher.t_id 
+WHERE course.t_id <> 0 ORDER BY course.c_id DESC";
 	$result = mysqli_query($conn, $sql);
 	$row = array();
 	for($i=0; $i<mysqli_num_rows($result); $i++){
@@ -968,7 +987,7 @@ function getTeacherSubject()
 function deleteTeacherCourse($cid)
 {
 	$conn = db_conn();
-	$sql ="UPDATE `course` SET `t_id`= '' WHERE `c_id` = $cid";
+	$sql ="UPDATE `course` SET `t_id`= '' WHERE `c_id` = ".mysqli_real_escape_string($conn, $cid);
 	mysqli_query($conn, $sql);
 	mysqli_close($conn);
 }
@@ -976,7 +995,7 @@ function deleteTeacherCourse($cid)
 function deleteStudentCourse($cid)
 {
 	$conn = db_conn();
-	$sql ="DELETE FROM `teacher_student_course` WHERE `c_id` = $cid";
+	$sql ="DELETE FROM `teacher_student_course` WHERE `c_id` = ".mysqli_real_escape_string($conn, $cid);
 	mysqli_query($conn, $sql);
 	mysqli_close($conn);
 }
@@ -984,7 +1003,7 @@ function deleteStudentCourse($cid)
 function deleteCourseStudentAttendence($cid)
 {
 	$conn = db_conn();
-	$sql ="DELETE FROM `attendinfo` WHERE `c_id` = $cid";
+	$sql ="DELETE FROM `attendinfo` WHERE `c_id` = ".mysqli_real_escape_string($conn, $cid);
 	mysqli_query($conn, $sql);
 	mysqli_close($conn);
 }
@@ -992,7 +1011,7 @@ function deleteCourseStudentAttendence($cid)
 function removeCourseStudentExam($cid)
 {
 	$conn = db_conn();
-	$sql ="DELETE FROM `course_student_marks` WHERE `c_id` = $cid";
+	$sql ="DELETE FROM `course_student_marks` WHERE `c_id` = ".mysqli_real_escape_string($conn, $cid);
 	mysqli_query($conn, $sql);
 	mysqli_close($conn);
 }
@@ -1000,7 +1019,7 @@ function removeCourseStudentExam($cid)
 function removeCourseStudentQuizTerm($cid)
 {
 	$conn = db_conn();
-	$sql ="DELETE FROM `exam` WHERE `c_id` = $cid";
+	$sql ="DELETE FROM `exam` WHERE `c_id` = ".mysqli_real_escape_string($conn, $cid);
 	mysqli_query($conn, $sql);
 	mysqli_close($conn);
 }
@@ -1008,7 +1027,7 @@ function removeCourseStudentQuizTerm($cid)
 function insertCourseTeacher($course, $tid)
 {
 	$conn = db_conn();
-	$sql ="UPDATE `course` SET `t_id`= $tid WHERE `c_name` = '$course'";
+	$sql ="UPDATE `course` SET `t_id`= ".mysqli_real_escape_string($conn, $tid)." WHERE `c_name` = '".mysqli_real_escape_string($conn, $course)."'";
 	mysqli_query($conn, $sql);
 	mysqli_close($conn);
 }
