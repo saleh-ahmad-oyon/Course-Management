@@ -554,7 +554,7 @@ function showMidBestTwo($cid, $sid)
 function addFinalBestTwo($cid, $sid, $mark)
 {
 	$conn = db_conn();
-	$sql3 = "UPDATE `course_student_marks` SET `final_best_two`= $mark WHERE `c_id` = $cid and `s_id` = $sid";
+	$sql3 = "UPDATE `course_student_marks` SET `final_best_two`= $mark WHERE `c_id` = $cid AND `s_id` = $sid";
 	mysqli_query($conn, $sql3);
 
 	mysqli_close($conn);
@@ -563,7 +563,7 @@ function addFinalBestTwo($cid, $sid, $mark)
 function showFinalBestTwo($cid, $sid)
 {
 	$conn = db_conn();
-	$sql = "SELECT `final_best_two` FROM `course_student_marks` WHERE `c_id` = $cid and `s_id` = $sid";
+	$sql = "SELECT `final_best_two` FROM `course_student_marks` WHERE `c_id` = $cid AND `s_id` = $sid";
 	$result = mysqli_query($conn, $sql);
 	$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 	$marks = $row['final_best_two'];
@@ -619,7 +619,7 @@ function calculateTermTotal($q1, $q2, $q3, $mid, $cid, $sid)
 function addMidTotal($cid, $sid, $mark)
 {
 	$conn = db_conn();
-	$sql3 = "UPDATE `course_student_marks` SET `mid_total`= $mark WHERE `c_id` = $cid and `s_id` = $sid";
+	$sql3 = "UPDATE `course_student_marks` SET `mid_total`= $mark WHERE `c_id` = $cid AND `s_id` = $sid";
 	mysqli_query($conn, $sql3);
 
 	mysqli_close($conn);
@@ -628,7 +628,7 @@ function addMidTotal($cid, $sid, $mark)
 function showMidTotal($cid, $sid)
 {
 	$conn = db_conn();
-	$sql = "SELECT `mid_total` FROM `course_student_marks` WHERE `c_id` = $cid and `s_id` = $sid";
+	$sql = "SELECT `mid_total` FROM `course_student_marks` WHERE `c_id` = $cid AND `s_id` = $sid";
 	$result = mysqli_query($conn, $sql);
 	$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 	$marks = $row['mid_total'];
@@ -640,7 +640,7 @@ function showMidTotal($cid, $sid)
 function addFinalTotal($cid, $sid, $mark)
 {
 	$conn = db_conn();
-	$sql3 = "UPDATE `course_student_marks` SET `final_total`= $mark WHERE `c_id` = $cid and `s_id` = $sid";
+	$sql3 = "UPDATE `course_student_marks` SET `final_total`= $mark WHERE `c_id` = $cid AND `s_id` = $sid";
 	mysqli_query($conn, $sql3);
 
 	mysqli_close($conn);
@@ -649,7 +649,7 @@ function addFinalTotal($cid, $sid, $mark)
 function showFinalTotal($cid, $sid)
 {
 	$conn = db_conn();
-	$sql = "SELECT `final_total` FROM `course_student_marks` WHERE `c_id` = $cid and `s_id` = $sid";
+	$sql = "SELECT `final_total` FROM `course_student_marks` WHERE `c_id` = $cid AND `s_id` = $sid";
 	$result = mysqli_query($conn, $sql);
 	$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 	$marks = $row['final_total'];
@@ -661,7 +661,7 @@ function showFinalTotal($cid, $sid)
 function addGrandTotal($cid, $sid, $mark)
 {
 	$conn = db_conn();
-	$sql3 = "UPDATE `course_student_marks` SET `grand_final_total`= $mark WHERE `c_id` = $cid and `s_id` = $sid";
+	$sql3 = "UPDATE `course_student_marks` SET `grand_final_total`= $mark WHERE `c_id` = $cid AND `s_id` = $sid";
 	mysqli_query($conn, $sql3);
 
 	mysqli_close($conn);
@@ -670,7 +670,7 @@ function addGrandTotal($cid, $sid, $mark)
 function showGrandTotal($cid, $sid)
 {
 	$conn = db_conn();
-	$sql = "SELECT `grand_final_total` FROM `course_student_marks` WHERE `c_id` = $cid and `s_id` = $sid";
+	$sql = "SELECT `grand_final_total` FROM `course_student_marks` WHERE `c_id` = $cid AND `s_id` = $sid";
 	$result = mysqli_query($conn, $sql);
 	$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 	$marks = $row['grand_final_total'];
@@ -687,7 +687,7 @@ function newSuggestedGrandTotal($mid, $final)
 function addMidTermGrade($midTermGrade, $cid, $sid)
 {
 	$conn = db_conn();
-	$sql2 = "UPDATE `course_student_marks` SET `mid_grade`= '$midTermGrade' WHERE `c_id` = $cid and `s_id` = $sid";
+	$sql2 = "UPDATE `course_student_marks` SET `mid_grade`= '$midTermGrade' WHERE `c_id` = $cid AND `s_id` = $sid";
 	mysqli_query($conn, $sql2);
 	mysqli_close($conn);
 }
@@ -695,7 +695,7 @@ function addMidTermGrade($midTermGrade, $cid, $sid)
 function addGradeFinal($finalTermGrade, $cid, $sid)
 {
 	$conn = db_conn();
-	$sql2 = "UPDATE `course_student_marks` SET `final_grade`= '$finalTermGrade' WHERE `c_id` = $cid and `s_id` = $sid";
+	$sql2 = "UPDATE `course_student_marks` SET `final_grade`= '$finalTermGrade' WHERE `c_id` = $cid AND `s_id` = $sid";
 	mysqli_query($conn, $sql2);
 	mysqli_close($conn);
 }
@@ -703,7 +703,7 @@ function addGradeFinal($finalTermGrade, $cid, $sid)
 function addGradeGrandTotal($grandTotalGrand, $cid, $sid)
 {
 	$conn = db_conn();
-	$sql2 = "UPDATE `course_student_marks` SET `grand_final_grade`= '$grandTotalGrand' WHERE `c_id` = $cid and `s_id` = $sid";
+	$sql2 = "UPDATE `course_student_marks` SET `grand_final_grade`= '$grandTotalGrand' WHERE `c_id` = $cid AND `s_id` = $sid";
 	mysqli_query($conn, $sql2);
 	mysqli_close($conn);
 }
@@ -716,7 +716,7 @@ function newSuggestedMid($givenMidQuizesMark, $mid){
 function returntotalMark($cid, $studid)
 {
 	$conn = db_conn();
-	$sql = "SELECT `grand_final_total` FROM `course_student_marks` WHERE `s_id` = $studid and `c_id` = $cid";
+	$sql = "SELECT `grand_final_total` FROM `course_student_marks` WHERE `s_id` = $studid AND `c_id` = $cid";
 	$result = mysqli_query($conn, $sql);
 	$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 	$mark = $row['grand_final_total'];
@@ -726,7 +726,7 @@ function returntotalMark($cid, $studid)
 function returnMidBestTwoQuizMarks($cid, $studid)
 {
 	$conn = db_conn();
-	$sql = "SELECT `mid_best_two` FROM `course_student_marks` WHERE `s_id` = $studid and `c_id` = $cid";
+	$sql = "SELECT `mid_best_two` FROM `course_student_marks` WHERE `s_id` = $studid AND `c_id` = $cid";
 	$result = mysqli_query($conn, $sql);
 	$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 	$mark = $row['mid_best_two'];
@@ -736,7 +736,7 @@ function returnMidBestTwoQuizMarks($cid, $studid)
 function returnMidTotal($cid, $studid)
 {
 	$conn = db_conn();
-	$sql = "SELECT `mid_total` FROM `course_student_marks` WHERE `s_id` = $studid and `c_id` = $cid";
+	$sql = "SELECT `mid_total` FROM `course_student_marks` WHERE `s_id` = $studid AND `c_id` = $cid";
 	$result = mysqli_query($conn, $sql);
 	$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 	$mark = $row['mid_total'];
@@ -746,7 +746,7 @@ function returnMidTotal($cid, $studid)
 function returnMidGrade($cid, $studid)
 {
 	$conn = db_conn();
-	$sql = "SELECT `mid_grade` FROM `course_student_marks` WHERE `s_id` = $studid and `c_id` = $cid";
+	$sql = "SELECT `mid_grade` FROM `course_student_marks` WHERE `s_id` = $studid AND `c_id` = $cid";
 	$result = mysqli_query($conn, $sql);
 	$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 	$mark = $row['mid_grade'];
