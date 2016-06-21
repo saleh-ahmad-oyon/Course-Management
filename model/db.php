@@ -716,7 +716,9 @@ function newSuggestedMid($givenMidQuizesMark, $mid){
 function returntotalMark($cid, $studid)
 {
 	$conn = db_conn();
-	$sql = "SELECT `grand_final_total` FROM `course_student_marks` WHERE `s_id` = $studid AND `c_id` = $cid";
+	$sql = "SELECT `grand_final_total` FROM `course_student_marks` 
+WHERE `s_id` = ".mysqli_real_escape_string($conn, $studid)." 
+AND `c_id` = ".mysqli_real_escape_string($conn, $cid);
 	$result = mysqli_query($conn, $sql);
 	$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 	$mark = $row['grand_final_total'];
@@ -726,7 +728,9 @@ function returntotalMark($cid, $studid)
 function returnMidBestTwoQuizMarks($cid, $studid)
 {
 	$conn = db_conn();
-	$sql = "SELECT `mid_best_two` FROM `course_student_marks` WHERE `s_id` = $studid AND `c_id` = $cid";
+	$sql = "SELECT `mid_best_two` FROM `course_student_marks` 
+WHERE `s_id` = ".mysqli_real_escape_string($conn, $studid)." 
+AND `c_id` = ".mysqli_real_escape_string($conn, $cid);
 	$result = mysqli_query($conn, $sql);
 	$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 	$mark = $row['mid_best_two'];
@@ -748,7 +752,9 @@ AND `c_id` = ".mysqli_real_escape_string($conn, $cid);
 function returnMidGrade($cid, $studid)
 {
 	$conn = db_conn();
-	$sql = "SELECT `mid_grade` FROM `course_student_marks` WHERE `s_id` = $studid AND `c_id` = $cid";
+	$sql = "SELECT `mid_grade` FROM `course_student_marks` 
+WHERE `s_id` = ".mysqli_real_escape_string($conn, $studid)." 
+AND `c_id` = ".mysqli_real_escape_string($conn, $cid);
 	$result = mysqli_query($conn, $sql);
 	$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 	$mark = $row['mid_grade'];
@@ -760,7 +766,8 @@ function returnFinalBestTwoQuizMarks($cid, $studid)
 {
 	$conn = db_conn();
 	$sql = "SELECT `final_best_two` FROM `course_student_marks` 
-WHERE `s_id` = $studid AND `c_id` = $cid";
+WHERE `s_id` = ".mysqli_real_escape_string($conn, $studid)." 
+AND `c_id` = ".mysqli_real_escape_string($conn, $cid);
 	$result = mysqli_query($conn, $sql);
 	$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 	$mark = $row['final_best_two'];
@@ -784,7 +791,9 @@ AND `c_id` = ".mysqli_real_escape_string($conn, $cid);
 function returnFinalGrade($cid, $studid)
 {
 	$conn = db_conn();
-	$sql = "SELECT `final_grade` FROM `course_student_marks` WHERE `s_id` = $studid AND `c_id` = $cid";
+	$sql = "SELECT `final_grade` FROM `course_student_marks` 
+WHERE `s_id` = ".mysqli_real_escape_string($conn, $studid)." 
+AND `c_id` = ".mysqli_real_escape_string($conn, $cid);
 	$result = mysqli_query($conn, $sql);
 	$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 	$mark = $row['final_grade'];
@@ -796,7 +805,7 @@ function returnGrandFinalGrade($cid, $studid)
 {
 	$conn = db_conn();
 	$sql = "SELECT `grand_final_grade` FROM `course_student_marks` 
-WHERE `s_id` = $studid 
+WHERE `s_id` = ".mysqli_real_escape_string($conn, $studid)." 
 AND `c_id` = ".mysqli_real_escape_string($conn, $cid);
 	$result = mysqli_query($conn, $sql);
 	$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
@@ -808,7 +817,8 @@ AND `c_id` = ".mysqli_real_escape_string($conn, $cid);
 function returnStdentPic($sid)
 {
 	$conn = db_conn();
-	$sql = "SELECT `s_image` FROM `student` WHERE `s_id` = ".mysqli_real_escape_string($conn, $sid);
+	$sql = "SELECT `s_image` FROM `student` 
+WHERE `s_id` = ".mysqli_real_escape_string($conn, $sid);
 	$result = mysqli_query($conn, $sql);
 	$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 	$stuImage = $row['s_image'];
@@ -818,7 +828,9 @@ function returnStdentPic($sid)
 function insertStudent($ID, $name, $cgpa, $phone, $email, $dept, $pic, $gender, $dob)
 {
 	$conn = db_conn();
-	$sql = "INSERT INTO `student`(`s_aiub_id`, `s_full_name`, `s_cgpa`, `s_phone`, `s_email`, `s_dept`, `s_image`, `s_gender`, `s_dob`) VALUES ('$ID', '$name', $cgpa, '$phone', '$email', '$dept', '$pic', '$gender', '$dob')";
+	$sql = "INSERT INTO 
+`student`(`s_aiub_id`, `s_full_name`, `s_cgpa`, `s_phone`, `s_email`, `s_dept`, `s_image`, `s_gender`, `s_dob`) 
+VALUES ('$ID', '$name', $cgpa, '$phone', '$email', '$dept', '$pic', '$gender', '$dob')";
 	mysqli_query($conn, $sql);
 	mysqli_close($conn);
 }
@@ -852,7 +864,8 @@ function insertTeacher($ID, $name, $phone, $email, $pic, $gender, $date, $design
 function teacherBasicInfo($tid)
 {
 	$conn = db_conn();
-	$sql = "SELECT `t_aiub_id`, `t_name`, `t_email`, `t_phone`, `t_gender`, `t_dob`, `t_image`, `t_designation` FROM `teacher` WHERE `t_id` = $tid";
+	$sql = "SELECT `t_aiub_id`, `t_name`, `t_email`, `t_phone`, `t_gender`, `t_dob`, `t_image`, `t_designation` 
+FROM `teacher` WHERE `t_id` = ".mysqli_real_escape_string($conn, $tid);
 	$result = mysqli_query($conn, $sql);
 	$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 	return $row;
@@ -861,7 +874,8 @@ function teacherBasicInfo($tid)
 function teacherEditableBasicInfo($tid)
 {
 	$conn = db_conn();
-	$sql = "SELECT `t_name`, `t_email`, `t_phone`, `t_gender`, `t_dob`, `t_image` FROM `teacher` WHERE `t_id` = $tid";
+	$sql = "SELECT `t_name`, `t_email`, `t_phone`, `t_gender`, `t_dob`, `t_image` FROM `teacher` 
+WHERE `t_id` = ".mysqli_real_escape_string($conn, $tid);
 	$result = mysqli_query($conn, $sql);
 	$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 	return $row;
