@@ -196,9 +196,14 @@ function editBasicInfo($fullName, $dept, $phone, $email, $sid, $pic, $gender, $d
 {
 	$conn = db_conn();
 	$sql = "UPDATE `student` 
-SET `s_full_name`= '".mysqli_real_escape_string($conn, $fullName)."', `s_phone`= '".mysqli_real_escape_string($conn, $phone)."', 
-`s_email`='".mysqli_real_escape_string($conn, $email)."', `s_dept`= '$dept', `s_image`= '$pic', `s_gender`='$gender', `s_dob`='$date' 
-WHERE `s_id` = $sid";
+SET `s_full_name`= '".mysqli_real_escape_string($conn, $fullName)."', 
+`s_phone`= '".mysqli_real_escape_string($conn, $phone)."', 
+`s_email`='".mysqli_real_escape_string($conn, $email)."', 
+`s_dept`= '".mysqli_real_escape_string($conn, $dept)."', 
+`s_image`= '".mysqli_real_escape_string($conn, $pic)."', 
+`s_gender`='".mysqli_real_escape_string($conn, $gender)."', 
+`s_dob`='".mysqli_real_escape_string($conn, $date)."' 
+WHERE `s_id` = ".mysqli_real_escape_string($conn, $sid);
 	mysqli_query($conn, $sql);
 	mysqli_close($conn);
 }
@@ -206,8 +211,14 @@ WHERE `s_id` = $sid";
 function editBasicInfoWithoutPic($fullName, $dept, $phone, $email, $sid, $gender, $date)
 {
 	$conn = db_conn();
-	$sql = "UPDATE `student` SET `s_full_name`= '$fullName', `s_phone`= '$phone',`s_email`='$email', `s_dept`= '$dept', `s_gender`='$gender', `s_dob`='$date' 
-WHERE `s_id` = $sid";
+	$sql = "UPDATE `student` 
+SET `s_full_name`= '".mysqli_real_escape_string($conn, $fullName)."', 
+`s_phone`= '".mysqli_real_escape_string($conn, $phone)."',
+`s_email`='".mysqli_real_escape_string($conn, $email)."', 
+`s_dept`= '".mysqli_real_escape_string($conn, $dept)."', 
+`s_gender`='".mysqli_real_escape_string($conn, $gender)."', 
+`s_dob`='".mysqli_real_escape_string($conn, $date)."' 
+WHERE `s_id` = ".mysqli_real_escape_string($conn, $sid);
 	mysqli_query($conn, $sql);
 	mysqli_close($conn);
 }
@@ -246,7 +257,8 @@ WHERE `c_id` = ".mysqli_real_escape_string($conn, $cid);
 function addStudent($tid, $stuId, $cid)
 {
 	$conn = db_conn();
-	$sql="INSERT INTO `teacher_student_course`(`s_id`, `t_id`, `c_id`) VALUES ((SELECT `s_id` FROM `student` WHERE `s_aiub_id` = '$stuId'), $tid, $cid)";
+	$sql="INSERT INTO `teacher_student_course`(`s_id`, `t_id`, `c_id`) VALUES (
+(SELECT `s_id` FROM `student` WHERE `s_aiub_id` = '$stuId'), $tid, $cid)";
 	mysqli_query($conn, $sql);
 	mysqli_close($conn);
 }
@@ -256,7 +268,7 @@ function studentList($cid)
 	$conn = db_conn();
 	$sql = "SELECT student.s_id, `s_aiub_id`, `s_full_name`, `s_cgpa`, `s_dept`, `s_image` FROM `student` 
 INNER JOIN `teacher_student_course` ON student.s_id = teacher_student_course.s_id 
-where teacher_student_course.c_id = $cid 
+WHERE teacher_student_course.c_id = $cid 
 ORDER BY student.s_full_name";
 	$result = mysqli_query($conn, $sql);
 	$row = array();
@@ -270,7 +282,7 @@ function stuDeleteInfo($sid)
 {
 	$conn = db_conn();
 	$sql ="SELECT `s_aiub_id`, `s_full_name`, `s_cgpa`, `s_dept` 
-FROM `student` where `s_id` = ".mysqli_real_escape_string($conn, $sid);
+FROM `student` WHERE `s_id` = ".mysqli_real_escape_string($conn, $sid);
 	$result = mysqli_query($conn, $sql);
 	$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 
@@ -281,7 +293,7 @@ function deleteStudent($cid, $sid)
 {
 	$conn = db_conn();
 	$sql ="DELETE FROM `teacher_student_course` 
-WHERE `s_id` = ".mysqli_real_escape_string($conn, $sid)." and `c_id` =" .mysqli_real_escape_string($conn, $cid);
+WHERE `s_id` = ".mysqli_real_escape_string($conn, $sid)." AND `c_id` =" .mysqli_real_escape_string($conn, $cid);
 	mysqli_query($conn, $sql);
 	mysqli_close($conn);
 }
@@ -289,7 +301,7 @@ WHERE `s_id` = ".mysqli_real_escape_string($conn, $sid)." and `c_id` =" .mysqli_
 function deleteStudentAttendence($cid, $sid)
 {
 	$conn = db_conn();
-	$sql ="DELETE FROM `attendinfo` WHERE `s_id` = $sid and `c_id` = $cid";
+	$sql ="DELETE FROM `attendinfo` WHERE `s_id` = $sid AND `c_id` = $cid";
 	mysqli_query($conn, $sql);
 	mysqli_close($conn);
 }
@@ -297,7 +309,7 @@ function deleteStudentAttendence($cid, $sid)
 function removeStudentExam($cid, $sid)
 {
 	$conn = db_conn();
-	$sql ="DELETE FROM `course_student_marks` WHERE `s_id` = $sid and `c_id` = $cid";
+	$sql ="DELETE FROM `course_student_marks` WHERE `s_id` = $sid AND `c_id` = $cid";
 	mysqli_query($conn, $sql);
 	mysqli_close($conn);
 }
@@ -306,7 +318,7 @@ function removeStudentQuizTerm($cid, $sid)
 {
 	$conn = db_conn();
 	$sql ="DELETE FROM `exam` WHERE 
-`s_id` = ".mysqli_real_escape_string($conn, $sid)." and `c_id` = ".mysqli_real_escape_string($conn, $cid);
+`s_id` = ".mysqli_real_escape_string($conn, $sid)." AND `c_id` = ".mysqli_real_escape_string($conn, $cid);
 	mysqli_query($conn, $sql);
 	mysqli_close($conn);
 }
@@ -342,7 +354,7 @@ function studentsAttendence($cid)
 function insertAttendence($sid, $cid)
 {
 	$conn = db_conn();
-	$sql = "UPDATE `attendinfo` SET `att_total`=`att_total`+1 WHERE `s_id` = $sid and `c_id` = $cid";
+	$sql = "UPDATE `attendinfo` SET `att_total`=`att_total`+1 WHERE `s_id` = $sid AND `c_id` = $cid";
 	mysqli_query($conn, $sql);
 	mysqli_close($conn);
 }
@@ -350,7 +362,7 @@ function insertAttendence($sid, $cid)
 function returnTotalAttendence($cid, $studid)
 {
 	$conn = db_conn();
-	$sql = "SELECT `att_total` FROM `attendinfo` WHERE `c_id` = $cid and `s_id` = $studid";
+	$sql = "SELECT `att_total` FROM `attendinfo` WHERE `c_id` = $cid AND `s_id` = $studid";
 	$result = mysqli_query($conn, $sql);
 	$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 	$totalAttendence = $row['att_total'];
@@ -374,7 +386,9 @@ WHERE course_student_marks.c_id = $cid ORDER BY student.s_full_name";
 function getStuIdNameAttendence($cid, $sid)
 {
 	$conn = db_conn();
-	$sql = "SELECT `s_aiub_id`, `s_full_name`, attendinfo.att_total FROM `student` LEFT JOIN attendinfo ON student.s_id = attendinfo.s_id WHERE student.s_id = $sid and attendinfo.c_id = $cid";
+	$sql = "SELECT `s_aiub_id`, `s_full_name`, attendinfo.att_total FROM `student` 
+LEFT JOIN attendinfo ON student.s_id = attendinfo.s_id 
+WHERE student.s_id = $sid and attendinfo.c_id = $cid";
 	$result = mysqli_query($conn, $sql);
 	$outputString='';
 	$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
@@ -385,7 +399,8 @@ function getStuIdNameAttendence($cid, $sid)
 function addQuiz1Marks($sid, $cid, $quiz1Marks, $dateTime, $name)
 {
 	$conn = db_conn();
-	$sql = "INSERT INTO `exam`(`e_name`, `e_date`, `e_marks`, `s_id`, `c_id`) VALUES ('$name','$dateTime',$quiz1Marks, $sid, $cid)";
+	$sql = "INSERT INTO `exam`(`e_name`, `e_date`, `e_marks`, `s_id`, `c_id`) 
+VALUES ('$name','$dateTime',$quiz1Marks, $sid, $cid)";
 	mysqli_query($conn, $sql);
 	mysqli_close($conn);
 }
@@ -393,7 +408,10 @@ function addQuiz1Marks($sid, $cid, $quiz1Marks, $dateTime, $name)
 function showMarks($cid, $sid, $q)
 {
 	$conn = db_conn();
-	$sql = "SELECT `e_marks` FROM `exam` WHERE `s_id` = $sid and `c_id` = $cid and `e_name` = '$q' order by `e_date` asc";
+	$sql = "SELECT `e_marks` FROM `exam` 
+WHERE `s_id` = $sid AND `c_id` = $cid 
+AND `e_name` = '$q' 
+ORDER BY `e_date` ASC";
 	$result = mysqli_query($conn, $sql);
 	$outputString='';
 	while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
