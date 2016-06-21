@@ -454,7 +454,10 @@ function getTermMarks($term, $sid, $cid)
 function returnMarks($cid, $sid, $name)
 {
 	$conn = db_conn();
-	$sql ="SELECT `e_marks` FROM `exam` WHERE `e_name` = '$name' and `s_id` = $sid and `c_id` =$cid";
+	$sql ="SELECT `e_marks` FROM `exam` 
+WHERE `e_name` = '$name' 
+AND `s_id` = $sid 
+AND `c_id` =$cid";
 	$result = mysqli_query($conn, $sql);
 	$outputString='';
 	while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
@@ -496,7 +499,10 @@ function getXmMarks($cid, $sid, $name)
 function getXmMarksForDelete($cid, $sid, $name)
 {
 	$conn = db_conn();
-	$sql = "SELECT `e_id`, `e_date`, `e_marks` FROM `exam` WHERE `e_name` = '$name' and `s_id` = $sid and `c_id` = $cid";
+	$sql = "SELECT `e_id`, `e_date`, `e_marks` FROM `exam` 
+WHERE `e_name` = '$name' 
+AND `s_id` = $sid 
+AND `c_id` = $cid";
 	$result = mysqli_query($conn, $sql);
 	$row = array();
 	for($i=0; $i<mysqli_num_rows($result); $i++){
@@ -513,10 +519,10 @@ function deleteExamMarks($eid)
 	mysqli_close($conn);
 }
 
-function updateMarks($id, $m)
+function updateMarks($id, $mark)
 {
 	$conn = db_conn();
-	$sql = "UPDATE `exam` SET `e_marks`= $m WHERE `e_id` = $id";
+	$sql = "UPDATE `exam` SET `e_marks`= $mark WHERE `e_id` = $id";
 	mysqli_query($conn, $sql);
 	mysqli_close($conn);
 }
