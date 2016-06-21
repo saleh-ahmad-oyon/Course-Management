@@ -863,13 +863,13 @@ function editTeacherBasicInfo($fullName, $phone, $email, $tid, $pic, $gender, $d
 {
 	$conn = db_conn();
 	$sql = "UPDATE `teacher` SET 
-`t_name`='$fullName',
-`t_email`='$email',
-`t_phone`='$phone',
-`t_gender`='$gender',
-`t_dob`='$date',
-`t_image`='$pic' 
-WHERE `t_id` = $tid";
+`t_name`='".mysqli_real_escape_string($conn, $fullName)."',
+`t_email`='".mysqli_real_escape_string($conn, $email)."',
+`t_phone`='".mysqli_real_escape_string($conn, $phone)."',
+`t_gender`='".mysqli_real_escape_string($conn, $gender)."',
+`t_dob`='".mysqli_real_escape_string($conn, $date)."',
+`t_image`='".mysqli_real_escape_string($conn, $pic)."' 
+WHERE `t_id` = ".mysqli_real_escape_string($conn, $tid);
 	mysqli_query($conn, $sql);
 	mysqli_close($conn);
 }
@@ -883,7 +883,7 @@ function editTeacherBasicInfoWithoutPic($fullName, $phone, $email, $tid, $gender
 `t_phone`='".mysqli_real_escape_string($conn, $phone)."',
 `t_gender`='".mysqli_real_escape_string($conn, $gender)."',
 `t_dob`='".mysqli_real_escape_string($conn, $date)."' 
-WHERE `t_id` = $tid";
+WHERE `t_id` = ".mysqli_real_escape_string($conn, $tid);
 	mysqli_query($conn, $sql);
 	mysqli_close($conn);
 }
