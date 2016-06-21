@@ -237,7 +237,7 @@ function checkFourtyStud($cid)
 {
 	$conn = db_conn();
 	$sql="SELECT COUNT(*) as `num` FROM `teacher_student_course` 
-WHERE `c_id` = mysqli_real_escape_string($conn, $cid)";
+WHERE `c_id` = ".mysqli_real_escape_string($conn, $cid);
 	$result = mysqli_query($conn, $sql);
 	$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 	return $row['num'] < 40 ? true : false;
@@ -1016,7 +1016,7 @@ function insertCourseTeacher($course, $tid)
 function getTId($tAiubId)
 {
 	$conn = db_conn();
-	$sql ="SELECT `t_id` FROM `teacher` WHERE `t_aiub_id` = '$tAiubId'";
+	$sql ="SELECT `t_id` FROM `teacher` WHERE `t_aiub_id` = '".mysqli_real_escape_string($conn, $tAiubId)."'";
 	$result = mysqli_query($conn, $sql);
 	$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 	$tid = $row['t_id'];
