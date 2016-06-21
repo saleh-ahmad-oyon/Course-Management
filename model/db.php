@@ -736,7 +736,9 @@ function returnMidBestTwoQuizMarks($cid, $studid)
 function returnMidTotal($cid, $studid)
 {
 	$conn = db_conn();
-	$sql = "SELECT `mid_total` FROM `course_student_marks` WHERE `s_id` = $studid AND `c_id` = $cid";
+	$sql = "SELECT `mid_total` FROM `course_student_marks` 
+WHERE `s_id` = ".mysqli_real_escape_string($conn, $studid)." 
+AND `c_id` = ".mysqli_real_escape_string($conn, $cid);
 	$result = mysqli_query($conn, $sql);
 	$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 	$mark = $row['mid_total'];
