@@ -12,7 +12,7 @@ AND `s_pass` = '".mysqli_real_escape_string($conn, $pass)."'";
 
 	$result = mysqli_query($conn, $sql);
 	$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
-	return ($row['num'] == 1) ? true : false ;
+	return $row['num'] ? true : false ;
 }
 
 function check_teacher_login($user, $pass)
@@ -25,7 +25,7 @@ AND `t_pass` = '".mysqli_real_escape_string($conn, $pass)."'";
 
 	$result = mysqli_query($conn, $sql);
 	$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
-	return ($row['num'] == 1) ? true : false ;
+	return $row['num'] ? true : false ;
 }
 
 function check_authority_login($user, $pass)
@@ -38,7 +38,7 @@ AND `a_pass` = '".mysqli_real_escape_string($conn, $pass)."'";
 
 	$result = mysqli_query($conn, $sql);
 	$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
-	return ($row['num'] == 1) ? true : false ;
+	return $row['num'] ? true : false ;
 }
 
 function teacher_id($user)
@@ -1207,7 +1207,7 @@ function editTeacherBasicInfoWithoutPic($fullName, $phone, $email, $tid, $gender
 `t_gender`='".mysqli_real_escape_string($conn, $gender)."',
 `t_dob`='".mysqli_real_escape_string($conn, $date)."' 
 WHERE `t_id` = ".mysqli_real_escape_string($conn, $tid);
-	
+
 	mysqli_query($conn, $sql);
 	mysqli_close($conn);
 }
