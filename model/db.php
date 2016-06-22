@@ -5,8 +5,11 @@ require_once 'db_conn.php';
 function check_stud_login($user, $pass)
 {
 	$conn = db_conn();
+
 	$sql = "SELECT COUNT(*) as `num` FROM `student` 
-WHERE `s_aiub_id` = '".mysqli_real_escape_string($conn, $user)."' and `s_pass` = '".mysqli_real_escape_string($conn, $pass)."';";
+WHERE `s_aiub_id` = '".mysqli_real_escape_string($conn, $user)."' 
+AND `s_pass` = '".mysqli_real_escape_string($conn, $pass)."'";
+
 	$result = mysqli_query($conn, $sql);
 	$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 	return ($row['num'] == 1) ? true : false ;
@@ -15,8 +18,11 @@ WHERE `s_aiub_id` = '".mysqli_real_escape_string($conn, $user)."' and `s_pass` =
 function check_teacher_login($user, $pass)
 {
 	$conn = db_conn();
+
 	$sql = "SELECT COUNT(*) as `num` FROM `teacher` 
-WHERE `t_aiub_id` = '".mysqli_real_escape_string($conn, $user)."' and `t_pass` = '".mysqli_real_escape_string($conn, $pass)."'";
+WHERE `t_aiub_id` = '".mysqli_real_escape_string($conn, $user)."' 
+AND `t_pass` = '".mysqli_real_escape_string($conn, $pass)."'";
+
 	$result = mysqli_query($conn, $sql);
 	$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 	return ($row['num'] == 1) ? true : false ;
@@ -25,8 +31,11 @@ WHERE `t_aiub_id` = '".mysqli_real_escape_string($conn, $user)."' and `t_pass` =
 function check_authority_login($user, $pass)
 {
 	$conn = db_conn();
+
 	$sql = "SELECT COUNT(*) as `num` FROM `authority` 
-WHERE `a_aiub_id` = '".mysqli_real_escape_string($conn, $user)."' and `a_pass` = '".mysqli_real_escape_string($conn, $pass)."'";
+WHERE `a_aiub_id` = '".mysqli_real_escape_string($conn, $user)."' 
+AND `a_pass` = '".mysqli_real_escape_string($conn, $pass)."'";
+
 	$result = mysqli_query($conn, $sql);
 	$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 	return ($row['num'] == 1) ? true : false ;
@@ -35,7 +44,10 @@ WHERE `a_aiub_id` = '".mysqli_real_escape_string($conn, $user)."' and `a_pass` =
 function teacher_id($user)
 {
 	$conn = db_conn();
-	$sql = "SELECT `t_id` FROM `teacher` WHERE `t_aiub_id` = '".mysqli_real_escape_string($conn, $user)."'";
+
+	$sql = "SELECT `t_id` FROM `teacher` 
+WHERE `t_aiub_id` = '".mysqli_real_escape_string($conn, $user)."'";
+
 	$result = mysqli_query($conn, $sql);
 	$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 	$tid = $row['t_id'];
@@ -46,7 +58,10 @@ function teacher_id($user)
 function authority_id($user)
 {
 	$conn = db_conn();
-	$sql = "SELECT `a_id` FROM `authority` WHERE `a_aiub_id` = '".mysqli_real_escape_string($conn, $user)."'";
+
+	$sql = "SELECT `a_id` FROM `authority` 
+WHERE `a_aiub_id` = '".mysqli_real_escape_string($conn, $user)."'";
+
 	$result = mysqli_query($conn, $sql);
 	$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 	$tid = $row['a_id'];
@@ -57,7 +72,10 @@ function authority_id($user)
 function student_id($user)
 {
 	$conn = db_conn();
-	$sql = "SELECT `s_id` FROM `student` WHERE `s_aiub_id` = '".mysqli_real_escape_string($conn, $user)."';";
+
+	$sql = "SELECT `s_id` FROM `student` 
+WHERE `s_aiub_id` = '".mysqli_real_escape_string($conn, $user)."'";
+
 	$result = mysqli_query($conn, $sql);
 	$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 	$sid = $row['s_id'];
@@ -68,7 +86,10 @@ function student_id($user)
 function checkTeacherOldPass($tid, $oldPass)
 {
 	$conn = db_conn();
-	$sql = "SELECT `t_pass` FROM `teacher` WHERE `t_id` = ".mysqli_real_escape_string($conn, $tid);
+
+	$sql = "SELECT `t_pass` FROM `teacher` 
+WHERE `t_id` = ".mysqli_real_escape_string($conn, $tid);
+
 	$result = mysqli_query($conn, $sql);
 	$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 	return strcmp($oldPass, $row['t_pass']) == 0 ? true : false;
@@ -77,7 +98,10 @@ function checkTeacherOldPass($tid, $oldPass)
 function checkAuthorOldPass($aid, $oldPass)
 {
 	$conn = db_conn();
-	$sql = "SELECT `a_pass` FROM `authority` WHERE `a_id` = ".mysqli_real_escape_string($conn, $aid);
+
+	$sql = "SELECT `a_pass` FROM `authority` 
+WHERE `a_id` = ".mysqli_real_escape_string($conn, $aid);
+
 	$result = mysqli_query($conn, $sql);
 	$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
     return strcmp($oldPass, $row['a_pass']) == 0 ? true : false;
@@ -86,7 +110,10 @@ function checkAuthorOldPass($aid, $oldPass)
 function checkStudentOldPass($sid, $oldPass)
 {
 	$conn = db_conn();
-	$sql = "SELECT `s_pass` FROM `student` WHERE `s_id` = ".mysqli_real_escape_string($conn, $sid);
+
+	$sql = "SELECT `s_pass` FROM `student` 
+WHERE `s_id` = ".mysqli_real_escape_string($conn, $sid);
+
 	$result = mysqli_query($conn, $sql);
 	$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 	return strcmp(mysqli_real_escape_string($conn, $oldPass), $row['s_pass']) == 0 ? true : false;
@@ -95,8 +122,11 @@ function checkStudentOldPass($sid, $oldPass)
 function updateStudentPass($sid, $newpass)
 {
 	$conn = db_conn();
-	$sql = "UPDATE `student` SET `s_pass`= '".mysqli_real_escape_string($conn, $newpass)."' 
-	WHERE `s_id` = ".mysqli_real_escape_string($conn, $sid);
+
+	$sql = "UPDATE `student` 
+SET `s_pass`= '".mysqli_real_escape_string($conn, $newpass)."' 
+WHERE `s_id` = ".mysqli_real_escape_string($conn, $sid);
+
 	mysqli_query($conn, $sql);
 	mysqli_close($conn);
 }
@@ -104,8 +134,11 @@ function updateStudentPass($sid, $newpass)
 function updateTeacherPass($tid, $newpass)
 {
 	$conn = db_conn();
-	$sql = "UPDATE `teacher` SET `t_pass`= '".mysqli_real_escape_string($conn, $newpass)."' 
-	WHERE `t_id` = ".mysqli_real_escape_string($conn, $tid);
+
+	$sql = "UPDATE `teacher` 
+SET `t_pass`= '".mysqli_real_escape_string($conn, $newpass)."' 
+WHERE `t_id` = ".mysqli_real_escape_string($conn, $tid);
+
 	mysqli_query($conn, $sql);
 	mysqli_close($conn);
 }
@@ -113,8 +146,11 @@ function updateTeacherPass($tid, $newpass)
 function updateAuthorityPass($aid, $newpass)
 {
 	$conn = db_conn();
-	$sql = "UPDATE `authority` SET `a_pass`= '".mysqli_real_escape_string($conn, $newpass)."' 
-	WHERE `a_id` = ".mysqli_real_escape_string($conn, $aid);
+
+	$sql = "UPDATE `authority` 
+SET `a_pass`= '".mysqli_real_escape_string($conn, $newpass)."' 
+WHERE `a_id` = ".mysqli_real_escape_string($conn, $aid);
+
 	mysqli_query($conn, $sql);
 	mysqli_close($conn);
 }
@@ -122,8 +158,10 @@ function updateAuthorityPass($aid, $newpass)
 function teacherCourse($tid)
 {
 	$conn = db_conn();
+
 	$sql = "SELECT `c_id`, `c_name` FROM `course` 
 WHERE `t_id` = ".mysqli_real_escape_string($conn, $tid);
+
 	$result = mysqli_query($conn, $sql);
 	$row = array();
 	for($i = 0; $i<mysqli_num_rows($result); $i++){
@@ -135,8 +173,10 @@ WHERE `t_id` = ".mysqli_real_escape_string($conn, $tid);
 function getCourseName($cid)
 {
 	$conn = db_conn();
+
 	$sql = "SELECT `c_name` FROM `course` 
 WHERE `c_id` = ".mysqli_real_escape_string($conn, $cid);
+
 	$result = mysqli_query($conn, $sql);
 	$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 	return $row['c_name'];
@@ -145,10 +185,12 @@ WHERE `c_id` = ".mysqli_real_escape_string($conn, $cid);
 function studentCourse($sid)
 {
 	$conn = db_conn();
+
 	$sql = "SELECT course.c_id, `c_name`, teacher.t_name FROM `course` 
 INNER JOIN `teacher_student_course` ON course.c_id = teacher_student_course.c_id 
 INNER JOIN teacher ON course.t_id = teacher.t_id 
 where teacher_student_course.s_id = ".mysqli_real_escape_string($conn, $sid);
+
 	$result = mysqli_query($conn, $sql);
 	$row = array();
 	for($i=0;$i < mysqli_num_rows($result) ;$i++){
@@ -161,8 +203,10 @@ where teacher_student_course.s_id = ".mysqli_real_escape_string($conn, $sid);
 function stubasicInfo($sid)
 {
 	$conn = db_conn();
+
 	$sql = "SELECT `s_aiub_id`, `s_full_name`, `s_cgpa`, `s_gender`, `s_phone`, `s_email`, `s_dept`, `s_image`, `s_dob` 
 FROM `student` WHERE `s_id` = ".mysqli_real_escape_string($conn, $sid);
+
 	$result = mysqli_query($conn, $sql);
 	$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 
@@ -172,8 +216,10 @@ FROM `student` WHERE `s_id` = ".mysqli_real_escape_string($conn, $sid);
 function stuEditableBasicInfo($sid)
 {
 	$conn = db_conn();
+
 	$sql = "SELECT `s_full_name`, `s_phone`, `s_email`, `s_dept`, `s_image`, `s_gender`, `s_dob` 
 FROM `student` WHERE `s_id` = ".mysqli_real_escape_string($conn, $sid);
+
 	$result = mysqli_query($conn, $sql);
 	$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 
@@ -183,7 +229,9 @@ FROM `student` WHERE `s_id` = ".mysqli_real_escape_string($conn, $sid);
 function deptName()
 {
 	$conn = db_conn();
+
 	$sql = "SELECT `d_name` FROM `department`";
+
 	$result = mysqli_query($conn, $sql);
 	$row = array();
 	for($i=0; $i < mysqli_num_rows($result); $i++){
@@ -195,6 +243,7 @@ function deptName()
 function editBasicInfo($fullName, $dept, $phone, $email, $sid, $pic, $gender, $date)
 {
 	$conn = db_conn();
+
 	$sql = "UPDATE `student` 
 SET `s_full_name`= '".mysqli_real_escape_string($conn, $fullName)."', 
 `s_phone`= '".mysqli_real_escape_string($conn, $phone)."', 
@@ -204,6 +253,7 @@ SET `s_full_name`= '".mysqli_real_escape_string($conn, $fullName)."',
 `s_gender`='".mysqli_real_escape_string($conn, $gender)."', 
 `s_dob`='".mysqli_real_escape_string($conn, $date)."' 
 WHERE `s_id` = ".mysqli_real_escape_string($conn, $sid);
+
 	mysqli_query($conn, $sql);
 	mysqli_close($conn);
 }
@@ -211,6 +261,7 @@ WHERE `s_id` = ".mysqli_real_escape_string($conn, $sid);
 function editBasicInfoWithoutPic($fullName, $dept, $phone, $email, $sid, $gender, $date)
 {
 	$conn = db_conn();
+
 	$sql = "UPDATE `student` 
 SET `s_full_name`= '".mysqli_real_escape_string($conn, $fullName)."', 
 `s_phone`= '".mysqli_real_escape_string($conn, $phone)."',
@@ -219,6 +270,7 @@ SET `s_full_name`= '".mysqli_real_escape_string($conn, $fullName)."',
 `s_gender`='".mysqli_real_escape_string($conn, $gender)."', 
 `s_dob`='".mysqli_real_escape_string($conn, $date)."' 
 WHERE `s_id` = ".mysqli_real_escape_string($conn, $sid);
+
 	mysqli_query($conn, $sql);
 	mysqli_close($conn);
 }
@@ -226,8 +278,10 @@ WHERE `s_id` = ".mysqli_real_escape_string($conn, $sid);
 function checkStudentId($stuId)
 {
 	$conn = db_conn();
+
 	$sql ="SELECT COUNT(*) as `num` FROM `student` 
 WHERE `s_aiub_id` = '".mysqli_real_escape_string($conn, $stuId)."'";
+
 	$result = mysqli_query($conn, $sql);
 	$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 	return $row['num'] == 1 ? true : false;
@@ -236,9 +290,14 @@ WHERE `s_aiub_id` = '".mysqli_real_escape_string($conn, $stuId)."'";
 function checkUniqueId($tid, $stuId, $cid)
 {
 	$conn = db_conn();
-	$sql = "SELECT COUNT(*) as `num` FROM `teacher_student_course` 
+
+	$sql = "SELECT COUNT(*) as `num` 
+FROM `teacher_student_course` 
 WHERE `s_id` = (SELECT `s_id` FROM `student` 
-WHERE `s_aiub_id` = '$stuId') and `t_id` = $tid and `c_id` = $cid";
+WHERE `s_aiub_id` = '".mysqli_real_escape_string($conn, $stuId)."') 
+AND `t_id` = ".mysqli_real_escape_string($conn, $tid)." 
+AND `c_id` = ".mysqli_real_escape_string($conn, $cid);
+
 	$result = mysqli_query($conn, $sql);
 	$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 	return $row['num'] == 0 ? true : false;
@@ -247,8 +306,11 @@ WHERE `s_aiub_id` = '$stuId') and `t_id` = $tid and `c_id` = $cid";
 function checkFourtyStud($cid)
 {
 	$conn = db_conn();
-	$sql="SELECT COUNT(*) as `num` FROM `teacher_student_course` 
+
+	$sql="SELECT COUNT(*) as `num` 
+FROM `teacher_student_course` 
 WHERE `c_id` = ".mysqli_real_escape_string($conn, $cid);
+
 	$result = mysqli_query($conn, $sql);
 	$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 	return $row['num'] < 40 ? true : false;
@@ -257,8 +319,13 @@ WHERE `c_id` = ".mysqli_real_escape_string($conn, $cid);
 function addStudent($tid, $stuId, $cid)
 {
 	$conn = db_conn();
+
 	$sql="INSERT INTO `teacher_student_course`(`s_id`, `t_id`, `c_id`) VALUES (
-(SELECT `s_id` FROM `student` WHERE `s_aiub_id` = '$stuId'), $tid, $cid)";
+(SELECT `s_id` FROM `student` 
+WHERE `s_aiub_id` = '".mysqli_real_escape_string($conn, $stuId)."'), 
+".mysqli_real_escape_string($conn, $tid).", 
+".mysqli_real_escape_string($conn, $cid).")";
+
 	mysqli_query($conn, $sql);
 	mysqli_close($conn);
 }
@@ -266,10 +333,13 @@ function addStudent($tid, $stuId, $cid)
 function studentList($cid)
 {
 	$conn = db_conn();
-	$sql = "SELECT student.s_id, `s_aiub_id`, `s_full_name`, `s_cgpa`, `s_dept`, `s_image` FROM `student` 
+
+	$sql = "SELECT student.s_id, `s_aiub_id`, `s_full_name`, `s_cgpa`, `s_dept`, `s_image` 
+FROM `student` 
 INNER JOIN `teacher_student_course` ON student.s_id = teacher_student_course.s_id 
-WHERE teacher_student_course.c_id = $cid 
+WHERE teacher_student_course.c_id = ".mysqli_real_escape_string($conn, $cid)." 
 ORDER BY student.s_full_name";
+
 	$result = mysqli_query($conn, $sql);
 	$row = array();
 	for($i=0; $i< mysqli_num_rows($result); $i++){
@@ -281,8 +351,11 @@ ORDER BY student.s_full_name";
 function stuDeleteInfo($sid)
 {
 	$conn = db_conn();
+
 	$sql ="SELECT `s_aiub_id`, `s_full_name`, `s_cgpa`, `s_dept` 
-FROM `student` WHERE `s_id` = ".mysqli_real_escape_string($conn, $sid);
+FROM `student` 
+WHERE `s_id` = ".mysqli_real_escape_string($conn, $sid);
+
 	$result = mysqli_query($conn, $sql);
 	$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 
@@ -292,8 +365,11 @@ FROM `student` WHERE `s_id` = ".mysqli_real_escape_string($conn, $sid);
 function deleteStudent($cid, $sid)
 {
 	$conn = db_conn();
+
 	$sql ="DELETE FROM `teacher_student_course` 
-WHERE `s_id` = ".mysqli_real_escape_string($conn, $sid)." AND `c_id` =" .mysqli_real_escape_string($conn, $cid);
+WHERE `s_id` = ".mysqli_real_escape_string($conn, $sid)." 
+AND `c_id` =" .mysqli_real_escape_string($conn, $cid);
+
 	mysqli_query($conn, $sql);
 	mysqli_close($conn);
 }
@@ -301,7 +377,11 @@ WHERE `s_id` = ".mysqli_real_escape_string($conn, $sid)." AND `c_id` =" .mysqli_
 function deleteStudentAttendence($cid, $sid)
 {
 	$conn = db_conn();
-	$sql ="DELETE FROM `attendinfo` WHERE `s_id` = $sid AND `c_id` = $cid";
+
+	$sql ="DELETE FROM `attendinfo` 
+WHERE `s_id` = ".mysqli_real_escape_string($conn, $sid)." 
+AND `c_id` = ".mysqli_real_escape_string($conn, $cid);
+
 	mysqli_query($conn, $sql);
 	mysqli_close($conn);
 }
@@ -309,7 +389,11 @@ function deleteStudentAttendence($cid, $sid)
 function removeStudentExam($cid, $sid)
 {
 	$conn = db_conn();
-	$sql ="DELETE FROM `course_student_marks` WHERE `s_id` = $sid AND `c_id` = $cid";
+
+	$sql ="DELETE FROM `course_student_marks` 
+WHERE `s_id` = ".mysqli_real_escape_string($conn, $sid)." 
+AND `c_id` = ".mysqli_real_escape_string($conn, $cid);
+
 	mysqli_query($conn, $sql);
 	mysqli_close($conn);
 }
@@ -317,8 +401,11 @@ function removeStudentExam($cid, $sid)
 function removeStudentQuizTerm($cid, $sid)
 {
 	$conn = db_conn();
+
 	$sql ="DELETE FROM `exam` WHERE 
-`s_id` = ".mysqli_real_escape_string($conn, $sid)." AND `c_id` = ".mysqli_real_escape_string($conn, $cid);
+`s_id` = ".mysqli_real_escape_string($conn, $sid)." 
+AND `c_id` = ".mysqli_real_escape_string($conn, $cid);
+
 	mysqli_query($conn, $sql);
 	mysqli_close($conn);
 }
@@ -326,7 +413,12 @@ function removeStudentQuizTerm($cid, $sid)
 function attendence($stuId, $cid)
 {
 	$conn = db_conn();
-	$sql = "INSERT INTO `attendInfo`(`s_id`, `c_id`) VALUES ((SELECT `s_id` FROM `student` WHERE `s_aiub_id` = '$stuId'),$cid)";
+
+	$sql = "INSERT INTO `attendInfo`(`s_id`, `c_id`) VALUES (
+(SELECT `s_id` FROM `student` 
+WHERE `s_aiub_id` = '".mysqli_real_escape_string($conn, $stuId)."'),
+".mysqli_real_escape_string($conn, $cid).")";
+
 	mysqli_query($conn, $sql);
 	mysqli_close($conn);
 }
@@ -334,7 +426,11 @@ function attendence($stuId, $cid)
 function addMarks($stuId, $cid)
 {
 	$conn = db_conn();
-	$sql = "INSERT INTO `course_student_marks`(`c_id`, `s_id`) VALUES ($cid, (SELECT `s_id` FROM `student` WHERE `s_aiub_id` = '$stuId'))";
+
+	$sql = "INSERT INTO `course_student_marks`(`c_id`, `s_id`) VALUES (
+".mysqli_real_escape_string($conn, $cid).", 
+(SELECT `s_id` FROM `student` WHERE `s_aiub_id` = '".mysqli_real_escape_string($conn, $stuId)."'))";
+
 	mysqli_query($conn, $sql);
 	mysqli_close($conn);
 }
@@ -342,7 +438,12 @@ function addMarks($stuId, $cid)
 function studentsAttendence($cid)
 {
 	$conn = db_conn();
-	$sql = "SELECT student.s_id, `s_aiub_id`, `s_full_name`, attendinfo.att_total FROM `student` INNER JOIN `attendinfo` ON student.s_id = attendinfo.s_id WHERE attendinfo.c_id = $cid ORDER BY student.s_full_name";
+
+	$sql = "SELECT student.s_id, `s_aiub_id`, `s_full_name`, attendinfo.att_total FROM `student` 
+INNER JOIN `attendinfo` ON student.s_id = attendinfo.s_id 
+WHERE attendinfo.c_id = ".mysqli_real_escape_string($conn, $cid)." 
+ORDER BY student.s_full_name";
+
 	$result = mysqli_query($conn, $sql);
 	$row = array();
 	for($i=0; $i<mysqli_num_rows($result); $i++){
@@ -354,7 +455,11 @@ function studentsAttendence($cid)
 function insertAttendence($sid, $cid)
 {
 	$conn = db_conn();
-	$sql = "UPDATE `attendinfo` SET `att_total`=`att_total`+1 WHERE `s_id` = $sid AND `c_id` = $cid";
+
+	$sql = "UPDATE `attendinfo` SET `att_total`=`att_total`+1 
+WHERE `s_id` = ".mysqli_real_escape_string($conn, $sid)." 
+AND `c_id` = ".mysqli_real_escape_string($conn, $cid);
+
 	mysqli_query($conn, $sql);
 	mysqli_close($conn);
 }
@@ -362,7 +467,11 @@ function insertAttendence($sid, $cid)
 function returnTotalAttendence($cid, $studid)
 {
 	$conn = db_conn();
-	$sql = "SELECT `att_total` FROM `attendinfo` WHERE `c_id` = $cid AND `s_id` = $studid";
+
+	$sql = "SELECT `att_total` FROM `attendinfo` 
+WHERE `c_id` = ".mysqli_real_escape_string($conn, $cid)." 
+AND `s_id` = ".mysqli_real_escape_string($conn, $studid);
+
 	$result = mysqli_query($conn, $sql);
 	$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 	$totalAttendence = $row['att_total'];
@@ -372,9 +481,13 @@ function returnTotalAttendence($cid, $studid)
 function getStudentListExam($cid)
 {
 	$conn = db_conn();
-	$sql = "SELECT student.s_id, `s_aiub_id`, `s_full_name`, course_student_marks.mid_grade, course_student_marks.final_grade, course_student_marks.grand_final_grade FROM `student`
+
+	$sql = "SELECT student.s_id, `s_aiub_id`, `s_full_name`, course_student_marks.mid_grade, course_student_marks.final_grade, course_student_marks.grand_final_grade 
+FROM `student`
 INNER JOIN `course_student_marks` ON student.s_id = course_student_marks.s_id
-WHERE course_student_marks.c_id = $cid ORDER BY student.s_full_name";
+WHERE course_student_marks.c_id = ".mysqli_real_escape_string($conn, $cid)." 
+ORDER BY student.s_full_name";
+
 	$result = mysqli_query($conn, $sql);
 	$row = array();
 	for($i=0; $i<mysqli_num_rows($result); $i++){
@@ -386,9 +499,13 @@ WHERE course_student_marks.c_id = $cid ORDER BY student.s_full_name";
 function getStuIdNameAttendence($cid, $sid)
 {
 	$conn = db_conn();
-	$sql = "SELECT `s_aiub_id`, `s_full_name`, attendinfo.att_total FROM `student` 
+
+	$sql = "SELECT `s_aiub_id`, `s_full_name`, attendinfo.att_total 
+FROM `student` 
 LEFT JOIN attendinfo ON student.s_id = attendinfo.s_id 
-WHERE student.s_id = $sid and attendinfo.c_id = $cid";
+WHERE student.s_id = ".mysqli_real_escape_string($conn, $sid)." 
+AND attendinfo.c_id = ".mysqli_real_escape_string($conn, $cid);
+
 	$result = mysqli_query($conn, $sql);
 	$outputString='';
 	$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
@@ -399,8 +516,15 @@ WHERE student.s_id = $sid and attendinfo.c_id = $cid";
 function addQuiz1Marks($sid, $cid, $quiz1Marks, $dateTime, $name)
 {
 	$conn = db_conn();
+
 	$sql = "INSERT INTO `exam`(`e_name`, `e_date`, `e_marks`, `s_id`, `c_id`) 
-VALUES ('$name','$dateTime',$quiz1Marks, $sid, $cid)";
+VALUES (
+'".mysqli_real_escape_string($conn, $name)."',
+'".mysqli_real_escape_string($conn, $dateTime)."',
+".mysqli_real_escape_string($conn, $quiz1Marks).", 
+".mysqli_real_escape_string($conn, $sid).", 
+".mysqli_real_escape_string($conn, $cid).")";
+
 	mysqli_query($conn, $sql);
 	mysqli_close($conn);
 }
@@ -734,9 +858,11 @@ function newSuggestedMid($givenMidQuizesMark, $mid){
 function returntotalMark($cid, $studid)
 {
 	$conn = db_conn();
+
 	$sql = "SELECT `grand_final_total` FROM `course_student_marks` 
 WHERE `s_id` = ".mysqli_real_escape_string($conn, $studid)." 
 AND `c_id` = ".mysqli_real_escape_string($conn, $cid);
+
 	$result = mysqli_query($conn, $sql);
 	$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 	$mark = $row['grand_final_total'];
@@ -746,9 +872,11 @@ AND `c_id` = ".mysqli_real_escape_string($conn, $cid);
 function returnMidBestTwoQuizMarks($cid, $studid)
 {
 	$conn = db_conn();
+
 	$sql = "SELECT `mid_best_two` FROM `course_student_marks` 
 WHERE `s_id` = ".mysqli_real_escape_string($conn, $studid)." 
 AND `c_id` = ".mysqli_real_escape_string($conn, $cid);
+
 	$result = mysqli_query($conn, $sql);
 	$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 	$mark = $row['mid_best_two'];
@@ -758,9 +886,11 @@ AND `c_id` = ".mysqli_real_escape_string($conn, $cid);
 function returnMidTotal($cid, $studid)
 {
 	$conn = db_conn();
+
 	$sql = "SELECT `mid_total` FROM `course_student_marks` 
 WHERE `s_id` = ".mysqli_real_escape_string($conn, $studid)." 
 AND `c_id` = ".mysqli_real_escape_string($conn, $cid);
+
 	$result = mysqli_query($conn, $sql);
 	$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 	$mark = $row['mid_total'];
@@ -770,10 +900,12 @@ AND `c_id` = ".mysqli_real_escape_string($conn, $cid);
 function returnMidGrade($cid, $studid)
 {
 	$conn = db_conn();
+
 	$sql = "SELECT `mid_grade` FROM `course_student_marks` 
 WHERE `s_id` = ".mysqli_real_escape_string($conn, $studid)." 
 AND `c_id` = ".mysqli_real_escape_string($conn, $cid);
 	$result = mysqli_query($conn, $sql);
+
 	$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 	$mark = $row['mid_grade'];
 
@@ -783,10 +915,12 @@ AND `c_id` = ".mysqli_real_escape_string($conn, $cid);
 function returnFinalBestTwoQuizMarks($cid, $studid)
 {
 	$conn = db_conn();
+
 	$sql = "SELECT `final_best_two` FROM `course_student_marks` 
 WHERE `s_id` = ".mysqli_real_escape_string($conn, $studid)." 
 AND `c_id` = ".mysqli_real_escape_string($conn, $cid);
 	$result = mysqli_query($conn, $sql);
+
 	$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 	$mark = $row['final_best_two'];
 
@@ -796,9 +930,11 @@ AND `c_id` = ".mysqli_real_escape_string($conn, $cid);
 function returnFinalTotal($cid, $studid)
 {
 	$conn = db_conn();
+
 	$sql = "SELECT `final_total` FROM `course_student_marks` 
 WHERE `s_id` = ".mysqli_real_escape_string($conn, $studid)." 
 AND `c_id` = ".mysqli_real_escape_string($conn, $cid);
+
 	$result = mysqli_query($conn, $sql);
 	$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 	$mark = $row['final_total'];
@@ -809,9 +945,11 @@ AND `c_id` = ".mysqli_real_escape_string($conn, $cid);
 function returnFinalGrade($cid, $studid)
 {
 	$conn = db_conn();
+
 	$sql = "SELECT `final_grade` FROM `course_student_marks` 
 WHERE `s_id` = ".mysqli_real_escape_string($conn, $studid)." 
 AND `c_id` = ".mysqli_real_escape_string($conn, $cid);
+
 	$result = mysqli_query($conn, $sql);
 	$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 	$mark = $row['final_grade'];
@@ -822,9 +960,11 @@ AND `c_id` = ".mysqli_real_escape_string($conn, $cid);
 function returnGrandFinalGrade($cid, $studid)
 {
 	$conn = db_conn();
+
 	$sql = "SELECT `grand_final_grade` FROM `course_student_marks` 
 WHERE `s_id` = ".mysqli_real_escape_string($conn, $studid)." 
 AND `c_id` = ".mysqli_real_escape_string($conn, $cid);
+
 	$result = mysqli_query($conn, $sql);
 	$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 	$mark = $row['grand_final_grade'];
@@ -835,8 +975,10 @@ AND `c_id` = ".mysqli_real_escape_string($conn, $cid);
 function returnStdentPic($sid)
 {
 	$conn = db_conn();
+
 	$sql = "SELECT `s_image` FROM `student` 
 WHERE `s_id` = ".mysqli_real_escape_string($conn, $sid);
+
 	$result = mysqli_query($conn, $sql);
 	$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 	$stuImage = $row['s_image'];
@@ -874,7 +1016,8 @@ function returnTeacherAiubID($ID)
 function insertTeacher($ID, $name, $phone, $email, $pic, $gender, $date, $designation)
 {
 	$conn = db_conn();
-	$sql = "INSERT INTO `teacher`(`t_aiub_id`, `t_name`, `t_email`, `t_phone`, `t_gender`, `t_dob`, `t_image`, `t_designation`) VALUES ('$ID', '$name', '$email', '$phone', '$gender', '$date', '$pic', '$designation')";
+	$sql = "INSERT INTO `teacher`(`t_aiub_id`, `t_name`, `t_email`, `t_phone`, `t_gender`, `t_dob`, `t_image`, `t_designation`) 
+VALUES ('$ID', '$name', '$email', '$phone', '$gender', '$date', '$pic', '$designation')";
 	mysqli_query($conn, $sql);
 	mysqli_close($conn);
 }
@@ -931,7 +1074,10 @@ WHERE `t_id` = ".mysqli_real_escape_string($conn, $tid);
 function returnTeacherPic($tid)
 {
 	$conn = db_conn();
-	$sql = "SELECT `t_image` FROM `teacher` WHERE `t_id` = $tid";
+
+	$sql = "SELECT `t_image` FROM `teacher` 
+WHERE `t_id` = ".mysqli_real_escape_string($conn, $tid);
+
 	$result = mysqli_query($conn, $sql);
 	$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 	$teacherImage = $row['t_image'];
@@ -941,7 +1087,9 @@ function returnTeacherPic($tid)
 function getStuIDPass()
 {
 	$conn = db_conn();
+
 	$sql = "SELECT `s_aiub_id`, `s_pass` FROM `student`";
+
 	$result = mysqli_query($conn, $sql);
 	$row = array();
 	for($i=0; $i<mysqli_num_rows($result); $i++){
@@ -953,7 +1101,9 @@ function getStuIDPass()
 function getteacherIDPass()
 {
 	$conn = db_conn();
+
 	$sql = "SELECT `t_aiub_id`, `t_pass` FROM `teacher`";
+
 	$result = mysqli_query($conn, $sql);
 	$row = array();
 	for($i=0; $i<mysqli_num_rows($result); $i++){
@@ -965,7 +1115,9 @@ function getteacherIDPass()
 function getAuthorityIDPass()
 {
 	$conn = db_conn();
+
 	$sql = "SELECT `a_aiub_id`, `a_pass` FROM `authority`";
+
 	$result = mysqli_query($conn, $sql);
 	$row = array();
 	for($i=0; $i<mysqli_num_rows($result); $i++){
@@ -977,7 +1129,9 @@ function getAuthorityIDPass()
 function getPrivilege($prv)
 {
 	$conn = db_conn();
+
 	$sql = "SELECT `info_list` FROM `information` WHERE `info_privilege` = $prv";
+
 	$result = mysqli_query($conn, $sql);
 	$row = array();
 	for($i=0; $i<mysqli_num_rows($result); $i++){
@@ -989,7 +1143,9 @@ function getPrivilege($prv)
 function getTeacher()
 {
 	$conn = db_conn();
+
 	$sql = "SELECT `t_aiub_id`, `t_name` FROM `teacher` ORDER BY `t_name` ASC";
+
 	$result = mysqli_query($conn, $sql);
 	$row = array();
 	for($i=0; $i<mysqli_num_rows($result); $i++){
@@ -1001,7 +1157,9 @@ function getTeacher()
 function getSubject()
 {
 	$conn = db_conn();
+
 	$sql = "SELECT `c_name` FROM `course` ORDER BY `c_name` ASC";
+
 	$result = mysqli_query($conn, $sql);
 	$row = array();
 	for($i=0; $i<mysqli_num_rows($result); $i++){
@@ -1013,9 +1171,11 @@ function getSubject()
 function getTeacherSubject()
 {
 	$conn = db_conn();
+
 	$sql = "SELECT teacher.t_aiub_id, teacher.t_name, course.c_id, `c_name` FROM `course` 
 INNER JOIN teacher ON course.t_id = teacher.t_id 
 WHERE course.t_id <> 0 ORDER BY course.c_id DESC";
+
 	$result = mysqli_query($conn, $sql);
 	$row = array();
 	for($i=0; $i<mysqli_num_rows($result); $i++){
@@ -1027,7 +1187,10 @@ WHERE course.t_id <> 0 ORDER BY course.c_id DESC";
 function deleteTeacherCourse($cid)
 {
 	$conn = db_conn();
-	$sql ="UPDATE `course` SET `t_id`= '' WHERE `c_id` = ".mysqli_real_escape_string($conn, $cid);
+
+	$sql ="UPDATE `course` SET `t_id`= '' 
+WHERE `c_id` = ".mysqli_real_escape_string($conn, $cid);
+
 	mysqli_query($conn, $sql);
 	mysqli_close($conn);
 }
@@ -1035,7 +1198,10 @@ function deleteTeacherCourse($cid)
 function deleteStudentCourse($cid)
 {
 	$conn = db_conn();
-	$sql ="DELETE FROM `teacher_student_course` WHERE `c_id` = ".mysqli_real_escape_string($conn, $cid);
+
+	$sql ="DELETE FROM `teacher_student_course` 
+WHERE `c_id` = ".mysqli_real_escape_string($conn, $cid);
+
 	mysqli_query($conn, $sql);
 	mysqli_close($conn);
 }
@@ -1043,7 +1209,10 @@ function deleteStudentCourse($cid)
 function deleteCourseStudentAttendence($cid)
 {
 	$conn = db_conn();
-	$sql ="DELETE FROM `attendinfo` WHERE `c_id` = ".mysqli_real_escape_string($conn, $cid);
+
+	$sql ="DELETE FROM `attendinfo` 
+WHERE `c_id` = ".mysqli_real_escape_string($conn, $cid);
+
 	mysqli_query($conn, $sql);
 	mysqli_close($conn);
 }
@@ -1051,7 +1220,10 @@ function deleteCourseStudentAttendence($cid)
 function removeCourseStudentExam($cid)
 {
 	$conn = db_conn();
-	$sql ="DELETE FROM `course_student_marks` WHERE `c_id` = ".mysqli_real_escape_string($conn, $cid);
+
+	$sql ="DELETE FROM `course_student_marks` 
+WHERE `c_id` = ".mysqli_real_escape_string($conn, $cid);
+
 	mysqli_query($conn, $sql);
 	mysqli_close($conn);
 }
@@ -1059,7 +1231,10 @@ function removeCourseStudentExam($cid)
 function removeCourseStudentQuizTerm($cid)
 {
 	$conn = db_conn();
-	$sql ="DELETE FROM `exam` WHERE `c_id` = ".mysqli_real_escape_string($conn, $cid);
+
+	$sql ="DELETE FROM `exam` 
+WHERE `c_id` = ".mysqli_real_escape_string($conn, $cid);
+
 	mysqli_query($conn, $sql);
 	mysqli_close($conn);
 }
@@ -1067,7 +1242,11 @@ function removeCourseStudentQuizTerm($cid)
 function insertCourseTeacher($course, $tid)
 {
 	$conn = db_conn();
-	$sql ="UPDATE `course` SET `t_id`= ".mysqli_real_escape_string($conn, $tid)." WHERE `c_name` = '".mysqli_real_escape_string($conn, $course)."'";
+
+	$sql ="UPDATE `course` 
+SET `t_id`= ".mysqli_real_escape_string($conn, $tid)." 
+WHERE `c_name` = '".mysqli_real_escape_string($conn, $course)."'";
+
 	mysqli_query($conn, $sql);
 	mysqli_close($conn);
 }
@@ -1075,7 +1254,11 @@ function insertCourseTeacher($course, $tid)
 function getTId($tAiubId)
 {
 	$conn = db_conn();
-	$sql ="SELECT `t_id` FROM `teacher` WHERE `t_aiub_id` = '".mysqli_real_escape_string($conn, $tAiubId)."'";
+
+	$sql ="SELECT `t_id` 
+FROM `teacher` 
+WHERE `t_aiub_id` = '".mysqli_real_escape_string($conn, $tAiubId)."'";
+
 	$result = mysqli_query($conn, $sql);
 	$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 	$tid = $row['t_id'];
@@ -1085,8 +1268,12 @@ function getTId($tAiubId)
 function checkDuplicateCourse($tid, $course)
 {
 	$conn = db_conn();
-	$sql = "SELECT COUNT(*) as `num` FROM `course`
- WHERE `t_id` = ".mysqli_real_escape_string($conn, $tid)." and `c_name` = '".mysqli_real_escape_string($conn, $course)."'";
+
+	$sql = "SELECT COUNT(*) as `num` 
+FROM `course`
+ WHERE `t_id` = ".mysqli_real_escape_string($conn, $tid)." 
+ AND `c_name` = '".mysqli_real_escape_string($conn, $course)."'";
+
 	$result = mysqli_query($conn, $sql);
 	$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 	return ($row['num'] == 0) ? true : false ;
@@ -1095,8 +1282,12 @@ function checkDuplicateCourse($tid, $course)
 function checkCourse($course)
 {
 	$conn = db_conn();
-	$sql = "SELECT COUNT(*) as `num` FROM `course` 
-WHERE `t_id` <> 0 AND `c_name` = '".mysqli_real_escape_string($conn, $course)."'";
+
+	$sql = "SELECT COUNT(*) as `num` 
+FROM `course` 
+WHERE `t_id` <> 0 
+AND `c_name` = '".mysqli_real_escape_string($conn, $course)."'";
+
 	$result = mysqli_query($conn, $sql);
 	$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 	return ($row['num'] == 0) ? true : false ;
