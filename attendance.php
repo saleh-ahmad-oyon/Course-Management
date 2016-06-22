@@ -45,14 +45,14 @@
                                                 <th>Name</th>
                                                 <th>Total Attendence</th>
                                             </tr>
-                                            <form action="<?= SERVER; ?>/controller/confirmAttendence?id=<?= $_GET['id']; ?>" method="post" onsubmit="return confirmation();">
+                                            <form action="<?= SERVER; ?>/controller/confirmAttendence?id=<?= htmlentities(stripcslashes($_GET['id']), ENT_QUOTES, 'UTF-8'); ?>" method="post" onsubmit="return confirmation();">
                                                 <?php $i=1; foreach($outputString as $value):?>
                                                     <tr>
-                                                        <td><input type='checkbox' id='del<?= $i ?>' name='check_att[]' checked='checked' value='<?= $value['s_id']; ?>' /><label for='del<?= $i; ?>'></label></td>
+                                                        <td><input type='checkbox' id='del<?= $i ?>' name='check_att[]' checked='checked' value='<?= htmlentities(stripcslashes($value['s_id']), ENT_QUOTES, 'UTF-8'); ?>' /><label for='del<?= $i; ?>'></label></td>
                                                         <td><?= $i; ?></td>
-                                                        <td><?= $value['s_aiub_id']; ?></td>
-                                                        <td><?= $value['s_full_name'] ?></td>
-                                                        <td class='text-success'><?= $value['att_total']; ?></td>
+                                                        <td><?= htmlentities(stripcslashes($value['s_aiub_id']), ENT_QUOTES, 'UTF-8'); ?></td>
+                                                        <td><?= htmlentities(stripcslashes($value['s_full_name']), ENT_QUOTES, 'UTF-8'); ?></td>
+                                                        <td class='text-success'><?= htmlentities(stripcslashes($value['att_total']), ENT_QUOTES, 'UTF-8'); ?></td>
                                                     </tr>
                                                     <?php $i++; ?>
                                                 <?php endforeach; ?>
