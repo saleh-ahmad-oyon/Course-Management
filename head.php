@@ -15,6 +15,7 @@ aiub mini portal,project done by aiubian,php with bootstrap" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <!--<meta http-equiv="refresh"         content="30">-->
 <meta name="robots"                content="index, nofollow">
+<meta property="og:locale"         content="en_US" />
 <meta property="og:url"            content="<?= SERVER; ?>" />
 <meta property="og:type"           content="website" />
 <meta property="og:title"          content="Course Management for AIUB" />
@@ -22,8 +23,15 @@ aiub mini portal,project done by aiubian,php with bootstrap" />
 <meta property="og:description"    content="It is a demo php project that can be used to manage a course according to AIUB(American International University-Bangladesh) regulation. It was done by a student of AIUB" />
 <meta property="og:image"          content="<?= SERVER; ?>/assets/img/aiub.png" />
 
-<link rel="icon"       href="<?= SERVER; ?>/assets/img/aiub.png"  />
+<meta name="twitter:card"          content="Course_Management" />
+<meta name="twitter:description"   content="It is a demo php project that can be used to manage a course according to AIUB(American International University-Bangladesh) regulation. It was done by a student of AIUB." />
+<meta name="twitter:title"         content="Course Management for AIUB" />
+<meta name="twitter:site"          content="@obinformatics" />
+<meta name="twitter:image"         content="<?= SERVER; ?>/assets/img/aiub.png" />
+<meta name="twitter:creator"       content="@obinformatics" />
+
+<link rel="icon"       href="<?= SERVER; ?>/assets/img/aiub.png" />
 <link rel="publisher"  href="https://www.linkedin.com/in/saleh-ahmad-917b0532" />
 <link rel="stylesheet" href="<?= SERVER; ?>/assets/css/bootstrap-3.3.6-dist/css/bootstrap.min.css" />
 <link rel="stylesheet" href="<?= SERVER; ?>/assets/css/font-awesome-4.5.0/css/font-awesome.min.css" />
-<link rel="stylesheet" href="<?= SERVER; ?>/assets/css/custom.php" rel="stylesheet"/>
+<link rel="stylesheet" href="<?= SERVER; ?>/assets/css/custom.php" />
