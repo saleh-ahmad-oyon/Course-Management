@@ -140,6 +140,7 @@
                         </div>
                     </div>
                 </div>
+                <?php include_once 'share.php'; ?>
             </div>
         </div>
     </div>
