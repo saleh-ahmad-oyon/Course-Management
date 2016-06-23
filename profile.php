@@ -68,41 +68,41 @@
                                     <table class="table table-bordered">
                                         <tr>
                                             <td>ID</td>
-                                            <td><?= htmlentities(stripslashes($row['s_aiub_id'])); ?></td>
+                                            <td><?= htmlentities(stripslashes($row['s_aiub_id']), ENT_QUOTES, 'UTF-8'); ?></td>
                                         </tr>
                                         <tr>
                                             <td>Full Name</td>
-                                            <td><?= htmlentities(stripslashes($row['s_full_name'])); ?></td>
+                                            <td><?= htmlentities(stripslashes($row['s_full_name']), ENT_QUOTES, 'UTF-8'); ?></td>
                                         </tr>
                                         <tr>
                                             <td>Department</td>
-                                            <td><?= htmlentities(stripslashes($row['s_dept'])); ?></td>
+                                            <td><?= htmlentities(stripslashes($row['s_dept']), ENT_QUOTES, 'UTF-8'); ?></td>
                                         </tr>
                                         <tr>
                                             <td>CGPA</td>
-                                            <td><?= htmlentities(stripslashes($row['s_cgpa'])); ?></td>
+                                            <td><?= htmlentities(stripslashes(number_format((float)$row['s_cgpa'], 2, '.', '')), ENT_QUOTES, 'UTF-8'); ?></td>
                                         </tr>
 
                                         <tr>
                                             <td>Gender</td>
-                                            <td><?= htmlentities(stripcslashes($row['s_gender'])); ?></td>
+                                            <td><?= htmlentities(stripcslashes($row['s_gender']), ENT_QUOTES, 'UTF-8'); ?></td>
                                         </tr>
 
                                         <tr>
                                             <td>Date of Birth</td>
                                             <?php
-                                            $DOB = strtotime(htmlentities(stripcslashes($row['s_dob'])));
+                                            $DOB = strtotime(htmlentities(stripcslashes($row['s_dob']), ENT_QUOTES, 'UTF-8'));
                                             $DOB = date("d M, Y", $DOB);
                                             ?>
                                             <td><?= $DOB; ?></td>
                                         </tr>
                                         <tr>
                                             <td>Phone</td>
-                                            <td><?= htmlentities(stripslashes($row['s_phone'])); ?></td>
+                                            <td><?= htmlentities(stripslashes($row['s_phone']), ENT_QUOTES, 'UTF-8'); ?></td>
                                         </tr>
                                         <tr>
                                             <td>Email</td>
-                                            <td><?= htmlentities(stripslashes($row['s_email'])); ?></td>
+                                            <td><?= htmlentities(stripslashes($row['s_email']), ENT_QUOTES, 'UTF-8'); ?></td>
                                         </tr>
                                     </table>
                                     <br />
@@ -122,36 +122,36 @@
                                         <table class="table table-bordered">
                                             <tr>
                                                 <td>ID</td>
-                                                <td><?= htmlentities(stripslashes($row['t_aiub_id'])); ?></td>
+                                                <td><?= htmlentities(stripslashes($row['t_aiub_id']), ENT_QUOTES, 'UTF-8'); ?></td>
                                             </tr>
                                             <tr>
                                                 <td>Full Name</td>
-                                                <td><?= htmlentities(stripslashes($row['t_name'])); ?></td>
+                                                <td><?= htmlentities(stripslashes($row['t_name']), ENT_QUOTES, 'UTF-8'); ?></td>
                                             </tr>
                                             <tr>
                                                 <td>Designation</td>
-                                                <td><?= htmlentities(stripslashes($row['t_designation'])); ?></td>
+                                                <td><?= htmlentities(stripslashes($row['t_designation']), ENT_QUOTES, 'UTF-8'); ?></td>
                                             </tr>
                                             <tr>
                                                 <td>Gender</td>
-                                                <td><?= htmlentities(stripcslashes($row['t_gender'])); ?></td>
+                                                <td><?= htmlentities(stripcslashes($row['t_gender']), ENT_QUOTES, 'UTF-8'); ?></td>
                                             </tr>
 
                                             <tr>
                                                 <td>Date of Birth</td>
                                                 <?php
-                                                $DOB = strtotime(htmlentities(stripcslashes($row['t_dob'])));
+                                                $DOB = strtotime(htmlentities(stripcslashes($row['t_dob']), ENT_QUOTES, 'UTF-8'));
                                                 $DOB = date("d M, Y", $DOB);
                                                 ?>
                                                 <td><?= $DOB; ?></td>
                                             </tr>
                                             <tr>
                                                 <td>Phone</td>
-                                                <td><?= htmlentities(stripslashes($row['t_phone'])); ?></td>
+                                                <td><?= htmlentities(stripslashes($row['t_phone']), ENT_QUOTES, 'UTF-8'); ?></td>
                                             </tr>
                                             <tr>
                                                 <td>Email</td>
-                                                <td><?= htmlentities(stripslashes($row['t_email'])); ?></td>
+                                                <td><?= htmlentities(stripslashes($row['t_email']), ENT_QUOTES, 'UTF-8'); ?></td>
                                             </tr>
                                         </table>
                                         <br />

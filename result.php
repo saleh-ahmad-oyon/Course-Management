@@ -45,17 +45,17 @@
                                     </thead>
                                     <tbody>
                                         <?php $i=1; foreach($outputString as $value): ?>
-                                                <tr>
-                                                    <td><?= $i; ?></td>
-                                                    <td><?= $value['s_aiub_id']; ?></td>
-                                                    <td><?= $value['s_full_name']; ?></td>
-                                                    <td class="text-center"><?= $value['mid_grade']; ?></td>
-                                                    <td class="text-center"><?= $value['final_grade']; ?></td>
-                                                    <td class="text-center"><?= $value['grand_final_grade']; ?></td>
-                                                    <td class='text-center'>
-                                                        <a class='btn btn-info' href='<?= SERVER;?>/course/<?= $_GET['id']; ?>/marks/<?= $value['s_id']; ?>' data-toggle="tooltip" data-placement="top" title="Mark Details"><span class='glyphicon glyphicon-info-sign font17 hidden-md hidden-sm'></span><span class="hidden-xs">  Details</span></a>
-                                                    </td>
-                                                </tr>
+                                            <tr>
+                                                <td><?= $i; ?></td>
+                                                <td><?= htmlentities(stripslashes($value['s_aiub_id']), ENT_QUOTES, 'UTF-8'); ?></td>
+                                                <td><?= htmlentities(stripslashes($value['s_full_name']), ENT_QUOTES, 'UTF-8'); ?></td>
+                                                <td class="text-center"><?= htmlentities(stripslashes($value['mid_grade']), ENT_QUOTES, 'UTF-8'); ?></td>
+                                                <td class="text-center"><?= htmlentities(stripslashes($value['final_grade']), ENT_QUOTES, 'UTF-8'); ?></td>
+                                                <td class="text-center"><?= htmlentities(stripslashes($value['grand_final_grade']), ENT_QUOTES, 'UTF-8'); ?></td>
+                                                <td class='text-center'>
+                                                    <a class='btn btn-info' href='<?= SERVER;?>/course/<?= $_GET['id']; ?>/marks/<?= htmlentities(stripslashes($value['s_id']), ENT_QUOTES, 'UTF-8'); ?>' data-toggle="tooltip" data-placement="top" title="Mark Details"><span class='glyphicon glyphicon-info-sign font17 hidden-md hidden-sm'></span><span class="hidden-xs">  Details</span></a>
+                                                </td>
+                                            </tr>
                                         <?php $i++; ?>
                                         <?php endforeach; ?>
                                     </tbody>

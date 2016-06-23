@@ -51,15 +51,15 @@
 										<?php $i=1; foreach($outputString as $value):?>
 											<tr>
 												<td><?= $i; ?></td>
-												<td><?= $value['s_aiub_id']; ?></td>
-												<td><?= $value['s_full_name']; ?></td>
-												<td><?= $value['s_cgpa']; ?></td>
-												<td><?= $value['s_dept']; ?></td>
+												<td><?= htmlentities(stripcslashes($value['s_aiub_id']), ENT_QUOTES, 'UTF-8'); ?></td>
+												<td><?= htmlentities(stripcslashes($value['s_full_name']), ENT_QUOTES, 'UTF-8'); ?></td>
+												<td><?= htmlentities(stripcslashes(number_format((float)$value['s_cgpa'], 2, '.', '')), ENT_QUOTES, 'UTF-8'); ?></td>
+												<td><?= htmlentities(stripcslashes($value['s_dept']), ENT_QUOTES, 'UTF-8'); ?></td>
 												<td>
-													<img src="<?= STUDENTPP, '/', $value['s_image']; ?>" alt="Profile Pic" class="img-circle zoom">
+													<img src="<?= STUDENTPP, '/', htmlentities(stripcslashes($value['s_image']), ENT_QUOTES, 'UTF-8'); ?>" alt="Profile Pic" class="img-circle zoom">
 												</td>
 												<td class='text-center'>
-													<form action="<?= SERVER; ?>/controller/removeStudent?id1=<?= $_GET['id']; ?>&id2=<?= $value['s_id']; ?>" method="post" onsubmit="return confirmation();">
+													<form action="<?= SERVER; ?>/controller/removeStudent?id1=<?= $_GET['id']; ?>&id2=<?= htmlentities(stripcslashes($value['s_id']), ENT_QUOTES, 'UTF-8'); ?>" method="post" onsubmit="return confirmation();">
 														<button type="submit" name="dltBtn" class="btn btn-danger" ><span class='glyphicon glyphicon-trash hidden-md hidden-sm'></span><span class="hidden-xs">  Delete</span></button>
 													</form>
 												</td>
