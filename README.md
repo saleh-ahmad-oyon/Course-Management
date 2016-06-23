@@ -3,7 +3,7 @@ This is a course project. I used PHP, HTML5, CSS3, Bootstrap, JavaScript, Jquery
 
 It is an application that can be used to manage a course according to AIUB(American International University-Bangladesh) regulation. The main features of this application is uploading the marks of multiple quizzes and term exams, uploading the attendance and modifying the uploaded information where applicable.
 
-**Authority is the heighest privileged user of this system.** The functionalities of an Authority are as follows:
+**Authority is the heighest privileged user of this system.** The functionality of an Authority are as follows:
 
 - Add Faculty Member(s).
 - Add Student(s).
@@ -11,7 +11,7 @@ It is an application that can be used to manage a course according to AIUB(Ameri
 - Two students/teachers with the same ID can't be added.
 - Can assign teachers in courses.
 
-**Faculty is the second highest privileged user of this system.** The functionalities of a faculty are as follows:
+**Faculty is the second highest privileged user of this system.** The functionality of a faculty are as follows:
 
 - View his/her information.
 - Edit his/her information except AIUB ID, Designation.
@@ -24,7 +24,7 @@ It is an application that can be used to manage a course according to AIUB(Ameri
 - View the marks of each quiz (including the makeups), the sum of best two quiz, the term exam and the total attendance for each student.
 - Change his/her password.
 
-**Student is the lower privileged user of the system.** The functionalities of a student is as follows:
+**Student is the lower privileged user of the system.** The functionality of a student is as follows:
 
 - View his/her information.
 - View his/her courses and course teacher's information.
