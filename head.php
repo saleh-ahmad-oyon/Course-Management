@@ -32,6 +32,7 @@ aiub mini portal,project done by aiubian,php with bootstrap" />
 
 <link rel="icon"       href="<?= SERVER; ?>/assets/img/aiub.png" />
 <link rel="publisher"  href="https://www.linkedin.com/in/saleh-ahmad-917b0532" />
-<link rel="stylesheet" href="<?= SERVER; ?>/assets/css/bootstrap-3.3.6-dist/css/bootstrap.min.css" />
-<link rel="stylesheet" href="<?= SERVER; ?>/assets/css/font-awesome-4.5.0/css/font-awesome.min.css" />
-<link rel="stylesheet" href="<?= SERVER; ?>/assets/css/custom.php" />
+
+<link rel="stylesheet" media='all' href="<?= SERVER; ?>/assets/css/bootstrap-3.3.6-dist/css/bootstrap.min.css" />
+<link rel="stylesheet" media='all' href="<?= SERVER; ?>/assets/css/font-awesome-4.5.0/css/font-awesome.min.css" />
+<link rel="stylesheet" media='all' href="<?= SERVER; ?>/assets/css/custom.php" />
