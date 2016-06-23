@@ -71,6 +71,7 @@
             </script>
         </div>
         <div class="col-sm-3">
+            <!--Linked In-->
             <script src="http:////platform.linkedin.com/in.js" type="text/javascript"> lang: en_US</script>
             <script type="IN/Share" data-url="http://course.nooblonely.com" data-counter="right"></script>
         </div>
