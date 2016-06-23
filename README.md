@@ -1,5 +1,5 @@
 # Course-Management
-This is a course project. I used PHP, HTML5, CSS3, Bootstrap, JavaScript, Jquery, MySql in this project.
+This is my course project during University. I used PHP, HTML5, CSS3, Bootstrap, JavaScript, Jquery, MySql in this project.
 
 It is an application that can be used to manage a course according to AIUB(American International University-Bangladesh) regulation. The main features of this application is uploading the marks of multiple quizzes and term exams, uploading the attendance and modifying the uploaded information where applicable.
 
