@@ -33,7 +33,7 @@
                                     <ul class="fa-ul">
                                         <?php $authorPrivilege = getPrivilege(1);
                                         foreach($authorPrivilege as $ap):?>
-                                            <li><i class="fa-li fa fa-cog fa-spin"></i><?php echo $ap['info_list']; ?></li>
+                                            <li><i class="fa-li fa fa-cog fa-spin"></i><?php echo htmlentities(stripcslashes($ap['info_list']), ENT_QUOTES, 'UTF-8'); ?></li>
                                         <?php endforeach; ?>
                                     </ul>
                                 </p>
@@ -41,7 +41,7 @@
                                     <ul class="fa-ul">
                                         <?php $teacherPrivilege = getPrivilege(2);
                                         foreach($teacherPrivilege as $tp):?>
-                                            <li><i class="fa-li fa fa-cog fa-spin"></i><?php echo $tp['info_list']; ?></li>
+                                            <li><i class="fa-li fa fa-cog fa-spin"></i><?php echo htmlentities(stripcslashes($tp['info_list']), ENT_QUOTES, 'UTF-8'); ?></li>
                                         <?php endforeach; ?>
                                     </ul>
                                 </p>
@@ -50,7 +50,7 @@
                                     <ul class="fa-ul">
                                     <?php $studentPrivilege = getPrivilege(3);
                                     foreach($studentPrivilege as $sp):?>
-                                        <li><i class="fa-li fa fa-cog fa-spin"></i><?php echo $sp['info_list']; ?></li>
+                                        <li><i class="fa-li fa fa-cog fa-spin"></i><?php echo htmlentities(stripcslashes($sp['info_list']), ENT_QUOTES, 'UTF-8'); ?></li>
                                     <?php endforeach; ?>
                                     </ul>
                                 </p>
@@ -91,8 +91,8 @@
                                                 <?php $stuIDPass = getStuIDPass();
                                                 foreach($stuIDPass as $sip): ?>
                                                 <tr>
-                                                    <td><?= $sip['s_aiub_id']; ?></td>
-                                                    <td><?= $sip['s_pass']; ?></td>
+                                                    <td><?= htmlentities(stripcslashes($sip['s_aiub_id']), ENT_QUOTES, 'UTF-8'); ?></td>
+                                                    <td><?= htmlentities(stripcslashes($sip['s_pass']), ENT_QUOTES, 'UTF-8'); ?></td>
                                                 </tr>
                                                 <?php endforeach; ?>
                                             </table>
@@ -107,8 +107,8 @@
                                                 <?php $authorityIDPass = getAuthorityIDPass();
                                                 foreach($authorityIDPass as $aip): ?>
                                                 <tr>
-                                                    <td><?= $aip['a_aiub_id']; ?></td>
-                                                    <td><?= $aip['a_pass']; ?></td>
+                                                    <td><?= htmlentities(stripcslashes($aip['a_aiub_id']), ENT_QUOTES, 'UTF-8'); ?></td>
+                                                    <td><?= htmlentities(stripcslashes($aip['a_pass']), ENT_QUOTES, 'UTF-8'); ?></td>
                                                 </tr>
                                                 <?php endforeach; ?>
                                             </table>
@@ -121,8 +121,8 @@
                                                 <?php $teacherIDPass = getteacherIDPass();
                                                 foreach($teacherIDPass as $tip): ?>
                                                 <tr>
-                                                    <td><?= $tip['t_aiub_id']; ?></td>
-                                                    <td><?= $tip['t_pass']; ?></td>
+                                                    <td><?= htmlentities(stripcslashes($tip['t_aiub_id']), ENT_QUOTES, 'UTF-8'); ?></td>
+                                                    <td><?= htmlentities(stripcslashes($tip['t_pass']), ENT_QUOTES, 'UTF-8'); ?></td>
                                                 </tr>
                                                 <?php endforeach; ?>
                                             </table>

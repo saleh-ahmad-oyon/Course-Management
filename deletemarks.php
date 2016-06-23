@@ -44,7 +44,7 @@
                                     <br />
                                     <h4>
                                         <?php $value = explode('|', $stuInfo); ?>
-                                        ID: <span class="text-primary"><?= $value[0]; ?></span>&nbsp;&nbsp;&nbsp;&nbsp;Name: <span class="text-primary"><?= $value[1]; ?></span>&nbsp;&nbsp;&nbsp;&nbsp;Attendence: <span class="text-primary"><?= $value[2]; ?></span>
+                                        ID: <span class="text-primary"><?= htmlentities(stripslashes($value[0]), ENT_QUOTES, 'UTF-8'); ?></span>&nbsp;&nbsp;&nbsp;&nbsp;Name: <span class="text-primary"><?= htmlentities(stripslashes($value[1]), ENT_QUOTES, 'UTF-8'); ?></span>&nbsp;&nbsp;&nbsp;&nbsp;Attendence: <span class="text-primary"><?= htmlentities(stripslashes($value[2]), ENT_QUOTES, 'UTF-8'); ?></span>
                                     </h4>
                                     <br/>
                                     <h5><ins><?= $name; ?></h5></ins>
@@ -67,8 +67,8 @@
                                             <tbody>
                                                 <?php $i=1;foreach($outputString as $value): ?>
                                                         <tr>
-                                                            <td><input type="checkbox" id="del<?php echo $i; ?>" name="check_dlt[]" value="<?= $value['e_id']; ?>" /><label for="del<?= $i; ?>"></label></td>
-                                                            <td><label name="date<?php echo $i; ?>"><?= $value['e_date']; ?></label></td>
+                                                            <td><input type="checkbox" id="del<?php echo $i; ?>" name="check_dlt[]" value="<?= htmlentities(stripslashes($value['e_id']), ENT_QUOTES, 'UTF-8'); ?>" /><label for="del<?= $i; ?>"></label></td>
+                                                            <td><label name="date<?php echo $i; ?>"><?= htmlentities(stripslashes($value['e_date']), ENT_QUOTES, 'UTF-8'); ?></label></td>
                                                             <td><label><?= $value['e_marks']; ?></label></td>
                                                         </tr>
                                                     <?php $i++; ?>

@@ -42,7 +42,7 @@
                                     <h2><ins><?= getCourseName($_GET['id1']) ?></ins></h2><br />
                                     <h4>
                                         <?php $value = explode('|', $stuInfo); ?>
-                                        ID: <span class="text-primary"><?= $value[0]; ?></span>&nbsp;&nbsp;&nbsp;&nbsp;Name: <span class="text-primary"><?= $value[1]; ?></span>&nbsp;&nbsp;&nbsp;&nbsp;Attendence: <span class="text-primary"><?= $value[2]; ?></span>
+                                        ID: <span class="text-primary"><?= htmlentities(stripcslashes($value[0]), ENT_QUOTES, 'UTF-8'); ?></span>&nbsp;&nbsp;&nbsp;&nbsp;Name: <span class="text-primary"><?= htmlentities(stripcslashes($value[1]), ENT_QUOTES, 'UTF-8'); ?></span>&nbsp;&nbsp;&nbsp;&nbsp;Attendence: <span class="text-primary"><?= htmlentities(stripcslashes($value[2]), ENT_QUOTES, 'UTF-8'); ?></span>
                                     </h4>
                                     <br/>
                                     <h5><ins><?= $name; ?></h5></ins>
@@ -64,13 +64,13 @@
                                             <tbody>
                                                 <?php foreach($outputString as $value): ?>
                                                     <tr>
-                                                        <td><label><?= $value['e_date']; ?></label></td>
+                                                        <td><label><?= htmlentities(stripcslashes($value['e_date']), ENT_QUOTES, 'UTF-8'); ?></label></td>
                                                         <?php if($_GET['id3'] == 'mid' || $_GET['id3'] == 'final'): ?>
-                                                                <td><input type="number" step="0.50" min="0" max="40" value="<?= $value['e_marks']; ?>" name="marks[]" class="onlyFloat form-control" /></td>
+                                                                <td><input type="number" step="0.50" min="0" max="40" value="<?= htmlentities(stripcslashes($value['e_marks']), ENT_QUOTES, 'UTF-8'); ?>" name="marks[]" class="onlyFloat form-control" /></td>
                                                         <?php else: ?>
-                                                                <td><input type="number" step="0.50" min="0" max="20" value="<?= $value['e_marks']; ?>" name="marks[]" class="onlyFloat form-control" /></td>
+                                                                <td><input type="number" step="0.50" min="0" max="20" value="<?= htmlentities(stripcslashes($value['e_marks']), ENT_QUOTES, 'UTF-8'); ?>" name="marks[]" class="onlyFloat form-control" /></td>
                                                         <?php endif; ?>
-                                                        <input type="hidden" value="<?= $value['e_id']; ?>" name="id[]" />
+                                                        <input type="hidden" value="<?= htmlentities(stripcslashes($value['e_id']), ENT_QUOTES, 'UTF-8'); ?>" name="id[]" />
                                                     </tr>
                                                 <?php endforeach; ?>
                                             </tbody>

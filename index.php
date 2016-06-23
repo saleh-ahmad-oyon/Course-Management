@@ -45,7 +45,7 @@
                                                 <?php $i = 1;foreach($outputString as $value):?>
                                                 <tr>
                                                     <td><?php echo $i; ?></td>
-                                                    <td><a href="<?= SERVER; ?>/teacher/course/<?= $value['c_id']; ?>"><?= $value['c_name']; ?></a></td>
+                                                    <td><a href="<?= SERVER; ?>/teacher/course/<?= htmlentities(stripcslashes($value['c_id']), ENT_QUOTES, 'UTF-8'); ?>"><?= htmlentities(stripcslashes($value['c_name']), ENT_QUOTES, 'UTF-8'); ?></a></td>
                                                 </tr>
                                                 <?php $i++; endforeach; ?>
                                             </tbody>
@@ -74,7 +74,7 @@
                                                 <tr>
                                                     <td><?php echo $i; ?></td>
                                                     <td>
-                                                        <a href="<?= SERVER; ?>/course/student/<?= $value['c_id']; ?>"><?= $value['c_name']; ?></a>
+                                                        <a href="<?= SERVER; ?>/course/student/<?= htmlentities(stripcslashes($value['c_id']), ENT_QUOTES, 'UTF-8'); ?>"><?= htmlentities(stripcslashes($value['c_name']), ENT_QUOTES, 'UTF-8'); ?></a>
                                                     </td>
                                                     <td>
                                                         <?= $value['t_name']; ?>
