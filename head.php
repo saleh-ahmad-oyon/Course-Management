@@ -34,4 +34,7 @@ aiub mini portal,project done by aiubian,php with bootstrap" />
 
 <link rel="stylesheet" media='all' href="<?= SERVER; ?>/assets/css/bootstrap-3.3.6-dist/css/bootstrap.min.css" />
 <link rel="stylesheet" media='all' href="<?= SERVER; ?>/assets/css/font-awesome-4.6.3/css/font-awesome.min.css" />
+<!--[if lt IE 8]>
+<link rel="stylesheet" media='all' href="<?= SERVER; ?>/assets/css/font-awesome-4.6.3/css/font-awesome-ie7.min.css" />
+<![endif]-->
 <link rel="stylesheet" media='all' href="<?= SERVER; ?>/assets/css/custom.php" />
