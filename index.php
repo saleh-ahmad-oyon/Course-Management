@@ -93,7 +93,7 @@
                                                 <p class="text-primary">Sign in with your organizational id number.</p>
                                                 <div class="input-group" style="padding-top: 25px;">
                                                     <div class="input-group-addon" title="AIUB ID"><i class="fa fa-user font17"></i></div>
-                                                    <input type="text" placeholder="AIUB ID" class="onlyId form-control" name="user" required="required" pattern="^\d{2}\-\d{5}\-\d{1}$|^\d{4}\-\d{3,4}\-\d{1}$" title="Please put a valid ID"/>
+                                                    <input type="text" placeholder="AIUB ID" class="onlyId form-control" name="user" required="required" pattern="^\d{2}-\d{5}-\d{1}$|^\d{4}-\d{3,4}-\d{1}$" title="Please put a valid ID"/>
                                                 </div>
                                                 <div class="input-group padding20">
                                                     <div class="input-group-addon" title="Password"><i class="fa fa-key"></i></div>

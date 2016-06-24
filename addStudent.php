@@ -32,7 +32,7 @@
                                         <div class="form-inline">
                                             <div class="form-group">
                                                 <label>AIUB ID</label>
-                                                <input type="text" class="form-control" maxlength="10" placeholder="XX-XXXXX-X" id="stuid" name="studId" required="required" />
+                                                <input type="text" class="form-control" maxlength="10" pattern="^\d{2}-\d{5}-\d{1}$" placeholder="XX-XXXXX-X" title="Please put a valid ID" id="stuid" name="studId" required="required" />
                                             </div>
                                             <div class="form-group">
                                                 <button type="submit" class="btn btn-primary" name="addStud"><i class="fa fa-user-plus"></i></button>
