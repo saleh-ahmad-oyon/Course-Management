@@ -68,8 +68,7 @@ if (empty($fn)) {
     $file_path  = $target_dir.$image;
     $fileTmpLoc = $_FILES['profilepic']['tmp_name'];
 
-    $moveResult = move_uploaded_file($fileTmpLoc, $file_path);
-    if ($moveResult != true) {
+    if (!move_uploaded_file($fileTmpLoc, $file_path)) {
         echo '<script language="javascript">
                   alert("ERROR: File not uploaded. Try again !!");
                   window.location="'.SERVER.'/profile";
