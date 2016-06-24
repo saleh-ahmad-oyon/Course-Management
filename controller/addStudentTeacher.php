@@ -11,6 +11,12 @@ session_start();
 require '../model/db.php';
 require 'define.php';
 
+if($_SERVER["REQUEST_METHOD"] != "POST") {
+    /** @Link 404 Page */
+    header('Location: '.SERVER.'/404');
+    return;
+}
+
 if ((!isset($_POST['addTeacher'])) && (!isset($_POST['addStudent']))) {
     /** @Link 404 Page */
     header('Location: '.SERVER.'/404');
@@ -76,10 +82,21 @@ if (isset($_POST['addTeacher'])) {
             return;
         }
 
-        $image     = md5($ID) . '_' .$_FILES['teacherpic']['name'];
-        $file_path = $target_dir . $image;
+        $image      = md5($ID) . '_' .$_FILES['teacherpic']['name'];
+        $file_path  = $target_dir . $image;
+        $fileTmpLoc = $_FILES['profilepic']['tmp_name'];
 
-        move_uploaded_file($_FILES['teacherpic']['tmp_name'], $file_path);
+        $moveResult = move_uploaded_file($fileTmpLoc, $file_path);
+        if ($moveResult != true) {
+            echo '<script language="javascript">
+                  alert("ERROR: File not uploaded. Try again !!");
+                  window.location="'.SERVER.'/profile";
+              </script>';
+            /** Remove the uploaded file from the PHP temp folder */
+            unlink($fileTmpLoc);
+            return;
+        }
+
         insertTeacher($ID, $name, $phone, $email, $image, $gender, $date, $designation);
     }
 } elseif (isset($_POST['addStudent'])) {
@@ -142,10 +159,21 @@ if (isset($_POST['addTeacher'])) {
             return;
         }
 
-        $image     = md5($ID) . '_' . $_FILES['stupic']['name'];
-        $file_path = $target_dir . $image;
+        $image      = md5($ID) . '_' . $_FILES['stupic']['name'];
+        $file_path  = $target_dir . $image;
+        $fileTmpLoc = $_FILES['profilepic']['tmp_name'];
 
-        move_uploaded_file($_FILES['stupic']['tmp_name'], $file_path);
+        $moveResult = move_uploaded_file($fileTmpLoc, $file_path);
+        if ($moveResult != true) {
+            echo '<script language="javascript">
+                  alert("ERROR: File not uploaded. Try again !!");
+                  window.location="'.SERVER.'/profile";
+              </script>';
+            /** Remove the uploaded file from the PHP temp folder */
+            unlink($fileTmpLoc);
+            return;
+        }
+
         insertStudent($ID, $name, $cgpa, $phone, $email, $dept, $image, $gender, $date);
     }
 }
