@@ -22,7 +22,6 @@ aiub mini portal,project done by aiubian,php with bootstrap" />
 <meta property="og:site_name"      content="Course Management"
 <meta property="og:description"    content="It is a demo php project that can be used to manage a course according to AIUB(American International University-Bangladesh) regulation. It was done by a student of AIUB" />
 <meta property="og:image"          content="<?= SERVER; ?>/assets/img/aiub.png" />
-
 <meta name="twitter:card"          content="Course_Management" />
 <meta name="twitter:description"   content="It is a demo php project that can be used to manage a course according to AIUB(American International University-Bangladesh) regulation. It was done by a student of AIUB." />
 <meta name="twitter:title"         content="Course Management for AIUB" />
@@ -34,5 +33,5 @@ aiub mini portal,project done by aiubian,php with bootstrap" />
 <link rel="publisher"  href="https://www.linkedin.com/in/saleh-ahmad-917b0532" />
 
 <link rel="stylesheet" media='all' href="<?= SERVER; ?>/assets/css/bootstrap-3.3.6-dist/css/bootstrap.min.css" />
-<link rel="stylesheet" media='all' href="<?= SERVER; ?>/assets/css/font-awesome-4.5.0/css/font-awesome.min.css" />
+<link rel="stylesheet" media='all' href="<?= SERVER; ?>/assets/css/font-awesome-4.6.3/css/font-awesome.min.css" />
 <link rel="stylesheet" media='all' href="<?= SERVER; ?>/assets/css/custom.php" />
