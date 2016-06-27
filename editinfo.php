@@ -182,6 +182,6 @@
                 </div>
             </main>
         </div>
-        <?php $dropify = true; $mask = true; require_once 'footer.php'; ?>
+        <?php $dropify = true; $mask = true; $jui=true; require_once 'footer.php'; ?>
 	</body>
 </html>

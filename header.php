@@ -13,7 +13,7 @@
                 if(isset($_SESSION['teacher'])) {
                     echo '<img src="'.TEACHERPP.'/'.returnTeacherPic($_SESSION['tid']).'" alt="propic" style="height: 18px;width: 17px;border-radius: 2px;" />', '<span>   '.$_SESSION['teacher'].'</span>';
 				} elseif (isset($_SESSION['stud'])) {
-					echo '<img src="'.STUDENTPP.'/'.returnStdentPic($_SESSION['sid']).'" alt="propic" style="height: 18px;width: 17px;border-radius: 2px;" />', '<span>   '.$_SESSION['stud'].'</span>';
+					echo '<img src="'.STUDENTPPICO.'/'.returnStdentPic($_SESSION['sid']).'" alt="" style="border-radius: 2px;" />', '<span>   '.$_SESSION['stud'].'</span>';
 				} elseif(isset($_SESSION['authority'])) {
 					echo '<img src="'.SERVER.'/assets/img/authority/hasansir.jpg" alt="authority propic" style="height: 18px;width: 17px;border-radius: 2px;" />', '<span>   '.$_SESSION['authority'].'</span>';
 				} ?>

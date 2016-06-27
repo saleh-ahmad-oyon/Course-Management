@@ -240,7 +240,7 @@ function deptName()
 	return $row;
 }
 
-function editBasicInfo($fullName, $dept, $phone, $email, $sid, $pic, $gender, $date)
+function editBasicInfo($fullName, $dept, $phone, $email, $sid, $pic, $gender, $date, $newIco, $fileContents)
 {
 	$conn = db_conn();
 
@@ -251,7 +251,9 @@ SET `s_full_name`= '".mysqli_real_escape_string($conn, $fullName)."',
 `s_dept`= '".mysqli_real_escape_string($conn, $dept)."', 
 `s_image`= '".mysqli_real_escape_string($conn, $pic)."', 
 `s_gender`='".mysqli_real_escape_string($conn, $gender)."', 
-`s_dob`='".mysqli_real_escape_string($conn, $date)."' 
+`s_dob`='".mysqli_real_escape_string($conn, $date)."',
+`s_small_image`='".mysqli_real_escape_string($conn, $newIco)."',
+`img_contents`='".mysqli_real_escape_string($conn, $fileContents)."' 
 WHERE `s_id` = ".mysqli_real_escape_string($conn, $sid);
 
 	mysqli_query($conn, $sql);
@@ -1082,12 +1084,12 @@ function returnStdentPic($sid)
 {
 	$conn = db_conn();
 
-	$sql = "SELECT `s_image` FROM `student` 
+	$sql = "SELECT `s_small_image` FROM `student` 
 WHERE `s_id` = ".mysqli_real_escape_string($conn, $sid);
 
 	$result = mysqli_query($conn, $sql);
 	$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
-	$stuImage = $row['s_image'];
+	$stuImage = $row['s_small_image'];
 	return $stuImage;
 }
 

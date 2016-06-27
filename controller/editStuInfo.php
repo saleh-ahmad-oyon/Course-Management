@@ -57,6 +57,9 @@ if (empty($fn)) {
         return;
     }
 
+    $filename = pathinfo($_FILES['profilepic']['name'], PATHINFO_FILENAME);
+    $fileext  = pathinfo($_FILES['profilepic']['name'], PATHINFO_EXTENSION);
+
     if (($check[2] !== IMAGETYPE_GIF) && ($check[2] !== IMAGETYPE_JPEG) && ($check[2] !== IMAGETYPE_PNG)) {
         echo '<script language="javascript">
                   alert("Image Type is not a gif/jpeg/png !!");
@@ -64,9 +67,27 @@ if (empty($fn)) {
               </script>';
         return;
     }
-    $image      = md5($sid) . '_' . $_FILES['profilepic']['name'];
-    $file_path  = $target_dir.$image;
-    $fileTmpLoc = $_FILES['profilepic']['tmp_name'];
+    $image        = uniqid('') . md5($filename).'.'.$fileext;
+    $file_path    = $target_dir.$image;
+    $fileTmpLoc   = $_FILES['profilepic']['tmp_name'];
+    $fileContents = hash_file('md5', $fileTmpLoc);
+
+    if ($check[2] == IMAGETYPE_JPEG) {
+        $src = imagecreatefromjpeg($fileTmpLoc);
+    } elseif ($check[2] == IMAGETYPE_PNG) {
+        $src = imagecreatefrompng($fileTmpLoc);
+    } else {
+        $src = imagecreatefromgif($fileTmpLoc);
+    }
+
+    list($width,$height)=getimagesize($fileTmpLoc);
+
+    $newwidth1=17;
+    $newheight1=18;
+    $tmp1=imagecreatetruecolor($newwidth1, $newheight1);
+
+    imagecopyresampled($tmp1,$src,0,0,0,0,$newwidth1,$newheight1,
+        $width,$height);
 
     if (!move_uploaded_file($fileTmpLoc, $file_path)) {
         echo '<script language="javascript">
@@ -78,7 +99,14 @@ if (empty($fn)) {
         return;
     }
 
-    editBasicInfo($fullName, $dept, $phone, $email, $sid, $image, $gender, $date);
+    $newIco   = uniqid('') . md5($filename).'_s.'.$fileext;
+    $icoImage = $target_dir."ico/". $newIco;
+
+    imagejpeg($tmp1,$icoImage,100);
+
+    imagedestroy($tmp1);
+
+    editBasicInfo($fullName, $dept, $phone, $email, $sid, $image, $gender, $date, $newIco, $fileContents);
 }
 echo '<script language="javascript">
           alert("Update Successful !!");
