@@ -183,5 +183,22 @@
             </main>
         </div>
         <?php $dropify = true; $mask = true; $jui=true; require_once 'footer.php'; ?>
+        <script>
+            $(function() {
+                $( "#datepicker" ).datepicker({
+                    showOnFocus: true,
+                    showOtherMonths: true,
+                    changeMonth: true,
+                    changeYear: true,
+                    showButtonPanel: true,
+                    dateFormat: "d M, yy",
+                    maxDate: "+0D"
+                });
+                $( "#speed" )
+                    .selectmenu()
+                    .selectmenu( "menuWidget" )
+                    .addClass( "overflow" );
+            });
+        </script>
 	</body>
 </html>

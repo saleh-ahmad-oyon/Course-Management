@@ -146,17 +146,16 @@
     </div>
 </div>
 </footer>
+
 <script src="<?= SERVER; ?>/assets/js/jquery-2.1.4.min.js"></script>
 <script src="<?= SERVER; ?>/assets/css/bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
 <script src="<?= SERVER; ?>/assets/js/custom.js"></script>
-
 <?php if(isset($dropify)): ?>
     <script src="<?= SERVER; ?>/assets/js/dropify.js"></script>
     <script src="<?= SERVER; ?>/assets/js/mydropify.js"></script>
 <?php endif; ?>
 <?php if(isset($jui)): ?>
     <script src="<?= SERVER; ?>/assets/js/jquery-ui.js"></script>
-    <script src="<?= SERVER; ?>/assets/js/myjui.js"></script>
 <?php endif; ?>
 <?php if(isset($mask)): ?>
     <script src="<?= SERVER; ?>/assets/js/jquery.maskedinput.min.js"></script>

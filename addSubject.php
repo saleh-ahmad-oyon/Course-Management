@@ -114,5 +114,17 @@
             </main>
         </div>
         <?php $jui = true; require_once 'footer.php'; ?>
+        <script>
+            $(function() {
+                $( "#speed" )
+                    .selectmenu()
+                    .selectmenu( "menuWidget" )
+                    .addClass( "overflow" );
+                $( "#speed1" )
+                    .selectmenu()
+                    .selectmenu( "menuWidget" )
+                    .addClass( "overflow" );
+            });
+        </script>
     </body>
 </html>
