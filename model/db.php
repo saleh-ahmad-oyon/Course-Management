@@ -55,6 +55,19 @@ WHERE `t_aiub_id` = '".mysqli_real_escape_string($conn, $user)."'";
 	return $tid;
 }
 
+function getFileContent($sid) {
+	$conn = db_conn();
+
+	$sql = "SELECT `img_contents` FROM `student` 
+WHERE `s_id` = ".mysqli_real_escape_string($conn, $sid);
+
+	$result = mysqli_query($conn, $sql);
+	$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
+	$tid = $row['img_contents'];
+
+	return $tid;
+}
+
 function authority_id($user)
 {
 	$conn = db_conn();

@@ -71,6 +71,15 @@ if (empty($fn)) {
     $file_path    = $target_dir.$image;
     $fileTmpLoc   = $_FILES['profilepic']['tmp_name'];
     $fileContents = hash_file('md5', $fileTmpLoc);
+    $oldContent   = getFileContent($sid);
+
+    if ($fileContents == $oldContent) {
+        echo '<script language="javascript">
+                  alert("You try to upload the same previous file !!");
+                  window.location="'.SERVER.'/profile";
+              </script>';
+        return;
+    }
 
     if ($check[2] == IMAGETYPE_JPEG) {
         $src = imagecreatefromjpeg($fileTmpLoc);
