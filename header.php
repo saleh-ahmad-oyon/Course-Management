@@ -15,7 +15,7 @@
 				} elseif (isset($_SESSION['stud'])) {
 					echo '<img src="'.STUDENTPPICO.'/'.returnStdentPic($_SESSION['sid']).'" alt="" style="border-radius: 2px;" />', '<span>   '.$_SESSION['stud'].'</span>';
 				} elseif(isset($_SESSION['authority'])) {
-					echo '<img src="'.SERVER.'/assets/img/authority/hasansir.jpg" alt="authority propic" style="height: 18px;width: 17px;border-radius: 2px;" />', '<span>   '.$_SESSION['authority'].'</span>';
+					echo '<img src="'.SERVER.'/assets/img/authority/ico/hasansir.jpg" alt="authority propic" style="border-radius: 2px;" />', '<span>   '.$_SESSION['authority'].'</span>';
 				} ?>
 			</a>
 			<a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#">
