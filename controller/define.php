@@ -15,3 +15,4 @@ define('SERVER', PROTOCOL.$_SERVER['SERVER_NAME'].'/course');
 define('STUDENTPP', SERVER.'/assets/img/student');
 define('STUDENTPPICO', SERVER.'/assets/img/student/ico');
 define('TEACHERPP', SERVER.'/assets/img/teacher');
+define('TEACHERPPICO', SERVER.'/assets/img/teacher/ico');

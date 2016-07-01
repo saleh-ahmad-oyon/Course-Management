@@ -67,6 +67,7 @@ if (empty($fn)) {
               </script>';
         return;
     }
+    
     $image        = uniqid('') . md5($filename).'.'.$fileext;
     $file_path    = $target_dir.$image;
     $fileTmpLoc   = $_FILES['profilepic']['tmp_name'];

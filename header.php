@@ -11,7 +11,7 @@
 			<a class="btn btn-primary">
 				<?php 
                 if(isset($_SESSION['teacher'])) {
-                    echo '<img src="'.TEACHERPP.'/'.returnTeacherPic($_SESSION['tid']).'" alt="propic" style="height: 18px;width: 17px;border-radius: 2px;" />', '<span>   '.$_SESSION['teacher'].'</span>';
+                    echo '<img src="'.TEACHERPPICO.'/'.returnTeacherPic($_SESSION['tid']).'" alt="" style="border-radius: 2px;" />', '<span>   '.$_SESSION['teacher'].'</span>';
 				} elseif (isset($_SESSION['stud'])) {
 					echo '<img src="'.STUDENTPPICO.'/'.returnStdentPic($_SESSION['sid']).'" alt="" style="border-radius: 2px;" />', '<span>   '.$_SESSION['stud'].'</span>';
 				} elseif(isset($_SESSION['authority'])) {

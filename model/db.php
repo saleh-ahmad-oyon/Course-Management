@@ -63,9 +63,22 @@ WHERE `s_id` = ".mysqli_real_escape_string($conn, $sid);
 
 	$result = mysqli_query($conn, $sql);
 	$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
-	$tid = $row['img_contents'];
+	$content = $row['img_contents'];
 
-	return $tid;
+	return $content;
+}
+
+function getTeacherFileContent($tid) {
+	$conn = db_conn();
+
+	$sql = "SELECT `img_contents` FROM `teacher` 
+WHERE `t_id` = ".mysqli_real_escape_string($conn, $tid);
+
+	$result = mysqli_query($conn, $sql);
+	$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
+    $content = $row['img_contents'];
+
+	return $content;
 }
 
 function authority_id($user)
@@ -1194,7 +1207,7 @@ WHERE `t_id` = ".mysqli_real_escape_string($conn, $tid);
 	return $row;
 }
 
-function editTeacherBasicInfo($fullName, $phone, $email, $tid, $pic, $gender, $date)
+function editTeacherBasicInfo($fullName, $phone, $email, $tid, $pic, $gender, $date, $fileContents, $newIco)
 {
 	$conn = db_conn();
 
@@ -1204,7 +1217,9 @@ function editTeacherBasicInfo($fullName, $phone, $email, $tid, $pic, $gender, $d
 `t_phone`='".mysqli_real_escape_string($conn, $phone)."',
 `t_gender`='".mysqli_real_escape_string($conn, $gender)."',
 `t_dob`='".mysqli_real_escape_string($conn, $date)."',
-`t_image`='".mysqli_real_escape_string($conn, $pic)."' 
+`t_image`='".mysqli_real_escape_string($conn, $pic)."', 
+`img_contents`='".mysqli_real_escape_string($conn, $fileContents)."', 
+`t_small_image`='".mysqli_real_escape_string($conn, $newIco)."' 
 WHERE `t_id` = ".mysqli_real_escape_string($conn, $tid);
 
 	mysqli_query($conn, $sql);
@@ -1231,12 +1246,12 @@ function returnTeacherPic($tid)
 {
 	$conn = db_conn();
 
-	$sql = "SELECT `t_image` FROM `teacher` 
+	$sql = "SELECT `t_small_image` FROM `teacher` 
 WHERE `t_id` = ".mysqli_real_escape_string($conn, $tid);
 
 	$result = mysqli_query($conn, $sql);
 	$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
-	$teacherImage = $row['t_image'];
+	$teacherImage = $row['t_small_image'];
 	return $teacherImage;
 }
 
