@@ -57,9 +57,6 @@ if (empty($fn)) {
         return;
     }
 
-    $filename = pathinfo($_FILES['profilepic']['name'], PATHINFO_FILENAME);
-    $fileext  = pathinfo($_FILES['profilepic']['name'], PATHINFO_EXTENSION);
-
     if (($check[2] !== IMAGETYPE_GIF) && ($check[2] !== IMAGETYPE_JPEG) && ($check[2] !== IMAGETYPE_PNG)) {
         echo '<script language="javascript">
                   alert("Image Type is not a gif/jpeg/png !!");
@@ -67,6 +64,9 @@ if (empty($fn)) {
               </script>';
         return;
     }
+
+    $filename = pathinfo($_FILES['profilepic']['name'], PATHINFO_FILENAME);
+    $fileext  = pathinfo($_FILES['profilepic']['name'], PATHINFO_EXTENSION);
     
     $image        = uniqid('') . md5($filename).'.'.$fileext;
     $file_path    = $target_dir.$image;
@@ -92,8 +92,8 @@ if (empty($fn)) {
 
     list($width,$height)=getimagesize($fileTmpLoc);
 
-    $newwidth1=17;
-    $newheight1=18;
+    $newwidth1  = 17;
+    $newheight1 = 18;
     $tmp1=imagecreatetruecolor($newwidth1, $newheight1);
 
     imagecopyresampled($tmp1,$src,0,0,0,0,$newwidth1,$newheight1,

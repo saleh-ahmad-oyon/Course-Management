@@ -82,10 +82,31 @@ if (isset($_POST['addTeacher'])) {
             return;
         }
 
-        $image      = md5($ID) . '_' .$_FILES['teacherpic']['name'];
-        $file_path  = $target_dir . $image;
-        $fileTmpLoc = $_FILES['teacherpic']['tmp_name'];
-        
+        $filename = pathinfo($_FILES['teacherpic']['name'], PATHINFO_FILENAME);
+        $fileext  = pathinfo($_FILES['teacherpic']['name'], PATHINFO_EXTENSION);
+
+        $image        = uniqid('') . md5($filename).'.'.$fileext;
+        $file_path    = $target_dir . $image;
+        $fileTmpLoc   = $_FILES['teacherpic']['tmp_name'];
+        $fileContents = hash_file('md5', $fileTmpLoc);
+
+        if ($check[2] == IMAGETYPE_JPEG) {
+            $src = imagecreatefromjpeg($fileTmpLoc);
+        } elseif ($check[2] == IMAGETYPE_PNG) {
+            $src = imagecreatefrompng($fileTmpLoc);
+        } else {
+            $src = imagecreatefromgif($fileTmpLoc);
+        }
+
+        list($width,$height)=getimagesize($fileTmpLoc);
+
+        $newwidth1  = 17;
+        $newheight1 = 18;
+        $tmp1=imagecreatetruecolor($newwidth1, $newheight1);
+
+        imagecopyresampled($tmp1,$src,0,0,0,0,$newwidth1,$newheight1,
+            $width,$height);
+
         if (!move_uploaded_file($fileTmpLoc, $file_path)) {
             echo '<script language="javascript">
                   alert("ERROR: File not uploaded. Try again !!");
@@ -96,7 +117,14 @@ if (isset($_POST['addTeacher'])) {
             return;
         }
 
-        insertTeacher($ID, $name, $phone, $email, $image, $gender, $date, $designation);
+        $newIco   = uniqid('') . md5($filename).'_s.'.$fileext;
+        $icoImage = $target_dir."ico/". $newIco;
+
+        imagejpeg($tmp1, $icoImage, 100);
+
+        imagedestroy($tmp1);
+
+        insertTeacher($ID, $name, $phone, $email, $image, $gender, $date, $designation, $fileContents, $newIco);
     }
 } elseif (isset($_POST['addStudent'])) {
     $name  = $_POST['fullname'];
@@ -158,7 +186,10 @@ if (isset($_POST['addTeacher'])) {
             return;
         }
 
-        $image        = md5($ID) . '_' . $_FILES['stupic']['name'];
+        $filename = pathinfo($_FILES['stupic']['name'], PATHINFO_FILENAME);
+        $fileext  = pathinfo($_FILES['stupic']['name'], PATHINFO_EXTENSION);
+
+        $image        = uniqid('') . md5($filename).'.'.$fileext;
         $file_path    = $target_dir . $image;
         $fileTmpLoc   = $_FILES['stupic']['tmp_name'];
         $fileContents = hash_file('md5', $fileTmpLoc);
@@ -173,8 +204,8 @@ if (isset($_POST['addTeacher'])) {
 
         list($width,$height)=getimagesize($fileTmpLoc);
 
-        $newwidth1=17;
-        $newheight1=18;
+        $newwidth1  = 17;
+        $newheight1 = 18;
         $tmp1=imagecreatetruecolor($newwidth1, $newheight1);
 
         imagecopyresampled($tmp1,$src,0,0,0,0,$newwidth1,$newheight1,
@@ -189,9 +220,7 @@ if (isset($_POST['addTeacher'])) {
             unlink($fileTmpLoc);
             return;
         }
-
-        $filename = pathinfo($_FILES['stupic']['name'], PATHINFO_FILENAME);
-        $fileext  = pathinfo($_FILES['stupic']['name'], PATHINFO_EXTENSION);
+        
         $newIco   = uniqid('') . md5($filename).'_s.'.$fileext;
         $icoImage = $target_dir."ico/". $newIco;
 
