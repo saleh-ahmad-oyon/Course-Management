@@ -84,7 +84,7 @@ if (isset($_POST['addTeacher'])) {
 
         $image      = md5($ID) . '_' .$_FILES['teacherpic']['name'];
         $file_path  = $target_dir . $image;
-        $fileTmpLoc = $_FILES['profilepic']['tmp_name'];
+        $fileTmpLoc = $_FILES['teacherpic']['tmp_name'];
         
         if (!move_uploaded_file($fileTmpLoc, $file_path)) {
             echo '<script language="javascript">
@@ -158,9 +158,27 @@ if (isset($_POST['addTeacher'])) {
             return;
         }
 
-        $image      = md5($ID) . '_' . $_FILES['stupic']['name'];
-        $file_path  = $target_dir . $image;
-        $fileTmpLoc = $_FILES['profilepic']['tmp_name'];
+        $image        = md5($ID) . '_' . $_FILES['stupic']['name'];
+        $file_path    = $target_dir . $image;
+        $fileTmpLoc   = $_FILES['stupic']['tmp_name'];
+        $fileContents = hash_file('md5', $fileTmpLoc);
+
+        if ($check[2] == IMAGETYPE_JPEG) {
+            $src = imagecreatefromjpeg($fileTmpLoc);
+        } elseif ($check[2] == IMAGETYPE_PNG) {
+            $src = imagecreatefrompng($fileTmpLoc);
+        } else {
+            $src = imagecreatefromgif($fileTmpLoc);
+        }
+
+        list($width,$height)=getimagesize($fileTmpLoc);
+
+        $newwidth1=17;
+        $newheight1=18;
+        $tmp1=imagecreatetruecolor($newwidth1, $newheight1);
+
+        imagecopyresampled($tmp1,$src,0,0,0,0,$newwidth1,$newheight1,
+            $width,$height);
         
         if (!move_uploaded_file($fileTmpLoc, $file_path)) {
             echo '<script language="javascript">
@@ -172,7 +190,16 @@ if (isset($_POST['addTeacher'])) {
             return;
         }
 
-        insertStudent($ID, $name, $cgpa, $phone, $email, $dept, $image, $gender, $date);
+        $filename = pathinfo($_FILES['stupic']['name'], PATHINFO_FILENAME);
+        $fileext  = pathinfo($_FILES['stupic']['name'], PATHINFO_EXTENSION);
+        $newIco   = uniqid('') . md5($filename).'_s.'.$fileext;
+        $icoImage = $target_dir."ico/". $newIco;
+
+        imagejpeg($tmp1,$icoImage,100);
+
+        imagedestroy($tmp1);
+
+        insertStudent($ID, $name, $cgpa, $phone, $email, $dept, $image, $gender, $date, $newIco, $fileContents);
     }
 }
 

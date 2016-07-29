@@ -1119,12 +1119,12 @@ WHERE `s_id` = ".mysqli_real_escape_string($conn, $sid);
 	return $stuImage;
 }
 
-function insertStudent($ID, $name, $cgpa, $phone, $email, $dept, $pic, $gender, $dob)
+function insertStudent($ID, $name, $cgpa, $phone, $email, $dept, $pic, $gender, $dob, $newico, $filecontent)
 {
 	$conn = db_conn();
 
 	$sql = "INSERT INTO 
-`student`(`s_aiub_id`, `s_full_name`, `s_cgpa`, `s_phone`, `s_email`, `s_dept`, `s_image`, `s_gender`, `s_dob`) VALUES (
+`student`(`s_aiub_id`, `s_full_name`, `s_cgpa`, `s_phone`, `s_email`, `s_dept`, `s_image`, `s_gender`, `s_dob`, `s_small_image`, `img_contents`) VALUES (
 '".mysqli_real_escape_string($conn, $ID)."', 
 '".mysqli_real_escape_string($conn, $name)."', 
 ".mysqli_real_escape_string($conn, $cgpa).", 
@@ -1133,7 +1133,9 @@ function insertStudent($ID, $name, $cgpa, $phone, $email, $dept, $pic, $gender, 
 '".mysqli_real_escape_string($conn, $dept)."', 
 '".mysqli_real_escape_string($conn, $pic)."', 
 '".mysqli_real_escape_string($conn, $gender)."', 
-'".mysqli_real_escape_string($conn, $dob)."')";
+'".mysqli_real_escape_string($conn, $dob)."',
+'".mysqli_real_escape_string($conn, $newico)."', 
+'".mysqli_real_escape_string($conn, $filecontent)."')";
 
 	mysqli_query($conn, $sql);
 	mysqli_close($conn);
