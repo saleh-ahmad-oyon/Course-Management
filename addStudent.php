@@ -8,6 +8,7 @@
 <html lang="en">
 	<head>
 		<?php require_once 'head.php'; ?>
+        <link rel="stylesheet" media='all' href="<?= SERVER; ?>/assets/css/search.css" />
 	</head>
 	<body>
         <div id="wrap">
@@ -30,9 +31,11 @@
                                     <h3><ins><?php echo getCourseName($_GET['id']) ?></ins></h3><br />
                                     <form action="<?= SERVER; ?>/controller/addStudent" method="post">
                                         <div class="form-inline">
+                                            <strong>AIUB ID: </strong>
                                             <div class="form-group">
-                                                <label>AIUB ID</label>
-                                                <input type="text" class="form-control" maxlength="10" pattern="^\d{2}-\d{5}-\d{1}$" placeholder="XX-XXXXX-X" title="Please put a valid ID" id="stuid" name="studId" required="required" />
+                                                <div id="bloodhound">
+                                                    <input class="typeahead" type="text" maxlength="10" pattern="^\d{2}-\d{5}-\d{1}$" placeholder="XX-XXXXX-X" title="Please put a valid ID" id="stuid" name="studId" required="required" />
+                                                </div>
                                             </div>
                                             <div class="form-group">
                                                 <button type="submit" class="btn btn-primary" name="addStud"><i class="fa fa-user-plus"></i></button>
@@ -47,6 +50,6 @@
                 </div>
             </main>
         </div>
-        <?php $mask = true; require_once 'footer.php'; ?>        
+        <?php $mask = true; $search = true; require_once 'footer.php'; ?>
 	</body>
 </html>

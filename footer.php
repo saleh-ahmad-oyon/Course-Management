@@ -161,3 +161,7 @@
     <script src="<?= SERVER; ?>/assets/js/jquery.maskedinput.min.js"></script>
     <script src="<?= SERVER; ?>/assets/js/mymask.js"></script>
 <?php endif; ?>
+<?php if(isset($search)): ?>
+    <script src="<?= SERVER; ?>/assets/js/typeahead.bundle.min.js"></script>
+    <script src="<?= SERVER; ?>/assets/js/search.js"></script>
+<?php endif; ?>
