@@ -5,7 +5,6 @@ $(document).ready(function() {
         url: '../../controller/searchStud.php',
         cache: false,
         success: function(states){
-            console.log(states);
             var states = new Bloodhound({
                 datumTokenizer: Bloodhound.tokenizers.whitespace,
                 queryTokenizer: Bloodhound.tokenizers.whitespace,
@@ -13,14 +12,14 @@ $(document).ready(function() {
             });
 
             $('#bloodhound .typeahead').typeahead({
-                    hint: true,
-                    highlight: true,
-                    minLength: 1
-                },
-                {
-                    name: 'states',
-                    source: states
-                });
+                hint: true,
+                highlight: true,
+                minLength: 1
+            },
+            {
+                name: 'states',
+                source: states
+            });
         }
     });
 });
