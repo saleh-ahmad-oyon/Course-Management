@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 29, 2016 at 07:19 AM
+-- Generation Time: Jul 31, 2016 at 08:13 PM
 -- Server version: 10.1.13-MariaDB
 -- PHP Version: 5.6.20
 
@@ -81,7 +81,20 @@ INSERT INTO `attendinfo` (`att_id`, `att_total`, `s_id`, `c_id`) VALUES
 (41, 3, 40, 2),
 (52, 1, 57, 2),
 (54, 0, 52, 5),
-(59, 0, 26, 5);
+(59, 0, 26, 5),
+(61, 0, 7, 14),
+(62, 0, 19, 14),
+(63, 0, 25, 14),
+(64, 0, 28, 14),
+(65, 0, 32, 14),
+(66, 0, 35, 14),
+(67, 0, 36, 14),
+(68, 0, 45, 14),
+(69, 0, 54, 14),
+(70, 0, 55, 14),
+(71, 0, 56, 14),
+(72, 0, 59, 14),
+(73, 0, 61, 14);
 
 -- --------------------------------------------------------
 
@@ -132,7 +145,7 @@ INSERT INTO `course` (`c_id`, `c_name`, `t_id`) VALUES
 (11, 'Programming Language 1 ', 0),
 (12, 'Advanced Database Management System', 0),
 (13, 'Computer Networks', 0),
-(14, 'Advanced Computer Networks', 0),
+(14, 'Advanced Computer Networks', 15),
 (15, 'Object Oriented Programming 1', 0),
 (16, 'Computer Fundamentals', 0),
 (17, 'Discrete Mahematics', 0),
@@ -214,7 +227,20 @@ INSERT INTO `course_student_marks` (`c_s_m_id`, `c_id`, `s_id`, `mid_best_two`, 
 (41, 2, 40, 0, 0, 0, 'FAIL', 'FAIL', 'FAIL', 0, 0),
 (52, 2, 57, 0, 0, 0, 'FAIL', 'FAIL', 'FAIL', 0, 0),
 (54, 5, 52, 0, 0, 0, 'FAIL', 'FAIL', 'FAIL', 0, 0),
-(59, 5, 26, 0, 0, 0, 'FAIL', 'FAIL', 'FAIL', 0, 0);
+(59, 5, 26, 0, 0, 0, 'FAIL', 'FAIL', 'FAIL', 0, 0),
+(61, 14, 7, 0, 0, 0, 'FAIL', 'FAIL', 'FAIL', 0, 0),
+(62, 14, 19, 0, 0, 0, 'FAIL', 'FAIL', 'FAIL', 0, 0),
+(63, 14, 25, 0, 0, 0, 'FAIL', 'FAIL', 'FAIL', 0, 0),
+(64, 14, 28, 0, 0, 0, 'FAIL', 'FAIL', 'FAIL', 0, 0),
+(65, 14, 32, 0, 0, 0, 'FAIL', 'FAIL', 'FAIL', 0, 0),
+(66, 14, 35, 0, 0, 0, 'FAIL', 'FAIL', 'FAIL', 0, 0),
+(67, 14, 36, 0, 0, 0, 'FAIL', 'FAIL', 'FAIL', 0, 0),
+(68, 14, 45, 0, 0, 0, 'FAIL', 'FAIL', 'FAIL', 0, 0),
+(69, 14, 54, 0, 0, 0, 'FAIL', 'FAIL', 'FAIL', 0, 0),
+(70, 14, 55, 0, 0, 0, 'FAIL', 'FAIL', 'FAIL', 0, 0),
+(71, 14, 56, 0, 0, 0, 'FAIL', 'FAIL', 'FAIL', 0, 0),
+(72, 14, 59, 0, 0, 0, 'FAIL', 'FAIL', 'FAIL', 0, 0),
+(73, 14, 61, 0, 0, 0, 'FAIL', 'FAIL', 'FAIL', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -344,7 +370,7 @@ INSERT INTO `student` (`s_id`, `s_aiub_id`, `s_full_name`, `s_cgpa`, `s_phone`, 
 (4, '12-20115-1', 'Roy, Pallob Kanti', 3.25, '+880-1912165908', 'pallab@ymail.com', '1234', 'CSSE', '577136cd2f578d5e323ab460b1453ead64258b2db5456.jpg', 'Male', '1970-01-01', '577136cd3f5dfd5e323ab460b1453ead64258b2db5456_s.jpg', '13ea350062fd64fe9fb73ef475879b60'),
 (5, '12-20120-1', 'Ayon, Arif Ahmed', 3.56, '+880-1677377003', 'ayon@rocketmail.com', '1234', 'CSSE', '577136fe25c65bf1191c6a98bf41c2d389f63ac0875d8.jpg', 'Male', '1992-09-04', '577136fe364a0bf1191c6a98bf41c2d389f63ac0875d8_s.jpg', '139baf433c3bf3f32fc207569ffe0c98'),
 (6, '12-20124-1', 'Alam, Nesar Ul', 3.41, '+880-1676756794', 'nesarul@gmail.com', '1234', 'CSSE', '579210fde9598ed967dc0d46a43c8a629b3d7a7900f97.jpg', 'Male', '1992-10-09', '579210fdf3c2ded967dc0d46a43c8a629b3d7a7900f97_s.jpg', '5ee71722a78d62888b9ad0129cfeb5f1'),
-(7, '12-20130-1', 'Faria, Tabassum Mehnaz', 3.63, '+880-1625784593', 'faria@live.com', '1234', 'CSE', '577159b2558e2d73f24d5090d7e2a4b2944c2b35dd2ec.jpg', 'Female', '1970-01-01', '577159b26f5dfd73f24d5090d7e2a4b2944c2b35dd2ec_s.jpg', '49b7fc9e672e1d93592feb15a6c73b77'),
+(7, '12-20130-1', 'Faria, Tabassum Mehnaz', 3.63, '+880-1686780827', 'faria@live.com', '1234', 'CSE', '577159b2558e2d73f24d5090d7e2a4b2944c2b35dd2ec.jpg', 'Female', '1970-01-01', '577159b26f5dfd73f24d5090d7e2a4b2944c2b35dd2ec_s.jpg', '49b7fc9e672e1d93592feb15a6c73b77'),
 (8, '12-20137-1', 'Mahmood, Asif', 3.11, '+880-1682702757', 'asif@hotmail.com', '1234', 'CSE', '57924fa34f7b5ce0b996aa0b7d64169a4b8ffeaf878c5.jpg', 'Male', '1970-01-01', '57924fa35ed7fce0b996aa0b7d64169a4b8ffeaf878c5_s.jpg', '7eb67a4f752c207cd943ae2e3c9d335b'),
 (9, '12-21032-1', 'Mimo, Minhaj Mohammad', 3.25, '+880-1711086599', 'mimo@outlook.com', '1234', 'CSSE', '57715ac439bd6f14cb5cf13c016653d8b6ab54def62bb.jpg', 'Male', '1992-06-09', '57715ac44114bf14cb5cf13c016653d8b6ab54def62bb_s.jpg', '305b9fe1398cade11efb2bb709bb8d06'),
 (10, '12-20138-1', 'Bhuiyan, Md, Maksudul Haque', 3.53, '+880-1671038362', 'turja@hotmail.com', '1234', 'CSSE', '5792604d1fa57aea513a578e865592f8526c31dc4c8f2.jpg', 'Male', '1970-09-28', '5792604d269b1aea513a578e865592f8526c31dc4c8f2_s.jpg', '37010faf280fc0b043902afe787ce4b9'),
@@ -369,7 +395,7 @@ INSERT INTO `student` (`s_id`, `s_aiub_id`, `s_full_name`, `s_cgpa`, `s_phone`, 
 (32, '12-20478-1', 'Uddin Jumana Jashim', 3.23, '+880-1621534769', 'jumana@ymail.com', '1234', 'CSE', '577561e03f291af0d77249097a4290431f0f53b404fd1.JPG', 'Female', '1992-12-19', '577561e0466efaf0d77249097a4290431f0f53b404fd1_s.JPG', '63e87daea31cd3787b0386a880cfc999'),
 (33, '12-21119-1', 'Alam, Maskurul', 3.26, '01743912055', 'alam@hotmail.com', '1234', 'CSSE', 'default-user.png', 'Male', '0000-00-00', 'default-user.png', NULL),
 (35, '12-20520-1', 'Israt,Fahmida', 3.56, '+880-1723217411', 'panda@yahoo.com', '1234', 'CSSE', '5792572f0edd47937d96549a7d1d9dcc3cd2c32012359.jpg', 'Female', '1970-01-01', '5792572f1e6b97937d96549a7d1d9dcc3cd2c32012359_s.jpg', 'ebeeee9dbcac731a1fc66b788043e232'),
-(36, '12-20397-1', 'Abrita, Samiha Islam', 3.82, '+880-1515245238', 'abrita@outlook.com', '1234', 'CSE', '579a41b76c58054f2fdd886fccdbb59591463b5e54804.jpg', 'Female', '1993-12-21', '579a41b79ae9154f2fdd886fccdbb59591463b5e54804_s.jpg', '84afa8b2aaf02b338f45e5d9b4d7cdda'),
+(36, '12-20397-1', 'Abrita, Samiha Islam', 3.82, '+880-1515245238', 'abrita@outlook.com', '1234', 'CSE', '579aeeeaaebb2bb765fc55854865465e9c47602650fbb.jpg', 'Female', '1993-12-21', '579aeeeac3949bb765fc55854865465e9c47602650fbb_s.jpg', 'e7e017cc0da5a2921ecf967883597472'),
 (37, '12-21094-1', 'Abrar,Faheem', 3.98, '+880-1515253396', 'faheem@gmail.com', '1234', 'CSE', '5797773e2a9ef6fda7c0b9ba6148a2191ed93d1da83eb.jpg', 'Male', '1992-08-05', '5797773e37b746fda7c0b9ba6148a2191ed93d1da83eb_s.jpg', '2bcb9c45ef58485d2cdaa7b869c7a0e1'),
 (38, '12-21023-1', 'Abedin Md. Tahmidul', 3.78, '+880-1552380913', 'anik@ymail.com', '1234', 'CSE', '5775683f05e6ef2bb10a6e6d5f76cb2d660333079e612.jpg', 'Male', '1991-01-07', '5775683f0da77f2bb10a6e6d5f76cb2d660333079e612_s.jpg', '17a1a073ea3fca7a14711f38bb956053'),
 (39, '12-20142-1', 'Abedin, Md. Rashedul', 3.01, '+880-1673016974', 'rashedul@yahoo.com', '1234', 'CSE', '57924cbdb5db5b60c306f62fbc07820dd607b17968aa2.jpg', 'Male', '1992-11-23', '57924cbdc5e3fb60c306f62fbc07820dd607b17968aa2_s.jpg', '768769e1006f3d6c6347689831026bf9'),
@@ -392,7 +418,9 @@ INSERT INTO `student` (`s_id`, `s_aiub_id`, `s_full_name`, `s_cgpa`, `s_phone`, 
 (56, '12-21014-1', 'Haque, Sadiah', 3.66, '+880-1767696626', 'sadiah.norway93@gmail.com', '1234', 'CSE', '5798ddeec0638b41543b565840ea8a8ad07553b7fb71e.jpg', 'Female', '1993-02-03', '5798ddeed1d9ab41543b565840ea8a8ad07553b7fb71e_s.jpg', 'e9242729c441ea0cae967f7d8b0aa78c'),
 (57, '12-20173-1', 'Islam MD Saiful', 3.01, '+880-1534855629', 'shibly@demo.com', '1234', 'CSSE', '579add7708254ab4aeaa942ee13cb7b09b6b7a2720032.jpg', 'Male', '1992-06-02', '579add771044aab4aeaa942ee13cb7b09b6b7a2720032_s.jpg', '6e43666180ae1765754a5ef3bfe8a1ae'),
 (59, '12-20203-1', 'Rahman, Faria', 3.32, '+880-1577999999', 'faria@demo.com', '1234', 'CSSE', '579ad8ee31306da7ad486c8381d290e558fe285c95d21.jpg', 'Female', '1993-05-05', '579ad8ee3e93fda7ad486c8381d290e558fe285c95d21_s.jpg', '31a46bd2f0af6be33235674a43b92f07'),
-(61, '11-19711-3', 'Das, Prianka', 3.35, '+880-1625959674', 'pria@aiub.com', '1234', 'CSE', '5792168a92e88bcd9d47c0e8413b2cdc186247e7d8957.jpg', 'Female', '1992-02-14', '5792168aa5ca8bcd9d47c0e8413b2cdc186247e7d8957_s.jpg', '8a273f05825cb29cc6c4952fff31a4ad');
+(61, '11-19711-3', 'Das, Prianka', 3.35, '+880-1625959674', 'pria@aiub.com', '1234', 'CSE', '5792168a92e88bcd9d47c0e8413b2cdc186247e7d8957.jpg', 'Female', '1992-02-14', '5792168aa5ca8bcd9d47c0e8413b2cdc186247e7d8957_s.jpg', '8a273f05825cb29cc6c4952fff31a4ad'),
+(62, '12-21131-1', 'Hasan, Mehedi', 3.42, '+880-1552639741', 'shakil@aiub.com', '1234', 'CSSE', '579b85edf1011a34b806b5d680cd45e301503fcdb1888.jpg', 'Male', '1992-12-20', '579b85ee0f39fa34b806b5d680cd45e301503fcdb1888_s.jpg', 'd1d7d2fa0addb574593ed58892ed9c94'),
+(63, '12-00000-1', 'Faruque Farzana', 2.78, '+880-1789526341', 'farzana@yahoo.com', '1234', 'SE', '579b8a46c3895495e32a105a1bd8f9971b2b0ecc1a2e2.jpg', 'Female', '1993-01-01', '579b8a46d5d77495e32a105a1bd8f9971b2b0ecc1a2e2_s.jpg', 'fe9fc2f3125299550c8538af2bbf5630');
 
 -- --------------------------------------------------------
 
@@ -407,7 +435,7 @@ CREATE TABLE `teacher` (
   `t_pass` varchar(255) NOT NULL DEFAULT '1234' COMMENT 'teacher pass',
   `t_email` varchar(100) NOT NULL COMMENT 'teacher email',
   `t_phone` text NOT NULL COMMENT 'teacher phone',
-  `t_gender` text NOT NULL COMMENT 'teacher gender',
+  `t_gender` text COMMENT 'teacher gender',
   `t_dob` date NOT NULL COMMENT 'teacher date of birth',
   `t_image` varchar(255) NOT NULL DEFAULT 'default-user.png' COMMENT 'teacher image',
   `t_designation` varchar(255) NOT NULL DEFAULT 'Lecturer' COMMENT 'teacher designation',
@@ -432,7 +460,8 @@ INSERT INTO `teacher` (`t_id`, `t_aiub_id`, `t_name`, `t_pass`, `t_email`, `t_ph
 (10, '0905-883-2', 'Nahar Sultana', '1234', 'nahar_sultana@aiub.edu', '+880-1853789641', 'Female', '1985-08-14', '57763e66e7a8d68927ffd86e3a7ef0d69d346c20ae655.jpg', 'Assistant Professor', 'f42efacd056071647383ff6bde1bb4d9', '57763e66e938068927ffd86e3a7ef0d69d346c20ae655_s.jpg'),
 (11, '1105-1220-2', 'Dr. Tabin Hasan', '1234', 'tabin@aiub.edu', '+880-1721727528', 'Male', '1977-10-13', '57763eabb95bc1c8295db010ee1dea3c987e764354712.jpg', 'Head, Graduate Program', 'df89b54da2293c783958a0284cb10fb7', '57763eabbebbd1c8295db010ee1dea3c987e764354712_s.jpg'),
 (15, '0509-431-2', 'Md. Manirul Islam', '1234', 'manir@aiub.edu', '+880-1852639874', 'Male', '1981-11-18', '57763ecd769ef1ff3ccc659687049ed49add3ce12f01f.jpg', 'Assistant Professor', 'd9e4e6197ad61449d9154ad1081b38d7', '57763ecd799b61ff3ccc659687049ed49add3ce12f01f_s.jpg'),
-(16, '1109-1255-2', 'Asif Ur Rahman', '1234', 'asif@aiub.edu', '+880-1855999999', 'Male', '1986-06-11', '57763ef3be59fce0b996aa0b7d64169a4b8ffeaf878c5.jpg', 'Assistant Professor', '2de27dc8dec9d1b42b01eb6a48461b69', '57763ef3c23bcce0b996aa0b7d64169a4b8ffeaf878c5_s.jpg');
+(16, '1109-1255-2', 'Asif Ur Rahman', '1234', 'asif@aiub.edu', '+880-1855999999', 'Male', '1986-06-11', '57763ef3be59fce0b996aa0b7d64169a4b8ffeaf878c5.jpg', 'Assistant Professor', '2de27dc8dec9d1b42b01eb6a48461b69', '57763ef3c23bcce0b996aa0b7d64169a4b8ffeaf878c5_s.jpg'),
+(18, '0909-931-2', 'Abhijit Bhowmik', '1234', 'ovi775@gmail.com', '+880-1725698741', 'Male', '1982-01-01', '579b8594c65279aa0610aabc1a5579bf5330e8f13d271.jpg', 'Assistant Professor', 'eb9c89a07ade6b0c5d6ba3aa990ef7f9', '579b8594cc2799aa0610aabc1a5579bf5330e8f13d271_s.jpg');
 
 -- --------------------------------------------------------
 
@@ -494,7 +523,20 @@ INSERT INTO `teacher_student_course` (`t_s_c_id`, `s_id`, `t_id`, `c_id`) VALUES
 (40, 39, 1, 2),
 (41, 40, 1, 2),
 (59, 26, 2, 5),
-(54, 52, 2, 5);
+(54, 52, 2, 5),
+(61, 7, 15, 14),
+(62, 19, 15, 14),
+(63, 25, 15, 14),
+(64, 28, 15, 14),
+(65, 32, 15, 14),
+(66, 35, 15, 14),
+(67, 36, 15, 14),
+(68, 45, 15, 14),
+(69, 54, 15, 14),
+(70, 55, 15, 14),
+(71, 56, 15, 14),
+(72, 59, 15, 14),
+(73, 61, 15, 14);
 
 --
 -- Indexes for dumped tables
@@ -568,7 +610,7 @@ ALTER TABLE `teacher_student_course`
 -- AUTO_INCREMENT for table `attendinfo`
 --
 ALTER TABLE `attendinfo`
-  MODIFY `att_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'attendance id', AUTO_INCREMENT=61;
+  MODIFY `att_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'attendance id', AUTO_INCREMENT=74;
 --
 -- AUTO_INCREMENT for table `authority`
 --
@@ -583,7 +625,7 @@ ALTER TABLE `course`
 -- AUTO_INCREMENT for table `course_student_marks`
 --
 ALTER TABLE `course_student_marks`
-  MODIFY `c_s_m_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'course student marks id', AUTO_INCREMENT=61;
+  MODIFY `c_s_m_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'course student marks id', AUTO_INCREMENT=74;
 --
 -- AUTO_INCREMENT for table `department`
 --
@@ -603,17 +645,17 @@ ALTER TABLE `information`
 -- AUTO_INCREMENT for table `student`
 --
 ALTER TABLE `student`
-  MODIFY `s_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'student id', AUTO_INCREMENT=62;
+  MODIFY `s_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'student id', AUTO_INCREMENT=64;
 --
 -- AUTO_INCREMENT for table `teacher`
 --
 ALTER TABLE `teacher`
-  MODIFY `t_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'teacher id', AUTO_INCREMENT=17;
+  MODIFY `t_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'teacher id', AUTO_INCREMENT=19;
 --
 -- AUTO_INCREMENT for table `teacher_student_course`
 --
 ALTER TABLE `teacher_student_course`
-  MODIFY `t_s_c_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'id', AUTO_INCREMENT=61;
+  MODIFY `t_s_c_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'id', AUTO_INCREMENT=74;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
