@@ -1,3 +1,9 @@
+var $url = {
+    root : function() {
+        return location.protocol + '//' + location.host + '/course';
+    }
+};
+
 $(document).ready(function(){
     $(".onlyId").each(function(){
         $(this).keypress(function(e){

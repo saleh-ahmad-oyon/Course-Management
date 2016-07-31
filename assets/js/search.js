@@ -2,7 +2,7 @@ $(document).ready(function() {
     $.ajax({
         type: 'GET',
         dataType: 'json',
-        url: '../../controller/searchStud.php',
+        url: $url.root() + '/default.php?controller=student&action=searchStudent',
         cache: false,
         success: function(states){
             var states = new Bloodhound({
