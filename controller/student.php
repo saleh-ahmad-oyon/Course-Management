@@ -1,13 +1,9 @@
 <?php
 require_once 'model/Student.php';
+require_once 'controller/base.php';
 
-class Controller_Student
+class Controller_Student extends Base
 {
-    public function action_index()
-    {
-        
-    }
-    
     public function action_searchStudent()
     {
         $row = (new Model_Student)->searchStudent();
