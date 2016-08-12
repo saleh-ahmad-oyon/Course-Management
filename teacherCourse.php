@@ -33,7 +33,8 @@
                                         <a class="btn btn-primary hover-focus margin-top-10" href="<?= SERVER; ?>/course/<?= $id; ?>/students">Student List</a>&nbsp;&nbsp;
                                         <a class="btn btn-info hover-focus margin-top-10" href="<?= SERVER; ?>/course/<?= $id; ?>/addstudent"><i class="fa fa-user-plus"></i> Student</a>&nbsp;&nbsp;
                                         <a class="btn btn-primary hover-focus margin-top-10" href="<?= SERVER; ?>/course/<?= $id; ?>/result">Students Marks</a>&nbsp;&nbsp;
-                                        <a class="btn btn-info hover-focus margin-top-10" href="<?= SERVER; ?>/course/<?= $id; ?>/attendance">Students Attendance</a>
+                                        <a class="btn btn-info hover-focus margin-top-10" href="<?= SERVER; ?>/course/<?= $id; ?>/attendance">Students Attendance</a>&nbsp;&nbsp;
+                                        <a class="btn btn-primary hover-focus margin-top-10" href="<?= SERVER; ?>/course/<?= $id; ?>/notes">Notes</a>
                                     </div>
                                 </div>
                             </div>
