@@ -36,7 +36,7 @@ if (!isset($_SESSION['teacher']) && !isset($_SESSION['stud'])) {
                 <div class="row">
                     <div class="col-md-12">
                         <div class="text-center">
-                            <h3><ins><?php echo getCourseName($_GET['id']) ?></ins></h3>
+                            <h3><ins><?php $_SESSION['course'] = getCourseName($_GET['id']); echo $_SESSION['course'] ?></ins></h3>
                         </div><br />
                         <div class="col-sm-12">
                                 <!-- The file upload form used as target for the file upload widget -->
