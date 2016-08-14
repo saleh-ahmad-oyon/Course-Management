@@ -165,3 +165,37 @@
     <script src="<?= SERVER; ?>/assets/js/typeahead.bundle.min.js"></script>
     <script src="<?= SERVER; ?>/assets/js/search.js"></script>
 <?php endif; ?>
+<?php if(isset($fileupload)): ?>
+<!-- The jQuery UI widget factory, can be omitted if jQuery UI is already included -->
+<script src="<?= SERVER; ?>/assets/js/vendor/jquery.ui.widget.js"></script>
+<!-- The Templates plugin is included to render the upload/download listings -->
+<script src="//blueimp.github.io/JavaScript-Templates/js/tmpl.min.js"></script>
+<!-- The Load Image plugin is included for the preview images and image resizing functionality -->
+<script src="//blueimp.github.io/JavaScript-Load-Image/js/load-image.all.min.js"></script>
+<!-- The Canvas to Blob plugin is included for image resizing functionality -->
+<script src="//blueimp.github.io/JavaScript-Canvas-to-Blob/js/canvas-to-blob.min.js"></script>
+<!-- blueimp Gallery script -->
+<script src="//blueimp.github.io/Gallery/js/jquery.blueimp-gallery.min.js"></script>
+<!-- The Iframe Transport is required for browsers without support for XHR file uploads -->
+<script src="<?= SERVER; ?>/assets/js/jquery.iframe-transport.js"></script>
+<!-- The basic File Upload plugin -->
+<script src="<?= SERVER; ?>/assets/js/jquery.fileupload.js"></script>
+<!-- The File Upload processing plugin -->
+<script src="<?= SERVER; ?>/assets/js/jquery.fileupload-process.js"></script>
+<!-- The File Upload image preview & resize plugin -->
+<script src="<?= SERVER; ?>/assets/js/jquery.fileupload-image.js"></script>
+<!-- The File Upload audio preview plugin -->
+<script src="<?= SERVER; ?>/assets/js/jquery.fileupload-audio.js"></script>
+<!-- The File Upload video preview plugin -->
+<script src="<?= SERVER; ?>/assets/js/jquery.fileupload-video.js"></script>
+<!-- The File Upload validation plugin -->
+<script src="<?= SERVER; ?>/assets/js/jquery.fileupload-validate.js"></script>
+<!-- The File Upload user interface plugin -->
+<script src="<?= SERVER; ?>/assets/js/jquery.fileupload-ui.js"></script>
+<!-- The main application script -->
+<script src="<?= SERVER; ?>/assets/js/main.js"></script>
+<!-- The XDomainRequest Transport is included for cross-domain file deletion for IE 8 and IE 9 -->
+<!--[if (gte IE 8)&(lt IE 10)]>
+<script src="<?= SERVER; ?>/assets/js/cors/jquery.xdr-transport.js"></script>
+<![endif]-->
+<?php endif; ?>
