@@ -1,14 +1,5 @@
 <?php
-/*
- * jQuery File Upload Plugin PHP Class
- * https://github.com/blueimp/jQuery-File-Upload
- *
- * Copyright 2010, Sebastian Tschan
- * https://blueimp.net
- *
- * Licensed under the MIT license:
- * http://www.opensource.org/licenses/MIT
- */
+include_once '../model/db.php';
 
 class UploadHandler
 {
@@ -1081,6 +1072,7 @@ class UploadHandler
                     );
                 } else {
                     move_uploaded_file($uploaded_file, $file_path);
+                    courseMaterials($_SESSION['course'], $file_path, $_SESSION['teacher']);
                 }
             } else {
                 // Non-multipart uploads (PUT method support)
@@ -1374,6 +1366,7 @@ class UploadHandler
             $file_path = $this->get_upload_path($file_name);
             $success = is_file($file_path) && $file_name[0] !== '.' && unlink($file_path);
             if ($success) {
+                deleteFile($_SESSION['course'], $file_path, $_SESSION['teacher']);
                 foreach ($this->options['image_versions'] as $version => $options) {
                     if (!empty($version)) {
                         $file = $this->get_upload_path($file_name, $version);

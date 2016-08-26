@@ -1467,3 +1467,29 @@ AND `c_name` = '".mysqli_real_escape_string($conn, $course)."'";
 	$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 	return ($row['num'] == 0) ? true : false ;
 }
+
+function courseMaterials($cname, $filepath, $taiubid)
+{
+	$conn = db_conn();
+
+	$sql="INSERT INTO `file`(`coursename`, `filepath`, `t_aiub_id`) VALUES ( 
+'".mysqli_real_escape_string($conn, $cname)."',
+'".mysqli_real_escape_string($conn, $filepath)."', 
+'".mysqli_real_escape_string($conn, $taiubid)."')";
+
+	mysqli_query($conn, $sql);
+	mysqli_close($conn);
+}
+
+function deleteFile($cname, $file, $taiubid)
+{
+    $conn = db_conn();
+
+    $sql ="DELETE FROM `file` 
+WHERE `filepath` = '".mysqli_real_escape_string($conn, $file)."' 
+AND `coursename` = '".mysqli_real_escape_string($conn, $cname)."' 
+AND `t_aiub_id` = '".mysqli_real_escape_string($conn, $taiubid)."'";
+
+    mysqli_query($conn, $sql);
+    mysqli_close($conn);
+}
