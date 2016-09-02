@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 31, 2016 at 08:13 PM
+-- Generation Time: Sep 02, 2016 at 09:08 PM
 -- Server version: 10.1.13-MariaDB
 -- PHP Version: 5.6.20
 
@@ -302,6 +302,22 @@ INSERT INTO `exam` (`e_id`, `e_name`, `e_date`, `e_marks`, `s_id`, `c_id`) VALUE
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `file`
+--
+
+CREATE TABLE `file` (
+  `id` bigint(20) NOT NULL,
+  `filepath` text NOT NULL,
+  `coursename` text NOT NULL,
+  `t_aiub_id` varchar(15) NOT NULL,
+  `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `file_size` text,
+  `file_type` text
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `information`
 --
 
@@ -382,15 +398,15 @@ INSERT INTO `student` (`s_id`, `s_aiub_id`, `s_full_name`, `s_cgpa`, `s_phone`, 
 (16, '12-20229-1', 'Parag, Kutubuddin Jalal', 3.12, '+880-1676163313', 'parag@ymail.com', '1234', 'CSE', '577160c0ba316a07d50fa47e3cfcad2a166929d680b45.jpg', 'Male', '1970-01-01', '577160c0bfbe6a07d50fa47e3cfcad2a166929d680b45_s.jpg', '3f7bec062f3a93d133125f96d0664103'),
 (60, '12-21206-1', 'Rahit, Tahsin Hasan', 3.89, '+880-1918393864', 'tahsin.rahit@gmail.com', '1234', 'CSE', '57925bac3db0fc213cc15cf6db58aa1bea005db652506.jpg', 'Male', '1992-02-04', '57925bac4b70ac213cc15cf6db58aa1bea005db652506_s.jpg', '64ab6c900a4f821714c6a0784ccc1c35'),
 (18, '12-20245-1', 'Banna, Sazid Hossain', 3.21, '+880-1715342366', 'cryingbanna@live.com', '1234', 'CSE', '5792584dc2796f79cf696bf8d18631c0c22ac40fc9db0.jpg', 'Male', '1992-08-30', '5792584dd5966f79cf696bf8d18631c0c22ac40fc9db0_s.jpg', '1e83334c10952e7d6935e74aab159b03'),
-(19, '12-20497-1', 'Roy, Nirbachita', 3.8, '+880-1730078219', 'nirba@live.com', '1234', 'CSE', '5793b4b635e4eb556341576fb69fa4581e5079d5ecefb.jpg', 'Female', '1992-05-26', '5793b4b648593b556341576fb69fa4581e5079d5ecefb_s.jpg', 'a0bdba87392f07343ea834635814c0c6'),
+(19, '12-20497-1', 'Roy, Nirbachita', 3.8, '+880-1730078219', 'nirba@live.com', '1234', 'CSE', '579f775d9ea82e7efbb8fd5987b779e242498c2a576cb.jpg', 'Female', '1992-05-26', '579f775da704ce7efbb8fd5987b779e242498c2a576cb_s.jpg', '3a0f933232812358018cad077fd5ade2'),
 (20, '12-20261-1', 'Hassan, Mahir Faisal', 2.95, '+880-1670281289', 'mahir@gmail.com', '1234', 'CSE', '577559db2df47307b9b5e9a0ecd6437ddd389eb1c7396.jpg', 'Male', '1992-04-07', '577559db3584b307b9b5e9a0ecd6437ddd389eb1c7396_s.jpg', 'd786865d543da14870e95f7c5277aee9'),
 (21, '12-20332-1', 'Sajid Mohammad', 3.25, '01732761556', 'sajid@rocketmail.com', '1234', 'CSE', 'default-user.png', 'Male', '0000-00-00', 'default-user.png', NULL),
 (22, '12-20335-1', 'Lasker, Md. Naim', 3.46, '+880-1680641959', 'lasker@yahoo.com', '1234', 'CSE', '579a4206601ba918391e674d90a3975b02f6f7112a966.jpg', 'Male', '1970-01-01', '579a42067319a918391e674d90a3975b02f6f7112a966_s.jpg', '33b1fec5561bc76d5a16d7530fe2369f'),
 (23, '12-20337-1', 'Khan, A.K.M Shakuruzzaman', 3.51, '+880-1676608440', 'ashik@rocketmail.com', '1234', 'CSE', '57755d21bb97e665f216444d0235a567667bad2c09e11.jpg', 'Male', '1970-01-01', '57755d21bef18665f216444d0235a567667bad2c09e11_s.jpg', '381115f455587a956ce9139dd70208ab'),
-(25, '12-20342-1', 'Tazrin, Fahmida', 3.32, '+880-1745269873', 'tazrin@ymail.com', '1234', 'CSE', '5798dd2a6de2cd87238f1c31f68081cb714462b7d3d63.jpg', 'Female', '1970-01-01', '5798dd2a84ba5d87238f1c31f68081cb714462b7d3d63_s.jpg', '6f8873f215c05cf05747114e2b1794b0'),
-(26, '12-20114-1', 'Antu, Golam Rabbi', 3.62, '+880-1671953765', 'amit@ymail.com', '1234', 'CSE', '5793b49f8bb600cb1eb413b8f7cee17701a37a1d74dc3.jpg', 'Male', '1990-01-25', '5793b49f934ea0cb1eb413b8f7cee17701a37a1d74dc3_s.jpg', '93422fcba52102398e3b025bd6dbe42c'),
+(25, '12-20342-1', 'Tazrin, Fahmida', 3.32, '+880-1745269873', 'tazrin@ymail.com', '1234', 'CSE', '57a4ac6c968bddff7755e04cf09af620d7843966700cc.jpg', 'Female', '1970-01-01', '57a4ac6ca5492dff7755e04cf09af620d7843966700cc_s.jpg', 'bc39f472b2f9462dceae58e9053dbcf6'),
+(26, '12-20114-1', 'Antu, Golam Rabbi', 3.62, '+880-1671953765', 'amit@ymail.com', '1234', 'CSE', '579f77435b9550cb1eb413b8f7cee17701a37a1d74dc3.jpg', 'Male', '1990-01-25', '579f774373a7a0cb1eb413b8f7cee17701a37a1d74dc3_s.jpg', '0fc90e8e80a426ec14a37bf087d57cf7'),
 (27, '12-20343-1', 'Sonchay, Khalid Hassan', 3.25, '+880-1677873564', 'sonchay@gmail.com', '1234', 'SE', '5775602cd297fcdaca809dea127b2b0bc47885cd873a8.jpg', 'Male', '1992-01-23', '5775602cd55cecdaca809dea127b2b0bc47885cd873a8_s.jpg', '4d8bdba950b96a8722c6779c9b9b4ba3'),
-(28, '12-20368-1', 'Toma, Tahmida Hedayet', 3.74, '+880-1746715666', 'toma@rocketmail.com', '1234', 'CSE', '579241a9d50ef07c496dfeb287bd74f5492265b641f4a.jpg', 'Female', '1970-01-01', '579241a9dc63b07c496dfeb287bd74f5492265b641f4a_s.jpg', 'abfc6543d30effe4c12eaa5fa0afd151'),
+(28, '12-20368-1', 'Toma, Tahmida Hedayet', 3.74, '+880-1746715666', 'toma@rocketmail.com', '1234', 'CSE', '57a3fcc79de3b07c496dfeb287bd74f5492265b641f4a.jpg', 'Female', '1970-01-01', '57a3fcc7b203c07c496dfeb287bd74f5492265b641f4a_s.jpg', '7c0f2c2ffd0f73ef09bb5291e7c9fa63'),
 (31, '12-20381-1', 'Haque, Imran Atiqul', 3.13, '+880-1682635939', 'imran@outlook.com', '1234', 'CSE', '57756192d986ce18fdc9fa7cc2b5f4e497d21a48ea3b7.jpg', 'Male', '1992-09-10', '57756192e8ba9e18fdc9fa7cc2b5f4e497d21a48ea3b7_s.jpg', 'c37a966a2bc77bb33603ba6ff45673fe'),
 (32, '12-20478-1', 'Uddin Jumana Jashim', 3.23, '+880-1621534769', 'jumana@ymail.com', '1234', 'CSE', '577561e03f291af0d77249097a4290431f0f53b404fd1.JPG', 'Female', '1992-12-19', '577561e0466efaf0d77249097a4290431f0f53b404fd1_s.JPG', '63e87daea31cd3787b0386a880cfc999'),
 (33, '12-21119-1', 'Alam, Maskurul', 3.26, '01743912055', 'alam@hotmail.com', '1234', 'CSSE', 'default-user.png', 'Male', '0000-00-00', 'default-user.png', NULL),
@@ -399,7 +415,7 @@ INSERT INTO `student` (`s_id`, `s_aiub_id`, `s_full_name`, `s_cgpa`, `s_phone`, 
 (37, '12-21094-1', 'Abrar,Faheem', 3.98, '+880-1515253396', 'faheem@gmail.com', '1234', 'CSE', '5797773e2a9ef6fda7c0b9ba6148a2191ed93d1da83eb.jpg', 'Male', '1992-08-05', '5797773e37b746fda7c0b9ba6148a2191ed93d1da83eb_s.jpg', '2bcb9c45ef58485d2cdaa7b869c7a0e1'),
 (38, '12-21023-1', 'Abedin Md. Tahmidul', 3.78, '+880-1552380913', 'anik@ymail.com', '1234', 'CSE', '5775683f05e6ef2bb10a6e6d5f76cb2d660333079e612.jpg', 'Male', '1991-01-07', '5775683f0da77f2bb10a6e6d5f76cb2d660333079e612_s.jpg', '17a1a073ea3fca7a14711f38bb956053'),
 (39, '12-20142-1', 'Abedin, Md. Rashedul', 3.01, '+880-1673016974', 'rashedul@yahoo.com', '1234', 'CSE', '57924cbdb5db5b60c306f62fbc07820dd607b17968aa2.jpg', 'Male', '1992-11-23', '57924cbdc5e3fb60c306f62fbc07820dd607b17968aa2_s.jpg', '768769e1006f3d6c6347689831026bf9'),
-(40, '12-20636-1', 'Faize, Md. Sadik', 3.27, '+880-1741341060', 'sadik@gmail.com', '1234', 'CSE', '5797771191680829e4a4a102526021855e3744bd8a86f.jpg', 'Male', '1992-02-06', '57977711a516a829e4a4a102526021855e3744bd8a86f_s.jpg', 'a58b8fecc7246d17c254627ad2878ba2'),
+(40, '12-20636-1', 'Faize, Md. Sadik', 3.27, '+880-1741341060', 'sadik@gmail.com', '1234', 'CSE', '57a4ecf076231829e4a4a102526021855e3744bd8a86f.jpg', 'Male', '1992-02-06', '57a4ecf09b696829e4a4a102526021855e3744bd8a86f_s.jpg', '69e57318fa58a984a4b9bd5bf13a0c6b'),
 (41, '12-20781-1', 'Uddin, Md. Sadman Sakib', 3.68, '+880-1785439727', 'sadmansakib@demo.com', '1234', 'CSE', '5793b5d91b7e1ade6b779f11c95490a4a394532f351f6.jpg', 'Male', '1992-09-15', '5793b5d922303ade6b779f11c95490a4a394532f351f6_s.jpg', '752e99663c0e09989dcb0249259fd829'),
 (42, '12-20566-1', 'Mansur, Ryan', 3.59, '+880-1558354442', 'ryan@ymail.com', '1234', 'CSSE', 'default-user.png', 'Male', '0000-00-00', 'default-user.png', NULL),
 (43, '12-21122-1', 'Selim, Rayan', 3.42, '+880-1925479615', 'rselim@demo.com', '1234', 'CSSE', '57756e71daf5aa12e1320abb3ef856c1b3adaa9b42afa.jpg', 'Male', '1992-02-26', '57756e71de0e1a12e1320abb3ef856c1b3adaa9b42afa_s.jpg', '827ec053c0a086c53d0c68aa9c293733'),
@@ -579,6 +595,12 @@ ALTER TABLE `exam`
   ADD PRIMARY KEY (`e_id`);
 
 --
+-- Indexes for table `file`
+--
+ALTER TABLE `file`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `information`
 --
 ALTER TABLE `information`
@@ -636,6 +658,11 @@ ALTER TABLE `department`
 --
 ALTER TABLE `exam`
   MODIFY `e_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'exam id', AUTO_INCREMENT=17;
+--
+-- AUTO_INCREMENT for table `file`
+--
+ALTER TABLE `file`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 --
 -- AUTO_INCREMENT for table `information`
 --
