@@ -1,5 +1,4 @@
 <?php
-
 $filepath = $_GET['file'];
 
 // block any attempt to the filesystem
@@ -35,14 +34,14 @@ if (!$filename) {
 
         // multipart-download and download resuming support
         if(isset($_SERVER['HTTP_RANGE'])) {
-            list($a, $range) = explode("=",$_SERVER['HTTP_RANGE'],2);
-            list($range) = explode(",",$range,2);
+            list($a, $range)         = explode("=",$_SERVER['HTTP_RANGE'],2);
+            list($range)             = explode(",",$range,2);
             list($range, $range_end) = explode("-", $range);
             $range=intval($range);
             if(!$range_end) {
-                $range_end=$size-1;
+                $range_end = $size-1;
             } else {
-                $range_end=intval($range_end);
+                $range_end = intval($range_end);
             }
 
             $new_length = $range_end-$range+1;
@@ -50,7 +49,7 @@ if (!$filename) {
             header("Content-Length: $new_length");
             header("Content-Range: bytes $range-$range_end/$size");
         } else {
-            $new_length=$size;
+            $new_length = $size;
             header("Content-Length: ".$size);
         }
 
