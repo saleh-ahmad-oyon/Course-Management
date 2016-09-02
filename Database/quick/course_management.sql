@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 02, 2016 at 09:08 PM
+-- Generation Time: Sep 02, 2016 at 11:09 PM
 -- Server version: 10.1.13-MariaDB
 -- PHP Version: 5.6.20
 
@@ -436,7 +436,8 @@ INSERT INTO `student` (`s_id`, `s_aiub_id`, `s_full_name`, `s_cgpa`, `s_phone`, 
 (59, '12-20203-1', 'Rahman, Faria', 3.32, '+880-1577999999', 'faria@demo.com', '1234', 'CSSE', '579ad8ee31306da7ad486c8381d290e558fe285c95d21.jpg', 'Female', '1993-05-05', '579ad8ee3e93fda7ad486c8381d290e558fe285c95d21_s.jpg', '31a46bd2f0af6be33235674a43b92f07'),
 (61, '11-19711-3', 'Das, Prianka', 3.35, '+880-1625959674', 'pria@aiub.com', '1234', 'CSE', '5792168a92e88bcd9d47c0e8413b2cdc186247e7d8957.jpg', 'Female', '1992-02-14', '5792168aa5ca8bcd9d47c0e8413b2cdc186247e7d8957_s.jpg', '8a273f05825cb29cc6c4952fff31a4ad'),
 (62, '12-21131-1', 'Hasan, Mehedi', 3.42, '+880-1552639741', 'shakil@aiub.com', '1234', 'CSSE', '579b85edf1011a34b806b5d680cd45e301503fcdb1888.jpg', 'Male', '1992-12-20', '579b85ee0f39fa34b806b5d680cd45e301503fcdb1888_s.jpg', 'd1d7d2fa0addb574593ed58892ed9c94'),
-(63, '12-00000-1', 'Faruque Farzana', 2.78, '+880-1789526341', 'farzana@yahoo.com', '1234', 'SE', '579b8a46c3895495e32a105a1bd8f9971b2b0ecc1a2e2.jpg', 'Female', '1993-01-01', '579b8a46d5d77495e32a105a1bd8f9971b2b0ecc1a2e2_s.jpg', 'fe9fc2f3125299550c8538af2bbf5630');
+(63, '12-00000-1', 'Faruque Farzana', 2.78, '+880-1789526341', 'farzana@yahoo.com', '1234', 'SE', '579b8a46c3895495e32a105a1bd8f9971b2b0ecc1a2e2.jpg', 'Female', '1993-01-01', '579b8a46d5d77495e32a105a1bd8f9971b2b0ecc1a2e2_s.jpg', 'fe9fc2f3125299550c8538af2bbf5630'),
+(64, '12-21461-2', 'Rashid, Rezwana', 3.83, '+880-01725000111', 'rezwana@janina.com', '1234', 'CSE', '57c9e95c8d76cbc69c09f24254311194dd59db27b0761.jpg', 'Female', '1993-03-23', '57c9e95cb09b5bc69c09f24254311194dd59db27b0761_s.jpg', 'd4ea494d39e55fe21c7e169eca84e46a');
 
 -- --------------------------------------------------------
 
@@ -672,7 +673,7 @@ ALTER TABLE `information`
 -- AUTO_INCREMENT for table `student`
 --
 ALTER TABLE `student`
-  MODIFY `s_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'student id', AUTO_INCREMENT=64;
+  MODIFY `s_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'student id', AUTO_INCREMENT=65;
 --
 -- AUTO_INCREMENT for table `teacher`
 --
