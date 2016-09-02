@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 02, 2016 at 11:10 PM
+-- Generation Time: Sep 03, 2016 at 12:07 AM
 -- Server version: 10.1.13-MariaDB
 -- PHP Version: 5.6.20
 
@@ -353,7 +353,9 @@ INSERT INTO `information` (`inf_id`, `info_privilege`, `info_list`) VALUES
 (17, 3, 'View his/her marks of each quiz (including the makeups), the sum of best two quiz, the term exam and the total attendance.'),
 (18, 3, 'Edit his/her information except AIUB ID, marks and CGPA (if there is any).'),
 (19, 3, 'Change his/her password.'),
-(20, 1, 'Can assign teachers in courses.');
+(20, 1, 'Can assign teachers in courses.'),
+(21, 2, 'Add necessary notes on his course for the students'),
+(22, 3, 'Can download the necessary notes uploaded by the course teacher');
 
 -- --------------------------------------------------------
 
@@ -670,7 +672,7 @@ ALTER TABLE `file`
 -- AUTO_INCREMENT for table `information`
 --
 ALTER TABLE `information`
-  MODIFY `inf_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'info id', AUTO_INCREMENT=21;
+  MODIFY `inf_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'info id', AUTO_INCREMENT=23;
 --
 -- AUTO_INCREMENT for table `student`
 --
