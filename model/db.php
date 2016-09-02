@@ -1468,14 +1468,16 @@ AND `c_name` = '".mysqli_real_escape_string($conn, $course)."'";
 	return ($row['num'] == 0) ? true : false ;
 }
 
-function courseMaterials($cname, $filepath, $taiubid)
+function courseMaterials($cname, $filepath, $taiubid, $size, $type)
 {
 	$conn = db_conn();
 
-	$sql="INSERT INTO `file`(`coursename`, `filepath`, `t_aiub_id`) VALUES ( 
+	$sql="INSERT INTO `file`(`coursename`, `filepath`, `t_aiub_id`, `file_size`, `file_type`) VALUES ( 
 '".mysqli_real_escape_string($conn, $cname)."',
 '".mysqli_real_escape_string($conn, $filepath)."', 
-'".mysqli_real_escape_string($conn, $taiubid)."')";
+'".mysqli_real_escape_string($conn, $taiubid)."',
+'".mysqli_real_escape_string($conn, $size)."',
+'".mysqli_real_escape_string($conn, $type)."')";
 
 	mysqli_query($conn, $sql);
 	mysqli_close($conn);
@@ -1492,4 +1494,18 @@ AND `t_aiub_id` = '".mysqli_real_escape_string($conn, $taiubid)."'";
 
     mysqli_query($conn, $sql);
     mysqli_close($conn);
+}
+
+function getNotes($course)
+{
+    $conn = db_conn();
+
+    $sql = "SELECT file.filepath FROM `file` INNER JOIN course ON file.coursename = course.c_name where course.c_id = $course ORDER BY file.date DESC";
+
+    $result = mysqli_query($conn, $sql);
+    $row = array();
+    for($i=0; $i < mysqli_num_rows($result); $i++){
+        $row[] = mysqli_fetch_array($result, MYSQLI_ASSOC);
+    }
+    return $row;
 }

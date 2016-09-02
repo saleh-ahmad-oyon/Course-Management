@@ -1072,7 +1072,7 @@ class UploadHandler
                     );
                 } else {
                     move_uploaded_file($uploaded_file, $file_path);
-                    courseMaterials($_SESSION['course'], $file_path, $_SESSION['teacher']);
+                    courseMaterials($_SESSION['course'], $file_path, $_SESSION['teacher'], $_FILES['files']['size'][0], $_FILES['files']['type'][0]);
                 }
             } else {
                 // Non-multipart uploads (PUT method support)

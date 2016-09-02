@@ -32,7 +32,8 @@
                                 <div class="col-md-3"></div>
                                 <div class="col-md-6">
                                     <div class="text-center">
-                                        <h3><ins><?= getCourseName($_GET['id']) ?></ins></h3><br />
+                                        <h3><ins><?= getCourseName($_GET['id']) ?></ins></h3><br/>
+                                        <a href="<?= SERVER ?>/course/<?= $cid ?>/allnotes" class="btn btn-primary">All Notes</a>
                                         <h5>Total Attendence: <?= $totalAttendence; ?> day[s]</h5>
                                     </div>
                                     <br/><br/>
