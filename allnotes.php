@@ -31,7 +31,7 @@ $notes = getNotes($_GET['id1']);
                         <?php else:
                          foreach($notes as $key => $n):
                              $file = explode('/', $n['filepath'])?>
-                            <?= $key+1 ?>. <a href="<?= $n['filepath'] ?>"><?= end($file); ?></a><br/><br/>
+                            <?= $key+1 ?>. <a href="<?= SERVER ?>/controller/download.php?file=<?= $n['filepath'] ?>"><?= end($file); ?></a><br/><br/>
                         <?php endforeach; endif;?>
                     </section>
                 </div>
