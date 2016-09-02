@@ -26,13 +26,18 @@ $notes = getNotes($_GET['id1']);
                 <hr/>
                 <div class="container">
                     <section>
-                        <?php if(!count($notes)): ?>
-                            <h3>No Data Found</h3>
-                        <?php else:
-                         foreach($notes as $key => $n):
-                             $file = explode('/', $n['filepath'])?>
-                            <?= $key+1 ?>. <a href="<?= SERVER ?>/controller/download.php?file=<?= $n['filepath'] ?>"><?= end($file); ?></a><br/><br/>
-                        <?php endforeach; endif;?>
+                        <div class="col-md-12">
+                            <div class="text-center">
+                                <h3><ins><?= getCourseName($_GET['id1']) ?></ins></h3>
+                            </div>
+                            <?php if(!count($notes)): ?>
+                                <h3>No Data Found</h3>
+                            <?php else:
+                                foreach($notes as $key => $n):
+                                    $file = explode('/', $n['filepath'])?>
+                                    <?= $key+1 ?>. <a href="<?= SERVER ?>/controller/download.php?file=<?= $n['filepath'] ?>"><?= end($file); ?></a><br/><br/>
+                                <?php endforeach; endif;?>
+                        </div>
                     </section>
                 </div>
             </main>
