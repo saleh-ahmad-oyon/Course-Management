@@ -11,6 +11,12 @@ session_start();
 require '../model/db.php';
 require 'define.php';
 
+if($_SERVER["REQUEST_METHOD"] != "POST") {
+    /** @Link 404 Page */
+    header('Location: '.SERVER.'/404');
+    return;
+}
+
 if (!isset($_POST['addStud'])) {
     /** @Link 404 Page */
     header('Location: '.SERVER.'/404');

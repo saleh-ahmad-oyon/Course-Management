@@ -6,7 +6,9 @@
  */
 
 /** Session Started */
-session_start();
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
 
 /** Required Files */
 require 'model/db.php';
