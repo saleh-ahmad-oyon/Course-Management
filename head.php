@@ -25,9 +25,9 @@ aiub mini portal,project done by aiubian,php with bootstrap" />
 <meta name="twitter:card"          content="Course_Management" />
 <meta name="twitter:description"   content="It is a demo php project that can be used to manage a course according to AIUB(American International University-Bangladesh) regulation. It was done by a student of AIUB." />
 <meta name="twitter:title"         content="Course Management for AIUB" />
-<meta name="twitter:site"          content="@obinformatics" />
+<meta name="twitter:site"          content="@l0onely" />
 <meta name="twitter:image"         content="<?= SERVER; ?>/assets/img/aiub.png" />
-<meta name="twitter:creator"       content="@obinformatics" />
+<meta name="twitter:creator"       content="@l0onely" />
 
 <link rel="icon"       href="<?= SERVER; ?>/assets/img/aiub.png" />
 <link rel="publisher"  href="https://www.linkedin.com/in/saleh-ahmad-917b0532" />
