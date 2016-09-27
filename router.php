@@ -5,6 +5,8 @@ class Router
 {
     private $controller;
     private $action;
+    private $param1 = false;
+    private $param2 = false;
 
     public function route()
     {
@@ -26,6 +28,13 @@ class Router
         $this->controller = new $class();
         $this->action = isset($_GET['action']) ? 'action_'.$_GET['action'] : 'action_index';
 
+        if (isset($_GET['param1'])) {
+            $this->param1 = $_GET['param1'];
+        }
+        if (isset($_GET['param2'])) {
+            $this->param2 = $_GET['param2'];
+        }
+
         return $this;
     }
 
@@ -33,7 +42,15 @@ class Router
     {
         if ($this->controller) {
             $action = $this->action;
-            $this->controller->$action();
+            
+            if (!$this->param1) {
+                $this->controller->$action();
+            } elseif(isset($this->param1) && !$this->param2) {
+                $this->controller->$action($this->param1);
+            } else {
+                $this->controller->$action($this->param1, $this->param2);
+            }
+            
         }
     }
 }

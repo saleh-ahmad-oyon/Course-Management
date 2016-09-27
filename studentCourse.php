@@ -5,7 +5,7 @@
 	}
 	$cid             = $_GET['id'];
 	$studid          = $_SESSION['sid'];
-	$totalAttendence = returnTotalAttendence($cid, $studid);
+    $totalAttendance = file_get_contents(SERVER.'/default.php?controller=student&action=totalAttendance&param1='.$cid.'&param2='.$studid);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -34,7 +34,7 @@
                                     <div class="text-center">
                                         <h3><ins><?= getCourseName($_GET['id']) ?></ins></h3><br/>
                                         <a href="<?= SERVER ?>/course/<?= $cid ?>/allnotes" class="btn btn-primary">All Notes</a>
-                                        <h5>Total Attendence: <?= $totalAttendence; ?> day[s]</h5>
+                                        <h5>Total Attendence: <?= $totalAttendance; ?> day[s]</h5>
                                     </div>
                                     <br/><br/>
                                     <table class="table table-bordered">

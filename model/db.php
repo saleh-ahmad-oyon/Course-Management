@@ -492,20 +492,6 @@ AND `c_id` = ".mysqli_real_escape_string($conn, $cid);
 	mysqli_close($conn);
 }
 
-function returnTotalAttendence($cid, $studid)
-{
-	$conn = db_conn();
-
-	$sql = "SELECT `att_total` FROM `attendinfo` 
-WHERE `c_id` = ".mysqli_real_escape_string($conn, $cid)." 
-AND `s_id` = ".mysqli_real_escape_string($conn, $studid);
-
-	$result = mysqli_query($conn, $sql);
-	$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
-	$totalAttendence = $row['att_total'];
-	return $totalAttendence;
-}
-
 function getStudentListExam($cid)
 {
 	$conn = db_conn();

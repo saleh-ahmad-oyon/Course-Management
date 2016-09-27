@@ -13,4 +13,11 @@ class Controller_Student extends Base
         }
         echo json_encode($id);
     }
+    
+    public function action_totalAttendance($cid, $sid)
+    {
+        $attendance = (new Model_Student)
+            ->totalAttendance($cid, $sid);
+        echo $attendance;
+    }
 }
