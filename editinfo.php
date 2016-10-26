@@ -191,7 +191,8 @@
                     changeMonth: true,
                     changeYear: true,
                     dateFormat: "d M, yy",
-                    maxDate: "+0D"
+                    maxDate: "+0D",
+                    yearRange: "-100:+0" // last hundred years
                 });
                 $( "#speed" )
                     .selectmenu()

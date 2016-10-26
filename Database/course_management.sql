@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 02, 2016 at 08:52 PM
+-- Generation Time: Oct 26, 2016 at 09:30 PM
 -- Server version: 10.1.13-MariaDB
 -- PHP Version: 5.6.20
 
@@ -387,18 +387,18 @@ INSERT INTO `student` (`s_id`, `s_aiub_id`, `s_full_name`, `s_cgpa`, `s_phone`, 
 (1, '12-20167-1', 'Rahman Sadikur', 3.5, '+880-1680091207', 'shawon@gmail.com', '1234', 'CSE', '579a4220454d89e8abbbf56ce2413c98504c25ab8bd90.jpg', 'Male', '1992-03-09', '579a422056e849e8abbbf56ce2413c98504c25ab8bd90_s.jpg', '03ecd52da2acd0eb0324503697d64705'),
 (2, '12-20107-1', 'Rafi, M.H', 3.62, '+880-1677649964', 'rafi@yahoo.com', '1234', 'CSE', '57eaae99beb7d139c4e89cdbedaf144d05ca54a12a57b.jpg', 'Male', '1970-01-01', '57eaae99c8157139c4e89cdbedaf144d05ca54a12a57b_s.jpg', '39db043a1aa8b4c27dfacf06bdc4247a'),
 (3, '12-20235-1', 'Ahmad, Saleh', 3.85, '+880-1626785569', 'salehoyon@hotmail.com', 'qQ1!', 'CSE', '5792566e7f759836c6d8e155de751a497359d07af41d8.jpg', 'Male', '1991-08-13', '5792566e912e2836c6d8e155de751a497359d07af41d8_s.jpg', 'ba72a8685a27103d435ceb224c6051c6'),
-(4, '12-20115-1', 'Roy, Pallob Kanti', 3.25, '+880-1912165908', 'pallab@ymail.com', '1234', 'CSSE', '57eab17a4dadcdffec98d214e6a9ccb86bff01c7387a3.jpg', 'Male', '1970-01-01', '57eab17a60ad9dffec98d214e6a9ccb86bff01c7387a3_s.jpg', 'e1cb6d6ac10771c924d4d7c3efa3807d'),
+(4, '12-20158-1', 'Roy, Pallob Kanti', 3.25, '+880-1912165908', 'pallab@ymail.com', '1234', 'CSSE', '57eab17a4dadcdffec98d214e6a9ccb86bff01c7387a3.jpg', 'Male', '1970-01-01', '57eab17a60ad9dffec98d214e6a9ccb86bff01c7387a3_s.jpg', 'e1cb6d6ac10771c924d4d7c3efa3807d'),
 (5, '12-20120-1', 'Ayon, Arif Ahmed', 3.56, '+880-1677377003', 'ayon@rocketmail.com', '1234', 'CSSE', '57d7d4d1764a30ff6c3ace16359e41e37d40b8301d67f.jpg', 'Male', '1992-09-04', '57d7d4d1862210ff6c3ace16359e41e37d40b8301d67f_s.jpg', 'd869f402148495509b21ffdfb8942416'),
 (6, '12-20124-1', 'Alam, Nesar Ul', 3.41, '+880-1676756794', 'nesarul@gmail.com', '1234', 'CSSE', '579210fde9598ed967dc0d46a43c8a629b3d7a7900f97.jpg', 'Male', '1992-10-09', '579210fdf3c2ded967dc0d46a43c8a629b3d7a7900f97_s.jpg', '5ee71722a78d62888b9ad0129cfeb5f1'),
 (7, '12-20130-1', 'Faria, Tabassum Mehnaz', 3.63, '+880-1686780827', 'faria@live.com', '1234', 'CSE', '57d7d06202dccd73f24d5090d7e2a4b2944c2b35dd2ec.jpg', 'Female', '1992-04-30', '57d7d06230cabd73f24d5090d7e2a4b2944c2b35dd2ec_s.jpg', '71b23f1e562f9d0111d7e08e869f8eda'),
 (8, '12-20137-1', 'Mahmood, Asif', 3.11, '+880-1682702757', 'asif@hotmail.com', '1234', 'CSE', '57924fa34f7b5ce0b996aa0b7d64169a4b8ffeaf878c5.jpg', 'Male', '1970-01-01', '57924fa35ed7fce0b996aa0b7d64169a4b8ffeaf878c5_s.jpg', '7eb67a4f752c207cd943ae2e3c9d335b'),
 (9, '12-21032-1', 'Mimo, Minhaj Mohammad', 3.25, '+880-1711086599', 'mimo@outlook.com', '1234', 'CSSE', '57715ac439bd6f14cb5cf13c016653d8b6ab54def62bb.jpg', 'Male', '1992-06-09', '57715ac44114bf14cb5cf13c016653d8b6ab54def62bb_s.jpg', '305b9fe1398cade11efb2bb709bb8d06'),
-(10, '12-20138-1', 'Bhuiyan, Md, Maksudul Haque', 3.53, '+880-1671038362', 'turja@hotmail.com', '1234', 'CSSE', '5792604d1fa57aea513a578e865592f8526c31dc4c8f2.jpg', 'Male', '1970-09-28', '5792604d269b1aea513a578e865592f8526c31dc4c8f2_s.jpg', '37010faf280fc0b043902afe787ce4b9'),
+(10, '12-20138-1', 'Bhuiyan, Md, Maksudul Haque', 3.53, '+880-1671038362', 'turja@hotmail.com', '1234', 'CSSE', '5811002852202b4535743b789b239e54c10e9ecf6d608.jpg', 'Male', '1970-09-28', '5811002858c3bb4535743b789b239e54c10e9ecf6d608_s.jpg', '857b4b94db24acd007cd9f662d3dc3d0'),
 (11, '12-20146-1', 'Amin, Mohammad Shafayet Bin', 3.47, '+880-1824954504', 'safayet@yahoo.com', '1234', 'CSSE', '57715ba829a9f01be8a917c000d33096c806452d3dd5c.jpg', 'Male', '1970-01-01', '57715ba834adf01be8a917c000d33096c806452d3dd5c_s.jpg', 'f681b1118a3376f6d9e686f52ae7fc46'),
 (12, '12-20151-1', 'Junayed, A.S.M', 3.05, '+880-1671821613', 'junayed@live.com', '1234', 'CSE', '57715e8c61945ccffef9a609ab819e954c7e635737575.jpg', 'Male', '1970-01-01', '57715e8c66f9fccffef9a609ab819e954c7e635737575_s.jpg', '53311779f74a0490c96add8524009754'),
 (13, '12-20158-1', 'Ahmed, Md. Isteak', 3.49, '+880-1675179712', 'isti@hotmail.com', '1234', 'CSE', '57715f3820635dd1d360bdd4eb57e39b525694b2002fc.jpg', 'Male', '1992-02-16', '57715f382c3aedd1d360bdd4eb57e39b525694b2002fc_s.jpg', 'e4a533af3baceee153809d40b12ae012'),
 (14, '12-20111-1', 'Ahmed Rejwan', 3.6, '+880-1831174312', 'rejwan@hotmail.com', '1234', 'CSSE', '57715f9adf4219cb4f7236550186017690a1cf0441af9.jpg', 'Male', '1992-10-09', '57715f9ae5d279cb4f7236550186017690a1cf0441af9_s.jpg', '25f4c80ae52d636414a7fc657c88a8af'),
-(15, '12-20172-1', 'Islam, Ayon Dipto', 3.32, '+880-1675641830', 'auyon@yahoo.com', '1234', 'CSE', '57716017d7700bb33fbefa810181900fd65c7c728c7c4.jpg', 'Male', '1992-10-29', '57716017e6eadbb33fbefa810181900fd65c7c728c7c4_s.jpg', 'c9c12176e443ccab74565efe71237572'),
+(15, '12-20172-1', 'Islam, Auyon Dipto', 3.32, '+880-1675641830', 'auyon@yahoo.com', '1234', 'CSE', '57716017d7700bb33fbefa810181900fd65c7c728c7c4.jpg', 'Male', '1992-10-29', '57716017e6eadbb33fbefa810181900fd65c7c728c7c4_s.jpg', 'c9c12176e443ccab74565efe71237572'),
 (16, '12-20229-1', 'Parag, Kutubuddin Jalal', 3.12, '+880-1676163313', 'parag@ymail.com', '1234', 'CSE', '57d7d661e889fa146cba6eab3d923abeff8b184922a6c.jpg', 'Male', '1970-01-01', '57d7d662043bfa146cba6eab3d923abeff8b184922a6c_s.jpg', 'fa3232af6dfcd7e189d3faf26e067289'),
 (60, '12-21206-1', 'Rahit, Tahsin Hasan', 3.89, '+880-1918393864', 'tahsin.rahit@gmail.com', '1234', 'CSE', '57925bac3db0fc213cc15cf6db58aa1bea005db652506.jpg', 'Male', '1992-02-04', '57925bac4b70ac213cc15cf6db58aa1bea005db652506_s.jpg', '64ab6c900a4f821714c6a0784ccc1c35'),
 (18, '12-20245-1', 'Banna, Sazid Hossain', 3.21, '+880-1715342366', 'cryingbanna@live.com', '1234', 'CSE', '57d7d28124444f79cf696bf8d18631c0c22ac40fc9db0.jpg', 'Male', '1992-08-30', '57d7d28135909f79cf696bf8d18631c0c22ac40fc9db0_s.jpg', '01a37e2e2af4d64db1163066a3240492'),
@@ -411,7 +411,7 @@ INSERT INTO `student` (`s_id`, `s_aiub_id`, `s_full_name`, `s_cgpa`, `s_phone`, 
 (26, '12-20114-1', 'Antu, Golam Rabbi', 3.62, '+880-1671953765', 'amit@ymail.com', '1234', 'CSE', '579f77435b9550cb1eb413b8f7cee17701a37a1d74dc3.jpg', 'Male', '1990-01-25', '579f774373a7a0cb1eb413b8f7cee17701a37a1d74dc3_s.jpg', '0fc90e8e80a426ec14a37bf087d57cf7'),
 (27, '12-20343-1', 'Sonchay, Khalid Hassan', 3.25, '+880-1677873564', 'sonchay@gmail.com', '1234', 'SE', '5775602cd297fcdaca809dea127b2b0bc47885cd873a8.jpg', 'Male', '1992-01-23', '5775602cd55cecdaca809dea127b2b0bc47885cd873a8_s.jpg', '4d8bdba950b96a8722c6779c9b9b4ba3'),
 (28, '12-20368-1', 'Toma, Tahmida Hedayet', 3.74, '+880-1746715666', 'toma@rocketmail.com', '1234', 'CSE', '57a3fcc79de3b07c496dfeb287bd74f5492265b641f4a.jpg', 'Female', '1970-01-01', '57a3fcc7b203c07c496dfeb287bd74f5492265b641f4a_s.jpg', '7c0f2c2ffd0f73ef09bb5291e7c9fa63'),
-(31, '12-20381-1', 'Haque, Imran Atiqul', 3.13, '+880-1682635939', 'imran@outlook.com', '1234', 'CSE', '57756192d986ce18fdc9fa7cc2b5f4e497d21a48ea3b7.jpg', 'Male', '1992-09-10', '57756192e8ba9e18fdc9fa7cc2b5f4e497d21a48ea3b7_s.jpg', 'c37a966a2bc77bb33603ba6ff45673fe'),
+(31, '12-20381-1', 'Haque, Imran Atiqul', 3.13, '+880-1682635939', 'imran@pclinkitbd.com', '1234', 'CSE', '5810e45d79bcfe18fdc9fa7cc2b5f4e497d21a48ea3b7.jpg', 'Male', '1992-09-10', '5810e45d8a062e18fdc9fa7cc2b5f4e497d21a48ea3b7_s.jpg', '28ed90698388608fdb940f3b0919e8ac'),
 (32, '12-20478-1', 'Uddin Jumana Jashim', 3.23, '+880-1621534769', 'jumana@ymail.com', '1234', 'CSE', '577561e03f291af0d77249097a4290431f0f53b404fd1.JPG', 'Female', '1992-12-19', '577561e0466efaf0d77249097a4290431f0f53b404fd1_s.JPG', '63e87daea31cd3787b0386a880cfc999'),
 (33, '12-21119-1', 'Alam, Maskurul', 3.26, '01743912055', 'alam@hotmail.com', '1234', 'CSSE', 'default-user.png', 'Male', '0000-00-00', 'default-user.png', NULL),
 (35, '12-20520-1', 'Israt,Fahmida', 3.56, '+880-1723217411', 'panda@yahoo.com', '1234', 'CSSE', '57ea99b6060cec8112ae913d4de9803698c673682652e.jpg', 'Female', '1992-05-12', '57ea99b64bf84c8112ae913d4de9803698c673682652e_s.jpg', 'ab5d2b95ec9b6ad227df4a584f5adfb7'),
@@ -431,17 +431,22 @@ INSERT INTO `student` (`s_id`, `s_aiub_id`, `s_full_name`, `s_cgpa`, `s_phone`, 
 (49, '12-20731-1', 'Islam, Md Shadmanul', 3.9, '+880-1645967435', 'shadmanul@live.com', '1234', 'CSE', '579ada97b9675a60a4676b99c41cb51970dfddc627ad3.jpg', 'Male', '1992-09-07', '579ada97c2889a60a4676b99c41cb51970dfddc627ad3_s.jpg', '9a501686f667868607df5afd1ffe2665'),
 (50, '12-20721-1', 'Saha, Koushik', 3.77, '+880-1920859131', 'koushik@live.com', '1234', 'CSE', '579776c3d8c533d4d3ebee2b218ef51213ce379954e49.jpg', 'Male', '1970-01-01', '579776c3eb9fb3d4d3ebee2b218ef51213ce379954e49_s.jpg', 'db9bc6fc2ceed4af56412cc18f536ac9'),
 (51, '12-21003-1', 'Islam, Tawhid Al ', 3.99, '+880-1622036696', 'tawhidvai@gmail.com', '1234', 'CSE', '57756b8569cf10fd7c651213a2c1a9df4d64849c01f42.jpg', 'Male', '1992-01-04', '57756b8579c480fd7c651213a2c1a9df4d64849c01f42_s.jpg', '8d120ddadadd8a8b8ae8b995355fea8d'),
-(52, '12-20981-1', 'Rahman, Sajidur', 3.96, '+880-1674242999', 'sajid_reznov9185@live.com', '1234', 'CSE', '57eaabcee190030220cfd902d347400efcfef5ca9d655.jpg', 'Male', '1992-10-31', '57eaabcef062830220cfd902d347400efcfef5ca9d655_s.jpg', 'dabcf7d1a72de6c6648fb6f648b77fc5'),
+(52, '12-20981-1', 'Rahman, Sajidur', 3.96, '+880-1674242999', 'sajid_reznov9185@live.com', '1234', 'CSE', '581101515a915f62b2dbd12d5d17b4b771972cca24288.jpg', 'Male', '1992-10-31', '581101516b940f62b2dbd12d5d17b4b771972cca24288_s.jpg', 'bbaecf756d0ef8276547537ce13aea97'),
 (53, '11-52486-1', 'Maher Mahmud Nishan', 2.75, '+880-1771588210', 'maheer@yahoo.com', '1234', 'CSSE', '57d7d38b3dc0c7aeadf973997ba1067038c2d321ba53f.jpg', 'Male', '1992-02-24', '57d7d38b48d237aeadf973997ba1067038c2d321ba53f_s.jpg', 'f5c4fda3070e88e2783baad98820a0f9'),
 (54, '12-20502-1', 'Bonna, Jannatul Ferdous', 3.72, '+880-1765342899', 'bonna@yahoo.com', '1234', 'CSE', '57965bdc4134fb24592cc69da9202d878f9a84fbd5433.jpg', 'Female', '1992-07-26', '57965bdc57789b24592cc69da9202d878f9a84fbd5433_s.jpg', 'fb0e4617164ae793244f11b2d2f235b4'),
 (55, '12-20664-1', 'Keya, Rashika Tasnim', 3.62, '+880-1676119628', 'rashika_tasnim@yahoo.com', '1234', 'CSE', '57e2d156a523d74378b19b736af202de0a80ec489697e.jpg', 'Female', '1992-05-18', '57e2d156ca3a874378b19b736af202de0a80ec489697e_s.jpg', 'dfd7203dde42b36d8907dc960a8aaea1'),
 (56, '12-21014-1', 'Haque, Sadiah', 3.66, '+880-1767696626', 'sadiah.norway93@gmail.com', '1234', 'CSE', '5798ddeec0638b41543b565840ea8a8ad07553b7fb71e.jpg', 'Female', '1993-02-03', '5798ddeed1d9ab41543b565840ea8a8ad07553b7fb71e_s.jpg', 'e9242729c441ea0cae967f7d8b0aa78c'),
 (57, '12-20173-1', 'Islam MD Saiful', 3.01, '+880-1534855629', 'shibly@demo.com', '1234', 'CSSE', '579add7708254ab4aeaa942ee13cb7b09b6b7a2720032.jpg', 'Male', '1992-06-02', '579add771044aab4aeaa942ee13cb7b09b6b7a2720032_s.jpg', '6e43666180ae1765754a5ef3bfe8a1ae'),
 (59, '12-20203-1', 'Rahman, Faria', 3.32, '+880-1577999999', 'faria@demo.com', '1234', 'CSSE', '579ad8ee31306da7ad486c8381d290e558fe285c95d21.jpg', 'Female', '1993-05-05', '579ad8ee3e93fda7ad486c8381d290e558fe285c95d21_s.jpg', '31a46bd2f0af6be33235674a43b92f07'),
-(61, '11-19711-3', 'Das, Prianka', 3.35, '+880-1625959674', 'pria@aiub.com', '1234', 'CSE', '5792168a92e88bcd9d47c0e8413b2cdc186247e7d8957.jpg', 'Female', '1992-02-14', '5792168aa5ca8bcd9d47c0e8413b2cdc186247e7d8957_s.jpg', '8a273f05825cb29cc6c4952fff31a4ad'),
+(61, '11-19711-3', 'Das, Prianka', 3.35, '+880-1625959674', 'pria@aiub.com', '1234', 'CSE', '5810ff0bd15f2798d52ccc420831521d44bef52cc6415.jpg', 'Female', '1992-02-14', '5810ff0bd983e798d52ccc420831521d44bef52cc6415_s.jpg', 'cd54bda8d6c02d7c6d3e7682d95777c1'),
 (62, '12-21131-1', 'Hasan, Mehedi', 3.42, '+880-1552639741', 'shakil@aiub.com', '1234', 'CSSE', '579b85edf1011a34b806b5d680cd45e301503fcdb1888.jpg', 'Male', '1992-12-20', '579b85ee0f39fa34b806b5d680cd45e301503fcdb1888_s.jpg', 'd1d7d2fa0addb574593ed58892ed9c94'),
 (63, '12-00000-1', 'Faruque Farzana', 2.78, '+880-1789526341', 'farzana@yahoo.com', '1234', 'SE', '579b8a46c3895495e32a105a1bd8f9971b2b0ecc1a2e2.jpg', 'Female', '1993-01-01', '579b8a46d5d77495e32a105a1bd8f9971b2b0ecc1a2e2_s.jpg', 'fe9fc2f3125299550c8538af2bbf5630'),
-(64, '12-21461-2', 'Rashid, Rezwana', 3.83, '+880-01725000111', 'rezwana@janina.com', '1234', 'CSE', '57c9e95c8d76cbc69c09f24254311194dd59db27b0761.jpg', 'Female', '1993-03-23', '57c9e95cb09b5bc69c09f24254311194dd59db27b0761_s.jpg', 'd4ea494d39e55fe21c7e169eca84e46a');
+(64, '12-21461-2', 'Rashid, Rezwana', 3.83, '+880-01725000111', 'rezwana@janina.com', '1234', 'CSE', '57c9e95c8d76cbc69c09f24254311194dd59db27b0761.jpg', 'Female', '1993-03-23', '57c9e95cb09b5bc69c09f24254311194dd59db27b0761_s.jpg', 'd4ea494d39e55fe21c7e169eca84e46a'),
+(65, '12-20940-1 ', 'Sk Farhana Jafrin Sonda', 3.22, '+880-1680068051', 'sonda@janina.com', '1234', 'CS', '57f7436170b80598cf5875cd151efae5f59867499180c.jpg', 'Female', '1992-01-11', '57f74361a38e6598cf5875cd151efae5f59867499180c_s.jpg', '2e11215f30fd9300e1848ed71a8122ab'),
+(66, '12-20189-1', 'Imran Kadir', 3.52, '', 'rion@janina.com', '1234', 'CSSE', '57f75851614b7e5efbf0a463369813811eb3474ef3e1e.jpg', 'Male', '1993-12-06', '57f758516eec0e5efbf0a463369813811eb3474ef3e1e_s.jpg', '77ecc96d2b7cfc204a309e334dbb926a'),
+(67, '12-20103-1', 'Devashis Roy', 3.12, '+880-1725431950', 'chinmoy@janina.com', '1234', 'CSSE', '57f75ad1c8318f88ed22b8ef52a487b8c2d6fa8768ce7.jpg', 'Male', '1991-01-01', '57f75ad1cf0e8f88ed22b8ef52a487b8c2d6fa8768ce7_s.jpg', '94c352174f0703f6f145e97e04eb295f'),
+(68, '12-20198-1', 'S. M. Estique Ahmed Rashel', 3.35, '+880-1865075942', '', '1234', 'CSE', '57f75b91a4ed12af6e252d710e86a08c9a82ce092794a.jpg', 'Male', '1970-01-01', '57f75b91b0bf72af6e252d710e86a08c9a82ce092794a_s.jpg', '3a4a4aa1a5d9da54aef7f2266511af4b'),
+(69, '12-20164-1', 'Tanveer Feisal Snigdho', 3.52, '', '', '1234', 'CSE', '57f75e462d3c54c7a70c1a753d1d9bf301df5cb2aa4ee.jpg', 'Male', '1992-12-21', '57f75e463bee34c7a70c1a753d1d9bf301df5cb2aa4ee_s.jpg', '298f369bbb591c9dbec7275d2295dfe8');
 
 -- --------------------------------------------------------
 
@@ -677,7 +682,7 @@ ALTER TABLE `information`
 -- AUTO_INCREMENT for table `student`
 --
 ALTER TABLE `student`
-  MODIFY `s_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'student id', AUTO_INCREMENT=65;
+  MODIFY `s_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'student id', AUTO_INCREMENT=70;
 --
 -- AUTO_INCREMENT for table `teacher`
 --

@@ -163,7 +163,8 @@
                     changeYear: true,
                     dateFormat: "dd/mm/yy",
                     minDate: '01/01/1900',
-                    maxDate: "+0D"
+                    maxDate: "+0D",
+                    yearRange: "-100:+0" // last hundred years
                 });
                 $( "#speed" )
                     .selectmenu()
