@@ -1,0 +1,22 @@
+- Basic Javascript
+
+http://www.w3schools.com/js/
+
+
+- Writing Convention:
+
+http://javascript.crockford.com/code.html
+http://www.w3schools.com/js/js_conventions.asp
+
+
+- Best Practices for beginners
+
+https://code.tutsplus.com/tutorials/24-javascript-best-practices-for-beginners--net-5399
+
+
+- Jquery vs. raw Javascript
+
+https://www.sitepoint.com/javascript-vs-jquery-html-collections/
+https://www.sitepoint.com/jquery-vs-raw-javascript-1-dom-forms/
+https://www.sitepoint.com/jquery-vs-raw-javascript-2-css3-animation/
+https://www.sitepoint.com/jquery-vs-raw-javascript-3-events-ajax/

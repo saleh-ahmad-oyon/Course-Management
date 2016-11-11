@@ -1,0 +1,17 @@
+- Basic Ajax
+
+https://developer.mozilla.org/en-US/docs/AJAX/Getting_Started
+http://www.w3schools.com/xml/ajax_intro.asp
+https://teamtreehouse.com/library/ajax-basics
+
+
+- jquery ajax
+
+http://api.jquery.com/jquery.ajax/
+http://www.w3schools.com/jquery/ajax_ajax.asp
+
+
+
+- Submit Form Using Ajax, PHP and jQuery
+
+https://www.formget.com/submit-form-using-ajax-php-and-jquery/

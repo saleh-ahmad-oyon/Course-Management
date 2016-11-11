@@ -1,0 +1,12 @@
+- basic json
+
+http://www.w3schools.com/js/js_json_intro.asp
+http://www.json.org/
+
+
+- json with php
+
+http://php.net/manual/en/book.json.php
+https://www.tutorialspoint.com/json/json_php_example.htm
+http://nitschinger.at/Handling-JSON-like-a-boss-in-PHP/
+

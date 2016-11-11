@@ -1,0 +1,12 @@
+- basic html
+
+http://www.w3schools.com/html/
+http://www.w3schools.com/html/html5_intro.asp
+https://www.w3.org/TR/html/
+
+
+- writing convention
+
+http://www.w3schools.com/html/html5_syntax.asp
+https://make.wordpress.org/core/handbook/best-practices/coding-standards/html/
+http://wiki.orangehrm.com/index.php/HTML_Coding_Conventions

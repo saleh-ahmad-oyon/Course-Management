@@ -1,0 +1,28 @@
+- basic php
+
+http://www.w3schools.com/php/
+
+
+- php oop
+
+http://www.techflirt.com/tutorials/oop-in-php/index.html
+
+
+- details about php function
+
+http://php.net/
+
+
+- php standard recommendation
+
+http://www.php-fig.org/psr/
+
+
+- php documentation
+
+https://www.phpdoc.org/docs/latest/index.html
+
+
+- unit testing
+
+https://phpunit.de/

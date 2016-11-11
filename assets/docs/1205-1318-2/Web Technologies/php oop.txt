@@ -1,3 +1,0 @@
-//php oop
-
-http://www.techflirt.com/tutorials/oop-in-php/index.html

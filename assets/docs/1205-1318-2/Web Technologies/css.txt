@@ -1,0 +1,11 @@
+-basic css
+
+http://www.w3schools.com/css/
+http://www.w3schools.com/css/css3_intro.asp
+
+
+- writing convention
+
+http://thesassway.com/advanced/modular-css-naming-conventions
+https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Writing_efficient_CSS
+http://cssguidelin.es/
