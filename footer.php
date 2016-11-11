@@ -26,7 +26,7 @@
                                 <h4 class="modal-title" id="myModalLabel">Course Management</h4>
                             </div>
                             <div class="modal-body" style="font-family: 'Arial';">
-                                <p>This is a course project. I used PHP, HTML5, CSS3, Bootstrap, JavaScript, Jquery, MySql in this project.</p>
+                                <p>This is a course project. I used PHP, HTML5, CSS3, Bootstrap, Raw JavaScript, Jquery, MySql in this project.</p>
                                 <p>It is an application that can be used to manage a course according to AIUB(American International University-Bangladesh) regulation. The main features of this application is uploading the marks of multiple quizzes and term exams, uploading the attendance and modifying the uploaded information where applicable.
                                 </p>
                                 <p>Authority is the heighest privileged user of this system. The functionalities of an Authority are as follows:
@@ -133,7 +133,7 @@
                             <div class="modal-footer">
                                 <div class="pull-left text-left">
                                     <p>Designed by Saleh Ahmad</p>
-                                    <p>Course Management &copy; <?php echo date("Y") ?></p></p>
+                                    <p>Course Management &copy; 2015</p>
                                 </div>
                                 <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
                             </div>

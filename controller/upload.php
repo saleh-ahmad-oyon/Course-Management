@@ -13,8 +13,8 @@ if (!file_exists('../assets/docs/'.$_SESSION['teacher'].'/'.$_SESSION['course'])
 }
 
 $options = [
-    'upload_dir' => $_SERVER['DOCUMENT_ROOT'].'/course/assets/docs/'.$_SESSION['teacher'].'/'.$_SESSION['course'].'/',
-    'upload_url' => $_SERVER['DOCUMENT_ROOT'].'/course/assets/docs/'.$_SESSION['teacher'].'/'.$_SESSION['course'].'/'
+    'upload_dir' => UPLOADDIR . '/assets/docs/'.$_SESSION['teacher'].'/'.$_SESSION['course'].'/',
+    'upload_url' => UPLOADDIR . '/assets/docs/'.$_SESSION['teacher'].'/'.$_SESSION['course'].'/'
 ];
 
 $upload_handler = new UploadHandler($options);
