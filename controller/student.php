@@ -1,4 +1,10 @@
 <?php
+/**
+ * @author Saleh Ahmad <oyon@nooblonely.com>
+ * @copyright 2015-2016 Noob Lonely
+ */
+
+/** Required Files */
 require_once 'model/Student.php';
 require_once 'controller/base.php';
 

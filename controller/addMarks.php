@@ -8,7 +8,7 @@
 require '../model/db.php';
 require 'define.php';
 
-if($_SERVER["REQUEST_METHOD"] != "POST") {
+if ($_SERVER["REQUEST_METHOD"] != "POST") {
 	/** @Link 404 Page */
 	header('Location: '.SERVER.'/404');
 	return;

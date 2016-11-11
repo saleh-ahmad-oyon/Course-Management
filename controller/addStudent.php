@@ -44,7 +44,7 @@ if (!checkStudentId($stuId)) {
 /**
  * Check if the no. of students is forty or not
  */
-if(!checkFourtyStud($cid)) {
+if (!checkFourtyStud($cid)) {
     echo '<script language="javascript">
               alert("You cannot enter more than 40 students !!");
               window.location="'.SERVER.'/teacher/course/'.$cid.'";

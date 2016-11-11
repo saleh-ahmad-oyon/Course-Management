@@ -11,7 +11,7 @@ session_start();
 require '../model/db.php';
 require 'define.php';
 
-if($_SERVER["REQUEST_METHOD"] != "POST") {
+if ($_SERVER["REQUEST_METHOD"] != "POST") {
     /** @Link 404 Page */
     header('Location: '.SERVER.'/404');
     return;
@@ -23,14 +23,14 @@ if (!isset($_POST['editBtn'])) {
     return;
 }
 
-$fullName      = $_POST['editFullName'];
-$dept          = $_POST['editDept'];
-$phone         = $_POST['editPhone'];
-$email         = $_POST['editEmail'];
-$gender        = $_POST['sex'];
-$sid           = $_SESSION['sid'];
-$dob           = $_POST['dob'];
-$date          = date('Y-m-d', strtotime($dob));
+$fullName = $_POST['editFullName'];
+$dept     = $_POST['editDept'];
+$phone    = $_POST['editPhone'];
+$email    = $_POST['editEmail'];
+$gender   = $_POST['sex'];
+$sid      = $_SESSION['sid'];
+$dob      = $_POST['dob'];
+$date     = date('Y-m-d', strtotime($dob));
 
 /**
  * @filesource

@@ -1,4 +1,9 @@
 <?php
+/**
+ * @author Saleh Ahmad <oyon@nooblonely.com>
+ * @copyright 2015-2016 Noob Lonely
+ */
+
 $filepath = $_GET['file'];
 
 // block any attempt to the filesystem

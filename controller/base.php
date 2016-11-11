@@ -1,4 +1,8 @@
 <?php
+/**
+ * @author Saleh Ahmad <oyon@nooblonely.com>
+ * @copyright 2015-2016 Noob Lonely
+ */
 
 class Base
 {
