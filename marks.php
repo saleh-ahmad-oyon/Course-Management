@@ -47,7 +47,10 @@
 									<h1><i><ins>Mid Term</ins></i></h1><br/><br/>
 								</div>
 								<div class="col-md-12">
-                                    <!-- Quiz 1 -->
+
+                                    <!-- ===========
+                                         Quiz 1
+                                    ============ -->
 									<div class="row">
 										<div class="col-sm-12 col-xs-12">
 											<div class="col-sm-7 col-xs-6">
@@ -80,7 +83,9 @@
 
 									<hr />
 
-                                    <!-- Quiz 2 -->
+                                    <!-- ===========
+                                         Quiz 2
+                                    ============ -->
 									<div class="row">
 										<div class="col-sm-12 col-xs-12">
 											<div class="col-sm-7 col-xs-6">
@@ -113,7 +118,9 @@
 
 									<hr />
 
-                                    <!-- Quiz 3 -->
+                                    <!-- ===========
+                                         Quiz 3
+                                    ============ -->
 									<div class="row">
 										<div class="col-sm-12 col-xs-12">
 											<div class="col-sm-7 col-xs-6">
@@ -146,7 +153,9 @@
 
 									<hr />
 
-									<!-- Mid term best two Quizes -->
+									<!-- ================================
+									     Mid term best two Quizes
+									================================= -->
 									<div class="row">
 										<div class="col-sm-12 col-xs-12">
 											<div class="col-sm-7 col-xs-6">
@@ -174,6 +183,9 @@
 
 									<hr />
 
+									<!-- =====================
+									     Mid Term Exam
+									====================== -->
 									<div class="row">
 										<div class="col-sm-12 col-xs-12">
 											<div class="col-sm-7 col-xs-6">
@@ -202,7 +214,9 @@
 
 									<hr />
 
-									<!-- Mid Term Total -->
+									<!-- ======================
+									     Mid Term Total
+									======================= -->
 									<div class="row">
 										<div class="col-sm-12 col-xs-12">
 											<div class="col-sm-7 col-xs-6">
@@ -232,7 +246,9 @@
 
 									<hr />
 
-									<!-- Mid Term Grade -->
+									<!-- =====================
+									     Mid Term Grade
+									====================== -->
 									<div class="text-center">
 										<div class="row">
 											<div class="col-sm-12">
@@ -249,7 +265,9 @@
 									<div class="text-center"><h1><i><ins>Final Term</ins></i></h1></div>
 									<br/><br/>
 
-                                    <!-- Quiz 4 -->
+                                    <!-- ===========
+                                         Quiz 4
+                                    ============ -->
 									<div class="row">
 										<div class="col-sm-12 col-xs-12">
 											<div class="col-sm-7 col-xs-6">
@@ -282,7 +300,9 @@
 
 									<hr />
 
-                                    <!-- Quiz 5 -->
+                                    <!-- ============
+                                         Quiz 5
+                                    ============= -->
 									<div class="row">
 										<div class="col-sm-12 col-xs-12">
 											<div class="col-sm-7 col-xs-6">
@@ -315,7 +335,9 @@
 
 									<hr />
 
-                                    <!-- Quiz 6 -->
+                                    <!-- ==============
+                                         Quiz 6
+                                    =============== -->
 									<div class="row">
 										<div class="col-sm-12 col-xs-12">
 											<div class="col-sm-7 col-xs-6">
@@ -348,7 +370,9 @@
 
 									<hr />
 
-									<!-- Final Best Two -->
+									<!-- ====================
+									     Final Best Two
+									===================== -->
 									<div class="row">
 										<div class="col-sm-12 col-xs-12">
 											<div class="col-sm-7 col-xs-6">
@@ -376,7 +400,9 @@
 
 									<hr />
 
-                                    <!-- Final Term -->
+                                    <!-- ===============
+                                         Final Term
+                                    ================ -->
 									<div class="row">
 										<div class="col-sm-12 col-xs-12">
 											<div class="col-sm-7 col-xs-6">
@@ -406,7 +432,9 @@
 
 									<hr />
 
-									<!-- Final Term Total -->
+									<!-- ======================
+									     Final Term Total
+									======================= -->
 									<div class="row">
 										<div class="col-sm-12 col-xs-12">
 											<div class="col-sm-7 col-xs-6">
@@ -437,7 +465,9 @@
 
 									<hr />
 
-									<!-- Final Term Grade -->
+									<!-- =======================
+									     Final Term Grade
+									======================== -->
 									<div class="text-center">
 										<div class="row">
 											<div class="col-sm-12">
@@ -455,7 +485,9 @@
 									<div class="text-center"><h1><i><ins>Grand Total</ins></i></h1></div>
 									<br/><br/>
 
-									<!-- Grand Total -->
+									<!-- ===================
+									     Grand Total
+									==================== -->
 									<div class="row">
 										<div class="col-sm-12 col-xs-12">
 											<div class="col-sm-7 col-xs-6">
@@ -482,7 +514,10 @@
                                     <!-- /Grand Total -->
 
 									<hr />
-									<!-- Grand Total Grade -->
+
+									<!-- ===========================
+									     Grand Total Grade
+									============================ -->
 									<div class="text-center">
 										<div class="row">
 											<div class="col-sm-12">

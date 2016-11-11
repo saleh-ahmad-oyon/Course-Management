@@ -22,18 +22,25 @@
                         <div class="row">
                             <div class="col-sm-12">
                                 <?php if(isset($_SESSION['authority'])): ?>
+
+                                    <!-- ============================
+                                         Authority Home Page
+                                    ============================= -->
                                     <div class="text-center">
                                         <a class="btn btn-primary hover-focus" href="<?= SERVER; ?>/manage/teacher">Manage Teacher</a><br/><br/>
                                         <a class="btn btn-success hover-focus" href="<?= SERVER; ?>/manage/student">Manage Student</a>
                                     </div>
-                                    <?php elseif(isset($_SESSION['teacher'])):
-                                        $tid = $_SESSION['tid'];
-                                        $outputString = teacherCourse($tid);
-                                        if(!count($outputString)): ?>
-                                            <h3>No Course has been assigned.</h3>
-                                            <?php else: ?>
-                                    <div class="col-md-3"></div>
-                                    <div class="col-md-6">
+                                    <?php elseif(isset($_SESSION['teacher'])): ?>
+
+                                    <!-- ============================
+                                         Teacher Home Page
+                                    ============================= -->
+                                    <?php $tid = $_SESSION['tid'];
+                                    $outputString = teacherCourse($tid);
+                                    if(!count($outputString)): ?>
+                                        <h3>No Course has been assigned.</h3>
+                                    <?php else: ?>
+                                    <div class="col-md-offset-3 col-md-6">
                                         <table class="table table-bordered">
                                             <thead>
                                                 <tr>
@@ -51,16 +58,17 @@
                                             </tbody>
                                         </table>
                                     </div>
-                                    <div class="col-md-3"></div>
-                                        <?php endif;
-                                        elseif(isset($_SESSION['stud'])):
-                                        $sid = $_SESSION['sid'];
-                                        $outputString = studentCourse($sid);
-                                        if(!count($outputString)): ?>
-                                            <h3>No Course.</h3>
-                                            <?php else: ?>
-                                    <div class="col-md-2"></div>
-                                    <div class="col-md-8">
+                                    <?php endif; elseif(isset($_SESSION['stud'])): ?>
+
+                                    <!-- ============================
+                                         Student Home Page
+                                    ============================= -->
+                                    <?php $sid = $_SESSION['sid'];
+                                    $outputString = studentCourse($sid);
+                                    if(!count($outputString)): ?>
+                                        <h3>No Course.</h3>
+                                    <?php else: ?>
+                                    <div class="col-md-offset-2 col-md-8">
                                         <table class="table table-bordered">
                                             <thead>
                                             <tr>
@@ -84,9 +92,11 @@
                                             </tbody>
                                         </table>
                                     </div>
-                                    <div class="col-md-2"></div>
-                                        <?php endif; ?>
-                                    <?php else: ?>
+                                    <?php endif; else: ?>
+
+                                    <!-- ============================
+                                         Login Page
+                                    ============================= -->
                                     <div class="col-sm-offset-3 col-sm-6 col-md-offset-4 col-md-4 form-block">
                                             <form action="<?= SERVER; ?>/session" method="post">
                                                 <p class="text-primary">Sign in with your organizational id number.</p>
@@ -114,7 +124,7 @@
                                                 }
                                             ?>
                                         </label>
-                                        </div>
+                                    </div>
                                     <?php endif; ?>
                             </div>
                         </div>

@@ -6,22 +6,22 @@ if (!isset($_SESSION['teacher']) && !isset($_SESSION['stud'])) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <?php require_once 'head.php'; ?>
+    <head>
+        <?php require_once 'head.php'; ?>
 
-    <!-- blueimp Gallery styles -->
-    <link rel="stylesheet" href="//blueimp.github.io/Gallery/css/blueimp-gallery.min.css">
-    <!-- CSS to style the file input field as button and adjust the Bootstrap progress bars -->
-    <link rel="stylesheet" href="<?= SERVER; ?>/assets/css/jquery.fileupload.css">
-    <link rel="stylesheet" href="<?= SERVER; ?>/assets/css/jquery.fileupload-ui.css">
-    <!-- CSS adjustments for browsers with JavaScript disabled -->
-    <noscript><link rel="stylesheet" href="<?= SERVER; ?>/assets/css/jquery.fileupload-noscript.css"></noscript>
-    <noscript><link rel="stylesheet" href="<?= SERVER; ?>/assets/css/jquery.fileupload-ui-noscript.css"></noscript>
-</head>
-<body>
-<div id="wrap">
-    <main>
-        <div class="container">
+        <!-- blueimp Gallery styles -->
+        <link rel="stylesheet" href="//blueimp.github.io/Gallery/css/blueimp-gallery.min.css">
+        <!-- CSS to style the file input field as button and adjust the Bootstrap progress bars -->
+        <link rel="stylesheet" href="<?= SERVER; ?>/assets/css/jquery.fileupload.css">
+        <link rel="stylesheet" href="<?= SERVER; ?>/assets/css/jquery.fileupload-ui.css">
+        <!-- CSS adjustments for browsers with JavaScript disabled -->
+        <noscript><link rel="stylesheet" href="<?= SERVER; ?>/assets/css/jquery.fileupload-noscript.css"></noscript>
+        <noscript><link rel="stylesheet" href="<?= SERVER; ?>/assets/css/jquery.fileupload-ui-noscript.css"></noscript>
+    </head>
+    <body>
+    <div id="wrap">
+        <main>
+            <div class="container">
             <header>
                 <div class="row">
                     <div class="col-md-12">
@@ -30,8 +30,8 @@ if (!isset($_SESSION['teacher']) && !isset($_SESSION['stud'])) {
                 </div>
             </header>
         </div>
-        <hr />
-        <div class="container">
+            <hr />
+            <div class="container">
             <section>
                 <div class="row">
                     <div class="col-md-12">
@@ -173,7 +173,7 @@ if (!isset($_SESSION['teacher']) && !isset($_SESSION['stud'])) {
             </section>
         </div>
     </main>
-</div>
-<?php $fileupload = true; require_once 'footer.php' ?>
+    </div>
+    <?php $fileupload = true; require_once 'footer.php' ?>
 </body>
 </html>
