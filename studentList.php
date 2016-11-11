@@ -32,6 +32,10 @@
 									<h3><ins><?= getCourseName($_GET['id']) ?></ins></h3>
 								</div>
 								<br />
+
+								<!-- =================
+								     Student List
+								================== -->
 								<?php if(!count($outputString)): ?>
 									<h3>No Data Found.</h3>
 								<?php else: ?>
@@ -76,8 +80,7 @@
 		</div>
 		<?php require_once 'footer.php' ?>
 		<script>
-			function confirmation()
-			{
+			function confirmation() {
 				var r = confirm("Are you sure ?\nNo data will be available of this student");
 				return r ? true : false;
 			}

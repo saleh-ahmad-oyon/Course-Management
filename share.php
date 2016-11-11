@@ -18,7 +18,10 @@
                     fjs.parentNode.insertBefore(js, fjs);
                 }(document, 'script', 'facebook-jssdk'));
             </script>
-            <!-- Load Facebook SDK for JavaScript -->
+
+            <!-- ============================================
+                 Load Facebook SDK for JavaScript
+            ============================================= -->
             <div id="fb-root"></div>
             <div class="fb-share-button"
                  data-href="<?= SERVER; ?>"
@@ -34,8 +37,11 @@
                     fjs.parentNode.insertBefore(js, fjs);
                 }(document, 'script', 'facebook-jssdk'));</script>
         </div>
+
+        <!-- ================
+             Google Plus
+        ================= -->
         <div class="col-sm-3">
-            <!-- Google Plus -->
             <div
                 class="g-plus"
                 data-action="share"
@@ -51,8 +57,11 @@
                 })();
             </script>
         </div>
+
+        <!-- =================
+             Twitter Share
+        ================== -->
         <div class="col-sm-2">
-            <!--Twitter Share-->
             <a
                 href="https://twitter.com/share"
                 class="twitter-share-button"
@@ -70,8 +79,11 @@
                 }(document, 'script', 'twitter-wjs');
             </script>
         </div>
+
+        <!-- ===============
+             Linked In
+        ================ -->
         <div class="col-sm-4">
-            <!--Linked In-->
             <script src="http://platform.linkedin.com/in.js" type="text/javascript"> lang: en_US</script>
             <script type="IN/Share" data-url="<?= SERVER; ?>" data-counter="right"></script>
         </div>
