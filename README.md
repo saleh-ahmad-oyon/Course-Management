@@ -23,7 +23,8 @@ It is an application that can be used to manage a course according to AIUB(Ameri
 - View the list of students and their information.
 - View the marks of each quiz (including the makeups), the sum of best two quiz, the term exam and the total attendance for each student.
 - Add necessary notes on his course for the students
-- Change his/her password.
+- Change his/her password
+- Add necessary notes on his course for the students
 
 **Student is the lower privileged user of the system.** The functionality of a student is as follows:
 
@@ -32,4 +33,8 @@ It is an application that can be used to manage a course according to AIUB(Ameri
 - View his/her marks of each quiz (including the makeups), the sum of best two quiz, the term exam and the total attendance.
 - Edit his/her information except AIUB ID, marks and CGPA (if there is any).
 - Can download the necessary notes uploaded by the course teacher
-- Change his/her password.
+- Change his/her password
+- Can download the necessary notes uploaded by the course teacher
+
+
+> Academic ID and password will be available in database. *No Hashing method is used here for password*
