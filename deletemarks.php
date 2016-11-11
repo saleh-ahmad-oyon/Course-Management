@@ -47,13 +47,17 @@
                   ID: <span class="text-primary"><?= htmlentities(stripslashes($value[0]), ENT_QUOTES, 'UTF-8'); ?></span>&nbsp;&nbsp;&nbsp;&nbsp;Name: <span class="text-primary"><?= htmlentities(stripslashes($value[1]), ENT_QUOTES, 'UTF-8'); ?></span>&nbsp;&nbsp;&nbsp;&nbsp;Attendence: <span class="text-primary"><?= htmlentities(stripslashes($value[2]), ENT_QUOTES, 'UTF-8'); ?></span>
                 </h4>
                 <br/>
-                <h5><ins><?= $name; ?></h5></ins>
+                <h5><ins><?= $name; ?></ins></h5>
               </div>
               <br/><br/>
               <?php if(!count($outputString)): ?>
                 <h3>No Data Found.</h3>
               <?php else: ?>
                 <div class="col-md-offset-4 col-md-4">
+
+                  <!-- =========================
+                       Delete Marks Form
+                  ========================== -->
                   <form action="<?= SERVER; ?>/controller/stuMarksDelete?id1=<?= $_GET['id1']; ?>&id2=<?= $_GET['id2']; ?>"
                         method="post"
                         onsubmit="return confirmation();">
