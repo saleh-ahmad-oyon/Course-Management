@@ -41,7 +41,7 @@
 									<h3><ins><?php echo getCourseName($_GET['id1']) ?></ins></h3><br />
 									<h4>
 										<?php $value = explode('|', $stuInfo); ?>
-										ID: <span class="text-primary"><?php echo $value[0]; ?></span>&nbsp;&nbsp;&nbsp;&nbsp;Name: <span class="text-primary"><?php echo $value[1]; ?></span>&nbsp;&nbsp;&nbsp;&nbsp;Attendence: <span class="text-primary"><?php echo $value[2]; ?></span>
+										ID: <span class="text-primary"><?= $value[0]; ?></span>&nbsp;&nbsp;&nbsp;&nbsp;Name: <span class="text-primary"><?= $value[1]; ?></span>&nbsp;&nbsp;&nbsp;&nbsp;Attendence: <span class="text-primary"><?= $value[2]; ?></span>
 									</h4>
 									<br/><br/>
 									<h1><i><ins>Mid Term</ins></i></h1><br/><br/>
@@ -54,7 +54,7 @@
 									<div class="row">
 										<div class="col-sm-12 col-xs-12">
 											<div class="col-sm-7 col-xs-6">
-												<span title="Quiz 1 marks"><b><i>Quiz 1:&nbsp;&nbsp;&nbsp;&nbsp;</i></b><?php $q1 ='quiz1'; echo showMarks($_GET['id1'], $_GET['id2'], $q1); ?></span>
+												<span title="Quiz 1 marks"><b><i>Quiz 1:&nbsp;</i></b><?php $q1 ='quiz1'; echo showMarks($_GET['id1'], $_GET['id2'], $q1); ?></span>
 											</div>
 											<div class="col-sm-5 col-xs-6 inline-form">
 												<form action="<?= SERVER; ?>/controller/markConfirm?name=quiz1" method="post">
@@ -89,7 +89,7 @@
 									<div class="row">
 										<div class="col-sm-12 col-xs-12">
 											<div class="col-sm-7 col-xs-6">
-												<span title="Quiz 2 marks"><b><i>Quiz 2:&nbsp;&nbsp;&nbsp;&nbsp;</i></b><?php $q2 = 'quiz2'; echo showMarks($_GET['id1'], $_GET['id2'], $q2); ?></span>
+												<span title="Quiz 2 marks"><b><i>Quiz 2:&nbsp;</i></b><?php $q2 = 'quiz2'; echo showMarks($_GET['id1'], $_GET['id2'], $q2); ?></span>
 											</div>
 											<div class="col-sm-5 col-xs-6 inline-form">
 												<form action="<?= SERVER; ?>/controller/markConfirm?name=quiz2" method="post">
@@ -124,7 +124,7 @@
 									<div class="row">
 										<div class="col-sm-12 col-xs-12">
 											<div class="col-sm-7 col-xs-6">
-												<span title="Quiz 3 marks"><b><i>Quiz 3:&nbsp;&nbsp;&nbsp;&nbsp;</i></b><?php $q3 = 'quiz3'; echo showMarks($_GET['id1'], $_GET['id2'], $q3); ?></span>
+												<span title="Quiz 3 marks"><b><i>Quiz 3: </i></b><?php $q3 = 'quiz3'; echo showMarks($_GET['id1'], $_GET['id2'], $q3); ?></span>
 											</div>
 											<div class="col-sm-5 col-xs-6 inline-form">
 												<form action="<?= SERVER; ?>/controller/markConfirm?name=quiz3" method="post">
@@ -189,7 +189,7 @@
 									<div class="row">
 										<div class="col-sm-12 col-xs-12">
 											<div class="col-sm-7 col-xs-6">
-												<span title="Mid Term marks"><b><i>Mid Term:&nbsp;&nbsp;&nbsp;&nbsp;</i></b><?php $mid = 'mid'; $midMarks = showMarks($_GET['id1'], $_GET['id2'], $mid); echo $midMarks; ?></span>
+												<span title="Mid Term marks"><b><i>Mid Term:&nbsp;</i></b><?php $mid = 'mid'; $midMarks = showMarks($_GET['id1'], $_GET['id2'], $mid); echo $midMarks; ?></span>
 											</div>
 											<div class="col-sm-5 col-xs-6 inline-form">
 												<form action="<?= SERVER; ?>/controller/markConfirm?name=mid" method="post">
@@ -253,7 +253,7 @@
 										<div class="row">
 											<div class="col-sm-12">
 												<span title="Suggested Mid Term Grade">Suggested Mid Term Grade: <b><?= suggestedGrade($SuggestedMidMark); ?></b></span>(old)&nbsp;&nbsp;&nbsp;&nbsp;
-												<b><?= suggestedGrade($newSuggestedMidMark); ?></b></span>(new)&nbsp;&nbsp;&nbsp;&nbsp;
+												<span><b><?= suggestedGrade($newSuggestedMidMark); ?></b></span>(new)&nbsp;&nbsp;&nbsp;&nbsp;
 												<span title="">You've Given: <b><?php $midTermGrade = suggestedGrade($midTotalMarks); echo $midTermGrade; ?></b></span>
 												<?php addMidTermGrade($midTermGrade, $_GET['id1'], $_GET['id2']); ?>
 											</div>
@@ -271,7 +271,7 @@
 									<div class="row">
 										<div class="col-sm-12 col-xs-12">
 											<div class="col-sm-7 col-xs-6">
-												<span title="Quiz 4 marks"><b><i>Quiz 4:&nbsp;&nbsp;&nbsp;&nbsp;</i></b><?php $q4 = 'quiz4'; echo showMarks($_GET['id1'], $_GET['id2'], $q4); ?></span>
+												<span title="Quiz 4 marks"><b><i>Quiz 4:&nbsp;</i></b><?php $q4 = 'quiz4'; echo showMarks($_GET['id1'], $_GET['id2'], $q4); ?></span>
 											</div>
 											<div class="col-sm-5 col-xs-6 inline-form">
 												<form action="<?= SERVER; ?>/controller/markConfirm?name=quiz4" method="post">
@@ -306,7 +306,7 @@
 									<div class="row">
 										<div class="col-sm-12 col-xs-12">
 											<div class="col-sm-7 col-xs-6">
-												<span title="Quiz 5 marks"><b><i>Quiz 5:&nbsp;&nbsp;&nbsp;&nbsp;</i></b><?php $q5 = 'quiz5'; echo showMarks($_GET['id1'], $_GET['id2'], $q5); ?></span>
+												<span title="Quiz 5 marks"><b><i>Quiz 5:&nbsp;</i></b><?php $q5 = 'quiz5'; echo showMarks($_GET['id1'], $_GET['id2'], $q5); ?></span>
 											</div>
 											<div class="col-sm-5 col-xs-6 inline-form">
 												<form action="<?= SERVER; ?>/controller/markConfirm?name=quiz5" method="post">
@@ -341,7 +341,7 @@
 									<div class="row">
 										<div class="col-sm-12 col-xs-12">
 											<div class="col-sm-7 col-xs-6">
-												<span title="Quiz 6 marks"><b><i>Quiz 6:&nbsp;&nbsp;&nbsp;&nbsp;</i></b><?php $q6 = 'quiz6'; echo showMarks($_GET['id1'], $_GET['id2'], $q6); ?></span>
+												<span title="Quiz 6 marks"><b><i>Quiz 6:&nbsp;</i></b><?php $q6 = 'quiz6'; echo showMarks($_GET['id1'], $_GET['id2'], $q6); ?></span>
 											</div>
 											<div class="col-sm-5 col-xs-6 inline-form">
 												<form action="<?= SERVER; ?>/controller/markConfirm?name=quiz6" method="post">
@@ -472,7 +472,7 @@
 										<div class="row">
 											<div class="col-sm-12">
 												<span title="Suggested Final Term Grade">Suggested Final Term Grade: <b><?php echo suggestedGrade($SuggestedFinalMark); ?></b></span>(old)&nbsp;&nbsp;&nbsp;&nbsp;
-												<b><?php echo suggestedGrade($newSuggestedMidMark); ?></b></span>(new)&nbsp;&nbsp;&nbsp;&nbsp;
+                                                <span><b><?php echo suggestedGrade($newSuggestedMidMark); ?></b></span>(new)&nbsp;&nbsp;&nbsp;&nbsp;
 												<span title="">You've Given: <b><?php $finalTermGrade = suggestedGrade($finalTotalMarks); echo $finalTermGrade; ?></b></span>
 												<?php addGradeFinal($finalTermGrade, $_GET['id1'], $_GET['id2']); ?>
 											</div>
@@ -521,7 +521,7 @@
 									<div class="text-center">
 										<div class="row">
 											<div class="col-sm-12">
-												<span title="Suggested Grand Final Grade">Suggested Grand Total Grade: <b><?php echo suggestedGrade($grandTotalMark); ?></b></span>(old)&nbsp;&nbsp;&nbsp;&nbsp;<b><?= suggestedGrade($newGrandTotalMark); ?></b>(new)&nbsp;&nbsp;&nbsp;&nbsp;
+												<span title="Suggested Grand Final Grade">Suggested Grand Total Grade: <b><?= suggestedGrade($grandTotalMark); ?></b></span>(old)&nbsp;&nbsp;&nbsp;&nbsp;<b><?= suggestedGrade($newGrandTotalMark); ?></b>(new)&nbsp;&nbsp;&nbsp;&nbsp;
 												<span title="">You've Given: <b><?php $grandTotalGrade = suggestedGrade($grandTotalMarksByTeacher); echo $grandTotalGrade ?></b></span>
 												<?php addGradeGrandTotal($grandTotalGrade, $_GET['id1'], $_GET['id2']); ?>
 											</div>
