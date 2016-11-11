@@ -2,17 +2,17 @@
 <hr />
 <div class="container">
     <div class="row">
-        <div class="col-md-12">
-            <div class="col-md-4">
+        <div class="col-sm-12">
+            <div class="col-sm-4">
                 <p><span>Designed by <strong>Saleh Ahmad</strong></span></p>
                 <p><cite>Noob Lonely</cite> &copy; <?php echo date("Y") ?></p>
             </div>
-            <div class="col-md-3">
+            <div class="col-sm-3">
                 <p><span class="glyphicon glyphicon-envelope"></span>&nbsp;&nbsp;<a href="mailto:oyon@nooblonely.com?cc=nissongo102@gmail.com&amp;subject=Feedback&amp;body=Dear%20Buddy%2C%0A" target="_top">oyon@nooblonely.com</a></p>
                 <p><span class="glyphicon glyphicon-earphone"></span>&nbsp;&nbsp;+880-1626785569</p>
                 <p><span class="glyphicon glyphicon-map-marker"></span>&nbsp;&nbsp;10/181, 12/B, Mirpur, Dhaka-1216</p>
             </div>
-            <div class="col-md-5">
+            <div class="col-sm-5">
                 <!-- Button trigger modal -->
                 <button type="button" class="btn btn-link" data-toggle="modal" data-target="#myModal"><i class="fa fa-info-circle"></i>&nbsp;
                     About
@@ -150,13 +150,16 @@
 <script src="<?= SERVER; ?>/assets/js/jquery-2.1.4.min.js"></script>
 <script src="<?= SERVER; ?>/assets/css/bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
 <script src="<?= SERVER; ?>/assets/js/custom.js"></script>
+
 <?php if(isset($dropify)): ?>
     <script src="<?= SERVER; ?>/assets/js/dropify.js"></script>
     <script src="<?= SERVER; ?>/assets/js/mydropify.js"></script>
 <?php endif; ?>
+
 <?php if(isset($jui)): ?>
     <script src="<?= SERVER; ?>/assets/js/jquery-ui.js"></script>
 <?php endif; ?>
+
 <?php if(isset($mask)): ?>
     <script src="<?= SERVER; ?>/assets/js/jquery.maskedinput.min.js"></script>
     <script src="<?= SERVER; ?>/assets/js/mymask.js"></script>
@@ -165,6 +168,7 @@
     <script src="<?= SERVER; ?>/assets/js/typeahead.bundle.min.js"></script>
     <script src="<?= SERVER; ?>/assets/js/search.js"></script>
 <?php endif; ?>
+
 <?php if(isset($fileupload)): ?>
 <!-- The jQuery UI widget factory, can be omitted if jQuery UI is already included -->
 <script src="<?= SERVER; ?>/assets/js/vendor/jquery.ui.widget.js"></script>

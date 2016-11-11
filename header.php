@@ -1,5 +1,7 @@
 <div class="col-lg-2 col-md-3 padding20">
-	<img src="<?= SERVER; ?>/assets/img/aiub.png" alt="aiub logo" class="center-block" />
+	<a href="<?= SERVER ?>">
+		<img src="<?= SERVER; ?>/assets/img/aiub.png" alt="aiub logo" class="center-block" />
+	</a>
 </div>
 <div class="col-lg-8 col-md-6 text-center">
 	<h2>American International University-Bangladesh</h2>

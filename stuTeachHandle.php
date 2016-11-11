@@ -33,8 +33,7 @@
                 <section>
                     <div class="row">
                         <div class="col-md-12">
-                            <div class="col-md-4"></div>
-                            <div class="col-md-4">
+                            <div class="col-sm-offset-4 col-sm-4">
                                 <div class="text-center">
                                     <?php if($teacher): ?>
                                     <a class="btn btn-primary btn-block hover-focus" href="<?= SERVER; ?>/add/teacher"><i class="fa fa-user-plus"></i>&nbsp;&nbsp;Add Teacher</a><br/>
@@ -44,7 +43,6 @@
                                     <?php endif; ?>
                                 </div>
                             </div>
-                            <div class="col-md-4"></div>
                         </div>
                     </div>
                 </section>

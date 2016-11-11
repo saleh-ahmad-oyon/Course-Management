@@ -87,8 +87,7 @@
                                     <div class="col-md-2"></div>
                                         <?php endif; ?>
                                     <?php else: ?>
-                                    <div class="col-sm-4"></div>
-                                    <div class="col-sm-4 form-block">
+                                    <div class="col-sm-offset-3 col-sm-6 col-md-offset-4 col-md-4 form-block">
                                             <form action="<?= SERVER; ?>/session" method="post">
                                                 <p class="text-primary">Sign in with your organizational id number.</p>
                                                 <div class="input-group" style="padding-top: 25px;">
@@ -116,7 +115,6 @@
                                             ?>
                                         </label>
                                         </div>
-                                        <div class="col-sm-4"></div>
                                     <?php endif; ?>
                             </div>
                         </div>
