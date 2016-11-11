@@ -1,16 +1,16 @@
 $(function() {
-    $( "#speed" )
+    $("#speed")
         .selectmenu()
         .selectmenu( "menuWidget" )
         .addClass( "overflow" );
-    $( "#speed1" )
+    $("#speed1")
         .selectmenu()
         .selectmenu( "menuWidget" )
         .addClass( "overflow" );
 });
 
 $(function() {
-    $( "#datepicker" ).datepicker({
+    $("#datepicker").datepicker({
         showOnFocus: true,
         showOtherMonths: true,
         changeMonth: true,
@@ -19,7 +19,7 @@ $(function() {
         minDate: '01/01/1900',
         maxDate: "+0D"
     });
-    $( "#speed" )
+    $("#speed")
         .selectmenu()
         .selectmenu( "menuWidget" )
         .addClass( "overflow" );
