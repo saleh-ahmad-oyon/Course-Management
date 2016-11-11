@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 26, 2016 at 09:30 PM
+-- Generation Time: Nov 11, 2016 at 07:56 AM
 -- Server version: 10.1.13-MariaDB
 -- PHP Version: 5.6.20
 
@@ -317,6 +317,13 @@ CREATE TABLE `file` (
   `file_type` text
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `file`
+--
+
+INSERT INTO `file` (`id`, `filepath`, `coursename`, `t_aiub_id`, `date`, `file_size`, `file_type`) VALUES
+(12, 'C:/xampp/htdocs/course/assets/docs/1205-1318-2/Web Technologies/php oop.txt', 'Web Technologies', '1205-1318-2', '2016-11-11 06:43:39', '69', 'text/plain');
+
 -- --------------------------------------------------------
 
 --
@@ -440,7 +447,7 @@ INSERT INTO `student` (`s_id`, `s_aiub_id`, `s_full_name`, `s_cgpa`, `s_phone`, 
 (59, '12-20203-1', 'Rahman, Faria', 3.32, '+880-1577999999', 'faria@demo.com', '1234', 'CSSE', '579ad8ee31306da7ad486c8381d290e558fe285c95d21.jpg', 'Female', '1993-05-05', '579ad8ee3e93fda7ad486c8381d290e558fe285c95d21_s.jpg', '31a46bd2f0af6be33235674a43b92f07'),
 (61, '11-19711-3', 'Das, Prianka', 3.35, '+880-1625959674', 'pria@aiub.com', '1234', 'CSE', '5810ff0bd15f2798d52ccc420831521d44bef52cc6415.jpg', 'Female', '1992-02-14', '5810ff0bd983e798d52ccc420831521d44bef52cc6415_s.jpg', 'cd54bda8d6c02d7c6d3e7682d95777c1'),
 (62, '12-21131-1', 'Hasan, Mehedi', 3.42, '+880-1552639741', 'shakil@aiub.com', '1234', 'CSSE', '579b85edf1011a34b806b5d680cd45e301503fcdb1888.jpg', 'Male', '1992-12-20', '579b85ee0f39fa34b806b5d680cd45e301503fcdb1888_s.jpg', 'd1d7d2fa0addb574593ed58892ed9c94'),
-(63, '12-00000-1', 'Faruque Farzana', 2.78, '+880-1789526341', 'farzana@yahoo.com', '1234', 'SE', '579b8a46c3895495e32a105a1bd8f9971b2b0ecc1a2e2.jpg', 'Female', '1993-01-01', '579b8a46d5d77495e32a105a1bd8f9971b2b0ecc1a2e2_s.jpg', 'fe9fc2f3125299550c8538af2bbf5630'),
+(63, '12-00000-1', 'Faruque Farzana', 2.78, '+880-1789526341', 'farzana@yahoo.com', '1234', 'SE', '581f93146b7ea495e32a105a1bd8f9971b2b0ecc1a2e2.jpg', 'Female', '1993-01-01', '581f9314885c4495e32a105a1bd8f9971b2b0ecc1a2e2_s.jpg', '147d223454ffd02487c778a03b4a6b32'),
 (64, '12-21461-2', 'Rashid, Rezwana', 3.83, '+880-01725000111', 'rezwana@janina.com', '1234', 'CSE', '57c9e95c8d76cbc69c09f24254311194dd59db27b0761.jpg', 'Female', '1993-03-23', '57c9e95cb09b5bc69c09f24254311194dd59db27b0761_s.jpg', 'd4ea494d39e55fe21c7e169eca84e46a'),
 (65, '12-20940-1 ', 'Sk Farhana Jafrin Sonda', 3.22, '+880-1680068051', 'sonda@janina.com', '1234', 'CS', '57f7436170b80598cf5875cd151efae5f59867499180c.jpg', 'Female', '1992-01-11', '57f74361a38e6598cf5875cd151efae5f59867499180c_s.jpg', '2e11215f30fd9300e1848ed71a8122ab'),
 (66, '12-20189-1', 'Imran Kadir', 3.52, '', 'rion@janina.com', '1234', 'CSSE', '57f75851614b7e5efbf0a463369813811eb3474ef3e1e.jpg', 'Male', '1993-12-06', '57f758516eec0e5efbf0a463369813811eb3474ef3e1e_s.jpg', '77ecc96d2b7cfc204a309e334dbb926a'),
@@ -672,7 +679,7 @@ ALTER TABLE `exam`
 -- AUTO_INCREMENT for table `file`
 --
 ALTER TABLE `file`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 --
 -- AUTO_INCREMENT for table `information`
 --
