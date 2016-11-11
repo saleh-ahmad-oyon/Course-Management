@@ -65,13 +65,12 @@
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                <?php $i=1;foreach($outputString as $value): ?>
-                                                        <tr>
-                                                            <td><input type="checkbox" id="del<?php echo $i; ?>" name="check_dlt[]" value="<?= htmlentities(stripslashes($value['e_id']), ENT_QUOTES, 'UTF-8'); ?>" /><label for="del<?= $i; ?>"></label></td>
-                                                            <td><label name="date<?php echo $i; ?>"><?= htmlentities(stripslashes($value['e_date']), ENT_QUOTES, 'UTF-8'); ?></label></td>
-                                                            <td><label><?= $value['e_marks']; ?></label></td>
-                                                        </tr>
-                                                    <?php $i++; ?>
+                                                <?php foreach($outputString as $i => $value): ?>
+                                                    <tr>
+                                                        <td><input type="checkbox" id="del<?= $i+1; ?>" name="check_dlt[]" value="<?= htmlentities(stripslashes($value['e_id']), ENT_QUOTES, 'UTF-8'); ?>" /><label for="del<?= $i + 1; ?>"></label></td>
+                                                        <td><label name="date<?= $i + 1; ?>"><?= htmlentities(stripslashes($value['e_date']), ENT_QUOTES, 'UTF-8'); ?></label></td>
+                                                        <td><label><?= $value['e_marks']; ?></label></td>
+                                                    </tr>
                                                 <?php endforeach; ?>
                                             </tbody>
                                             <tfoot>
