@@ -2,7 +2,9 @@
 
 session_start();
 error_reporting(E_ALL | E_STRICT);
+
 require('UploadHandler.php');
+require_once 'define.php';
 
 if (!file_exists('../assets/docs/'.$_SESSION['teacher'])) {
     mkdir('../assets/docs/'.$_SESSION['teacher']);
