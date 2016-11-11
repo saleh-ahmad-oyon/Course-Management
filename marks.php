@@ -38,13 +38,15 @@
 											}
 										?>
 									</label>
-									<h3><ins><?php echo getCourseName($_GET['id1']) ?></ins></h3><br />
+									<h3><ins><?php echo getCourseName($_GET['id1']) ?></ins></h3>
+                                    <br />
 									<h4>
 										<?php $value = explode('|', $stuInfo); ?>
-										ID: <a href="<?= SERVER ?>/course/1/students"><span class="text-primary"><?= $value[0]; ?></span></a>&nbsp;&nbsp;&nbsp;&nbsp;Name: <span class="text-primary"><?= $value[1]; ?></span>&nbsp;&nbsp;&nbsp;&nbsp;Attendence: <span class="text-primary"><?= $value[2]; ?></span>
+										ID: <a href="<?= SERVER ?>/course/<?= $cid ?>/students"><span class="text-primary"><?= $value[0]; ?></span></a>&nbsp;&nbsp;&nbsp;&nbsp;Name: <span class="text-primary"><?= $value[1]; ?></span>&nbsp;&nbsp;&nbsp;&nbsp;Attendence: <span class="text-primary"><?= $value[2]; ?></span>
 									</h4>
 									<br/><br/>
-									<h1><i><ins>Mid Term</ins></i></h1><br/><br/>
+									<h1><i><ins>Mid Term</ins></i></h1>
+                                    <br/><br/>
 								</div>
 								<div class="col-md-12">
 
