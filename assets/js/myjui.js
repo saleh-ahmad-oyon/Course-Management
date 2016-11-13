@@ -10,16 +10,16 @@ $(function() {
 });
 
 $(function() {
-    $("#datepicker").datepicker({
+    $( "#datepicker" ).datepicker({
         showOnFocus: true,
         showOtherMonths: true,
         changeMonth: true,
         changeYear: true,
         dateFormat: "d M, yy",
-        minDate: '01/01/1900',
-        maxDate: "+0D"
+        maxDate: "+0D",
+        yearRange: "-100:+0" // last hundred years
     });
-    $("#speed")
+    $( "#speed" )
         .selectmenu()
         .selectmenu( "menuWidget" )
         .addClass( "overflow" );

@@ -206,6 +206,7 @@
 
 <?php if(isset($jui)): ?>
     <script src="<?= SERVER; ?>/assets/js/jquery-ui.js"></script>
+    <script src="<?= SERVER; ?>/assets/js/myjui.js"></script>
 <?php endif; ?>
 
 <?php if(isset($mask)): ?>
