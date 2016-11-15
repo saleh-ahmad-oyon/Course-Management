@@ -5,7 +5,7 @@
 	}
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 	<head>
 		<?php require_once 'head.php'; ?>
 	</head>
@@ -20,9 +20,7 @@
 							</div>
 						</div>
 					</header>
-                </div>
-                <hr />
-                <div class="container">
+                    <hr />
 					<section>
 						<div class="row">
 							<div class="col-sm-12">
