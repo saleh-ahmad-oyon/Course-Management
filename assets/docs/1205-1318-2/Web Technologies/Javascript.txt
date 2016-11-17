@@ -3,10 +3,14 @@
 http://www.w3schools.com/js/
 
 
-- Writing Convention:
+- Writing Convention
 
 http://javascript.crockford.com/code.html
 http://www.w3schools.com/js/js_conventions.asp
+
+- Comment Styling
+
+http://www.hongkiat.com/blog/source-code-comment-styling-tips/
 
 
 - Best Practices for beginners
