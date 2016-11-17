@@ -1,8 +1,8 @@
 <?php
-    require 'session.php'; 
-	if (!isset($_SESSION['teacher'])) {
-		header('Location: '.SERVER.'');
-	}
+require 'session.php';
+if (!isset($_SESSION['teacher'])) {
+    header('Location: '.SERVER.'');
+}
 ?>
 <!DOCTYPE html>
 <html lang="en-US">
