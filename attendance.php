@@ -55,12 +55,17 @@
                         <?php foreach($outputString as $i => $value):?>
                           <tr>
                             <td>
-                              <input type='checkbox' id='del<?= $i + 1 ?>' name='check_att[]' checked='checked' value='<?= htmlentities(stripcslashes($value['s_id']), ENT_QUOTES, 'UTF-8'); ?>' /><label for='del<?= $i + 1; ?>'></label>
+                              <input type='checkbox'
+                                     id='del<?= $i + 1 ?>'
+                                     name='check_att[]'
+                                     checked='checked'
+                                     value='<?= htmlentities(stripcslashes($value['s_id']), ENT_QUOTES, 'UTF-8'); ?>' />
+                              <label for='del<?= $i + 1; ?>'></label>
                             </td>
                             <td><?= $i + 1; ?></td>
                             <td><?= htmlentities(stripcslashes($value['s_aiub_id']), ENT_QUOTES, 'UTF-8'); ?></td>
                             <td><?= htmlentities(stripcslashes($value['s_full_name']), ENT_QUOTES, 'UTF-8'); ?></td>
-                            <td class='text-success'><?= htmlentities(stripcslashes($value['att_total']), ENT_QUOTES, 'UTF-8'); ?></td>
+                            <td class='text-primary'><?= htmlentities(stripcslashes($value['att_total']), ENT_QUOTES, 'UTF-8'); ?></td>
                           </tr>
                         <?php endforeach; ?>
                         <tr>

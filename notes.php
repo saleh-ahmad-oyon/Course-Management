@@ -1,99 +1,101 @@
 <?php
 require 'session.php';
-if (!isset($_SESSION['teacher']) && !isset($_SESSION['stud'])) {
+if (!isset($_SESSION['teacher'])) {
     header('Location: '.SERVER.'');
 }
 ?>
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <?php require_once 'head.php'; ?>
+<html lang="en-US">
+<head>
+  <?php require_once 'head.php'; ?>
 
-        <!-- blueimp Gallery styles -->
-        <link rel="stylesheet" href="//blueimp.github.io/Gallery/css/blueimp-gallery.min.css">
-        <!-- CSS to style the file input field as button and adjust the Bootstrap progress bars -->
-        <link rel="stylesheet" href="<?= SERVER; ?>/assets/css/jquery.fileupload.css">
-        <link rel="stylesheet" href="<?= SERVER; ?>/assets/css/jquery.fileupload-ui.css">
-        <!-- CSS adjustments for browsers with JavaScript disabled -->
-        <noscript><link rel="stylesheet" href="<?= SERVER; ?>/assets/css/jquery.fileupload-noscript.css"></noscript>
-        <noscript><link rel="stylesheet" href="<?= SERVER; ?>/assets/css/jquery.fileupload-ui-noscript.css"></noscript>
-    </head>
-    <body>
-    <div id="wrap">
-        <main>
-            <div class="container">
-            <header>
-                <div class="row">
-                    <div class="col-md-12">
-                        <?php require_once 'header.php'; ?>
-                    </div>
+  <!-- blueimp Gallery styles -->
+  <link rel="stylesheet" href="//blueimp.github.io/Gallery/css/blueimp-gallery.min.css">
+  <!-- CSS to style the file input field as button and adjust the Bootstrap progress bars -->
+  <link rel="stylesheet" href="<?= SERVER; ?>/assets/css/jquery.fileupload.css">
+  <link rel="stylesheet" href="<?= SERVER; ?>/assets/css/jquery.fileupload-ui.css">
+  <!-- CSS adjustments for browsers with JavaScript disabled -->
+  <noscript><link rel="stylesheet" href="<?= SERVER; ?>/assets/css/jquery.fileupload-noscript.css"></noscript>
+  <noscript><link rel="stylesheet" href="<?= SERVER; ?>/assets/css/jquery.fileupload-ui-noscript.css"></noscript>
+</head>
+<body>
+  <div id="wrap">
+    <main>
+      <div class="container">
+        <header>
+          <div class="row">
+            <div class="col-md-12">
+              <?php require_once 'header.php'; ?>
+            </div>
+          </div>
+        </header>
+        <hr />
+        <section>
+          <div class="row">
+            <h3 class="text-center">
+              <ins><?php $_SESSION['course'] = getCourseName($_GET['id']); echo $_SESSION['course'] ?></ins>
+            </h3>
+            <br />
+            <div class="col-sm-12">
+            <!-- The file upload form used as target for the file upload widget -->
+            <form id="fileupload" action="<?= SERVER ?>/controller/upload" method="POST" enctype="multipart/form-data">
+              <!-- Redirect browsers with JavaScript disabled to the origin page -->
+              <noscript><input type="hidden" name="redirect" value="https://blueimp.github.io/jQuery-File-Upload/"></noscript>
+              <!-- The fileupload-buttonbar contains buttons to add/delete files and start/cancel the upload -->
+              <div class="row fileupload-buttonbar">
+
+                <div class="col-lg-7">
+                  <!-- The fileinput-button span is used to style the file input field as button -->
+                  <span class="btn btn-success fileinput-button">
+                    <i class="glyphicon glyphicon-plus"></i>
+                    <span>Add files...</span>
+                    <input type="file" name="files[]" multiple>
+                  </span>
+                  <button type="submit" class="btn btn-primary start">
+                    <i class="glyphicon glyphicon-upload"></i>
+                    <span>Start upload</span>
+                  </button>
+                  <button type="reset" class="btn btn-warning cancel">
+                    <i class="glyphicon glyphicon-ban-circle"></i>
+                    <span>Cancel upload</span>
+                  </button>
+                  <button type="button" class="btn btn-danger delete">
+                    <i class="glyphicon glyphicon-trash"></i>
+                    <span>Delete</span>
+                  </button>
+                  <input type="checkbox" class="toggle">
+                  <!-- The global file processing state -->
+                  <span class="fileupload-process"></span>
                 </div>
-            </header>
-        </div>
-            <hr />
-            <div class="container">
-            <section>
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="text-center">
-                            <h3><ins><?php $_SESSION['course'] = getCourseName($_GET['id']); echo $_SESSION['course'] ?></ins></h3>
-                        </div>
-                        <br />
-                        <div class="col-sm-12">
-                            <!-- The file upload form used as target for the file upload widget -->
-                            <form id="fileupload" action="<?= SERVER ?>/controller/upload" method="POST" enctype="multipart/form-data">
-                                <!-- Redirect browsers with JavaScript disabled to the origin page -->
-                                <noscript><input type="hidden" name="redirect" value="https://blueimp.github.io/jQuery-File-Upload/"></noscript>
-                                <!-- The fileupload-buttonbar contains buttons to add/delete files and start/cancel the upload -->
-                                <div class="row fileupload-buttonbar">
-                                    <div class="col-lg-7">
-                                        <!-- The fileinput-button span is used to style the file input field as button -->
-                                        <span class="btn btn-success fileinput-button">
-                                            <i class="glyphicon glyphicon-plus"></i>
-                                            <span>Add files...</span>
-                                            <input type="file" name="files[]" multiple>
-                                        </span>
-                                        <button type="submit" class="btn btn-primary start">
-                                            <i class="glyphicon glyphicon-upload"></i>
-                                            <span>Start upload</span>
-                                        </button>
-                                        <button type="reset" class="btn btn-warning cancel">
-                                            <i class="glyphicon glyphicon-ban-circle"></i>
-                                            <span>Cancel upload</span>
-                                        </button>
-                                        <button type="button" class="btn btn-danger delete">
-                                            <i class="glyphicon glyphicon-trash"></i>
-                                            <span>Delete</span>
-                                        </button>
-                                        <input type="checkbox" class="toggle">
-                                        <!-- The global file processing state -->
-                                        <span class="fileupload-process"></span>
-                                    </div>
-                                    <!-- The global progress state -->
-                                    <div class="col-lg-5 fileupload-progress fade">
-                                        <!-- The global progress bar -->
-                                        <div class="progress progress-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100">
-                                            <div class="progress-bar progress-bar-success" style="width:0%;"></div>
-                                        </div>
-                                        <!-- The extended global progress state -->
-                                        <div class="progress-extended">&nbsp;</div>
-                                    </div>
-                                </div>
-                                <!-- The table listing the files available for upload/download -->
-                                <table role="presentation" class="table table-striped"><tbody class="files"></tbody></table>
-                            </form>
-                            <!-- The blueimp Gallery widget -->
-                            <div id="blueimp-gallery" class="blueimp-gallery blueimp-gallery-controls" data-filter=":even">
-                                <div class="slides"></div>
-                                <h3 class="title"></h3>
-                                <a class="prev">‹</a>
-                                <a class="next">›</a>
-                                <a class="close">×</a>
-                                <a class="play-pause"></a>
-                                <ol class="indicator"></ol>
-                            </div>
-                            <!-- The template to display files available for upload -->
-                            <script id="template-upload" type="text/x-tmpl">
+
+                <!-- The global progress state -->
+                <div class="col-lg-5 fileupload-progress fade">
+                  <!-- The global progress bar -->
+                  <div class="progress progress-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar progress-bar-success" style="width:0%;"></div>
+                  </div>
+                  <!-- The extended global progress state -->
+                  <div class="progress-extended">&nbsp;</div>
+                </div>
+              </div>
+
+              <!-- The table listing the files available for upload/download -->
+              <table role="presentation" class="table table-striped"><tbody class="files"></tbody></table>
+            </form>
+
+            <!-- The blueimp Gallery widget -->
+            <div id="blueimp-gallery" class="blueimp-gallery blueimp-gallery-controls" data-filter=":even">
+              <div class="slides"></div>
+              <h3 class="title"></h3>
+              <a class="prev">‹</a>
+              <a class="next">›</a>
+              <a class="close">×</a>
+              <a class="play-pause"></a>
+              <ol class="indicator"></ol>
+            </div>
+
+            <!-- The template to display files available for upload -->
+            <script id="template-upload" type="text/x-tmpl">
 {% for (var i=0, file; file=o.files[i]; i++) { %}
     <tr class="template-upload fade">
         <td>
@@ -167,13 +169,12 @@ if (!isset($_SESSION['teacher']) && !isset($_SESSION['stud'])) {
     </tr>
 {% } %}
 </script>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </div>
+            </div><!-- /.col-sm-12 -->
+          </div><!-- /.row -->
+        </section>
+      </div><!-- container -->
     </main>
-    </div>
-    <?php $fileupload = true; require_once 'footer.php' ?>
+  </div><!-- /#wrap -->
+  <?php $fileupload = true; require_once 'footer.php' ?>
 </body>
 </html>

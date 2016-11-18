@@ -76,7 +76,7 @@ if (empty($fn)) {
 
     if ($fileContents == $oldContent) {
         echo '<script language="javascript">
-                  alert("You try to upload the same previous file !!");
+                  alert("You are trying to upload the same file!");
                   window.location="'.SERVER.'/profile";
               </script>';
         return;
@@ -119,6 +119,6 @@ if (empty($fn)) {
     editBasicInfo($fullName, $dept, $phone, $email, $sid, $image, $gender, $date, $newIco, $fileContents);
 }
 echo '<script language="javascript">
-          alert("Update Successful !!");
+          alert("Update Successful!");
           window.location="'.SERVER.'/profile";
       </script>';

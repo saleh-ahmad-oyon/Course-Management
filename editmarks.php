@@ -56,7 +56,9 @@
                   <!-- =====================
                        Edit Mark Form
                   ====================== -->
-                  <form action="<?= SERVER; ?>/controller/stuMarksEdit?id1=<?= $_GET['id1']; ?>&id2=<?= $_GET['id2']; ?>" method="post" onsubmit="return confirmation();">
+                  <form action="<?= SERVER; ?>/controller/stuMarksEdit?id1=<?= $_GET['id1']; ?>&id2=<?= $_GET['id2']; ?>"
+                        method="post"
+                        onsubmit="return confirmation();">
                     <table class="table table-bordered">
                       <thead>
                         <tr>
@@ -69,11 +71,29 @@
                           <tr>
                             <td><label><?= htmlentities(stripcslashes($value['e_date']), ENT_QUOTES, 'UTF-8'); ?></label></td>
                             <?php if($_GET['id3'] == 'mid' || $_GET['id3'] == 'final'): ?>
-                              <td><input type="number" step="0.50" min="0" max="40" value="<?= htmlentities(stripcslashes($value['e_marks']), ENT_QUOTES, 'UTF-8'); ?>" name="marks[]" class="onlyFloat form-control" /></td>
+                              <td>
+                                <input type="number"
+                                       step="0.50"
+                                       min="0"
+                                       max="40"
+                                       value="<?= htmlentities(stripcslashes($value['e_marks']), ENT_QUOTES, 'UTF-8'); ?>"
+                                       name="marks[]"
+                                       class="onlyFloat form-control" />
+                              </td>
                             <?php else: ?>
-                              <td><input type="number" step="0.50" min="0" max="20" value="<?= htmlentities(stripcslashes($value['e_marks']), ENT_QUOTES, 'UTF-8'); ?>" name="marks[]" class="onlyFloat form-control" /></td>
+                              <td>
+                                <input type="number"
+                                       step="0.50"
+                                       min="0"
+                                       max="20"
+                                       value="<?= htmlentities(stripcslashes($value['e_marks']), ENT_QUOTES, 'UTF-8'); ?>"
+                                       name="marks[]"
+                                       class="onlyFloat form-control" />
+                              </td>
                             <?php endif; ?>
-                            <input type="hidden" value="<?= htmlentities(stripcslashes($value['e_id']), ENT_QUOTES, 'UTF-8'); ?>" name="id[]" />
+                            <input type="hidden"
+                                   value="<?= htmlentities(stripcslashes($value['e_id']), ENT_QUOTES, 'UTF-8'); ?>"
+                                   name="id[]" />
                           </tr>
                         <?php endforeach; ?>
                       </tbody>
