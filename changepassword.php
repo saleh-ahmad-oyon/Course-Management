@@ -6,9 +6,9 @@
 ?>
 <!DOCTYPE html>
 <html lang="en-US">
-	<head>
-		<?php require_once 'head.php'; ?>
-	</head>
+<head>
+	<?php require_once 'head.php'; ?>
+</head>
 	<body>
 		<div id="wrap">
 			<main>
