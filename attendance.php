@@ -1,6 +1,6 @@
 <?php 
     require 'session.php'; 
-	if (!isset($_SESSION['teacher']) && !isset($_SESSION['stud'])) {
+	if (!isset($_SESSION['teacher'])) {
 		header('Location: '.SERVER.'');
 	}
 	$outputString = studentsAttendence($_GET['id']);
