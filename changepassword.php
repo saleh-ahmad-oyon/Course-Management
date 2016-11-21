@@ -3,6 +3,13 @@
 	if (!isset($_SESSION['teacher']) && !isset($_SESSION['stud']) && !isset($_SESSION['authority'])) {
 		header('Location: '.SERVER.'');
 	}
+	if (isset($_SESSION['teacher']) && $_GET['id'] != '11') {
+        header('Location: '.SERVER.'/changepassword?id=11');
+    } else if (isset($_SESSION['stud']) && $_GET['id'] != '22') {
+        header('Location: '.SERVER.'/changepassword?id=22');
+    } else if (isset($_SESSION['authority']) && $_GET['id'] != '00') {
+        header('Location: '.SERVER.'/changepassword?id=00');
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en-US">
@@ -62,7 +69,7 @@
                              onchange="this.setCustomValidity(this.validity.patternMismatch ? 'Please enter the same Password as above' : '');" />
 					</div><!-- /.col-sm-8 -->
                   </div><!-- /.col-sm-12 -->
-                  <input type="hidden" name="user" value="<?php echo $_GET['id']; ?>" />
+                  <input type="hidden" name="user" value="<?= $_GET['id']; ?>" />
 					<div class="col-sm-12 form-group text-center">
 					  <button type="submit" value="Confirm" name="changePassword" class="btn btn-primary">
                         <span class="glyphicon glyphicon-ok" aria-hidden="true"></span><span>  Confirm</span>
