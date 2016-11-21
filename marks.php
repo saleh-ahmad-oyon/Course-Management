@@ -106,38 +106,63 @@
 
 				  <hr />
 
-								<!-- ===========
-									 Quiz 2
-								============ -->
-								<div class="row">
-									<div class="col-sm-12 col-xs-12">
-										<div class="col-sm-7 col-xs-6">
-											<span title="Quiz 2 marks"><b><i>Quiz 2:&nbsp;</i></b><?php $q2 = 'quiz2'; echo showMarks($_GET['id1'], $_GET['id2'], $q2); ?></span>
-										</div>
-										<div class="col-sm-5 col-xs-6 inline-form">
-											<form action="<?= SERVER; ?>/controller/markConfirm?name=quiz2" method="post">
-												<div class="form-inline">
-													<input type="number" step="0.50" min="0" max="20" name="mark" class="onlyFloat form-control" placeholder="Quiz 2" required="required"/>
-													<button type="submit" name="addMarks" class="btn btn-success" data-toggle="tooltip" data-placement="top" title="Add"><span class="glyphicon glyphicon-plus"></span></button>
-													<input type="hidden" name="cid" value="<?= $_GET['id1']; ?>"/>
-													<input type="hidden" name="sid" value="<?= $_GET['id2']; ?>"/>
-													<?php
-														date_default_timezone_set("Asia/Dhaka");
-														$date = date('Y/m/d h:i:sa');
-													?>
-													<input type="hidden" name="date" value="<?= $date; ?>"/>
-												</div>
-											</form>&nbsp;&nbsp;
-											<form>
-												<a class="btn btn-info" data-toggle="tooltip" data-placement="top" title="Edit" href="<?= SERVER; ?>/editmarks?id1=<?= $_GET['id1'] ?>&id2=<?php echo $_GET['id2'] ?>&id3=<?= $q2 ?>"><span class="glyphicon glyphicon-edit"></span></a>
-											</form>&nbsp;&nbsp;
-											<form>
-												<a class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Delete" href="<?= SERVER; ?>/deletemarks?id1=<?= $_GET['id1'] ?>&id2=<?php echo $_GET['id2'] ?>&id3=<?= $q2 ?>"><span class="glyphicon glyphicon-trash"></span></a>
-											</form>
-										</div>
-									</div>
-								</div>
-								<!-- /Quiz 2 -->
+				  <!-- ===========
+				   	   Quiz 2
+				  ============ -->
+				  <div class="row">
+					<div class="col-sm-12 col-xs-12">
+					  <div class="col-sm-7 col-xs-6">
+						<span title="Quiz 2 marks">
+						  <b><i>Quiz 2:&nbsp;</i></b><?php $q2 = 'quiz2'; echo showMarks($_GET['id1'], $_GET['id2'], $q2); ?>
+						</span>
+					  </div>
+					  <div class="col-sm-5 col-xs-6 inline-form">
+					    <form action="<?= SERVER; ?>/controller/markConfirm?name=quiz2" method="post">
+						  <div class="form-inline">
+							<input type="number"
+								   step="0.50"
+								   min="0"
+								   max="20"
+								   name="mark"
+								   class="onlyFloat form-control"
+								   placeholder="Quiz 2"
+								   required="required"/>
+							<button type="submit"
+									name="addMarks"
+									class="btn btn-success"
+									data-toggle="tooltip"
+									data-placement="top"
+									title="Add">
+								<span class="glyphicon glyphicon-plus"></span>
+							</button>
+							<input type="hidden" name="cid" value="<?= $_GET['id1']; ?>"/>
+							<input type="hidden" name="sid" value="<?= $_GET['id2']; ?>"/>
+							<?php date_default_timezone_set("Asia/Dhaka"); $date = date('Y/m/d h:i:sa'); ?>
+							<input type="hidden" name="date" value="<?= $date; ?>"/>
+						  </div>
+						</form>&nbsp;&nbsp;
+						<form>
+						  <a class="btn btn-info"
+							 data-toggle="tooltip"
+							 data-placement="top"
+							 title="Edit"
+							 href="<?= SERVER; ?>/editmarks?id1=<?= $_GET['id1'] ?>&id2=<?php echo $_GET['id2'] ?>&id3=<?= $q2 ?>">
+							  <span class="glyphicon glyphicon-edit"></span>
+						  </a>
+						</form>&nbsp;&nbsp;
+						<form>
+						  <a class="btn btn-danger"
+							 data-toggle="tooltip"
+							 data-placement="top"
+							 title="Delete"
+							 href="<?= SERVER; ?>/deletemarks?id1=<?= $_GET['id1'] ?>&id2=<?php echo $_GET['id2'] ?>&id3=<?= $q2 ?>">
+							  <span class="glyphicon glyphicon-trash"></span>
+						  </a>
+						</form>
+					  </div>
+					</div>
+				  </div>
+				  <!-- /Quiz 2 -->
 
 								<hr />
 
