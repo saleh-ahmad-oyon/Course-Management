@@ -39,6 +39,7 @@ footer{
     border: 1px solid rgba(0,0,0,.075);
     padding-top: 15px;
     background-color: #f5f5f5;
+    padding-bottom: 15px;
 }
 
 .form-group label {
