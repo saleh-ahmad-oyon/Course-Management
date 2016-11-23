@@ -705,70 +705,92 @@
 
 				  <hr />
 
-								<!-- =======================
-									 Final Term Grade
-								======================== -->
-								<div class="text-center">
-									<div class="row">
-										<div class="col-sm-12">
-											<span title="Suggested Final Term Grade">Suggested Final Term Grade: <b><?php echo suggestedGrade($SuggestedFinalMark); ?></b></span>(old)&nbsp;&nbsp;&nbsp;&nbsp;
-											<span><b><?php echo suggestedGrade($newSuggestedMidMark); ?></b></span>(new)&nbsp;&nbsp;&nbsp;&nbsp;
-											<span title="Your Given Marks">You've Given: <b><?php $finalTermGrade = suggestedGrade($finalTotalMarks); echo $finalTermGrade; ?></b></span>
-											<?php addGradeFinal($finalTermGrade, $_GET['id1'], $_GET['id2']); ?>
-										</div>
-									</div>
-								</div>
-								<!-- /Final Term Grade -->
+				  <!-- =======================
+					   Final Term Grade
+				  ======================== -->
+				  <div class="row text-center">
+					<div class="col-sm-12">
+					  <span title="Suggested Final Term Grade">
+						Suggested Final Term Grade: <b><?php echo suggestedGrade($SuggestedFinalMark); ?></b>
+					  </span>(old)&nbsp;&nbsp;&nbsp;&nbsp;
+					  <span>
+						<b><?= suggestedGrade($newSuggestedMidMark); ?></b>
+					  </span>(new)&nbsp;&nbsp;&nbsp;&nbsp;
+					  <span title="Your Given Marks">
+						You've Given: <b><?php $finalTermGrade = suggestedGrade($finalTotalMarks); echo $finalTermGrade; ?></b>
+					  </span>
+					  <?php addGradeFinal($finalTermGrade, $_GET['id1'], $_GET['id2']); ?>
+					</div><!-- /.col-sm-12 -->
+				  </div><!-- /.row -->
+				  <!-- /Final Term Grade -->
 
-								<br /><br />
+				  <br /><br />
 
-								<div class="text-center"><h1><i><ins>Grand Total</ins></i></h1></div>
-								<br/><br/>
+				  <!-- ===================
+					   Grand Total
+				  ==================== -->
+				  <h1 class="text-center">
+					<i><ins>Grand Total</ins></i>
+				  </h1>
+				  <br/><br/>
+				  <div class="row">
+					<div class="col-xs-12">
+					  <div class="col-sm-7 col-xs-6">
+						<span title="Grand Total Marks">
+						  Suggested Grand Total: <b><?php $grandTotalMark = getTotalMark($q1, $q2, $q3, $mid, $q4, $q5, $q6, $final, $_GET['id1'], $_GET['id2']); echo $grandTotalMark; ?></b>(old)
+						</span>&nbsp;&nbsp;&nbsp;&nbsp;<b><?php $newGrandTotalMark = newSuggestedGrandTotal($midTotalMarks, $finalTotalMarks); echo $newGrandTotalMark; ?></b>(new)&nbsp;&nbsp;&nbsp;&nbsp;
+						<span title="Your Given Marks">
+						  You've Given: <b><?php $grandTotalMarksByTeacher = showGrandTotal($_GET['id1'], $_GET['id2']); echo $grandTotalMarksByTeacher; ?></b>
+						</span>
+					  </div><!-- /.col-xs-6 -->
+					  <div class="col-sm-5 col-xs-6 inline-form">
+						<form action="<?= SERVER; ?>/controller/addMarks" method="post">
+						  <div class="form-inline">
+							<input type="number"
+								   step="0.01"
+								   min="0"
+								   max="100"
+								   name="mark"
+								   class="onlyFloat form-control"
+								   placeholder="Grand Total"
+								   required="required"
+								   style="width: 120px;" />
+							<button type="submit"
+									name="addGrandTotal"
+									class="btn btn-warning">
+							  <span class="glyphicon glyphicon-edit"></span>
+							</button>
+							<input type="hidden" name="cid" value="<?= $_GET['id1']; ?>"/>
+							<input type="hidden" name="sid" value="<?= $_GET['id2']; ?>"/>
+							<?php date_default_timezone_set("Asia/Dhaka"); $date = date('Y/m/d h:i:sa'); ?>
+							<input type="hidden" name="date" value="<?= $date; ?>"/>
+						  </div><!-- /.form-inline -->
+						</form>
+					  </div><!-- /.col-xs-6 -->
+					</div><!-- /.col-xs-12 -->
+				  </div><!-- /.row -->
+				  <!-- /Grand Total -->
 
-								<!-- ===================
-									 Grand Total
-								==================== -->
-								<div class="row">
-									<div class="col-sm-12 col-xs-12">
-										<div class="col-sm-7 col-xs-6">
-											<span title="Grand Total Marks">Suggested Grand Total: <b><?php $grandTotalMark = getTotalMark($q1, $q2, $q3, $mid, $q4, $q5, $q6, $final, $_GET['id1'], $_GET['id2']); echo $grandTotalMark; ?></b>(old)</span>&nbsp;&nbsp;&nbsp;&nbsp;<b><?php $newGrandTotalMark = newSuggestedGrandTotal($midTotalMarks, $finalTotalMarks); echo $newGrandTotalMark; ?></b>(new)&nbsp;&nbsp;&nbsp;&nbsp;
-											<span title="Your Given Marks">You've Given: <b><?php $grandTotalMarksByTeacher = showGrandTotal($_GET['id1'], $_GET['id2']); echo $grandTotalMarksByTeacher; ?></b></span>
-										</div>
-										<div class="col-sm-5 col-xs-6 inline-form">
-											<form action="<?= SERVER; ?>/controller/addMarks" method="post">
-												<div class="form-inline">
-													<input type="number" step="0.01" min="0" max="100" name="mark" class="onlyFloat form-control" placeholder="Grand Total" required="required" style="width: 120px;" />
-													<button type="submit" name="addGrandTotal"  class="btn btn-warning"><span class="glyphicon glyphicon-edit"></span></button>
-													<input type="hidden" name="cid" value="<?= $_GET['id1']; ?>"/>
-													<input type="hidden" name="sid" value="<?= $_GET['id2']; ?>"/>
-													<?php date_default_timezone_set("Asia/Dhaka"); $date = date('Y/m/d h:i:sa'); ?>
-													<input type="hidden" name="date" value="<?= $date; ?>"/>
-												</div>
-											</form>
-										</div>
-									</div>
-								</div>
-								<!-- /Grand Total -->
+				  <hr />
 
-								<hr />
-
-								<!-- ===========================
-									 Grand Total Grade
-								============================ -->
-								<div class="text-center">
-									<div class="row">
-										<div class="col-sm-12">
-											<span title="Suggested Grand Final Grade">Suggested Grand Total Grade: <b><?= suggestedGrade($grandTotalMark); ?></b></span>(old)&nbsp;&nbsp;&nbsp;&nbsp;<b><?= suggestedGrade($newGrandTotalMark); ?></b>(new)&nbsp;&nbsp;&nbsp;&nbsp;
-											<span title="Your Given Marks">You've Given: <b><?php $grandTotalGrade = suggestedGrade($grandTotalMarksByTeacher); echo $grandTotalGrade ?></b></span>
-											<?php addGradeGrandTotal($grandTotalGrade, $_GET['id1'], $_GET['id2']); ?>
-										</div>
-									</div>
-								</div>
-								<!-- /Grand Total Grade -->
-
-							</div>
-						</div>
-					</div>
+				  <!-- ===========================
+					   Grand Total Grade
+				  ============================ -->
+				  <div class="row text-center">
+					<div class="col-sm-12">
+					  <span title="Suggested Grand Final Grade">
+						Suggested Grand Total Grade: <b><?= suggestedGrade($grandTotalMark); ?></b>
+					  </span>(old)&nbsp;&nbsp;&nbsp;&nbsp;<b><?= suggestedGrade($newGrandTotalMark); ?></b>(new)&nbsp;&nbsp;&nbsp;&nbsp;
+					  <span title="Your Given Marks">
+						You've Given: <b><?php $grandTotalGrade = suggestedGrade($grandTotalMarksByTeacher); echo $grandTotalGrade ?></b>
+					  </span>
+					  <?php addGradeGrandTotal($grandTotalGrade, $_GET['id1'], $_GET['id2']); ?>
+					</div><!-- /.col-sm-12 -->
+				  </div><!-- /.row -->
+				  <!-- /Grand Total Grade -->
+				</div>
+			</div>
+		  </div>
 		</section>
 	  </div><!-- /.container -->
 	</main>
