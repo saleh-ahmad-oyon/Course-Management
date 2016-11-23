@@ -1,7 +1,17 @@
 <?php
-
 require_once 'db_conn.php';
 
+/**
+ * Check Student login credential
+ *
+ * Check Student Username and password provided in the login form with
+ * the registered username and password
+ *
+ * @param string $user
+ * @param string $pass
+ *
+ * @return bool
+ */
 function check_stud_login($user, $pass)
 {
 	$conn = db_conn();
@@ -15,6 +25,17 @@ AND `s_pass` = '".mysqli_real_escape_string($conn, $pass)."'";
 	return $row['num'] ? true : false ;
 }
 
+/**
+ * Check Teacher login credential
+ *
+ * Check Teacher Username and Password provided in the login form with
+ * the registered username and password
+ *
+ * @param string $user
+ * @param string $pass
+ *
+ * @return bool
+ */
 function check_teacher_login($user, $pass)
 {
 	$conn = db_conn();
@@ -28,6 +49,17 @@ AND `t_pass` = '".mysqli_real_escape_string($conn, $pass)."'";
 	return $row['num'] ? true : false ;
 }
 
+/**
+ * Check Authority login credential
+ *
+ * Check Authority Username and Password provided in the login form with
+ * the registered username and password
+ *
+ * @param string $user
+ * @param string $pass
+ *
+ * @return string bool
+ */
 function check_authority_login($user, $pass)
 {
 	$conn = db_conn();
