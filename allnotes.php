@@ -25,7 +25,13 @@ $notes = getNotes($_GET['id1']);
         <hr/>
         <section>
           <div class="col-md-12">
-            <h3 class="text-center"><ins><?= getCourseName($_GET['id1']) ?></ins></h3>
+            <h3 class="text-center">
+              <ins>
+                <a href="<?= SERVER; ?>/course/student/<?= htmlentities(stripcslashes($_GET['id1']), ENT_QUOTES, 'UTF-8'); ?>">
+                  <?= getCourseName($_GET['id1']) ?>
+                </a>
+              </ins>
+            </h3>
               <?php if(!count($notes)): ?>
                 <h3>No Data Found</h3>
               <?php else: foreach($notes as $key => $n):

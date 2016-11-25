@@ -33,7 +33,11 @@ if (!isset($_SESSION['teacher'])) {
         <section>
           <div class="row">
             <h3 class="text-center">
-              <ins><?php $_SESSION['course'] = getCourseName($_GET['id']); echo $_SESSION['course'] ?></ins>
+              <ins>
+                <a href="<?= SERVER; ?>/teacher/course/<?= htmlentities(stripcslashes($_GET['id']), ENT_QUOTES, 'UTF-8'); ?>">
+                  <?php $_SESSION['course'] = getCourseName($_GET['id']); echo $_SESSION['course'] ?>
+                </a>
+              </ins>
             </h3>
             <br />
             <div class="col-sm-12">

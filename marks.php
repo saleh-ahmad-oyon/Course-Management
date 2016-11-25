@@ -34,7 +34,13 @@
 					**You cannot enter this mark Twice!
 				  </label>
 				<?php endif; ?>
-				<h3><ins><?php echo getCourseName($_GET['id1']) ?></ins></h3>
+				<h3>
+				  <ins>
+					<a href="<?= SERVER; ?>/teacher/course/<?= htmlentities(stripcslashes($_GET['id1']), ENT_QUOTES, 'UTF-8'); ?>">
+					  <?= getCourseName($_GET['id1']) ?>
+					</a>
+				  </ins>
+				</h3>
 				<br />
 				<h4>
 				  <?php $value = explode('|', $stuInfo); ?>

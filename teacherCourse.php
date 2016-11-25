@@ -25,7 +25,14 @@
         <section>
           <div class="row">
             <div class="col-md-12 text-center">
-              <h3><ins><?= getCourseName($_GET['id']) ?></ins></h3><br />
+              <h3>
+                <ins>
+                  <a href="<?= SERVER; ?>/teacher/course/<?= htmlentities(stripcslashes($_GET['id']), ENT_QUOTES, 'UTF-8'); ?>">
+                    <?= getCourseName($_GET['id']) ?>
+                  </a>
+                </ins>
+              </h3>
+              <br />
               <a class="btn btn-primary hover-focus margin-top-10" href="<?= SERVER; ?>/course/<?= $id; ?>/students">Student List</a>&nbsp;&nbsp;
               <a class="btn btn-info hover-focus margin-top-10" href="<?= SERVER; ?>/course/<?= $id; ?>/addstudent">
                 <i class="fa fa-user-plus"></i> Student

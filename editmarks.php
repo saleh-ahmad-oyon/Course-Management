@@ -39,7 +39,14 @@
           <div class="row">
             <div class="col-md-12">
               <div class="text-center">
-                <h2><ins><?= getCourseName($_GET['id1']) ?></ins></h2><br />
+                <h3>
+                  <ins>
+                    <a href="<?= SERVER; ?>/teacher/course/<?= htmlentities(stripcslashes($_GET['id1']), ENT_QUOTES, 'UTF-8'); ?>">
+                      <?= getCourseName($_GET['id1']) ?>
+                    </a>
+                  </ins>
+                </h3>
+                <br />
                 <h4>
                   <?php $value = explode('|', $stuInfo); ?>
                   ID: <span class="text-primary"><?= htmlentities(stripcslashes($value[0]), ENT_QUOTES, 'UTF-8'); ?></span>&nbsp;&nbsp;&nbsp;&nbsp;Name: <span class="text-primary"><?= htmlentities(stripcslashes($value[1]), ENT_QUOTES, 'UTF-8'); ?></span>&nbsp;&nbsp;&nbsp;&nbsp;Attendence: <span class="text-primary"><?= htmlentities(stripcslashes($value[2]), ENT_QUOTES, 'UTF-8'); ?></span>

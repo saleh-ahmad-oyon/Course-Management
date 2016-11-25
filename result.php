@@ -30,7 +30,11 @@
                    Student Result
               ====================== -->
               <h3 class="text-center">
-                <ins><?= getCourseName($_GET['id']) ?></ins>
+                <ins>
+                  <a href="<?= SERVER; ?>/teacher/course/<?= htmlentities(stripcslashes($_GET['id']), ENT_QUOTES, 'UTF-8'); ?>">
+                    <?= getCourseName($_GET['id']) ?>
+                  </a>
+                </ins>
               </h3>
               <br />
               <?php if(!count($outputString)): ?>

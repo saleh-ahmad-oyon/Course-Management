@@ -28,7 +28,14 @@
           <div class="row">
             <div class="col-sm-offset-3 col-sm-6">
               <div class="text-center">
-                <h3><ins><?= getCourseName($_GET['id']) ?></ins></h3><br/>
+                <h3>
+                  <ins>
+                    <a href="<?= SERVER; ?>/course/student/<?= htmlentities(stripcslashes($_GET['id']), ENT_QUOTES, 'UTF-8'); ?>">
+                      <?= getCourseName($_GET['id']) ?>
+                    </a>
+                  </ins>
+                </h3>
+                <br/>
                 <a href="<?= SERVER ?>/course/<?= $cid ?>/allnotes" class="btn btn-primary">All Notes</a>
                 <h5>Total Attendence: <?= $totalAttendance; ?> day[s]</h5>
               </div>
