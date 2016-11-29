@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 11, 2016 at 07:55 AM
+-- Generation Time: Nov 29, 2016 at 08:00 PM
 -- Server version: 10.1.13-MariaDB
 -- PHP Version: 5.6.20
 
@@ -38,7 +38,7 @@ CREATE TABLE `attendinfo` (
 --
 
 INSERT INTO `attendinfo` (`att_id`, `att_total`, `s_id`, `c_id`) VALUES
-(1, 0, 3, 1),
+(1, 3, 3, 1),
 (2, 3, 1, 2),
 (60, 0, 61, 2),
 (4, 3, 3, 2),
@@ -94,7 +94,8 @@ INSERT INTO `attendinfo` (`att_id`, `att_total`, `s_id`, `c_id`) VALUES
 (70, 0, 55, 14),
 (71, 0, 56, 14),
 (72, 0, 59, 14),
-(73, 0, 61, 14);
+(73, 0, 61, 14),
+(74, 3, 26, 1);
 
 -- --------------------------------------------------------
 
@@ -184,7 +185,7 @@ CREATE TABLE `course_student_marks` (
 --
 
 INSERT INTO `course_student_marks` (`c_s_m_id`, `c_id`, `s_id`, `mid_best_two`, `final_best_two`, `mid_total`, `mid_grade`, `final_grade`, `grand_final_grade`, `final_total`, `grand_final_total`) VALUES
-(1, 1, 3, 40, 0, 100, 'A+', 'FAIL', 'FAIL', 0, 0),
+(1, 1, 3, 40, 40, 100, 'A+', 'A+', 'FAIL', 94, 0),
 (2, 2, 1, 0, 0, 0, 'FAIL', 'FAIL', 'FAIL', 0, 0),
 (60, 2, 61, 0, 0, 0, 'FAIL', 'FAIL', 'FAIL', 0, 0),
 (4, 2, 3, 0, 0, 0, 'FAIL', 'FAIL', 'FAIL', 0, 0),
@@ -240,7 +241,8 @@ INSERT INTO `course_student_marks` (`c_s_m_id`, `c_id`, `s_id`, `mid_best_two`, 
 (70, 14, 55, 0, 0, 0, 'FAIL', 'FAIL', 'FAIL', 0, 0),
 (71, 14, 56, 0, 0, 0, 'FAIL', 'FAIL', 'FAIL', 0, 0),
 (72, 14, 59, 0, 0, 0, 'FAIL', 'FAIL', 'FAIL', 0, 0),
-(73, 14, 61, 0, 0, 0, 'FAIL', 'FAIL', 'FAIL', 0, 0);
+(73, 14, 61, 0, 0, 0, 'FAIL', 'FAIL', 'FAIL', 0, 0),
+(74, 1, 26, 0, 0, 0, 'FAIL', 'FAIL', 'FAIL', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -284,7 +286,7 @@ CREATE TABLE `exam` (
 --
 
 INSERT INTO `exam` (`e_id`, `e_name`, `e_date`, `e_marks`, `s_id`, `c_id`) VALUES
-(1, 'quiz1', '2016-05-19 10:16:57', 18, 3, 1),
+(17, 'quiz4', '2016-11-11 06:41:04', 20, 3, 1),
 (2, 'quiz2', '2016-05-19 10:17:05', 20, 3, 1),
 (3, 'quiz3', '2016-05-19 10:17:10', 17, 3, 1),
 (4, 'mid', '2016-05-19 10:17:21', 38, 3, 1),
@@ -297,7 +299,12 @@ INSERT INTO `exam` (`e_id`, `e_name`, `e_date`, `e_marks`, `s_id`, `c_id`) VALUE
 (13, 'quiz4', '2016-05-28 10:21:01', 12, 38, 2),
 (14, 'quiz5', '2016-05-28 10:21:08', 15, 38, 2),
 (15, 'quiz4', '2016-05-28 10:21:15', 15, 38, 2),
-(16, 'quiz6', '2016-05-28 10:21:21', 20, 38, 2);
+(16, 'quiz6', '2016-05-28 10:21:21', 20, 38, 2),
+(18, 'quiz5', '2016-11-11 06:41:21', 18, 3, 1),
+(19, 'quiz6', '2016-11-11 06:41:27', 15, 3, 1),
+(20, 'final', '2016-11-11 06:41:36', 35, 3, 1),
+(21, 'quiz1', '2016-11-11 06:44:17', 20, 26, 1),
+(22, 'quiz2', '2016-11-11 06:44:22', 20, 26, 1);
 
 -- --------------------------------------------------------
 
@@ -320,7 +327,12 @@ CREATE TABLE `file` (
 --
 
 INSERT INTO `file` (`id`, `filepath`, `coursename`, `t_aiub_id`, `date`, `file_size`, `file_type`) VALUES
-(12, 'C:/xampp/htdocs/course/assets/docs/1205-1318-2/Web Technologies/php oop.txt', 'Web Technologies', '1205-1318-2', '2016-11-11 06:43:39', '69', 'text/plain');
+(1, 'C:/xampp/htdocs/course/assets/docs/1205-1318-2/Web Technologies/Ajax.txt', 'Web Technologies', '1205-1318-2', '2016-11-25 03:14:31', '387', 'text/plain'),
+(2, 'C:/xampp/htdocs/course/assets/docs/1205-1318-2/Web Technologies/css.txt', 'Web Technologies', '1205-1318-2', '2016-11-25 03:14:31', '330', 'text/plain'),
+(3, 'C:/xampp/htdocs/course/assets/docs/1205-1318-2/Web Technologies/html.txt', 'Web Technologies', '1205-1318-2', '2016-11-25 03:14:31', '339', 'text/plain'),
+(4, 'C:/xampp/htdocs/course/assets/docs/1205-1318-2/Web Technologies/Javascript.txt', 'Web Technologies', '1205-1318-2', '2016-11-25 03:14:31', '689', 'text/plain'),
+(5, 'C:/xampp/htdocs/course/assets/docs/1205-1318-2/Web Technologies/json.txt', 'Web Technologies', '1205-1318-2', '2016-11-25 03:14:31', '265', 'text/plain'),
+(6, 'C:/xampp/htdocs/course/assets/docs/1205-1318-2/Web Technologies/php.txt', 'Web Technologies', '1205-1318-2', '2016-11-25 03:14:31', '355', 'text/plain');
 
 -- --------------------------------------------------------
 
@@ -391,12 +403,12 @@ CREATE TABLE `student` (
 INSERT INTO `student` (`s_id`, `s_aiub_id`, `s_full_name`, `s_cgpa`, `s_phone`, `s_email`, `s_pass`, `s_dept`, `s_image`, `s_gender`, `s_dob`, `s_small_image`, `img_contents`) VALUES
 (1, '12-20167-1', 'Rahman Sadikur', 3.5, '+880-1680091207', 'shawon@gmail.com', '1234', 'CSE', '579a4220454d89e8abbbf56ce2413c98504c25ab8bd90.jpg', 'Male', '1992-03-09', '579a422056e849e8abbbf56ce2413c98504c25ab8bd90_s.jpg', '03ecd52da2acd0eb0324503697d64705'),
 (2, '12-20107-1', 'Rafi, M.H', 3.62, '+880-1677649964', 'rafi@yahoo.com', '1234', 'CSE', '57eaae99beb7d139c4e89cdbedaf144d05ca54a12a57b.jpg', 'Male', '1970-01-01', '57eaae99c8157139c4e89cdbedaf144d05ca54a12a57b_s.jpg', '39db043a1aa8b4c27dfacf06bdc4247a'),
-(3, '12-20235-1', 'Ahmad, Saleh', 3.85, '+880-1626785569', 'salehoyon@hotmail.com', 'qQ1!', 'CSE', '5792566e7f759836c6d8e155de751a497359d07af41d8.jpg', 'Male', '1991-08-13', '5792566e912e2836c6d8e155de751a497359d07af41d8_s.jpg', 'ba72a8685a27103d435ceb224c6051c6'),
+(3, '12-20235-1', 'Ahmad, Saleh', 3.85, '+880-1626785569', 'salehoyon@hotmail.com', 'qQ1!', 'CSE', '5792566e7f759836c6d8e155de751a497359d07af41d8.jpg', 'Male', '1992-08-13', '5792566e912e2836c6d8e155de751a497359d07af41d8_s.jpg', 'ba72a8685a27103d435ceb224c6051c6'),
 (4, '12-20158-1', 'Roy, Pallob Kanti', 3.25, '+880-1912165908', 'pallab@ymail.com', '1234', 'CSSE', '57eab17a4dadcdffec98d214e6a9ccb86bff01c7387a3.jpg', 'Male', '1970-01-01', '57eab17a60ad9dffec98d214e6a9ccb86bff01c7387a3_s.jpg', 'e1cb6d6ac10771c924d4d7c3efa3807d'),
 (5, '12-20120-1', 'Ayon, Arif Ahmed', 3.56, '+880-1677377003', 'ayon@rocketmail.com', '1234', 'CSSE', '57d7d4d1764a30ff6c3ace16359e41e37d40b8301d67f.jpg', 'Male', '1992-09-04', '57d7d4d1862210ff6c3ace16359e41e37d40b8301d67f_s.jpg', 'd869f402148495509b21ffdfb8942416'),
 (6, '12-20124-1', 'Alam, Nesar Ul', 3.41, '+880-1676756794', 'nesarul@gmail.com', '1234', 'CSSE', '579210fde9598ed967dc0d46a43c8a629b3d7a7900f97.jpg', 'Male', '1992-10-09', '579210fdf3c2ded967dc0d46a43c8a629b3d7a7900f97_s.jpg', '5ee71722a78d62888b9ad0129cfeb5f1'),
 (7, '12-20130-1', 'Faria, Tabassum Mehnaz', 3.63, '+880-1686780827', 'faria@live.com', '1234', 'CSE', '57d7d06202dccd73f24d5090d7e2a4b2944c2b35dd2ec.jpg', 'Female', '1992-04-30', '57d7d06230cabd73f24d5090d7e2a4b2944c2b35dd2ec_s.jpg', '71b23f1e562f9d0111d7e08e869f8eda'),
-(8, '12-20137-1', 'Mahmood, Asif', 3.11, '+880-1682702757', 'asif@hotmail.com', '1234', 'CSE', '57924fa34f7b5ce0b996aa0b7d64169a4b8ffeaf878c5.jpg', 'Male', '1970-01-01', '57924fa35ed7fce0b996aa0b7d64169a4b8ffeaf878c5_s.jpg', '7eb67a4f752c207cd943ae2e3c9d335b'),
+(8, '12-20137-1', 'Mahmood, Asif', 3.11, '+880-1682702757', 'asif@hot.com', '1234', 'CSE', '57924fa34f7b5ce0b996aa0b7d64169a4b8ffeaf878c5.jpg', 'Male', '1991-01-25', '57924fa35ed7fce0b996aa0b7d64169a4b8ffeaf878c5_s.jpg', '7eb67a4f752c207cd943ae2e3c9d335b'),
 (9, '12-21032-1', 'Mimo, Minhaj Mohammad', 3.25, '+880-1711086599', 'mimo@outlook.com', '1234', 'CSSE', '57715ac439bd6f14cb5cf13c016653d8b6ab54def62bb.jpg', 'Male', '1992-06-09', '57715ac44114bf14cb5cf13c016653d8b6ab54def62bb_s.jpg', '305b9fe1398cade11efb2bb709bb8d06'),
 (10, '12-20138-1', 'Bhuiyan, Md, Maksudul Haque', 3.53, '+880-1671038362', 'turja@hotmail.com', '1234', 'CSSE', '5811002852202b4535743b789b239e54c10e9ecf6d608.jpg', 'Male', '1970-09-28', '5811002858c3bb4535743b789b239e54c10e9ecf6d608_s.jpg', '857b4b94db24acd007cd9f662d3dc3d0'),
 (11, '12-20146-1', 'Amin, Mohammad Shafayet Bin', 3.47, '+880-1824954504', 'safayet@yahoo.com', '1234', 'CSSE', '57715ba829a9f01be8a917c000d33096c806452d3dd5c.jpg', 'Male', '1970-01-01', '57715ba834adf01be8a917c000d33096c806452d3dd5c_s.jpg', 'f681b1118a3376f6d9e686f52ae7fc46'),
@@ -436,7 +448,7 @@ INSERT INTO `student` (`s_id`, `s_aiub_id`, `s_full_name`, `s_cgpa`, `s_phone`, 
 (49, '12-20731-1', 'Islam, Md Shadmanul', 3.9, '+880-1645967435', 'shadmanul@live.com', '1234', 'CSE', '579ada97b9675a60a4676b99c41cb51970dfddc627ad3.jpg', 'Male', '1992-09-07', '579ada97c2889a60a4676b99c41cb51970dfddc627ad3_s.jpg', '9a501686f667868607df5afd1ffe2665'),
 (50, '12-20721-1', 'Saha, Koushik', 3.77, '+880-1920859131', 'koushik@live.com', '1234', 'CSE', '579776c3d8c533d4d3ebee2b218ef51213ce379954e49.jpg', 'Male', '1970-01-01', '579776c3eb9fb3d4d3ebee2b218ef51213ce379954e49_s.jpg', 'db9bc6fc2ceed4af56412cc18f536ac9'),
 (51, '12-21003-1', 'Islam, Tawhid Al ', 3.99, '+880-1622036696', 'tawhidvai@gmail.com', '1234', 'CSE', '57756b8569cf10fd7c651213a2c1a9df4d64849c01f42.jpg', 'Male', '1992-01-04', '57756b8579c480fd7c651213a2c1a9df4d64849c01f42_s.jpg', '8d120ddadadd8a8b8ae8b995355fea8d'),
-(52, '12-20981-1', 'Rahman, Sajidur', 3.96, '+880-1674242999', 'sajid_reznov9185@live.com', '1234', 'CSE', '581101515a915f62b2dbd12d5d17b4b771972cca24288.jpg', 'Male', '1992-10-31', '581101516b940f62b2dbd12d5d17b4b771972cca24288_s.jpg', 'bbaecf756d0ef8276547537ce13aea97'),
+(52, '12-20981-1', 'Rahman, Sajidur', 3.96, '+880-1674242999', 'sajid_reznov9185@live.com', '1234', 'CSE', '5835e95343063477ba124e83b9aa62a1d5d3c2c6438f2.jpg', 'Male', '1992-10-31', '5835e95367821477ba124e83b9aa62a1d5d3c2c6438f2_s.jpg', '47ef67535cc16030549785b114ed1edf'),
 (53, '11-52486-1', 'Maher Mahmud Nishan', 2.75, '+880-1771588210', 'maheer@yahoo.com', '1234', 'CSSE', '57d7d38b3dc0c7aeadf973997ba1067038c2d321ba53f.jpg', 'Male', '1992-02-24', '57d7d38b48d237aeadf973997ba1067038c2d321ba53f_s.jpg', 'f5c4fda3070e88e2783baad98820a0f9'),
 (54, '12-20502-1', 'Bonna, Jannatul Ferdous', 3.72, '+880-1765342899', 'bonna@yahoo.com', '1234', 'CSE', '57965bdc4134fb24592cc69da9202d878f9a84fbd5433.jpg', 'Female', '1992-07-26', '57965bdc57789b24592cc69da9202d878f9a84fbd5433_s.jpg', 'fb0e4617164ae793244f11b2d2f235b4'),
 (55, '12-20664-1', 'Keya, Rashika Tasnim', 3.62, '+880-1676119628', 'rashika_tasnim@yahoo.com', '1234', 'CSE', '57e2d156a523d74378b19b736af202de0a80ec489697e.jpg', 'Female', '1992-05-18', '57e2d156ca3a874378b19b736af202de0a80ec489697e_s.jpg', 'dfd7203dde42b36d8907dc960a8aaea1'),
@@ -567,7 +579,8 @@ INSERT INTO `teacher_student_course` (`t_s_c_id`, `s_id`, `t_id`, `c_id`) VALUES
 (70, 55, 15, 14),
 (71, 56, 15, 14),
 (72, 59, 15, 14),
-(73, 61, 15, 14);
+(73, 61, 15, 14),
+(74, 26, 1, 1);
 
 --
 -- Indexes for dumped tables
@@ -647,7 +660,7 @@ ALTER TABLE `teacher_student_course`
 -- AUTO_INCREMENT for table `attendinfo`
 --
 ALTER TABLE `attendinfo`
-  MODIFY `att_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'attendance id', AUTO_INCREMENT=74;
+  MODIFY `att_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'attendance id', AUTO_INCREMENT=75;
 --
 -- AUTO_INCREMENT for table `authority`
 --
@@ -662,7 +675,7 @@ ALTER TABLE `course`
 -- AUTO_INCREMENT for table `course_student_marks`
 --
 ALTER TABLE `course_student_marks`
-  MODIFY `c_s_m_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'course student marks id', AUTO_INCREMENT=74;
+  MODIFY `c_s_m_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'course student marks id', AUTO_INCREMENT=75;
 --
 -- AUTO_INCREMENT for table `department`
 --
@@ -672,12 +685,12 @@ ALTER TABLE `department`
 -- AUTO_INCREMENT for table `exam`
 --
 ALTER TABLE `exam`
-  MODIFY `e_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'exam id', AUTO_INCREMENT=17;
+  MODIFY `e_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'exam id', AUTO_INCREMENT=23;
 --
 -- AUTO_INCREMENT for table `file`
 --
 ALTER TABLE `file`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT for table `information`
 --
@@ -697,7 +710,7 @@ ALTER TABLE `teacher`
 -- AUTO_INCREMENT for table `teacher_student_course`
 --
 ALTER TABLE `teacher_student_course`
-  MODIFY `t_s_c_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'id', AUTO_INCREMENT=74;
+  MODIFY `t_s_c_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'id', AUTO_INCREMENT=75;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
