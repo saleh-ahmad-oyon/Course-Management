@@ -83,12 +83,11 @@
                     <!-- Email -->
                     <div class="form-group required">
                       <label>Email</label>
-                      <input type="email"
-                             class="form-control"
+                      <input class="form-control"
                              placeholder="Email"
                              required="required"
                              name="temail"
-                             pattern="[([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)]i"
+                             pattern="^[^<>()\[\]\\\\.,;:\s@]{1}[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~\-`]{0,63}@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,63}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$"
                              title="Insert Teacher's Email Correctly">
                     </div>
                     <!-- Phone -->
@@ -179,11 +178,10 @@
                     <!-- Email -->
                     <div class="form-group">
                       <label>Email</label>
-                      <input type="email"
-                             class="form-control"
+                      <input class="form-control"
                              placeholder="Email"
                              name="email"
-                             pattern="[([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)]i"
+                             pattern="^[^<>()\[\]\\\\.,;:\s@]{1}[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~\-`]{0,63}@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,63}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$"
                              title="Insert Email address Correctly">
                     </div>
                     <!-- Phone -->

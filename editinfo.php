@@ -174,7 +174,12 @@
                       <div class="form-group">
                         <div class="input-group">
                           <div class="input-group-addon" title="Email"><span class="glyphicon glyphicon-envelope"></span></div>
-                          <input type="email" value="<?php echo htmlentities(stripslashes($row['s_email']), ENT_QUOTES, 'UTF-8'); ?>" name="editEmail" pattern="[([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)]i" title="Insert Email address Correctly" class="form-control"/>
+                          <input value="<?= htmlentities(stripslashes($row['s_email']), ENT_QUOTES, 'UTF-8'); ?>"
+                                 name="editEmail"
+                                 pattern="^[^<>()\[\]\\\\.,;:\s@]{1}[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~\-`]{0,63}@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,63}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$"
+                                 title="Insert Email address Correctly"
+                                 required="required"
+                                 class="form-control"/>
                         </div>
                       </div>
                       <!-- Submit -->
@@ -287,11 +292,11 @@
                     <div class="form-group">
                       <div class="input-group">
                         <div class="input-group-addon" title="Email"><span class="glyphicon glyphicon-envelope"></span></div>
-                        <input type="email"
-                               value="<?= htmlentities(stripslashes($row['t_email']), ENT_QUOTES, 'UTF-8'); ?>"
+                        <input value="<?= htmlentities(stripslashes($row['t_email']), ENT_QUOTES, 'UTF-8'); ?>"
                                name="editEmail"
-                               pattern="[([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)]i"
+                               pattern="^[^<>()\[\]\\\\.,;:\s@]{1}[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~\-`]{0,63}@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,63}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$"
                                title="Insert Email address Correctly"
+                               required="required"
                                class="form-control"/>
                       </div>
                     </div>
