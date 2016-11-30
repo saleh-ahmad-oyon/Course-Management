@@ -14,11 +14,11 @@ if (session_status() == PHP_SESSION_NONE) {
 require 'model/db.php';
 require 'controller/define.php';
 
-if (isset($_POST['loginbtn'])) {
+if (array_key_exists('loginbtn', $_POST)) {
 
     /**
-     * @var string     $user    AIUB ID
-     * @var string     $pass    Password
+     * @var string $user    AIUB ID
+     * @var string $pass    Password
      */
 	$user = $_POST['user'];
 	$pass = $_POST['pass'];
@@ -40,8 +40,8 @@ if (isset($_POST['loginbtn'])) {
         }
 
         /**
-         * @var string     $_SESSION['authority']    Saving Authority's AIUB ID
-         * @var int        $_SESSION['aid']          Saving Authority's ID
+         * @var string $_SESSION['authority']    Saving Authority's AIUB ID
+         * @var int    $_SESSION['aid']          Saving Authority's ID
          */
         $_SESSION['authority'] = $user;
         $_SESSION['aid']       = authority_id($user);
@@ -55,8 +55,8 @@ if (isset($_POST['loginbtn'])) {
         }
 
         /**
-         * @var string     $_SESSION['teacher']    Saving Teacher's AIUB ID
-         * @var int        $_SESSION['tid']        Saving Teacher's ID
+         * @var string $_SESSION['teacher']    Saving Teacher's AIUB ID
+         * @var int    $_SESSION['tid']        Saving Teacher's ID
          */
         $_SESSION['teacher'] = $user;
         $_SESSION['tid']     = teacher_id($user);
@@ -70,8 +70,8 @@ if (isset($_POST['loginbtn'])) {
         }
 
         /**
-         * @var string     $_SESSION['stud']    Saving Student's AIUB ID
-         * @var int        $_SESSION['sid']     Saving Student's ID
+         * @var string $_SESSION['stud']    Saving Student's AIUB ID
+         * @var int    $_SESSION['sid']     Saving Student's ID
          */
         $_SESSION['stud'] = $user;
         $_SESSION['sid']  = student_id($user);
