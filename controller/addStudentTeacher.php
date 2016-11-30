@@ -16,8 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] != "POST") {
     header('Location: '.SERVER.'/404');
     return;
 }
-
-if ((!isset($_POST['addTeacher'])) && (!isset($_POST['addStudent']))) {
+if ((!array_key_exists('addTeacher', $_POST)) && (!array_key_exists('addStudent', $_POST))) {
     /** @Link 404 Page */
     header('Location: '.SERVER.'/404');
     return;

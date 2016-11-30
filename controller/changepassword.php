@@ -17,7 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] != "POST") {
     return;
 }
 
-if (!isset($_POST['changePassword'])) {
+if (!array_key_exists('changePassword', $_POST)) {
     /** @Link 404 Page */
     header('Location: '.SERVER.'/404');
     return;

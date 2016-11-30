@@ -14,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] != "POST") {
     return;
 }
 
-if (!isset($_POST['addCot'])) {
+if (!array_key_exists('addCot', $_POST)) {
     /** @Link 404 Page */
     header('Location: '.SERVER.'/404');
     return;
