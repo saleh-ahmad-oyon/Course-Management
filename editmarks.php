@@ -19,7 +19,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <?php require_once 'head.php'; ?>
+    <?php require_once 'templates/default/head.php'; ?>
 </head>
 <body>
   <div id="wrap">
@@ -28,7 +28,7 @@
         <header>
           <div class="row">
             <div class="col-md-12">
-              <?php require_once 'header.php'; ?>
+              <?php require_once 'templates/default/header.php'; ?>
             </div>
           </div>
         </header>
@@ -60,9 +60,9 @@
               <?php else: ?>
                 <div class="col-md-offset-4 col-md-4">
 
-                  <!-- =====================
+                  <!-- ==================
                        Edit Mark Form
-                  ====================== -->
+                  =================== -->
                   <form action="<?= SERVER; ?>/controller/stuMarksEdit?id1=<?= $_GET['id1']; ?>&id2=<?= $_GET['id2']; ?>"
                         method="post"
                         onsubmit="return confirmation();">
@@ -125,6 +125,6 @@
       </div><!-- /.container -->
     </main>
   </div><!-- /#wrap -->
-  <?php require_once 'footer.php' ?>
+  <?php require_once 'templates/default/footer.php' ?>
 </body>
 </html>

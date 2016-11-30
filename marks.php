@@ -11,7 +11,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<?php require_once 'head.php'; ?>
+<?php require_once 'templates/default/head.php'; ?>
 </head>
 <body>
   <div id="wrap">
@@ -20,7 +20,7 @@
 		<header>
 		  <div class="row">
 			<div class="col-md-12">
-			  <?php require_once 'header.php'; ?>
+			  <?php require_once 'templates/default/header.php'; ?>
 			</div>
 		  </div>
 		</header>
@@ -112,9 +112,9 @@
 
 				  <hr />
 
-				  <!-- ===========
+				  <!-- ==========
 				   	   Quiz 2
-				  ============ -->
+				  =========== -->
 				  <div class="row">
 					<div class="col-sm-12 col-xs-12">
 					  <div class="col-sm-7 col-xs-6">
@@ -172,9 +172,9 @@
 
 				  <hr />
 
-				  <!-- ===========
+				  <!-- ==========
 					   Quiz 3
-				  ============ -->
+				  =========== -->
 				  <div class="row">
 					<div class="col-xs-12">
 					  <div class="col-sm-7 col-xs-6">
@@ -711,9 +711,9 @@
 
 				  <hr />
 
-				  <!-- =======================
+				  <!-- ====================
 					   Final Term Grade
-				  ======================== -->
+				  ===================== -->
 				  <div class="row text-center">
 					<div class="col-sm-12">
 					  <span title="Suggested Final Term Grade">
@@ -732,9 +732,9 @@
 
 				  <br /><br />
 
-				  <!-- ===================
+				  <!-- ===============
 					   Grand Total
-				  ==================== -->
+				  ================ -->
 				  <h1 class="text-center">
 					<i><ins>Grand Total</ins></i>
 				  </h1>
@@ -779,9 +779,9 @@
 
 				  <hr />
 
-				  <!-- ===========================
+				  <!-- =====================
 					   Grand Total Grade
-				  ============================ -->
+				  ====================== -->
 				  <div class="row text-center">
 					<div class="col-sm-12">
 					  <span title="Suggested Grand Final Grade">
@@ -801,6 +801,6 @@
 	  </div><!-- /.container -->
 	</main>
   </div><!-- /#wrap -->
-  <?php require_once 'footer.php' ?>
+  <?php require_once 'templates/default/footer.php' ?>
 </body>
 </html>

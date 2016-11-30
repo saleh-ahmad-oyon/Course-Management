@@ -9,7 +9,7 @@ $notes = getNotes($_GET['id1']);
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <?php require_once 'head.php'; ?>
+  <?php require_once 'templates/default/head.php'; ?>
 </head>
 <body>
   <div id="wrap">
@@ -18,7 +18,7 @@ $notes = getNotes($_GET['id1']);
         <header>
           <div class="row">
             <div class="col-md-12">
-              <?php require_once 'header.php'; ?>
+              <?php require_once 'templates/default/header.php'; ?>
             </div>
           </div>
         </header>
@@ -44,6 +44,6 @@ $notes = getNotes($_GET['id1']);
       </div><!-- /.container -->
     </main>
   </div><!-- /#wrap -->
-<?php require_once 'footer.php' ?>
+<?php require_once 'templates/default/footer.php' ?>
 </body>
 </html>

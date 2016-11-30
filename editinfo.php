@@ -18,7 +18,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <?php require_once 'head.php'; ?>
+  <?php require_once 'templates/default/head.php'; ?>
   <link href="<?= SERVER; ?>/assets/css/dropify.css" rel="stylesheet"/>
   <link href="<?= SERVER; ?>/assets/css/radio.css" rel="stylesheet"/>
   <link rel="stylesheet" href="<?= SERVER; ?>/assets/css/jquery-ui.css">
@@ -44,7 +44,7 @@
         <header>
           <div class="row">
             <div class="col-md-12">
-              <?php require_once 'header.php'; ?>
+              <?php require_once 'templates/default/header.php'; ?>
             </div>
           </div>
         </header>
@@ -315,6 +315,6 @@
       </div>
     </main>
   </div><!-- /#wrap -->
-  <?php $dropify = true; $mask = true; $jui=true; require_once 'footer.php'; ?>
+  <?php $dropify = true; $mask = true; $jui=true; require_once 'templates/default/footer.php'; ?>
 </body>
 </html>

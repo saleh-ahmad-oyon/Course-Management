@@ -7,7 +7,7 @@ if (!isset($_SESSION['teacher'])) {
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-    <?php require_once 'head.php'; ?>
+    <?php require_once 'templates/default/head.php'; ?>
     <link rel="stylesheet" media='all' href="<?= SERVER; ?>/assets/css/search.css" />
 </head>
 <body>
@@ -17,7 +17,7 @@ if (!isset($_SESSION['teacher'])) {
         <header>
           <div class="row">
             <div class="col-md-12">
-              <?php require_once 'header.php'; ?>
+              <?php require_once 'templates/default/header.php'; ?>
             </div><!-- /.col-md-12 -->
           </div><!-- /.row -->
         </header>
@@ -61,6 +61,6 @@ if (!isset($_SESSION['teacher'])) {
       </div><!-- /.container -->
     </main>
   </div><!-- /#wrap -->
-  <?php $mask = true; $search = true; require_once 'footer.php'; ?>
+  <?php $mask = true; $search = true; require_once 'templates/default/footer.php'; ?>
 </body>
 </html>

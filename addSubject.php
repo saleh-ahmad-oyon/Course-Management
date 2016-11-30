@@ -11,7 +11,7 @@ $teacherCourse = getTeacherSubject();
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-  <?php require_once 'head.php'; ?>
+  <?php require_once 'templates/default/head.php'; ?>
   <link rel="stylesheet" href="<?= SERVER; ?>/assets/css/jquery-ui.css">
   <link rel="stylesheet" href="<?= SERVER; ?>/assets/css/jquery-ui.theme.css">
   <style>
@@ -27,7 +27,7 @@ $teacherCourse = getTeacherSubject();
         <header>
           <div class="row">
             <div class="col-md-12">
-              <?php require_once 'header.php'; ?>
+              <?php require_once 'templates/default/header.php'; ?>
             </div>
           </div>
         </header>
@@ -89,12 +89,12 @@ $teacherCourse = getTeacherSubject();
                   </tr>
                   <?php foreach($teacherCourse as $tc): ?>
                     <tr>
-                      <td><?php echo $tc['t_aiub_id']; ?></td>
-                        <td><?php echo $tc['t_name']; ?></td>
-                        <td><?php echo $tc['c_name']; ?></td>
+                      <td><?= $tc['t_aiub_id']; ?></td>
+                        <td><?= $tc['t_name']; ?></td>
+                        <td><?= $tc['c_name']; ?></td>
                         <td class="text-center">
                           <form action="<?= SERVER; ?>/controller/dltTeacherCourse" method="post" onsubmit="return confirmation();">
-                            <input type="hidden" value="<?php echo $tc['c_id']; ?>" name="id">
+                            <input type="hidden" value="<?= $tc['c_id']; ?>" name="id">
                             <button type="submit" name="dltTeacher" class="btn btn-danger"><span class='glyphicon glyphicon-trash hidden-md hidden-sm'></span><span class="hidden-xs">  Delete</span></button>
                           </form>
                       </td>
@@ -108,6 +108,6 @@ $teacherCourse = getTeacherSubject();
       </div><!-- /.container -->
     </main>
   </div><!-- /#wrap -->
-  <?php $jui = true; require_once 'footer.php'; ?>
+  <?php $jui = true; require_once 'templates/default/footer.php'; ?>
 </body>
 </html>

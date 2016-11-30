@@ -179,6 +179,7 @@ if (!isset($_SESSION['teacher'])) {
       </div><!-- container -->
     </main>
   </div><!-- /#wrap -->
-  <?php $fileupload = true; require_once 'footer.php' ?>
+  <?php $fileupload = true;
+  require_once 'footer.php' ?>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-  <?php require_once 'head.php'; ?>
+  <?php require_once 'templates/default/head.php'; ?>
 </head>
 <body>
   <div id="wrap">
@@ -11,7 +11,7 @@
         <header>
           <div class="row">
             <div class="col-md-12">
-              <?php require_once 'header.php'; ?>
+              <?php require_once 'templates/default/header.php'; ?>
             </div>
           </div>
         </header>
@@ -66,9 +66,9 @@
                 <?php endif; ?>
               <?php elseif(isset($_SESSION['stud'])): ?>
 
-                <!-- ============================
+                <!-- =====================
                      Student Home Page
-                ============================= -->
+                ====================== -->
                 <?php $sid = $_SESSION['sid'];
                   $outputString = studentCourse($sid);
                   if(!count($outputString)): ?>
@@ -101,9 +101,9 @@
                   <?php endif; ?>
                 <?php else: ?>
 
-                  <!-- ============================
+                  <!-- ==============
                        Login Page
-                  ============================= -->
+                  =============== -->
                   <div class="col-sm-offset-3 col-sm-6 col-md-offset-4 col-md-4 form-block">
                     <form action="<?= SERVER; ?>/session" method="post">
                       <p class="text-primary">Sign in with your organizational id number.</p>
@@ -120,9 +120,9 @@
                       </div>
                     </form>
 
-                    <!-- ====================
+                    <!-- =================
                          Error Message
-                    ===================== -->
+                    ================== -->
                     <?php if(isset($_GET['err'])): ?>
                       <label class="text-danger">
                         <?php if($_GET['err'] == 1): ?>
@@ -140,11 +140,11 @@
       </div><!-- /.container -->
     </main>
   </div>
-  <?php require_once 'footer.php' ?>
+  <?php require_once 'templates/default/footer.php' ?>
 
-  <!-- =====================
+  <!-- ====================
        Google Analytics
-  ====================== -->
+  ===================== -->
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
