@@ -26,3 +26,7 @@ https://www.phpdoc.org/docs/latest/index.html
 - unit testing
 
 https://phpunit.de/
+
+- The 10 Most Common Mistakes PHP Developers Make
+
+https://www.toptal.com/php/10-most-common-mistakes-php-programmers-make
