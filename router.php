@@ -57,7 +57,6 @@ class Router
             } else {
                 $this->controller->$action($this->param1, $this->param2);
             }
-            
         }
     }
 }
