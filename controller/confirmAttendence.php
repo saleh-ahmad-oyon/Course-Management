@@ -23,10 +23,12 @@ if (!array_key_exists('attend', $_POST)) {
 /** @var int $cid     Course ID */
 $cid = $_GET['id'];
 
+$attedId = [];
 if (!empty($_POST['check_att'])) {
     foreach ($_POST['check_att'] as $sid) {
-        insertAttendence($sid, $cid);
+        array_push($attedId, $sid);
     }
+    insertAttendence($attedId, $cid);
 }
 
 echo '<script language="javascript">

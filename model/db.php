@@ -512,12 +512,12 @@ ORDER BY student.s_full_name";
 	return $row;
 }
 
-function insertAttendence($sid, $cid)
+function insertAttendence($attedId, $cid)
 {
 	$conn = db_conn();
 
 	$sql = "UPDATE `attendinfo` SET `att_total`=`att_total`+1 
-WHERE `s_id` = ".mysqli_real_escape_string($conn, $sid)." 
+WHERE `s_id` IN (".implode(',', $attedId).") 
 AND `c_id` = ".mysqli_real_escape_string($conn, $cid);
 
 	mysqli_query($conn, $sql);
